@@ -11,7 +11,7 @@ export default function MainRouter() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/Details" element={<Detail />} />
+        <Route path="/details" element={<Detail />} />
         <Route path="*" element={<NotFound_404 />} />
       </Routes>
     </div>
