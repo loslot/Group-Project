@@ -1,6 +1,7 @@
-import React from "react";
-import Slide from "../components/Slide";
+import React from 'react'
 
 export default function Homepage() {
-  re
+  return (
+    <div>Homepage</div>
+  )
 }
