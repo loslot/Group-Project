@@ -1,75 +1,87 @@
 import React from "react";
+import { Link } from "react-router"; // Add this import
 
 export default function Footer() {
   return (
-    <footer className="w-full h-[25%] bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 pt-10 border-t border-gray-300 dark:border-gray-700 fixed bottom-0">
+    <footer className="w-full min-h-[100px] bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-t border-gray-300 dark:border-gray-700 sticky bottom-0 z-10 px-5 ">
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10">
-        {/* Brand / About */}
-        <div>
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
-            Product Express
-          </h2>
-          <p className="text-sm leading-relaxed">
-            Delivering high-quality products and services with modern web technologies.
-            Follow us for updates and insights.
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 py-6 sm:py-8 lg:py-10">
+          {/* Brand / About */}
+          <div className="col-span-1 sm:col-span-2 md:col-span-1">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white mb-3">
+              Product Express
+            </h2>
+            <p className="text-xs sm:text-sm leading-relaxed">
+              Delivering high-quality products and services with modern web technologies.
+            </p>
+          </div>
 
-        {/* Products */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-            Products
-          </h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-blue-500">React</a></li>
-            <li><a href="#" className="hover:text-blue-500">Angular</a></li>
-            <li><a href="#" className="hover:text-blue-500">Vue</a></li>
-            <li><a href="#" className="hover:text-blue-500">Laravel</a></li>
-          </ul>
-        </div>
+          {/* Products */}
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+              Products
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/react" className="hover:text-blue-500 transition-colors">React</Link></li>
+              <li><Link to="/angular" className="hover:text-blue-500 transition-colors">Angular</Link></li>
+              <li><Link to="/vue" className="hover:text-blue-500 transition-colors">Vue</Link></li>
+              <li><Link to="/laravel" className="hover:text-blue-500 transition-colors">Laravel</Link></li>
+            </ul>
+          </div>
 
-        {/* Useful Links */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-            Useful Links
-          </h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-blue-500">Pricing</a></li>
-            <li><a href="#" className="hover:text-blue-500">Settings</a></li>
-            <li><a href="#" className="hover:text-blue-500">Orders</a></li>
-            <li><a href="#" className="hover:text-blue-500">Help</a></li>
-          </ul>
-        </div>
+          {/* Useful Links */}
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+              Useful Links
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/pricing" className="hover:text-blue-500 transition-colors">Pricing</Link></li>
+              <li><Link to="/settings" className="hover:text-blue-500 transition-colors">Settings</Link></li>
+              <li><Link to="/orders" className="hover:text-blue-500 transition-colors">Orders</Link></li>
+              <li><Link to="/help" className="hover:text-blue-500 transition-colors">Help</Link></li>
+            </ul>
+          </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-            Contact
-          </h3>
-          <ul className="space-y-3 text-sm">
-            <li>📍 Phnom Penh, PP 10012, KH</li>
-            <li>📧 info@example.com</li>
-            <li>📞 +01 234 567 88</li>
-            <li>📞 +01 234 567 89</li>
-          </ul>
+          {/* Contact */}
+          <div className="sm:col-span-2 md:col-span-1">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+              Contact
+            </h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li>📍 Phnom Penh, PP 10012, KH</li>
+              <li>📧 info@example.com</li>
+              <li>📞 +01 234 567 88</li>
+              <li>📞 +01 234 567 89</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       {/* Social Icons */}
-      <div className="border-t border-gray-300 dark:border-gray-700 py-6">
-        <div className="flex justify-center space-x-6">
-          <a href="#" className="hover:text-blue-500"><i className="fab fa-facebook-f"></i></a>
-          <a href="#" className="hover:text-sky-400"><i className="fab fa-twitter"></i></a>
-          <a href="#" className="hover:text-pink-500"><i className="fab fa-instagram"></i></a>
-          <a href="#" className="hover:text-gray-900 dark:hover:text-gray-100"><i className="fab fa-github"></i></a>
-          <a href="#" className="hover:text-blue-700"><i className="fab fa-linkedin-in"></i></a>
+      <div className="border-t border-gray-300 dark:border-gray-700 py-4 sm:py-6">
+        <div className="flex justify-center space-x-4 sm:space-x-6">
+          <Link to="https://facebook.com" className="text-xl hover:text-blue-500 transition-colors" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <i className="fab fa-facebook-f"></i>
+          </Link>
+          <Link to="https://twitter.com" className="text-xl hover:text-sky-400 transition-colors" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <i className="fab fa-twitter"></i>
+          </Link>
+          <Link to="https://instagram.com" className="text-xl hover:text-pink-500 transition-colors" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <i className="fab fa-instagram"></i>
+          </Link>
+          <Link to="https://github.com" className="text-xl hover:text-gray-900 dark:hover:text-gray-100 transition-colors" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <i className="fab fa-github"></i>
+          </Link>
+          <Link to="https://linkedin.com" className="text-xl hover:text-blue-700 transition-colors" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <i className="fab fa-linkedin-in"></i>
+          </Link>
         </div>
       </div>
 
       {/* Bottom Copyright */}
-      <div className="bg-gray-200 dark:bg-gray-800 text-center py-4">
-        <p className="text-sm">
+      <div className="bg-gray-200 dark:bg-gray-800 text-center py-3 sm:py-4">
+        <p className="text-xs sm:text-sm">
           © 2025 <span className="font-semibold">Product Express</span>. All rights reserved.
         </p>
       </div>
