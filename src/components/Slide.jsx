@@ -31,7 +31,7 @@ export default function Slide() {
       >
         <SwiperSlide>
             <div className='w-full h-[300px] bg-black '>
-
+    {/* pp  */}
             </div>
         </SwiperSlide>
         <SwiperSlide>
