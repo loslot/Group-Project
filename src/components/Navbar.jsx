@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div>
       <header className="bg-white shadow">
-        <div className="container mx-auto px-1 py-4 flex items-center">
+        <div className="container mx-auto px-1 py-3 flex items-center">
           {/* <!-- logo --> */}
           <div className="mr-auto flex items-center gap-3">
             {/* Logo */}
