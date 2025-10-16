@@ -35,7 +35,7 @@ export default function Slide() {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='w-full h-[300px] bg-black '>
+            <div className='w-full h-[300px] bg-red-400 '>
 
             </div>
         </SwiperSlide>
