@@ -30,12 +30,12 @@ export default function Slide() {
         className="mySwiper"
       >
         <SwiperSlide>
-            <div className='w-full h-[300px] bg-black '>
+            <div className='w-full h-[300px] bg-green-300  '>
     {/* pp  */}
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className='w-full h-[300px] bg-black '>
+            <div className='w-full h-[300px] bg-red-400 '>
 
             </div>
         </SwiperSlide>
