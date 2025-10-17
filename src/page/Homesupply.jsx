@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Detail() {
+export default function homesupply() {
   return (
     <div>
-      detail
+      Homesupply
     </div>
   )
 }
