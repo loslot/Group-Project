@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Detail() {
+export default function Beauty() {
   return (
     <div>
-      detail
+      Beauty
     </div>
   )
 }
