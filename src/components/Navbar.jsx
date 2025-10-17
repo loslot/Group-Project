@@ -22,7 +22,7 @@ export default function Navbar() {
             <input
               className="border-l border-gray-300 bg-transparent font-semibold text-sm pl-4"
               type="text"
-              placeholder="I'm searching for ..."
+              placeholder="I'm searching for ...."
             />
             <svg
               className="ml-auto h-5 px-4 text-gray-500 svg-inline--fa fa-search fa-w-16 fa-9x"
