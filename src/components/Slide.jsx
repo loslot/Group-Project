@@ -31,27 +31,27 @@ export default function Slide() {
       >
         <SwiperSlide>
             <div className='w-full h-[500px] bg-black '>
-            <img src="/slides/electronic.png" alt="" className='w-full h-full object-contain'/>
+            <img src="/slides/electronic.png" alt="" className='w-full h-full object-cover'/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className='w-full h-[500px] bg-black '>
-            <img src="/slides/fashion1.png" alt="" className='w-full h-full object-contain'/>
+            <img src="/slides/fashion1.png" alt="" className='w-full h-full object-cover'/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className='w-full h-[500px] bg-black '>
-            <img src="/slides/Kitchen.png" alt="" className='w-full h-full object-contain'/>
+            <img src="/slides/Kitchen.png" alt="" className='w-full h-full object-cover'/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className='w-full h-[500px] bg-black '>
-            <img src="/slides/Skincare.png" alt="" className='w-full h-full object-contain'/>
+            <img src="/slides/Skincare.png" alt="" className='w-full h-full object-cover'/>
             </div>
         </SwiperSlide>
           <SwiperSlide>
             <div className='w-full h-[500px] bg-black '>
-            <img src="/slides/wash.png" alt="" className='w-full h-full object-contain'/>
+            <img src="/slides/wash.png" alt="" className='w-full h-full object-cover'/>
             </div>
         </SwiperSlide>
         
