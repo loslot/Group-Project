@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function homesupply() {
-  return (
-    <div>
-      Homesupply
-    </div>
-  )
+  return <div>Homesupply</div>;
 }

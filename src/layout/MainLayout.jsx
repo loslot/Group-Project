@@ -5,14 +5,13 @@ import Footer from "../components/Footer";
 
 export default function MainLayout() {
   return (
-    <div >
+    <div>
       <div>
         <Navbar />
       </div>
 
       <div>
         <MainRouter />
-        
       </div>
 
       <div>

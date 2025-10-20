@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Router, Routes, Route } from "react-router";
 export default function Navbar() {
   return (
     <div>
@@ -32,12 +32,27 @@ export default function Navbar() {
             className="w-full max-w-xs sm:max-w-md xl:max-w-lg 2xl:max-w-2xl bg-gray-100 rounded-md flex items-center"
           >
             <select
-              className="bg-transparent uppercase font-bold text-sm p-4 mr-2 outline-none text-blue-600 "
+              className="cursor-pointer bg-transparent uppercase font-bold text-sm p-4 mr-2 outline-none text-blue-600 "
               name="category"
               defaultValue="all"
             >
-              <option value="all" className="bg-blue-500">
+              <option className="cursor-pointer" value="all">
                 All Categories
+              </option>
+              <option className="cursor-pointer" value="electronics">
+                Electronics
+              </option>
+              <option className="cursor-pointer" value="clothing">
+                Clothing
+              </option>
+              <option className="cursor-pointer" value="shoes">
+                Shoes
+              </option>
+              <option className="cursor-pointer" value="home">
+                House Supplies
+              </option>
+              <option className="cursor-pointer" value="accessories">
+                Accessories
               </option>
             </select>
 
