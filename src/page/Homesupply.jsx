@@ -1,9 +1,7 @@
 import React from 'react'
 
-export default function homesupply() {
+export default function Homesupply() {
   return (
-    <div>
-      Homesupply
-    </div>
+    <div>Homesupply</div>
   )
 }
