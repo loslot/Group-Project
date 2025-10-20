@@ -27,12 +27,25 @@ export default function Slide() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="w-full h-[300px] bg-black "> {/* Test */}</div> 
+          <SwiperSlide>
+          <div className="w-full h-[500px] bg-black ">
+            <img
+              src="/slides/electronic.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-full h-[300px] bg-black "></div>
+         <SwiperSlide>
+          <div className="w-full h-[500px] bg-black ">
+            <img
+              src="/slides/fashion.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
         </SwiperSlide>
+       
         <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
             <img
@@ -60,6 +73,7 @@ export default function Slide() {
             />
           </div>
         </SwiperSlide>
+       
       </Swiper>
     </>
   );
