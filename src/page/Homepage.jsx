@@ -1,5 +1,6 @@
 import React from "react";
 import Slide from "../components/Slide";
+import New from "../components/New";
 
 export default function Homepage() {
  
@@ -7,8 +8,11 @@ export default function Homepage() {
     <div className="px-5 py-3">
       <Slide/>
     </div>
-  </div>
 
-  return <div className="text-center">Homepage</div>;
+    <div>
+      <New/>
+    </div>
+
+  </div>
 
 }

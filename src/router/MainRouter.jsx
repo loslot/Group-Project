@@ -9,10 +9,7 @@ export default function MainRouter() {
     <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
-
-      
         <Route path="/details" element={<Detail />} />
-
         <Route path="*" element={<NotFound_404 />} />
       </Routes>
     </div>
