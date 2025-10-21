@@ -132,8 +132,18 @@ import React from 'react'
 
 export default function New(){
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-slate-800 text-center">New</h2>
+    
+    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
+       <h2
+  className="text-2xl sm:text-2xl font-bold mb-6 text-white text-center 
+             border-4 border-transparent rounded-xl px-8 py-4 
+             bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
+             shadow-lg hover:from-blue-600 hover:via-purple-600 hover:to-pink-600
+             transition-all duration-500 ease-in-out 
+             animate-bounce mx-auto w-fit"
+>
+  New
+</h2>
 
       {/* Grid:
           small (sm): 2 columns

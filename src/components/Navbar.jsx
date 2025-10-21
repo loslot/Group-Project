@@ -1,10 +1,10 @@
 import React from "react";
-import { Router, Routes, Route } from "react-router";
+import { Link } from "react-router";
 export default function Navbar() {
   return (
-    <div>
-      <header className="bg-white shadow">
-        <div className="container mx-auto px-1 py-3 flex items-center">
+    <div >
+      <header className="bg-white  shadow">
+        <div className="container  mx-7  px-1 py-3 flex items-center">
           {/* <!-- logo --> */}
           <div className="mr-auto flex items-center gap-3">
             {/* Logo */}
@@ -37,22 +37,22 @@ export default function Navbar() {
               defaultValue="all"
             >
               <option className="cursor-pointer" value="all">
-                All Categories
+               All Products
               </option>
-              <option className="cursor-pointer" value="electronics">
-                Electronics
+              <option className="cursor-pointer" value="electronic">
+               Electronics
               </option>
-              <option className="cursor-pointer" value="clothing">
-                Clothing
+              <option className="cursor-pointer" value="fashion">
+               Fashion
               </option>
-              <option className="cursor-pointer" value="shoes">
-                Shoes
+              <option className="cursor-pointer" value="beauty">
+                Beauty 
               </option>
               <option className="cursor-pointer" value="home">
                 House Supplies
               </option>
-              <option className="cursor-pointer" value="accessories">
-                Accessories
+              <option className="cursor-pointer" value="jewellery">
+                Jewellery
               </option>
             </select>
 
@@ -62,7 +62,6 @@ export default function Navbar() {
               name="q"
               placeholder="Search product..."
             />
-
             {/* clickable search button */}
             <button
               type="submit"
@@ -134,7 +133,7 @@ export default function Navbar() {
           </nav>
 
           {/* <!-- cart count --> */}
-          <div className="ml-4 hidden sm:flex flex-col font-bold">
+          <div className="ml-4 hidden sm:flex flex-col font-bold mx-14">
             <span className="text-xs text-blue-500">Your Cart</span>
             <span>$0.00</span>
           </div>
