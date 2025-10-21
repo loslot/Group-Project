@@ -16,10 +16,13 @@ export default function Navbar() {
       <header className=" shadow">
         <div className="container mx-auto px-1  flex items-center">
           {/* <!-- logo --> */}
-          <div className="mr-auto flex items-center gap-1 cursor-pointer">
+          <div
+            onClick={() => navigate("/")}
+            className="mr-auto flex items-center gap-1 cursor-pointer"
+          >
             {/* Logo */}
             <img
-              className="h-20 w-26 drop-shadow-md"
+              className="h-20 w-30  drop-shadow-md"
               src="logo/logo.png"
               alt="Logo"
             />
