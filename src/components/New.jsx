@@ -96,7 +96,7 @@ export default function New() {
               </div>
 
               <p className="mt-3 text-sm text-slate-700">
-                A lovely place to rest, recharge, and enjoy the scenery. 
+                A lovely place to rest, recharge, and enjoy the scenery. Clean, comfy, and close to activities.
               </p>
 
               <div className="mt-4 flex items-center justify-between">

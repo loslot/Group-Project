@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div>
       <header className="bg-white shadow">
-        <div className="container mx-auto px-1 py-4 flex items-center">
+        <div className="container mx-auto px-1 py-3 flex items-center">
           {/* <!-- logo --> */}
           <div className="mr-auto flex items-center gap-3">
             {/* Logo */}
@@ -32,15 +32,17 @@ export default function Navbar() {
             className="w-full max-w-xs sm:max-w-md xl:max-w-lg 2xl:max-w-2xl bg-gray-100 rounded-md flex items-center"
           >
             <select
-              className="bg-transparent uppercase font-bold text-sm p-4 mr-2 outline-none"
+              className="bg-transparent uppercase font-bold text-sm p-4 mr-2 outline-none text-blue-600 "
               name="category"
               defaultValue="all"
             >
-              <option value="all">All Categories</option>
+              <option value="all" className="bg-blue-500">
+                All Categories
+              </option>
             </select>
 
             <input
-              className="flex-1 border-l border-gray-300 bg-transparent font-semibold text-sm pl-4 pr-2 outline-none"
+              className="flex-1 border-l border-blue-600 bg-transparent font-semibold text-sm pl-4 pr-2 outline-none"
               type="text"
               name="q"
               placeholder="Search product..."
@@ -49,7 +51,7 @@ export default function Navbar() {
             {/* clickable search button */}
             <button
               type="submit"
-              className="ml-auto px-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+              className="ml-auto px-4 text-blue-600 hover:text-gray-800 focus:outline-none"
               title="Search"
             >
               <svg
@@ -83,8 +85,8 @@ export default function Navbar() {
               {/* Wishlist icon */}
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <a href="#">
-                  <div className="absolute -top-1 right-0 z-10 bg-yellow-400 text-xs font-bold px-1 py-0.5 rounded-sm">
-                    3
+                  <div className="absolute -top-1 right-0 z-10 bg-blue-500 text-gray-100 text-xs font-bold px-1 py-0.5 rounded-sm">
+                    0
                   </div>
                   <svg
                     className="h-9 lg:h-10 p-2 text-gray-500"
@@ -100,8 +102,8 @@ export default function Navbar() {
               {/* Cart icon */}
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <a href="#">
-                  <div className="absolute -top-1 right-0 z-10 bg-yellow-400 text-xs font-bold px-1 py-0.5 rounded-sm">
-                    12
+                  <div className="absolute -top-1 right-0 z-10 bg-blue-500 text-gray-100 text-xs font-bold px-1 py-0.5 rounded-sm">
+                    0
                   </div>
                   <svg
                     className="h-9 lg:h-10 p-2 text-gray-500"
@@ -118,8 +120,8 @@ export default function Navbar() {
 
           {/* <!-- cart count --> */}
           <div className="ml-4 hidden sm:flex flex-col font-bold">
-            <span className="text-xs text-gray-400">Your Cart</span>
-            <span>$2,650.59</span>
+            <span className="text-xs text-blue-500">Your Cart</span>
+            <span>$0.00</span>
           </div>
         </div>
       </header>
