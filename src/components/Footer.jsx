@@ -20,18 +20,10 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+            <h3 className="text-base sm:text-lg font-semibold text-blue-800 dark:text-white mb-3">
               Products
             </h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  to="/accessories"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  Accessories
-                </Link>
-              </li>
               <li>
                 <Link
                   to="/fashion"
@@ -56,12 +48,20 @@ export default function Footer() {
                   Home Supplies
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/accessories"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Accessories
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Useful Links */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+            <h3 className="text-base sm:text-lg font-semibold text-blue-800 dark:text-white mb-3">
               Useful Links
             </h3>
             <ul className="space-y-2 text-sm">
