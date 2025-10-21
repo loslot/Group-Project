@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 // Responsive 5/4/2 Card Grid
 // - Desktop (lg): 5 columns
@@ -212,12 +213,6 @@ const cardsData = [
 export default function Electronic() {
   return (
     <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
-      {/* Grid:
-          small (sm): 2 columns
-          md (tablet): 4 columns
-          lg (desktop): 5 columns
-      */}
-      {/* title of product page */}
       <h1 className="relative text-center mb-10 px-4">
         <span
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -231,74 +226,70 @@ export default function Electronic() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
-          <article
-            key={card.id}
-            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
-          >
-            <div className="relative h-48 sm:h-56  w-full overflow-hidden">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
-              />
-
-              {/* Badge */}
-              <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-                Featured
-              </div>
-
-              {/* Quick action */}
-              <button
-                aria-label="save"
-                className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-rose-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="p-4 sm:p-5">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {card.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-slate-500">{card.subtitle}</p>
+          <Link to={`/details/${card.id}`} key={card.id}>
+            <article
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
+            >
+              <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
+                />
+                <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+                  Featured
                 </div>
-                <div className="text-right">
-                  <p className="text-sm text-slate-600">From</p>
-                  <p className="text-lg font-bold text-slate-900">
-                    {card.price}
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-4 flex items-center justify-between">
-                <h3
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                <button
+                  aria-label="save"
+                  className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
                 >
-                  Add to Cart
-                </h3>
-                <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
-                  Details
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 text-rose-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
+                  </svg>
                 </button>
               </div>
-            </div>
 
-            <div className="px-4 pb-4 sm:px-5 sm:pb-5">
-              <div className="flex items-center justify-between text-xs text-slate-500">
-                <span>⭐ {card.rating}</span>
-                <span>Free cancellation</span> {/* Updated text here */}
+              <div className="p-4 sm:p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {card.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-500">{card.subtitle}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-slate-600">From</p>
+                    <p className="text-lg font-bold text-slate-900">
+                      {card.price}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4 flex items-center justify-between">
+                  <button
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                  >
+                    Add to Cart
+                  </button>
+                  <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
+                    Details
+                  </button>
+                </div>
               </div>
-            </div>
-          </article>
+
+              <div className="px-4 pb-4 sm:px-5 sm:pb-5">
+                <div className="flex items-center justify-between text-xs text-slate-500">
+                  <span>⭐ {card.rating}</span>
+                  <span>Free returns</span>
+                </div>
+              </div>
+            </article>
+          </Link>
         ))}
       </div>
     </section>

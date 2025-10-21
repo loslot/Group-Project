@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 // Responsive 5/4/2 Card Grid
 // - Desktop (lg): 5 columns
@@ -7,7 +8,7 @@ import React from "react";
 // - Smooth hover transitions using Tailwind utilities
 const cardsData = [
   {
-    id: 1,
+    id: 41,
     image: "/Fashion/1.png",
     title: "Classic Denim Jacket",
     subtitle: "Outerwear • Unisex",
@@ -17,7 +18,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 2,
+    id: 42,
     image: "/Fashion/2.png",
     title: "Elegant Silk Dress",
     subtitle: "Women • Evening Wear",
@@ -27,7 +28,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 3,
+    id: 43,
     image: "/Fashion/3.png",
     title: "Urban Slim Jeans",
     subtitle: "Men • Stretch Fit",
@@ -37,7 +38,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 4,
+    id: 44,
     image: "/Fashion/4.png",
     title: "Leather Crossbody Bag",
     subtitle: "Accessories • Genuine Leather",
@@ -47,7 +48,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 5,
+    id: 45,
     image: "/Fashion/5.png",
     title: "Cotton Graphic T-Shirt",
     subtitle: "Unisex • Street Style",
@@ -57,7 +58,7 @@ const cardsData = [
     rating: 4.4,
   },
   {
-    id: 6,
+    id: 46,
     image: "/Fashion/6.png",
     title: "Sporty White Sneakers",
     subtitle: "Footwear • Unisex",
@@ -67,7 +68,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 7,
+    id: 47,
     image: "/Fashion/7.png",
     title: "Wool Knit Sweater",
     subtitle: "Men • Winter Wear",
@@ -77,7 +78,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 8,
+    id: 48,
     image: "/Fashion/8.png",
     title: "Floral Maxi Dress",
     subtitle: "Women • Bohemian Style",
@@ -87,7 +88,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 9,
+    id: 49,
     image: "/Fashion/9.png",
     title: "Classic Aviator Sunglasses",
     subtitle: "Accessories • UV Protection",
@@ -97,7 +98,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 10,
+    id: 50,
     image: "/Fashion/10.png",
     title: "Casual Linen Shirt",
     subtitle: "Men • Breathable Fabric",
@@ -107,7 +108,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 11,
+    id: 51,
     image: "/Fashion/11.png",
     title: "Chunky Knit Scarf",
     subtitle: "Accessories • Unisex",
@@ -117,7 +118,7 @@ const cardsData = [
     rating: 4.4,
   },
   {
-    id: 12,
+    id: 52,
     image: "/Fashion/12.png",
     title: "Pleated Midi Skirt",
     subtitle: "Women • Casual Chic",
@@ -127,7 +128,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 13,
+    id: 53,
     image: "/Fashion/13.png",
     title: "Classic Oxford Shoes",
     subtitle: "Men • Leather",
@@ -137,7 +138,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 14,
+    id: 54,
     image: "/Fashion/14.png",
     title: "Vintage Tote Bag",
     subtitle: "Accessories • Canvas",
@@ -147,7 +148,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 15,
+    id: 55,
     image: "/Fashion/15.png",
     title: "Elegant Pearl Necklace",
     subtitle: "Jewelry • Classic Style",
@@ -157,7 +158,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 16,
+    id: 56,
     image: "/Fashion/16.png",
     title: "Summer Sandals",
     subtitle: "Footwear • Women",
@@ -167,7 +168,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 17,
+    id: 57,
     image: "/Fashion/17.png",
     title: "Tailored Blazer",
     subtitle: "Men • Formal Wear",
@@ -177,7 +178,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 18,
+    id: 58,
     image: "/Fashion/18.png",
     title: "Casual Hoodie",
     subtitle: "Unisex • Streetwear",
@@ -187,7 +188,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 19,
+    id: 59,
     image: "/Fashion/19.png",
     title: "Luxury Wristwatch",
     subtitle: "Accessories • Quartz",
@@ -197,7 +198,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 20,
+    id: 60,
     image: "/Fashion/20.png",
     title: "Denim Mini Skirt",
     subtitle: "Women • Casual Wear",
@@ -212,7 +213,7 @@ export default function Fashion() {
   return (
     <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
       {/* Grid:
-          small (sm): 2 columns
+4         small (sm): 2 columns
           md (tablet): 4 columns
           lg (desktop): 5 columns
       */}
@@ -235,12 +236,13 @@ export default function Fashion() {
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
           >
             <div className="relative h-48 sm:h-56  w-full overflow-hidden">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
-              />
-
+              <Link to={`/details/${card.id}`}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
+                />
+              </Link>
               {/* Badge */}
               <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                 Featured

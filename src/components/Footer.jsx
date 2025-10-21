@@ -18,87 +18,44 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Products */}
+          {/* Company */}
           <div>
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              Products
+              Company
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/accessories"
+                  to="/about"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Accessories
+                  About
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/fashion"
+                  to="/contact"
+                  className="hover:text-blue-500 transition-colors"
+                ></Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Fashion
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/electronic"
+                  to="/careers"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Electronics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/homesupplie"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  Home Supplies
+                  Careers
                 </Link>
               </li>
             </ul>
-          </div>
-
-          {/* Useful Links */}
-          <div>
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              Useful Links
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  to="/pricing"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/settings"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  Settings
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/orders"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  Orders
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/help"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  Help
-                </Link>
-              </li>
-            </ul>
-          </div>
+          </div> 
 
           {/* Contact */}
           <div className="sm:col-span-2 md:col-span-1">
@@ -114,7 +71,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Social Icons */}
       <div className="border-t border-gray-300 dark:border-gray-700 py-4 sm:py-6">
         <div className="flex justify-center space-x-4 sm:space-x-6">
@@ -176,4 +132,3 @@ export default function Footer() {
     </footer>
   );
 }
-// Test

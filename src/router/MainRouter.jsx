@@ -15,14 +15,15 @@ export default function MainRouter() {
     <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/details" element={<Detail />} />
+        <Route path="/details/:id" element={<Detail />} />
         <Route path="/electronic" element={<Electronic/>} />
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/beauty" element={<Beauty />} />
         {/* <Route path="/accessories" element={<Accessories />} /> */}
-        <Route path="/homesupply" element={<Homesupply />} />
+        <Route path="/homesupplie" element={<Homesupply />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<NotFound_404 />} />
+        
       </Routes>
     </div>
   );

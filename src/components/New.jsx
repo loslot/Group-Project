@@ -8,7 +8,7 @@ import React from "react";
 
 const cardsData = [
   {
-    id: 1,
+    id: 101,
     image: "/New/1.png",
     title: "Cozy Cabin",
     subtitle: "Mountains • 2 nights",
@@ -18,7 +18,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 2,
+    id: 102,
     image: "/New/2.png",
     title: "Beach House",
     subtitle: "Sea • 4 nights",
@@ -28,7 +28,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 3,
+    id: 103,
     image: "/New/3.png",
     title: "City Loft",
     subtitle: "Downtown • 1 night",
@@ -38,7 +38,7 @@ const cardsData = [
     rating: 4.2,
   },
   {
-    id: 4,
+    id: 104,
     image: "/New/4.png",
     title: "Lake Retreat",
     subtitle: "Lakeside • 3 nights",
@@ -48,7 +48,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 5,
+    id: 105,
     image: "/New/5.png",
     title: "Desert Escape",
     subtitle: "Sahara • 5 nights",
@@ -58,7 +58,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 6,
+    id: 106,
     image: "/New/1.png",
     title: "Jungle Lodge",
     subtitle: "Rainforest • 3 nights",
@@ -68,7 +68,7 @@ const cardsData = [
     rating: 4.4,
   },
   {
-    id: 7,
+    id: 107,
     image: "/New/2.png",
     title: "Snow Chalet",
     subtitle: "Alps • 2 nights",
@@ -78,7 +78,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 8,
+    id: 108,
     image: "/New/3.png",
     title: "Island Villa",
     subtitle: "Tropical • 5 nights",
@@ -88,7 +88,7 @@ const cardsData = [
     rating: 5.0,
   },
   {
-    id: 9,
+    id: 109,
     image: "/New/4.png",
     title: "Forest Cabin",
     subtitle: "Woodlands • 3 nights",
@@ -98,7 +98,7 @@ const cardsData = [
     rating: 4.3,
   },
   {
-    id: 10,
+    id: 110,
     image: "/New/5.png",
     title: "Luxury Penthouse",
     subtitle: "Skyline • 2 nights",
@@ -108,7 +108,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 11,
+    id: 111,
     image: "/New/1.png",
     title: "Farm Stay",
     subtitle: "Countryside • 4 nights",
@@ -118,7 +118,7 @@ const cardsData = [
     rating: 4.2,
   },
   {
-    id: 12,
+    id: 112,
     image: "/New/2.png",
     title: "Riverside Bungalow",
     subtitle: "Riverside • 3 nights",
@@ -128,7 +128,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 13,
+    id: 113,
     image: "/New/3.png",
     title: "Mountain Resort",
     subtitle: "Highlands • 5 nights",
@@ -138,7 +138,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 14,
+    id: 114,
     image: "/New/4.png",
     title: "Eco Dome",
     subtitle: "Nature Park • 2 nights",
@@ -148,7 +148,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 15,
+    id: 115,
     image: "/New/5.png",
     title: "Cliffside Cottage",
     subtitle: "Seaside Cliff • 3 nights",
