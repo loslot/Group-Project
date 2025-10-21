@@ -161,7 +161,7 @@ const cardsData = [
 
 export default function New() {
   return (
-    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
+    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 ">
       <h1
         className="
     relative text-3xl sm:text-5xl font-extrabold mb-8 text-white text-center

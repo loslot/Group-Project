@@ -14,7 +14,14 @@ export default function Navbar() {
   };
   return (
     <div>
-      <header className=" shadow">
+      <header
+        className="
+  fixed top-0 left-0 w-full z-50 
+  bg-white/80 backdrop-blur-md 
+  border-b border-gray-200 shadow-sm
+  transition-all duration-300
+"
+      >
         <div className="w-full mx-auto px-4 flex items-center">
           {/* <!-- logo --> */}
           <div
@@ -141,10 +148,6 @@ export default function Navbar() {
           </nav>
 
           {/* <!-- cart count --> */}
-          <div className="ml-4 hidden sm:flex flex-col font-bold">
-            <span className="text-xs text-blue-500 ">Your Cart</span>
-            <span>$0.00</span>
-          </div>
         </div>
       </header>
     </div>
