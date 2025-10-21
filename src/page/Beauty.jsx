@@ -15,6 +15,7 @@ const cardsData = [
     price: "$45",
     description:
       "A lightweight serum that brightens dull skin, evens tone, and restores a youthful glow.",
+    rating: 4.7,
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const cardsData = [
     price: "$25",
     description:
       "A creamy matte lipstick that delivers rich color with a smooth, long-lasting finish.",
+    rating: 4.5,
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const cardsData = [
     price: "$38",
     description:
       "An ultra-hydrating moisturizer infused with hyaluronic acid for all-day smoothness.",
+    rating: 4.6,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const cardsData = [
     price: "$32",
     description:
       "A nourishing oil that tames frizz, adds shine, and keeps hair soft and healthy.",
+    rating: 4.4,
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ const cardsData = [
     price: "$28",
     description:
       "A refreshing rose-infused mask that hydrates, purifies, and soothes the skin.",
+    rating: 4.5,
   },
   {
     id: 6,
@@ -60,6 +65,7 @@ const cardsData = [
     price: "$30",
     description:
       "A nourishing shampoo enriched with argan oil to strengthen and repair damaged hair.",
+    rating: 4.6,
   },
   {
     id: 7,
@@ -69,6 +75,7 @@ const cardsData = [
     price: "$22",
     description:
       "A gentle toner that tightens pores, balances pH, and refreshes your skin.",
+    rating: 4.3,
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ const cardsData = [
     price: "$60",
     description:
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
+    rating: 4.8,
   },
   {
     id: 9,
@@ -87,6 +95,7 @@ const cardsData = [
     price: "$55",
     description:
       "An anti-aging eye cream that reduces puffiness, fine lines, and dark circles.",
+    rating: 4.7,
   },
   {
     id: 10,
@@ -96,6 +105,7 @@ const cardsData = [
     price: "$40",
     description:
       "A lightweight liquid foundation offering smooth coverage and a natural satin finish.",
+    rating: 4.6,
   },
   {
     id: 11,
@@ -105,6 +115,7 @@ const cardsData = [
     price: "$15",
     description:
       "A hydrating lip balm with a hint of berry tint to keep lips soft and naturally glowing.",
+    rating: 4.4,
   },
   {
     id: 12,
@@ -114,6 +125,7 @@ const cardsData = [
     price: "$27",
     description:
       "A deeply moisturizing lotion that softens skin with coconut oil and vitamin E.",
+    rating: 4.5,
   },
   {
     id: 13,
@@ -123,6 +135,7 @@ const cardsData = [
     price: "$26",
     description:
       "A deep-cleansing facial wash that removes impurities and clears clogged pores.",
+    rating: 4.6,
   },
   {
     id: 14,
@@ -132,6 +145,7 @@ const cardsData = [
     price: "$35",
     description:
       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
+    rating: 4.7,
   },
   {
     id: 15,
@@ -141,6 +155,7 @@ const cardsData = [
     price: "$20",
     description:
       "A soothing gel perfect for hydrating and cooling the skin after sun exposure.",
+    rating: 4.5,
   },
   {
     id: 16,
@@ -150,6 +165,7 @@ const cardsData = [
     price: "$29",
     description:
       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
+    rating: 4.6,
   },
   {
     id: 17,
@@ -159,6 +175,7 @@ const cardsData = [
     price: "$24",
     description:
       "A refreshing facial mist infused with natural botanicals for instant hydration.",
+    rating: 4.4,
   },
   {
     id: 18,
@@ -168,6 +185,7 @@ const cardsData = [
     price: "$33",
     description:
       "An exfoliating scrub that removes dead skin and leaves your body smooth and glowing.",
+    rating: 4.6,
   },
   {
     id: 19,
@@ -177,6 +195,7 @@ const cardsData = [
     price: "$28",
     description:
       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
+    rating: 4.5,
   },
   {
     id: 20,
@@ -186,6 +205,7 @@ const cardsData = [
     price: "$31",
     description:
       "A refreshing body mist with aquatic and citrus notes for a clean, energizing scent.",
+    rating: 4.7,
   },
 ];
 

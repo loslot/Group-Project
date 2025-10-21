@@ -14,6 +14,7 @@ const cardsData = [
     price: "$79",
     description:
       "A timeless denim jacket with a modern fit, perfect for layering and casual outfits.",
+    rating: 4.6,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const cardsData = [
     price: "$120",
     description:
       "A luxurious silk dress designed with soft fabric and graceful draping for special occasions.",
+    rating: 4.8,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const cardsData = [
     price: "$65",
     description:
       "Comfortable slim-fit jeans made from durable stretch denim for everyday wear.",
+    rating: 4.5,
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const cardsData = [
     price: "$95",
     description:
       "A sleek and compact leather bag ideal for carrying your essentials in style.",
+    rating: 4.7,
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ const cardsData = [
     price: "$35",
     description:
       "Soft, breathable cotton T-shirt with a bold graphic design for a trendy, casual look.",
+    rating: 4.4,
   },
   {
     id: 6,
@@ -59,6 +64,7 @@ const cardsData = [
     price: "$85",
     description:
       "Lightweight sneakers with cushioned soles and a minimalist design for everyday comfort.",
+    rating: 4.6,
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const cardsData = [
     price: "$70",
     description:
       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
+    rating: 4.5,
   },
   {
     id: 8,
@@ -77,6 +84,7 @@ const cardsData = [
     price: "$110",
     description:
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+    rating: 4.7,
   },
   {
     id: 9,
@@ -86,6 +94,7 @@ const cardsData = [
     price: "$55",
     description:
       "Stylish aviator sunglasses offering UV400 protection and a timeless look.",
+    rating: 4.6,
   },
   {
     id: 10,
@@ -95,6 +104,7 @@ const cardsData = [
     price: "$60",
     description:
       "Lightweight linen shirt perfect for summer days with a relaxed yet polished vibe.",
+    rating: 4.5,
   },
   {
     id: 11,
@@ -104,6 +114,7 @@ const cardsData = [
     price: "$40",
     description:
       "A soft, oversized knit scarf that keeps you cozy and adds texture to your outfit.",
+    rating: 4.4,
   },
   {
     id: 12,
@@ -113,6 +124,7 @@ const cardsData = [
     price: "$75",
     description:
       "A lightweight, elegant skirt with pleats that flow beautifully with every step.",
+    rating: 4.6,
   },
   {
     id: 13,
@@ -122,6 +134,7 @@ const cardsData = [
     price: "$130",
     description:
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+    rating: 4.8,
   },
   {
     id: 14,
@@ -131,6 +144,7 @@ const cardsData = [
     price: "$45",
     description:
       "A durable canvas tote with vintage prints, great for daily use and weekend trips.",
+    rating: 4.5,
   },
   {
     id: 15,
@@ -140,6 +154,7 @@ const cardsData = [
     price: "$150",
     description:
       "A refined pearl necklace that adds sophistication to any outfit or special occasion.",
+    rating: 4.9,
   },
   {
     id: 16,
@@ -149,6 +164,7 @@ const cardsData = [
     price: "$55",
     description:
       "Comfortable flat sandals designed for warm days with soft straps and durable soles.",
+    rating: 4.5,
   },
   {
     id: 17,
@@ -158,6 +174,7 @@ const cardsData = [
     price: "$145",
     description:
       "A sharp, slim-fit blazer crafted from premium fabric for a refined, confident look.",
+    rating: 4.8,
   },
   {
     id: 18,
@@ -167,6 +184,7 @@ const cardsData = [
     price: "$60",
     description:
       "A soft cotton-blend hoodie with a relaxed fit — perfect for laid-back, modern style.",
+    rating: 4.6,
   },
   {
     id: 19,
@@ -176,6 +194,7 @@ const cardsData = [
     price: "$220",
     description:
       "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement.",
+    rating: 4.9,
   },
   {
     id: 20,
@@ -185,6 +204,7 @@ const cardsData = [
     price: "$65",
     description:
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+    rating: 4.6,
   },
 ];
 

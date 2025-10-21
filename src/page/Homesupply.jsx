@@ -14,6 +14,7 @@ const cardsData = [
     price: "$45",
     description:
       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
+    rating: 4.6,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const cardsData = [
     price: "$70",
     description:
       "Breathable cotton bedsheets designed for durability, comfort, and a luxurious feel.",
+    rating: 4.7,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const cardsData = [
     price: "$25",
     description:
       "A soothing scented candle with lavender and vanilla notes to create a relaxing atmosphere.",
+    rating: 4.5,
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const cardsData = [
     price: "$55",
     description:
       "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at Homesupply.",
+    rating: 4.6,
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ const cardsData = [
     price: "$35",
     description:
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
+    rating: 4.4,
   },
   {
     id: 6,
@@ -59,6 +64,7 @@ const cardsData = [
     price: "$60",
     description:
       "A dimmable LED lamp with touch control and warm-to-cool light modes for any mood.",
+    rating: 4.7,
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const cardsData = [
     price: "$48",
     description:
       "Removes impurities and provides clean, great-tasting water for the entire family.",
+    rating: 4.5,
   },
   {
     id: 8,
@@ -77,6 +84,7 @@ const cardsData = [
     price: "$40",
     description:
       "Ultrasonic aroma diffuser that fills your Homesupply with relaxing natural scents and mist.",
+    rating: 4.6,
   },
   {
     id: 9,
@@ -86,6 +94,7 @@ const cardsData = [
     price: "$85",
     description:
       "Precision stainless steel knives for perfect slicing, chopping, and cutting every time.",
+    rating: 4.8,
   },
   {
     id: 10,
@@ -95,6 +104,7 @@ const cardsData = [
     price: "$75",
     description:
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
+    rating: 4.6,
   },
   {
     id: 11,
@@ -104,6 +114,7 @@ const cardsData = [
     price: "$190",
     description:
       "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern Homesupplys.",
+    rating: 4.7,
   },
   {
     id: 12,
@@ -113,6 +124,7 @@ const cardsData = [
     price: "$120",
     description:
       "Removes dust, pollen, and odors to keep your indoor air clean and breathable.",
+    rating: 4.8,
   },
   {
     id: 13,
@@ -122,6 +134,7 @@ const cardsData = [
     price: "$65",
     description:
       "A soft fleece blanket that keeps you warm and cozy during chilly nights.",
+    rating: 4.6,
   },
   {
     id: 14,
@@ -131,6 +144,7 @@ const cardsData = [
     price: "$150",
     description:
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
+    rating: 4.7,
   },
   {
     id: 15,
@@ -140,6 +154,7 @@ const cardsData = [
     price: "$18",
     description:
       "Gentle foaming hand soap infused with essential oils for soft and clean hands.",
+    rating: 4.5,
   },
   {
     id: 16,
@@ -149,6 +164,7 @@ const cardsData = [
     price: "$90",
     description:
       "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen.",
+    rating: 4.6,
   },
   {
     id: 17,
@@ -158,6 +174,7 @@ const cardsData = [
     price: "$110",
     description:
       "Elegant velvet curtains that block sunlight and add a touch of luxury to your decor.",
+    rating: 4.7,
   },
   {
     id: 18,
@@ -167,6 +184,7 @@ const cardsData = [
     price: "$130",
     description:
       "A high-speed blender ideal for smoothies, soups, and sauces with easy-clean blades.",
+    rating: 4.8,
   },
   {
     id: 19,
@@ -176,6 +194,7 @@ const cardsData = [
     price: "$140",
     description:
       "A plush, non-slip rug that adds warmth and comfort to your living area.",
+    rating: 4.6,
   },
   {
     id: 20,
@@ -185,6 +204,7 @@ const cardsData = [
     price: "$50",
     description:
       "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric.",
+    rating: 4.5,
   },
 ];
 

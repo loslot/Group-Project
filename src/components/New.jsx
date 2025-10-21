@@ -15,6 +15,7 @@ const cardsData = [
     price: "$99",
     description:
       "A peaceful wooden cabin surrounded by nature, perfect for relaxing and enjoying mountain views.",
+    rating: 4.5,
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const cardsData = [
     price: "$180",
     description:
       "A bright and airy house located right on the beach, ideal for sunbathing and watching sunsets.",
+    rating: 4.8,
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const cardsData = [
     price: "$75",
     description:
       "A modern loft in the heart of the city, close to shopping, dining, and nightlife attractions.",
+    rating: 4.2,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const cardsData = [
     price: "$140",
     description:
       "A cozy lakeside retreat offering calm waters, fresh air, and beautiful evening sunsets.",
+    rating: 4.6,
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ const cardsData = [
     price: "$220",
     description:
       "An elegant desert stay with breathtaking dune views and peaceful nights under the stars.",
+    rating: 4.7,
   },
   {
     id: 6,
@@ -60,6 +65,7 @@ const cardsData = [
     price: "$160",
     description:
       "Stay deep within the jungle and experience the natural beauty and sounds of the rainforest.",
+    rating: 4.4,
   },
   {
     id: 7,
@@ -69,6 +75,7 @@ const cardsData = [
     price: "$190",
     description:
       "A warm alpine chalet with a fireplace and mountain views — perfect for a winter getaway.",
+    rating: 4.9,
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ const cardsData = [
     price: "$250",
     description:
       "A luxury villa surrounded by turquoise waters and white sands for a dream island vacation.",
+    rating: 5.0,
   },
   {
     id: 9,
@@ -87,6 +95,7 @@ const cardsData = [
     price: "$120",
     description:
       "Reconnect with nature in this rustic forest cabin hidden among tall trees and chirping birds.",
+    rating: 4.3,
   },
   {
     id: 10,
@@ -96,6 +105,7 @@ const cardsData = [
     price: "$300",
     description:
       "Enjoy a panoramic city view from a modern penthouse with elegant design and top amenities.",
+    rating: 4.9,
   },
   {
     id: 11,
@@ -105,6 +115,7 @@ const cardsData = [
     price: "$110",
     description:
       "Experience peaceful country life, fresh air, and local food at this charming farmhouse retreat.",
+    rating: 4.2,
   },
   {
     id: 12,
@@ -114,6 +125,7 @@ const cardsData = [
     price: "$130",
     description:
       "Relax beside a quiet river with scenic views and enjoy canoeing or fishing right at your doorstep.",
+    rating: 4.5,
   },
   {
     id: 13,
@@ -123,6 +135,7 @@ const cardsData = [
     price: "$270",
     description:
       "A luxury mountain resort offering fresh air, hiking trails, and panoramic views of nature.",
+    rating: 4.8,
   },
   {
     id: 14,
@@ -132,6 +145,7 @@ const cardsData = [
     price: "$150",
     description:
       "A unique eco-friendly dome offering a modern stay with a focus on sustainability and comfort.",
+    rating: 4.6,
   },
   {
     id: 15,
@@ -141,6 +155,7 @@ const cardsData = [
     price: "$200",
     description:
       "A private cliffside cottage with stunning ocean views and cozy interiors for couples or families.",
+    rating: 4.7,
   },
 ];
 
@@ -228,7 +243,7 @@ export default function New() {
 
             <div className="px-4 pb-4 sm:px-5 sm:pb-5">
               <div className="flex items-center justify-between text-xs text-slate-500">
-                <span>⭐ 4.7</span>
+                <span>⭐ {card.rating}</span>
                 <span>Free cancellation</span>
               </div>
             </div>
