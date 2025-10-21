@@ -3,6 +3,11 @@ import { Route, Routes } from "react-router";
 import Homepage from "../page/Homepage";
 import NotFound_404 from "../error/NotFound_404";
 import Detail from "../page/Detail";
+import Fashion from "../page/Fashion";
+import Beauty from "../page/Beauty";
+import Homesupply from "../page/Homesupply";
+import Accessories from "../page/Accessories";
+import Electronic from "../page/Electronic";
 
 export default function MainRouter() {
   return (
@@ -10,6 +15,11 @@ export default function MainRouter() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/details" element={<Detail />} />
+        <Route path="/electronic" element={<Electronic/>} />
+        <Route path="/fashion" element={<Fashion />} />
+        <Route path="/beauty" element={<Beauty />} />
+        <Route path="/accessories" element={<Accessories />} />
+        <Route path="/homesupply" element={<Homesupply />} />
         <Route path="*" element={<NotFound_404 />} />
       </Routes>
     </div>
