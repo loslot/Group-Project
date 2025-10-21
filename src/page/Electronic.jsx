@@ -15,6 +15,7 @@ const cardsData = [
     price: "$699",
     description:
       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
+    rating: 4.7,
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const cardsData = [
     price: "$129",
     description:
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
+    rating: 4.5,
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const cardsData = [
     price: "$799",
     description:
       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
+    rating: 4.8,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const cardsData = [
     price: "$199",
     description:
       "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications.",
+    rating: 4.6,
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ const cardsData = [
     price: "$89",
     description:
       "A compact Bluetooth speaker with deep bass, clear treble, and 12-hour battery life.",
+    rating: 4.4,
   },
   {
     id: 6,
@@ -60,6 +65,7 @@ const cardsData = [
     price: "$999",
     description:
       "A powerful ultrabook designed for productivity with fast performance and lightweight design.",
+    rating: 4.7,
   },
   {
     id: 7,
@@ -69,6 +75,7 @@ const cardsData = [
     price: "$1,250",
     description:
       "Capture professional-grade photos and videos with advanced autofocus and 4K recording.",
+    rating: 4.9,
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ const cardsData = [
     price: "$79",
     description:
       "Control lights, music, and more with your voice — the perfect addition to any smart home.",
+    rating: 4.3,
   },
   {
     id: 9,
@@ -87,6 +95,7 @@ const cardsData = [
     price: "$55",
     description:
       "A quiet and powerful fan with adjustable speeds and oscillation for full-room cooling.",
+    rating: 4.2,
   },
   {
     id: 10,
@@ -96,6 +105,7 @@ const cardsData = [
     price: "$49",
     description:
       "High-precision gaming mouse with customizable buttons and RGB lighting for pro gamers.",
+    rating: 4.5,
   },
   {
     id: 11,
@@ -105,6 +115,7 @@ const cardsData = [
     price: "$89",
     description:
       "A durable mechanical keyboard with smooth keys, anti-ghosting, and vibrant lighting effects.",
+    rating: 4.6,
   },
   {
     id: 12,
@@ -114,6 +125,7 @@ const cardsData = [
     price: "$39",
     description:
       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
+    rating: 4.4,
   },
   {
     id: 13,
@@ -123,6 +135,7 @@ const cardsData = [
     price: "$120",
     description:
       "Monitor your home anytime with motion detection, night vision, and mobile alerts.",
+    rating: 4.5,
   },
   {
     id: 14,
@@ -132,6 +145,7 @@ const cardsData = [
     price: "$299",
     description:
       "A lightweight tablet for entertainment and productivity with a vivid HD display and long battery.",
+    rating: 4.3,
   },
   {
     id: 15,
@@ -141,6 +155,7 @@ const cardsData = [
     price: "$159",
     description:
       "Over-ear headphones delivering immersive sound with active noise cancellation technology.",
+    rating: 4.6,
   },
   {
     id: 16,
@@ -150,6 +165,7 @@ const cardsData = [
     price: "$145",
     description:
       "Cook crispy and healthy meals faster with digital temperature control and preset menus.",
+    rating: 4.4,
   },
   {
     id: 17,
@@ -159,6 +175,7 @@ const cardsData = [
     price: "$175",
     description:
       "A lightning-fast external SSD for secure file storage and instant data transfers.",
+    rating: 4.7,
   },
   {
     id: 18,
@@ -168,6 +185,7 @@ const cardsData = [
     price: "$299",
     description:
       "An intelligent robot vacuum that cleans efficiently with smart sensors and app control.",
+    rating: 4.5,
   },
   {
     id: 19,
@@ -177,6 +195,7 @@ const cardsData = [
     price: "$210",
     description:
       "Enhance your home theater experience with powerful stereo sound and wireless connectivity.",
+    rating: 4.6,
   },
   {
     id: 20,
@@ -186,6 +205,7 @@ const cardsData = [
     price: "$349",
     description:
       "A high-performance gaming monitor with ultra-smooth refresh rate and vibrant color accuracy.",
+    rating: 4.8,
   },
 ];
 
@@ -264,7 +284,7 @@ export default function Electronic() {
                   href="#"
                   className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
                 >
-                  Book
+                  Add to Cart
                 </h3>
                 <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
                   Details
@@ -274,7 +294,7 @@ export default function Electronic() {
 
             <div className="px-4 pb-4 sm:px-5 sm:pb-5">
               <div className="flex items-center justify-between text-xs text-slate-500">
-                <span>⭐ 4.7</span>
+                <span>⭐ {card.rating}</span>
                 <span>Free cancellation</span>
               </div>
             </div>

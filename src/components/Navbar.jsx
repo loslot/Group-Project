@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { useNavigate } from "react-router";
+
 export default function Navbar() {
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -93,7 +94,7 @@ export default function Navbar() {
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <a href="#">
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                     fill="currentColor"
@@ -110,7 +111,7 @@ export default function Navbar() {
                     0
                   </div>
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     fill="currentColor"
@@ -127,7 +128,7 @@ export default function Navbar() {
                     0
                   </div>
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
                     fill="currentColor"
