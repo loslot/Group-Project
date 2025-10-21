@@ -9,11 +9,9 @@ export default function MainLayout() {
       <div>
         <Navbar />
       </div>
-
       <div>
-        <MainRouter />
+        <MainRouter/>
       </div>
-
       <div>
         <Footer />
       </div>

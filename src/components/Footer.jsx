@@ -23,10 +23,10 @@ export default function Footer() {
               Products
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/react" className="hover:text-blue-500 transition-colors">React</Link></li>
-              <li><Link to="/angular" className="hover:text-blue-500 transition-colors">Angular</Link></li>
-              <li><Link to="/vue" className="hover:text-blue-500 transition-colors">Vue</Link></li>
-              <li><Link to="/laravel" className="hover:text-blue-500 transition-colors">Laravel</Link></li>
+              <li><Link to="/accessories" className="hover:text-blue-500 transition-colors">Accessories</Link></li>
+              <li><Link to="/fashion" className="hover:text-blue-500 transition-colors">Fashion</Link></li>
+              <li><Link to="/electronic" className="hover:text-blue-500 transition-colors">Electronics</Link></li>
+              <li><Link to="/homesupply" className="hover:text-blue-500 transition-colors">Home Supply</Link></li>
             </ul>
           </div>
 
