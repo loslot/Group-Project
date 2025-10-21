@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/homesupply"
+                  to="/homesupplie"
                   className="hover:text-blue-500 transition-colors"
                 >
                   Home Supplies

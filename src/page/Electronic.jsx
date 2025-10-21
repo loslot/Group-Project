@@ -295,7 +295,7 @@ export default function Electronic() {
             <div className="px-4 pb-4 sm:px-5 sm:pb-5">
               <div className="flex items-center justify-between text-xs text-slate-500">
                 <span>⭐ {card.rating}</span>
-                <span>Free cancellation</span>
+                <span>Free cancellation</span> {/* Updated text here */}
               </div>
             </div>
           </article>

@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <div>
       <header className=" shadow">
-        <div className="container mx-auto px-1  flex items-center">
+        <div className="w-full mx-auto px-4 flex items-center">
           {/* <!-- logo --> */}
           <div
             onClick={() => navigate("/")}
@@ -30,7 +30,7 @@ export default function Navbar() {
 
             {/* Brand name */}
             <div className="flex flex-col">
-              <h1 className="text-xl md:text-xl font-extrabold tracking-wide text-gray-800">
+              <h1 className="text-xs md:text-xl font-extrabold tracking-wide text-gray-800 flex">
                 PRODUCT <span className="text-blue-600">EXPRESS</span>
               </h1>
               <p className="text-xs md:text-sm text-gray-500 tracking-tight">
@@ -55,7 +55,7 @@ export default function Navbar() {
               <option value="electronic">Electronics</option>
               <option value="beauty">Beauty and SkinCare</option>
               <option value="fashion">Fashions</option>
-              <option value="home">Home Supplies</option>
+              <option value="homesupplie">Home Supplies</option>
               <option value="accessories">Accessories</option>
             </select>
 
@@ -142,7 +142,7 @@ export default function Navbar() {
 
           {/* <!-- cart count --> */}
           <div className="ml-4 hidden sm:flex flex-col font-bold">
-            <span className="text-xs text-blue-500">Your Cart</span>
+            <span className="text-xs text-blue-500 ">Your Cart</span>
             <span>$0.00</span>
           </div>
         </div>
