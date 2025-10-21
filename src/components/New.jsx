@@ -161,17 +161,40 @@ const cardsData = [
 
 export default function New() {
   return (
-    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
-      <h2
-        className="text-2xl sm:text-2xl font-bold mb-6 text-white text-center 
-             border-4 border-transparent rounded-xl px-8 py-4 
-             bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
-             shadow-lg hover:from-blue-600 hover:via-purple-600 hover:to-pink-600
-             transition-all duration-500 ease-in-out 
-             animate-bounce mx-auto w-fit"
+    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 ">
+      <h1
+        className="
+    relative text-3xl sm:text-5xl font-extrabold mb-8 text-white text-center
+    rounded-3xl px-12 py-6
+    bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+    shadow-2xl shadow-blue-500/60
+    uppercase tracking-wider
+    mx-auto w-fit
+    overflow-hidden
+  "
       >
-        New
-      </h2>
+        <span className="relative z-10">New's Product</span>
+        <span
+          className="
+    absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400
+    opacity-30
+    animate-[shimmer_2s_infinite]
+  "
+        >
+          ;
+        </span>
+      </h1>
+
+      <style jsx>{`
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+      `}</style>
 
       {/* Grid:
           small (sm): 2 columns
@@ -231,7 +254,7 @@ export default function New() {
               <div className="mt-4 flex items-center justify-between">
                 <h3
                   href="#"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
                 >
                   Add to Cart
                 </h3>

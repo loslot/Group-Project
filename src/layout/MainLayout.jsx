@@ -9,7 +9,7 @@ export default function MainLayout() {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="pt-14 flex-grow">
         <MainRouter />
       </div>
       <div>

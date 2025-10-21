@@ -9,6 +9,7 @@ import Homesupply from "../page/Homesupply";
 
 import Electronic from "../page/Electronic";
 import Contact from "../page/Contact";
+import Jewellery from "../page/Jewellery";
 
 export default function MainRouter() {
   return (
@@ -22,6 +23,7 @@ export default function MainRouter() {
         {/* <Route path="/accessories" element={<Accessories />} /> */}
         <Route path="/homesupplie" element={<Homesupply />} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/jewelry" element={<Jewellery/>} />
         <Route path="*" element={<NotFound_404 />} />
         
       </Routes>

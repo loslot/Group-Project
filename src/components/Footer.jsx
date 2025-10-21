@@ -21,15 +21,15 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              Company
+              Products
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/about"
+                  to="/accessories"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  About
+                  Accessories
                 </Link>
               </li>
               <li>
@@ -51,7 +51,48 @@ export default function Footer() {
                   to="/careers"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Careers
+                  Home Supplies
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Useful Links */}
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+              Useful Links
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  to="/pricing"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/settings"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Settings
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/orders"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Orders
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/help"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Help
                 </Link>
               </li>
             </ul>
@@ -64,7 +105,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>📍 Phnom Penh, PP 10012, KH</li>
-              <li>📧 info@example.com</li>
+              <li>📧 productepress@shop.com</li>
               <li>📞 +01 234 567 88</li>
               <li>📞 +01 234 567 89</li>
             </ul>
