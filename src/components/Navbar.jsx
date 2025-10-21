@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Routes, Route } from "react-router";
+import { Router, Routes, Route, Link } from "react-router";
 export default function Navbar() {
   return (
     <div>
@@ -43,13 +43,13 @@ export default function Navbar() {
                 Electronics
               </option>
               <option className="cursor-pointer" value="clothing">
-                Clothing
+                Fashion
               </option>
               <option className="cursor-pointer" value="shoes">
                 Shoes
               </option>
               <option className="cursor-pointer" value="home">
-                House Supplies
+                <Link to="/homesupply">Home Supply</Link>
               </option>
               <option className="cursor-pointer" value="accessories">
                 Accessories

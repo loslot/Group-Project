@@ -8,6 +8,7 @@ import Beauty from "../page/Beauty";
 import Homesupply from "../page/Homesupply";
 import Accessories from "../page/Accessories";
 import Electronic from "../page/Electronic";
+import Contact from "../page/Contact";
 
 export default function MainRouter() {
   return (
@@ -20,6 +21,7 @@ export default function MainRouter() {
         <Route path="/beauty" element={<Beauty />} />
         <Route path="/accessories" element={<Accessories />} />
         <Route path="/homesupply" element={<Homesupply />} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<NotFound_404 />} />
       </Routes>
     </div>
