@@ -1,22 +1,36 @@
 import React from "react";
-import { Router, Routes, Route, Link } from "react-router";
+import { Link } from "react-router";
+import { useNavigate } from "react-router";
+
 export default function Navbar() {
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    const category = e.target.value;
+    if (category === "all") {
+      navigate("/"); // go back to homepage
+    } else {
+      navigate(`/${category}`); // go to /electronic, /clothing, etc.
+    }
+  };
   return (
     <div>
-      <header className="bg-white shadow">
-        <div className="container mx-auto px-1 py-3 flex items-center">
+      <header className=" shadow">
+        <div className="w-full mx-auto px-4 flex items-center">
           {/* <!-- logo --> */}
-          <div className="mr-auto flex items-center gap-3">
+          <div
+            onClick={() => navigate("/")}
+            className="mr-auto flex items-center gap-1 cursor-pointer"
+          >
             {/* Logo */}
             <img
-              className="h-10 w-10 object-contain drop-shadow-md"
+              className="h-20 w-30  drop-shadow-md"
               src="logo/logo.png"
               alt="Logo"
             />
 
             {/* Brand name */}
             <div className="flex flex-col">
-              <h1 className="text-xl md:text-xl font-extrabold tracking-wide text-gray-800">
+              <h1 className="text-xs md:text-xl font-extrabold tracking-wide text-gray-800 flex">
                 PRODUCT <span className="text-blue-600">EXPRESS</span>
               </h1>
               <p className="text-xs md:text-sm text-gray-500 tracking-tight">
@@ -29,44 +43,37 @@ export default function Navbar() {
           <form
             action="/search"
             method="GET"
-            className="w-full max-w-xs sm:max-w-md xl:max-w-lg 2xl:max-w-2xl bg-gray-100 rounded-md flex items-center"
+            className="w-full max-w-2xl bg-white/90 backdrop-blur-sm shadow-sm border border-gray-200 rounded-full flex items-center overflow-hidden transition-all duration-300 focus-within:shadow-md"
           >
+            {/* Category selector */}
             <select
-              className="cursor-pointer bg-transparent uppercase font-bold text-sm p-4 mr-2 outline-none text-blue-600 "
-              name="category"
+              onChange={handleChange}
+              className="cursor-pointer bg-transparent uppercase font-semibold text-sm px-4 py-3 text-blue-600 focus:outline-none"
               defaultValue="all"
             >
-              <option className="cursor-pointer" value="all">
-                All Categories
-              </option>
-              <option className="cursor-pointer" value="electronics">
-                Electronics
-              </option>
-              <option className="cursor-pointer" value="clothing">
-                Fashion
-              </option>
-              <option className="cursor-pointer" value="shoes">
-                Shoes
-              </option>
-              <option className="cursor-pointer" value="home">
-                <Link to="/homesupply">Home Supply</Link>
-              </option>
-              <option className="cursor-pointer" value="accessories">
-                Accessories
-              </option>
+              <option value="all">All Categories</option>
+              <option value="electronic">Electronics</option>
+              <option value="beauty">Beauty and SkinCare</option>
+              <option value="fashion">Fashions</option>
+              <option value="homesupplie">Home Supplies</option>
+              <option value="accessories">Accessories</option>
             </select>
 
+            {/* Vertical divider */}
+            <div className="h-6 w-px bg-blue-500/30"></div>
+
+            {/* Search input */}
             <input
-              className="flex-1 border-l border-blue-600 bg-transparent font-semibold text-sm pl-4 pr-2 outline-none"
+              className="flex-1 bg-transparent font-medium text-sm px-4 py-3 text-gray-700 placeholder-gray-400 outline-none"
               type="text"
               name="q"
-              placeholder="Search product..."
+              placeholder="Search products..."
             />
 
-            {/* clickable search button */}
+            {/* Search button */}
             <button
               type="submit"
-              className="ml-auto px-4 text-blue-600 hover:text-gray-800 focus:outline-none"
+              className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-5 py-3 rounded-full hover:from-blue-600 hover:to-blue-800 transition-all duration-300 active:scale-95"
               title="Search"
             >
               <svg
@@ -87,7 +94,7 @@ export default function Navbar() {
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <a href="#">
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                     fill="currentColor"
@@ -104,7 +111,7 @@ export default function Navbar() {
                     0
                   </div>
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     fill="currentColor"
@@ -121,7 +128,7 @@ export default function Navbar() {
                     0
                   </div>
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
                     fill="currentColor"
@@ -135,7 +142,7 @@ export default function Navbar() {
 
           {/* <!-- cart count --> */}
           <div className="ml-4 hidden sm:flex flex-col font-bold">
-            <span className="text-xs text-blue-500">Your Cart</span>
+            <span className="text-xs text-blue-500 ">Your Cart</span>
             <span>$0.00</span>
           </div>
         </div>
