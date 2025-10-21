@@ -173,7 +173,7 @@ export default function New() {
     overflow-hidden
   "
       >
-        <span className="relative z-10">New</span>
+        <span className="relative z-10">New's Product</span>
         <span
           className="
     absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400

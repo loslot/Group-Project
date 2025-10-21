@@ -107,7 +107,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>📍 Phnom Penh, PP 10012, KH</li>
-              <li>📧 info@example.com</li>
+              <li>📧 productepress@shop.com</li>
               <li>📞 +01 234 567 88</li>
               <li>📞 +01 234 567 89</li>
             </ul>
