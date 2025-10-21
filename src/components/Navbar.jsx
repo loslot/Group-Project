@@ -1,8 +1,19 @@
 import React from "react";
+import { Link } from "react-router";
+import { useNavigate } from "react-router";
 export default function Navbar() {
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    const category = e.target.value;
+    if (category === "all") {
+      navigate("/"); // go back to homepage
+    } else {
+      navigate(`/${category}`); // go to /electronic, /clothing, etc.
+    }
+  };
   return (
     <div>
-      <header className="bg-white shadow">
+      <header className=" shadow">
         <div className="container mx-auto px-1  flex items-center">
           {/* <!-- logo --> */}
           <div className="mr-auto flex items-center gap-1 cursor-pointer">
@@ -32,15 +43,15 @@ export default function Navbar() {
           >
             {/* Category selector */}
             <select
+              onChange={handleChange}
               className="cursor-pointer bg-transparent uppercase font-semibold text-sm px-4 py-3 text-blue-600 focus:outline-none"
-              name="category"
               defaultValue="all"
             >
               <option value="all">All Categories</option>
-              <option value="electronics">Electronics</option>
-              <option value="clothing">Clothing</option>
-              <option value="shoes">Shoes</option>
-              <option value="home">House Supplies</option>
+              <option value="electronic">Electronics</option>
+              <option value="beauty">Beauty and SkinCare</option>
+              <option value="fashion">Fashions</option>
+              <option value="home">Home Supplies</option>
               <option value="accessories">Accessories</option>
             </select>
 
