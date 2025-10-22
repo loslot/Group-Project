@@ -200,14 +200,13 @@ const cardsData = [
   },
   {
     id: 120,
-    image: "/Homesupply/14.png",
-    title: "Stainless Cookware Set",
-    subtitle: "Kitchen • 8 Pieces",
-    price: "$150",
-    rating: 4.7,
-    description:
-      "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
-  },
+
+    image: '/Homesupply/14.png',
+    title: 'Stainless Cookware Set',
+    subtitle: 'Kitchen • 8 Pieces',
+    price: '$150',
+    description: 'Durable stainless steel cookware with even heat distribution for perfect cooking results.'
+   },
 ];
 
 export default function New() {
