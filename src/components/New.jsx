@@ -215,7 +215,7 @@ export default function New() {
     <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 ">
       <h1
         className="
-    relative text-3xl sm:text-5xl font-extrabold mb-8 text-white text-center
+    relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center
     rounded-3xl px-12 py-6
     bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
     shadow-2xl shadow-blue-500/60
