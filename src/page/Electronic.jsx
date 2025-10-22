@@ -212,7 +212,7 @@ const cardsData = [
 
 export default function Electronic() {
   return (
-    <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
+    <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10">
       <h1 className="relative text-center mb-10 px-4">
         <span
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -227,9 +227,7 @@ export default function Electronic() {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
           <Link to={`/details/${card.id}`} key={card.id}>
-            <article
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full"
-            >
+            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full">
               <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                 <img
                   src={card.image}
@@ -273,9 +271,7 @@ export default function Electronic() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <button
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
-                  >
+                  <button className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none">
                     Add to Cart
                   </button>
                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">

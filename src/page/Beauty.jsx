@@ -549,7 +549,7 @@ export default function Beauty() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
+    <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 ">
       {/* Grid:
           small (sm): 2 columns
           md (tablet): 4 columns

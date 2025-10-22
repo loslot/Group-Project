@@ -211,7 +211,7 @@ const cardsData = [
 
 export default function Homesupply() {
   return (
-    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10 bg-slate-300">
+    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10 ">
       {/* Grid:
           small (sm): 2 columns
           md (tablet): 4 columns
