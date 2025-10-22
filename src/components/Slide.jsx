@@ -30,7 +30,7 @@ export default function Slide() {
           <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
             <img
-              src="/slides/electronic.png"
+              src="/slides/Electronic.png"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -39,7 +39,7 @@ export default function Slide() {
          <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
             <img
-              src="/slides/fashion.png"
+              src="/slides/Fashion.png"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -49,7 +49,7 @@ export default function Slide() {
         <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
             <img
-              src="/slides/Kitchen.png"
+              src="/slides/Homesupply.png"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -67,7 +67,7 @@ export default function Slide() {
         <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
             <img
-              src="/slides/wash.png"
+              src="/slides/Jewellery.png"
               alt=""
               className="w-full h-full object-cover"
             />

@@ -8,126 +8,166 @@ import React from 'react'
 
  const cardsData = [
   {
-    id: 1,
-    image: '/New/1.png',
-    title: 'Cozy Cabin',
-    subtitle: 'Mountains • 2 nights',
-    price: '$99',
-    description: 'A peaceful wooden cabin surrounded by nature, perfect for relaxing and enjoying mountain views.'
-  },
-  {
+  id: 1,
+  image: '/Beauty/8.png',
+  title: 'Pure Bloom Perfume',
+  subtitle: 'Fragrance • 50ml',
+  price: '$60',
+  description: 'A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.'
+},
+{
     id: 2,
-    image: '/New/2.png',
-    title: 'Beach House',
-    subtitle: 'Sea • 4 nights',
-    price: '$180',
-    description: 'A bright and airy house located right on the beach, ideal for sunbathing and watching sunsets.'
+    image: '/Electronic/1.png',
+    title: 'SmartX Pro Phone',
+    subtitle: 'Smartphone • 128GB',
+    price: '$699',
+    description: 'A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.'
   },
   {
     id: 3,
-    image: '/New/3.png',
-    title: 'City Loft',
-    subtitle: 'Downtown • 1 night',
-    price: '$75',
-    description: 'A modern loft in the heart of the city, close to shopping, dining, and nightlife attractions.'
+    image: '/Fashion/7.png',
+    title: 'Wool Knit Sweater',
+    subtitle: 'Men • Winter Wear',
+    price: '$70',
+    description: 'A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.'
   },
-  {
+   {
     id: 4,
-    image: '/New/4.png',
-    title: 'Lake Retreat',
-    subtitle: 'Lakeside • 3 nights',
-    price: '$140',
-    description: 'A cozy lakeside retreat offering calm waters, fresh air, and beautiful evening sunsets.'
+    image: '/Homesupply/1.png',
+    title: 'ComfortPlus Pillow Set',
+    subtitle: 'Bedroom • 2 Pieces',
+    price: '$45',
+    description: 'Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.'
   },
   {
     id: 5,
-    image: '/New/5.png',
-    title: 'Desert Escape',
-    subtitle: 'Sahara • 5 nights',
-    price: '$220',
-    description: 'An elegant desert stay with breathtaking dune views and peaceful nights under the stars.'
+    image: '/Jewellery/11.png',
+    title: 'Sapphire Queen Ring',
+    subtitle: 'Ring • Sapphire Stone',
+    price: '$390',
+    description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
   },
-  {
+   {
     id: 6,
-    image: '/New/1.png',
-    title: 'Jungle Lodge',
-    subtitle: 'Rainforest • 3 nights',
-    price: '$160',
-    description: 'Stay deep within the jungle and experience the natural beauty and sounds of the rainforest.'
+    image: '/Electronic/3.png',
+    title: 'VisionHD 4K TV',
+    subtitle: 'Display • 55-inch',
+    price: '$799',
+    description: 'A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.'
   },
   {
-    id: 7,
-    image: '/New/2.png',
-    title: 'Snow Chalet',
-    subtitle: 'Alps • 2 nights',
-    price: '$190',
-    description: 'A warm alpine chalet with a fireplace and mountain views — perfect for a winter getaway.'
-  },
-  {
+  id: 7,
+  image: '/Beauty/14.png',
+  title: 'Lavender Night Cream',
+  subtitle: 'Skincare • 50ml',
+  price: '$35',
+  description: 'A calming night cream that nourishes skin overnight and promotes a healthy glow.'
+},
+ {
     id: 8,
-    image: '/New/3.png',
-    title: 'Island Villa',
-    subtitle: 'Tropical • 5 nights',
-    price: '$250',
-    description: 'A luxury villa surrounded by turquoise waters and white sands for a dream island vacation.'
+    image: '/Jewellery/1.png',
+    title: 'Golden Elegance Necklace',
+    subtitle: 'Necklace • 18K Gold',
+    price: '$320',
+    description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
   },
-  {
+    {
     id: 9,
-    image: '/New/4.png',
-    title: 'Forest Cabin',
-    subtitle: 'Woodlands • 3 nights',
-    price: '$120',
-    description: 'Reconnect with nature in this rustic forest cabin hidden among tall trees and chirping birds.'
+    image: '/Homesupply/10.png',
+    title: 'AirBreeze Floor Fan',
+    subtitle: 'Homesupply Appliance • 3-Speed',
+    price: '$75',
+    description: 'A quiet, powerful fan that keeps your room cool and comfortable all day long.'
   },
-  {
+   {
     id: 10,
-    image: '/New/5.png',
-    title: 'Luxury Penthouse',
-    subtitle: 'Skyline • 2 nights',
-    price: '$300',
-    description: 'Enjoy a panoramic city view from a modern penthouse with elegant design and top amenities.'
+    image: '/Fashion/8.png',
+    title: 'Floral Maxi Dress',
+    subtitle: 'Women • Bohemian Style',
+    price: '$110',
+    description: 'A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.'
   },
   {
     id: 11,
-    image: '/New/1.png',
-    title: 'Farm Stay',
-    subtitle: 'Countryside • 4 nights',
-    price: '$110',
-    description: 'Experience peaceful country life, fresh air, and local food at this charming farmhouse retreat.'
-  },
-  {
-    id: 12,
-    image: '/New/2.png',
-    title: 'Riverside Bungalow',
-    subtitle: 'Riverside • 3 nights',
+    image: '/Jewellery/6.png',
+    title: 'Emerald Grace Pendant',
+    subtitle: 'Pendant • Gold Plated',
     price: '$130',
-    description: 'Relax beside a quiet river with scenic views and enjoy canoeing or fishing right at your doorstep.'
+    description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.'
+  },
+
+    {
+    id: 12,
+    image: '/Homesupply/5.png',
+    title: 'Modern Ceramic Vase',
+    subtitle: 'Decor • Minimalist Design',
+    price: '$35',
+    description: 'A sleek ceramic vase that adds a touch of modern elegance to your living space.'
   },
   {
     id: 13,
-    image: '/New/3.png',
-    title: 'Mountain Resort',
-    subtitle: 'Highlands • 5 nights',
-    price: '$270',
-    description: 'A luxury mountain resort offering fresh air, hiking trails, and panoramic views of nature.'
+    image: '/Fashion/13.png',
+    title: 'Classic Oxford Shoes',
+    subtitle: 'Men • Leather',
+    price: '$130',
+    description: 'Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.'
   },
-  {
+   {
     id: 14,
-    image: '/New/4.png',
-    title: 'Eco Dome',
-    subtitle: 'Nature Park • 2 nights',
-    price: '$150',
-    description: 'A unique eco-friendly dome offering a modern stay with a focus on sustainability and comfort.'
+    image: '/Electronic/12.png',
+    title: 'XPower 10,000mAh Power Bank',
+    subtitle: 'Charging • Fast Charge',
+    price: '$39',
+    description: 'A compact power bank with fast-charging support for phones, tablets, and other devices.'
+  },
+{
+  id: 15,
+  image: '/Beauty/19.png',
+  title: 'Herbal Hair Conditioner',
+  subtitle: 'Haircare • 250ml',
+  price: '$28',
+  description: 'A natural conditioner that strengthens and smooths hair with herbal extracts.'
+},
+{
+    id: 16,
+    image: '/Fashion/20.png',
+    title: 'Denim Mini Skirt',
+    subtitle: 'Women • Casual Wear',
+    price: '$65',
+    description: 'A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.'
   },
   {
-    id: 15,
-    image: '/New/5.png',
-    title: 'Cliffside Cottage',
-    subtitle: 'Seaside Cliff • 3 nights',
-    price: '$200',
-    description: 'A private cliffside cottage with stunning ocean views and cozy interiors for couples or families.'
-  }
-
+    id: 17,
+    image: '/Electronic/2.png',
+    title: 'AeroBuds Wireless Earphones',
+    subtitle: 'Audio • Bluetooth 5.3',
+    price: '$129',
+    description: 'Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.'
+  },
+  {
+  id: 18,
+  image: '/Beauty/16.png',
+  title: 'Diamond Glow Highlighter',
+  subtitle: 'Makeup • Compact',
+  price: '$29',
+  description: 'A shimmery highlighter that adds a radiant glow to cheekbones and eyes.'
+},
+{
+    id: 19,
+    image: '/Jewellery/14.png',
+    title: 'RosePetal Brooch',
+    subtitle: 'Brooch • Floral Design',
+    price: '$70',
+    description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
+  },
+   {
+    id: 20,
+    image: '/Homesupply/14.png',
+    title: 'Stainless Cookware Set',
+    subtitle: 'Kitchen • 8 Pieces',
+    price: '$150',
+    description: 'Durable stainless steel cookware with even heat distribution for perfect cooking results.'
+  },
 ];
 
 export default function New(){
