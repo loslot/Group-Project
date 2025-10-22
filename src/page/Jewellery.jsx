@@ -190,7 +190,7 @@ export default function Jewellery() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
-          <Link to={`/jewellery/${card.id}`} key={card.id}>
+          <Link to={`/details/${card.id}`} key={card.id}>
           <article
         
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
@@ -236,7 +236,7 @@ export default function Jewellery() {
                   <button
                     className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
                   >
-                    Book
+                    Add to cart
                   </button>
                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
                     Details
