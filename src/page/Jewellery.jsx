@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 // - Smooth hover transitions using Tailwind utilities
 const cardsData = [
   {
-    id: 1,
+    id: 121,
     image: '/Jewellery/1.png',
     title: 'Golden Elegance Necklace',
     subtitle: 'Necklace • 18K Gold',
@@ -16,7 +16,7 @@ const cardsData = [
     description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
   },
   {
-    id: 2,
+    id: 122,
     image: '/Jewellery/2.png',
     title: 'Crystal Bloom Earrings',
     subtitle: 'Earrings • Sterling Silver',
@@ -24,7 +24,7 @@ const cardsData = [
     description: 'Sparkling crystal earrings crafted from premium silver to add charm to any outfit.'
   },
   {
-    id: 3,
+    id: 123,
     image: '/Jewellery/3.png',
     title: 'RoseGold Infinity Bracelet',
     subtitle: 'Bracelet • Adjustable Fit',
@@ -32,7 +32,7 @@ const cardsData = [
     description: 'A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.'
   },
   {
-    id: 4,
+    id: 124,
     image: '/Jewellery/4.png',
     title: 'PearlDream Choker',
     subtitle: 'Necklace • Freshwater Pearls',
@@ -40,7 +40,7 @@ const cardsData = [
     description: 'A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.'
   },
   {
-    id: 5,
+    id: 125,
     image: '/Jewellery/5.png',
     title: 'DiamondTwist Ring',
     subtitle: 'Ring • White Gold',
@@ -48,7 +48,7 @@ const cardsData = [
     description: 'A stunning diamond ring set in white gold with a graceful twist design for brilliance.'
   },
   {
-    id: 6,
+    id: 126,
     image: '/Jewellery/6.png',
     title: 'Emerald Grace Pendant',
     subtitle: 'Pendant • Gold Plated',
@@ -56,7 +56,7 @@ const cardsData = [
     description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.'
   },
   {
-    id: 7,
+    id: 127,
     image: '/Jewellery/7.png',
     title: 'SilverWave Anklet',
     subtitle: 'Anklet • Sterling Silver',
@@ -64,7 +64,7 @@ const cardsData = [
     description: 'A wavy-pattern anklet made of pure silver for a chic and beachy look.'
   },
   {
-    id: 8,
+    id: 128,
     image: '/Jewellery/8.png',
     title: 'Ruby Radiance Studs',
     subtitle: 'Earrings • Ruby Stone',
@@ -72,7 +72,7 @@ const cardsData = [
     description: 'Gorgeous ruby studs set in gold for a pop of color and refined beauty.'
   },
   {
-    id: 9,
+    id: 129,
     image: '/Jewellery/9.png',
     title: 'CharmLink Bracelet',
     subtitle: 'Bracelet • Stainless Steel',
@@ -80,7 +80,7 @@ const cardsData = [
     description: 'A stylish link bracelet with customizable charms that showcase your personality.'
   },
   {
-    id: 10,
+    id: 130,
     image: '/Jewellery/10.png',
     title: 'OpalMist Necklace',
     subtitle: 'Necklace • Opal Gemstone',
@@ -88,7 +88,7 @@ const cardsData = [
     description: 'A soft glowing opal pendant necklace designed to capture natural iridescence.'
   },
   {
-    id: 11,
+    id: 131,
     image: '/Jewellery/11.png',
     title: 'Sapphire Queen Ring',
     subtitle: 'Ring • Sapphire Stone',
@@ -96,7 +96,7 @@ const cardsData = [
     description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
   },
   {
-    id: 12,
+    id: 132,
     image: '/Jewellery/12.png',
     title: 'Golden Halo Hoops',
     subtitle: 'Earrings • Gold-Plated',
@@ -104,7 +104,7 @@ const cardsData = [
     description: 'Bold yet elegant gold-plated hoops that complement both casual and formal looks.'
   },
   {
-    id: 13,
+    id: 133,
     image: '/Jewellery/13.png',
     title: 'Moonlight Bangle Set',
     subtitle: 'Bangle • Silver Finish',
@@ -112,7 +112,7 @@ const cardsData = [
     description: 'A set of three silver bangles with moonlight shine, perfect for layering.'
   },
   {
-    id: 14,
+    id: 134,
     image: '/Jewellery/14.png',
     title: 'RosePetal Brooch',
     subtitle: 'Brooch • Floral Design',
@@ -120,7 +120,7 @@ const cardsData = [
     description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
   },
   {
-    id: 15,
+    id: 135,
     image: '/Jewellery/15.png',
     title: 'Royal Crown Tiara',
     subtitle: 'Hair Accessory • Crystal',
@@ -128,7 +128,7 @@ const cardsData = [
     description: 'A sparkling tiara with crystal embellishments for special occasions and events.'
   },
   {
-    id: 16,
+    id: 136,
     image: '/Jewellery/16.png',
     title: 'Amber Glow Pendant',
     subtitle: 'Pendant • Natural Amber',
@@ -136,7 +136,7 @@ const cardsData = [
     description: 'A warm amber pendant that radiates natural beauty and vintage charm.'
   },
   {
-    id: 17,
+    id: 137,
     image: '/Jewellery/17.png',
     title: 'GoldenLeaf Hairpin Set',
     subtitle: 'Hair Accessory • Gold Tone',
@@ -144,7 +144,7 @@ const cardsData = [
     description: 'Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.'
   },
   {
-    id: 18,
+    id: 138,
     image: '/Jewellery/18.png',
     title: 'DiamondAura Necklace',
     subtitle: 'Necklace • Lab Diamond',
@@ -152,7 +152,7 @@ const cardsData = [
     description: 'A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.'
   },
   {
-    id: 19,
+    id: 139,
     image: '/Jewellery/19.png',
     title: 'Crystal Harmony Bracelet',
     subtitle: 'Bracelet • Multi-Stone',
@@ -160,7 +160,7 @@ const cardsData = [
     description: 'A beautiful bracelet with mixed crystals symbolizing peace and positive energy.'
   },
   {
-    id: 20,
+    id: 140,
     image: '/Jewellery/20.png',
     title: 'Elegance Pearl Drop Earrings',
     subtitle: 'Earrings • Gold-Plated',

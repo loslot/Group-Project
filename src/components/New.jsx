@@ -9,7 +9,7 @@ import { Link } from "react-router";
 
 const cardsData = [
   {
-  id: 1,
+  id: 101,
   image: '/Beauty/8.png',
   title: 'Pure Bloom Perfume',
   subtitle: 'Fragrance • 50ml',
@@ -17,7 +17,7 @@ const cardsData = [
   description: 'A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.'
 },
 {
-    id: 2,
+    id: 102,
     image: '/Electronic/1.png',
     title: 'SmartX Pro Phone',
     subtitle: 'Smartphone • 128GB',
@@ -25,7 +25,7 @@ const cardsData = [
     description: 'A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.'
   },
   {
-    id: 3,
+    id:103,
     image: '/Fashion/7.png',
     title: 'Wool Knit Sweater',
     subtitle: 'Men • Winter Wear',
@@ -33,7 +33,7 @@ const cardsData = [
     description: 'A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.'
   },
    {
-    id: 4,
+    id: 104,
     image: '/Homesupply/1.png',
     title: 'ComfortPlus Pillow Set',
     subtitle: 'Bedroom • 2 Pieces',
@@ -41,7 +41,7 @@ const cardsData = [
     description: 'Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.'
   },
   {
-    id: 5,
+    id: 105,
     image: '/Jewellery/11.png',
     title: 'Sapphire Queen Ring',
     subtitle: 'Ring • Sapphire Stone',
@@ -49,7 +49,7 @@ const cardsData = [
     description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
   },
    {
-    id: 6,
+    id: 106,
     image: '/Electronic/3.png',
     title: 'VisionHD 4K TV',
     subtitle: 'Display • 55-inch',
@@ -57,7 +57,7 @@ const cardsData = [
     description: 'A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.'
   },
   {
-  id: 7,
+  id: 107,
   image: '/Beauty/14.png',
   title: 'Lavender Night Cream',
   subtitle: 'Skincare • 50ml',
@@ -65,7 +65,7 @@ const cardsData = [
   description: 'A calming night cream that nourishes skin overnight and promotes a healthy glow.'
 },
  {
-    id: 8,
+    id: 108,
     image: '/Jewellery/1.png',
     title: 'Golden Elegance Necklace',
     subtitle: 'Necklace • 18K Gold',
@@ -73,7 +73,7 @@ const cardsData = [
     description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
   },
     {
-    id: 9,
+    id: 109,
     image: '/Homesupply/10.png',
     title: 'AirBreeze Floor Fan',
     subtitle: 'Homesupply Appliance • 3-Speed',
@@ -81,7 +81,7 @@ const cardsData = [
     description: 'A quiet, powerful fan that keeps your room cool and comfortable all day long.'
   },
    {
-    id: 10,
+    id: 110,
     image: '/Fashion/8.png',
     title: 'Floral Maxi Dress',
     subtitle: 'Women • Bohemian Style',
@@ -89,7 +89,7 @@ const cardsData = [
     description: 'A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.'
   },
   {
-    id: 11,
+    id: 111,
     image: '/Jewellery/6.png',
     title: 'Emerald Grace Pendant',
     subtitle: 'Pendant • Gold Plated',
@@ -98,7 +98,7 @@ const cardsData = [
   },
 
     {
-    id: 12,
+    id: 112,
     image: '/Homesupply/5.png',
     title: 'Modern Ceramic Vase',
     subtitle: 'Decor • Minimalist Design',
@@ -106,7 +106,7 @@ const cardsData = [
     description: 'A sleek ceramic vase that adds a touch of modern elegance to your living space.'
   },
   {
-    id: 13,
+    id: 113,
     image: '/Fashion/13.png',
     title: 'Classic Oxford Shoes',
     subtitle: 'Men • Leather',
@@ -114,7 +114,7 @@ const cardsData = [
     description: 'Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.'
   },
    {
-    id: 14,
+    id: 114,
     image: '/Electronic/12.png',
     title: 'XPower 10,000mAh Power Bank',
     subtitle: 'Charging • Fast Charge',
@@ -122,7 +122,7 @@ const cardsData = [
     description: 'A compact power bank with fast-charging support for phones, tablets, and other devices.'
   },
 {
-  id: 15,
+  id: 115,
   image: '/Beauty/19.png',
   title: 'Herbal Hair Conditioner',
   subtitle: 'Haircare • 250ml',
@@ -130,7 +130,7 @@ const cardsData = [
   description: 'A natural conditioner that strengthens and smooths hair with herbal extracts.'
 },
 {
-    id: 16,
+    id: 116,
     image: '/Fashion/20.png',
     title: 'Denim Mini Skirt',
     subtitle: 'Women • Casual Wear',
@@ -138,7 +138,7 @@ const cardsData = [
     description: 'A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.'
   },
   {
-    id: 17,
+    id: 117,
     image: '/Electronic/2.png',
     title: 'AeroBuds Wireless Earphones',
     subtitle: 'Audio • Bluetooth 5.3',
@@ -146,7 +146,7 @@ const cardsData = [
     description: 'Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.'
   },
   {
-  id: 18,
+  id: 118,
   image: '/Beauty/16.png',
   title: 'Diamond Glow Highlighter',
   subtitle: 'Makeup • Compact',
@@ -154,7 +154,7 @@ const cardsData = [
   description: 'A shimmery highlighter that adds a radiant glow to cheekbones and eyes.'
 },
 {
-    id: 19,
+    id: 119,
     image: '/Jewellery/14.png',
     title: 'RosePetal Brooch',
     subtitle: 'Brooch • Floral Design',
@@ -162,164 +162,14 @@ const cardsData = [
     description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
   },
    {
-    id: 20,
+    id: 120,
     image: '/Homesupply/14.png',
     title: 'Stainless Cookware Set',
     subtitle: 'Kitchen • 8 Pieces',
     price: '$150',
     description: 'Durable stainless steel cookware with even heat distribution for perfect cooking results.'
    },
-   {
-    id: 101,
-    image: "/New/1.png",
-    title: "Cozy Cabin",
-    subtitle: "Mountains • 2 nights",
-    price: "$99",
-    description:
-      "A peaceful wooden cabin surrounded by nature, perfect for relaxing and enjoying mountain views.",
-    rating: 4.5,
-  },
-  {
-    id: 102,
-    image: "/New/2.png",
-    title: "Beach House",
-    subtitle: "Sea • 4 nights",
-    price: "$180",
-    description:
-      "A bright and airy house located right on the beach, ideal for sunbathing and watching sunsets.",
-    rating: 4.8,
-  },
-  {
-    id: 103,
-    image: "/New/3.png",
-    title: "City Loft",
-    subtitle: "Downtown • 1 night",
-    price: "$75",
-    description:
-      "A modern loft in the heart of the city, close to shopping, dining, and nightlife attractions.",
-    rating: 4.2,
-  },
-  {
-    id: 104,
-    image: "/New/4.png",
-    title: "Lake Retreat",
-    subtitle: "Lakeside • 3 nights",
-    price: "$140",
-    description:
-      "A cozy lakeside retreat offering calm waters, fresh air, and beautiful evening sunsets.",
-    rating: 4.6,
-  },
-  {
-    id: 105,
-    image: "/New/5.png",
-    title: "Desert Escape",
-    subtitle: "Sahara • 5 nights",
-    price: "$220",
-    description:
-      "An elegant desert stay with breathtaking dune views and peaceful nights under the stars.",
-    rating: 4.7,
-  },
-  {
-    id: 106,
-    image: "/New/1.png",
-    title: "Jungle Lodge",
-    subtitle: "Rainforest • 3 nights",
-    price: "$160",
-    description:
-      "Stay deep within the jungle and experience the natural beauty and sounds of the rainforest.",
-    rating: 4.4,
-  },
-  {
-    id: 107,
-    image: "/New/2.png",
-    title: "Snow Chalet",
-    subtitle: "Alps • 2 nights",
-    price: "$190",
-    description:
-      "A warm alpine chalet with a fireplace and mountain views — perfect for a winter getaway.",
-    rating: 4.9,
-  },
-  {
-    id: 108,
-    image: "/New/3.png",
-    title: "Island Villa",
-    subtitle: "Tropical • 5 nights",
-    price: "$250",
-    description:
-      "A luxury villa surrounded by turquoise waters and white sands for a dream island vacation.",
-    rating: 5.0,
-  },
-  {
-    id: 109,
-    image: "/New/4.png",
-    title: "Forest Cabin",
-    subtitle: "Woodlands • 3 nights",
-    price: "$120",
-    description:
-      "Reconnect with nature in this rustic forest cabin hidden among tall trees and chirping birds.",
-    rating: 4.3,
-  },
-  {
-    id: 110,
-    image: "/New/5.png",
-    title: "Luxury Penthouse",
-    subtitle: "Skyline • 2 nights",
-    price: "$300",
-    description:
-      "Enjoy a panoramic city view from a modern penthouse with elegant design and top amenities.",
-    rating: 4.9,
-  },
-  {
-    id: 111,
-    image: "/New/1.png",
-    title: "Farm Stay",
-    subtitle: "Countryside • 4 nights",
-    price: "$110",
-    description:
-      "Experience peaceful country life, fresh air, and local food at this charming farmhouse retreat.",
-    rating: 4.2,
-  },
-  {
-    id: 112,
-    image: "/New/2.png",
-    title: "Riverside Bungalow",
-    subtitle: "Riverside • 3 nights",
-    price: "$130",
-    description:
-      "Relax beside a quiet river with scenic views and enjoy canoeing or fishing right at your doorstep.",
-    rating: 4.5,
-  },
-  {
-    id: 113,
-    image: "/New/3.png",
-    title: "Mountain Resort",
-    subtitle: "Highlands • 5 nights",
-    price: "$270",
-    description:
-      "A luxury mountain resort offering fresh air, hiking trails, and panoramic views of nature.",
-    rating: 4.8,
-  },
-  {
-    id: 114,
-    image: "/New/4.png",
-    title: "Eco Dome",
-    subtitle: "Nature Park • 2 nights",
-    price: "$150",
-    description:
-      "A unique eco-friendly dome offering a modern stay with a focus on sustainability and comfort.",
-    rating: 4.6,
-  },
-  {
-    id: 115,
-    image: "/New/5.png",
-    title: "Cliffside Cottage",
-    subtitle: "Seaside Cliff • 3 nights",
-    price: "$200",
-    description:
-      "A private cliffside cottage with stunning ocean views and cozy interiors for couples or families.",
-    rating: 4.7,
-
-  },
+   
 ];
 
 export default function New() {
