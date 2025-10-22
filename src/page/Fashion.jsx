@@ -231,18 +231,19 @@ export default function Fashion() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
+          <Link to={`/details/${card.id}`} key={card.id}>
           <article
             key={card.id}
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
           >
             <div className="relative h-48 sm:h-56  w-full overflow-hidden">
-              <Link to={`/details/${card.id}`}>
+              
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
                 />
-              </Link>
+             
               {/* Badge */}
               <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                 Featured
@@ -300,7 +301,8 @@ export default function Fashion() {
               </div>
             </div>
           </article>
-        ))}
+          </Link> 
+        ))}     
       </div>
     </section>
   );

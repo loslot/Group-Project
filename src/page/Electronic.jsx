@@ -213,12 +213,6 @@ const cardsData = [
 export default function Electronic() {
   return (
     <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300">
-      {/* Grid:
-          small (sm): 2 columns
-          md (tablet): 4 columns
-          lg (desktop): 5 columns
-      */}
-      {/* title of product page */}
       <h1 className="relative text-center mb-10 px-4">
         <span
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -234,13 +228,13 @@ export default function Electronic() {
         {cardsData.map((card) => (
           <Link to={`/details/${card.id}`} key={card.id}>
             <article
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full"
             >
               <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
                 <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                   Featured
@@ -260,13 +254,15 @@ export default function Electronic() {
                 </button>
               </div>
 
-              <div className="p-4 sm:p-5">
+              <div className="p-4 sm:p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
                       {card.title}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">{card.subtitle}</p>
+                    <p className="mt-1 text-sm text-slate-500 line-clamp-1">
+                      {card.subtitle}
+                    </p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-slate-600">From</p>

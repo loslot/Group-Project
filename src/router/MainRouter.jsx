@@ -20,7 +20,6 @@ export default function MainRouter() {
         <Route path="/electronic" element={<Electronic/>} />
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/beauty" element={<Beauty />} />
-        {/* <Route path="/accessories" element={<Accessories />} /> */}
         <Route path="/homesupplie" element={<Homesupply />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/jewelry" element={<Jewellery/>} />

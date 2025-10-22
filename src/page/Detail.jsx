@@ -1228,3 +1228,17 @@ export default function Detail() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
