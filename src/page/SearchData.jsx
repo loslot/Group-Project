@@ -1,6 +1,13 @@
-import { useParams, useNavigate } from "react-router";
+// src/data/searchData.js
+const FashionData = [ /* your 20 fashion items */ ];
+const ElectronicData = [ /* … */ ];
+const BeautyData = [ /* … */ ];
+const HomeData = [ /* … */ ];
+const JewelleryData = [ /* … */ ];
 
-const cardsData = [
+// flatten and add category tag
+const SEARCH_DATA = [
+
   {
     id: 1,
     image: "/Electronic/1.png",
@@ -9,7 +16,7 @@ const cardsData = [
     price: "$699",
     description:
       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
-  Categorization: true
+    rating: 4.7,
   },
   {
     id: 2,
@@ -19,7 +26,7 @@ const cardsData = [
     price: "$129",
     description:
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 3,
@@ -29,7 +36,7 @@ const cardsData = [
     price: "$799",
     description:
       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 4,
@@ -39,7 +46,7 @@ const cardsData = [
     price: "$199",
     description:
       "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 5,
@@ -49,7 +56,7 @@ const cardsData = [
     price: "$89",
     description:
       "A compact Bluetooth speaker with deep bass, clear treble, and 12-hour battery life.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 6,
@@ -59,7 +66,7 @@ const cardsData = [
     price: "$999",
     description:
       "A powerful ultrabook designed for productivity with fast performance and lightweight design.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 7,
@@ -69,7 +76,7 @@ const cardsData = [
     price: "$1,250",
     description:
       "Capture professional-grade photos and videos with advanced autofocus and 4K recording.",
-    Categorization: true
+    rating: 4.9,
   },
   {
     id: 8,
@@ -79,7 +86,7 @@ const cardsData = [
     price: "$79",
     description:
       "Control lights, music, and more with your voice — the perfect addition to any smart home.",
-    Categorization: true
+    rating: 4.3,
   },
   {
     id: 9,
@@ -89,7 +96,7 @@ const cardsData = [
     price: "$55",
     description:
       "A quiet and powerful fan with adjustable speeds and oscillation for full-room cooling.",
-    Categorization: true
+    rating: 4.2,
   },
   {
     id: 10,
@@ -99,7 +106,7 @@ const cardsData = [
     price: "$49",
     description:
       "High-precision gaming mouse with customizable buttons and RGB lighting for pro gamers.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 11,
@@ -109,7 +116,7 @@ const cardsData = [
     price: "$89",
     description:
       "A durable mechanical keyboard with smooth keys, anti-ghosting, and vibrant lighting effects.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 12,
@@ -119,7 +126,7 @@ const cardsData = [
     price: "$39",
     description:
       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 13,
@@ -129,7 +136,7 @@ const cardsData = [
     price: "$120",
     description:
       "Monitor your home anytime with motion detection, night vision, and mobile alerts.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 14,
@@ -139,7 +146,7 @@ const cardsData = [
     price: "$299",
     description:
       "A lightweight tablet for entertainment and productivity with a vivid HD display and long battery.",
-    Categorization: true
+    rating: 4.3,
   },
   {
     id: 15,
@@ -149,7 +156,7 @@ const cardsData = [
     price: "$159",
     description:
       "Over-ear headphones delivering immersive sound with active noise cancellation technology.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 16,
@@ -159,7 +166,7 @@ const cardsData = [
     price: "$145",
     description:
       "Cook crispy and healthy meals faster with digital temperature control and preset menus.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 17,
@@ -169,7 +176,7 @@ const cardsData = [
     price: "$175",
     description:
       "A lightning-fast external SSD for secure file storage and instant data transfers.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 18,
@@ -179,7 +186,7 @@ const cardsData = [
     price: "$299",
     description:
       "An intelligent robot vacuum that cleans efficiently with smart sensors and app control.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 19,
@@ -189,7 +196,7 @@ const cardsData = [
     price: "$210",
     description:
       "Enhance your home theater experience with powerful stereo sound and wireless connectivity.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 20,
@@ -199,7 +206,7 @@ const cardsData = [
     price: "$349",
     description:
       "A high-performance gaming monitor with ultra-smooth refresh rate and vibrant color accuracy.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 21,
@@ -209,7 +216,7 @@ const cardsData = [
     price: "$45",
     description:
       "A lightweight serum that brightens dull skin, evens tone, and restores a youthful glow.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 22,
@@ -219,7 +226,7 @@ const cardsData = [
     price: "$25",
     description:
       "A creamy matte lipstick that delivers rich color with a smooth, long-lasting finish.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 23,
@@ -229,7 +236,7 @@ const cardsData = [
     price: "$38",
     description:
       "An ultra-hydrating moisturizer infused with hyaluronic acid for all-day smoothness.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 24,
@@ -239,7 +246,7 @@ const cardsData = [
     price: "$32",
     description:
       "A nourishing oil that tames frizz, adds shine, and keeps hair soft and healthy.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 25,
@@ -249,7 +256,7 @@ const cardsData = [
     price: "$28",
     description:
       "A refreshing rose-infused mask that hydrates, purifies, and soothes the skin.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 26,
@@ -259,7 +266,7 @@ const cardsData = [
     price: "$30",
     description:
       "A nourishing shampoo enriched with argan oil to strengthen and repair damaged hair.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 27,
@@ -269,7 +276,7 @@ const cardsData = [
     price: "$22",
     description:
       "A gentle toner that tightens pores, balances pH, and refreshes your skin.",
-    Categorization: true
+    rating: 4.3,
   },
   {
     id: 28,
@@ -279,7 +286,7 @@ const cardsData = [
     price: "$60",
     description:
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 29,
@@ -289,7 +296,7 @@ const cardsData = [
     price: "$55",
     description:
       "An anti-aging eye cream that reduces puffiness, fine lines, and dark circles.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 30,
@@ -299,7 +306,7 @@ const cardsData = [
     price: "$40",
     description:
       "A lightweight liquid foundation offering smooth coverage and a natural satin finish.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 31,
@@ -309,7 +316,7 @@ const cardsData = [
     price: "$15",
     description:
       "A hydrating lip balm with a hint of berry tint to keep lips soft and naturally glowing.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 32,
@@ -319,7 +326,7 @@ const cardsData = [
     price: "$27",
     description:
       "A deeply moisturizing lotion that softens skin with coconut oil and vitamin E.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 33,
@@ -329,7 +336,7 @@ const cardsData = [
     price: "$26",
     description:
       "A deep-cleansing facial wash that removes impurities and clears clogged pores.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 34,
@@ -339,7 +346,7 @@ const cardsData = [
     price: "$35",
     description:
       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 35,
@@ -349,7 +356,7 @@ const cardsData = [
     price: "$20",
     description:
       "A soothing gel perfect for hydrating and cooling the skin after sun exposure.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 36,
@@ -359,7 +366,7 @@ const cardsData = [
     price: "$29",
     description:
       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 37,
@@ -369,7 +376,7 @@ const cardsData = [
     price: "$24",
     description:
       "A refreshing facial mist infused with natural botanicals for instant hydration.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 38,
@@ -379,7 +386,7 @@ const cardsData = [
     price: "$33",
     description:
       "An exfoliating scrub that removes dead skin and leaves your body smooth and glowing.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 39,
@@ -389,7 +396,7 @@ const cardsData = [
     price: "$28",
     description:
       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 40,
@@ -399,7 +406,7 @@ const cardsData = [
     price: "$31",
     description:
       "A refreshing body mist with aquatic and citrus notes for a clean, energizing scent.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 41,
@@ -409,7 +416,7 @@ const cardsData = [
     price: "$79",
     description:
       "A timeless denim jacket with a modern fit, perfect for layering and casual outfits.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 42,
@@ -419,7 +426,7 @@ const cardsData = [
     price: "$120",
     description:
       "A luxurious silk dress designed with soft fabric and graceful draping for special occasions.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 43,
@@ -429,7 +436,7 @@ const cardsData = [
     price: "$65",
     description:
       "Comfortable slim-fit jeans made from durable stretch denim for everyday wear.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 44,
@@ -439,7 +446,7 @@ const cardsData = [
     price: "$95",
     description:
       "A sleek and compact leather bag ideal for carrying your essentials in style.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 45,
@@ -449,7 +456,7 @@ const cardsData = [
     price: "$35",
     description:
       "Soft, breathable cotton T-shirt with a bold graphic design for a trendy, casual look.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 46,
@@ -459,7 +466,7 @@ const cardsData = [
     price: "$85",
     description:
       "Lightweight sneakers with cushioned soles and a minimalist design for everyday comfort.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 47,
@@ -469,7 +476,7 @@ const cardsData = [
     price: "$70",
     description:
       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 48,
@@ -479,7 +486,7 @@ const cardsData = [
     price: "$110",
     description:
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 49,
@@ -489,7 +496,7 @@ const cardsData = [
     price: "$55",
     description:
       "Stylish aviator sunglasses offering UV400 protection and a timeless look.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 50,
@@ -499,7 +506,7 @@ const cardsData = [
     price: "$60",
     description:
       "Lightweight linen shirt perfect for summer days with a relaxed yet polished vibe.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 51,
@@ -509,7 +516,7 @@ const cardsData = [
     price: "$40",
     description:
       "A soft, oversized knit scarf that keeps you cozy and adds texture to your outfit.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 52,
@@ -519,7 +526,7 @@ const cardsData = [
     price: "$75",
     description:
       "A lightweight, elegant skirt with pleats that flow beautifully with every step.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 53,
@@ -529,7 +536,7 @@ const cardsData = [
     price: "$130",
     description:
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 54,
@@ -539,7 +546,7 @@ const cardsData = [
     price: "$45",
     description:
       "A durable canvas tote with vintage prints, great for daily use and weekend trips.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 55,
@@ -549,7 +556,7 @@ const cardsData = [
     price: "$150",
     description:
       "A refined pearl necklace that adds sophistication to any outfit or special occasion.",
-    Categorization: true
+    rating: 4.9,
   },
   {
     id: 56,
@@ -559,7 +566,7 @@ const cardsData = [
     price: "$55",
     description:
       "Comfortable flat sandals designed for warm days with soft straps and durable soles.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 57,
@@ -569,7 +576,7 @@ const cardsData = [
     price: "$145",
     description:
       "A sharp, slim-fit blazer crafted from premium fabric for a refined, confident look.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 58,
@@ -579,7 +586,7 @@ const cardsData = [
     price: "$60",
     description:
       "A soft cotton-blend hoodie with a relaxed fit — perfect for laid-back, modern style.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 59,
@@ -589,7 +596,7 @@ const cardsData = [
     price: "$220",
     description:
       "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement.",
-    Categorization: true
+    rating: 4.9,
   },
   {
     id: 60,
@@ -599,7 +606,7 @@ const cardsData = [
     price: "$65",
     description:
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 61,
@@ -609,7 +616,7 @@ const cardsData = [
     price: "$45",
     description:
       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 62,
@@ -619,7 +626,7 @@ const cardsData = [
     price: "$70",
     description:
       "Breathable cotton bedsheets designed for durability, comfort, and a luxurious feel.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 63,
@@ -629,7 +636,7 @@ const cardsData = [
     price: "$25",
     description:
       "A soothing scented candle with lavender and vanilla notes to create a relaxing atmosphere.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 64,
@@ -639,7 +646,7 @@ const cardsData = [
     price: "$55",
     description:
       "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at Homesupply.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 65,
@@ -649,7 +656,7 @@ const cardsData = [
     price: "$35",
     description:
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
-    Categorization: true
+    rating: 4.4,
   },
   {
     id: 66,
@@ -659,7 +666,7 @@ const cardsData = [
     price: "$60",
     description:
       "A dimmable LED lamp with touch control and warm-to-cool light modes for any mood.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 67,
@@ -669,7 +676,7 @@ const cardsData = [
     price: "$48",
     description:
       "Removes impurities and provides clean, great-tasting water for the entire family.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 68,
@@ -679,7 +686,7 @@ const cardsData = [
     price: "$40",
     description:
       "Ultrasonic aroma diffuser that fills your Homesupply with relaxing natural scents and mist.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 69,
@@ -689,7 +696,7 @@ const cardsData = [
     price: "$85",
     description:
       "Precision stainless steel knives for perfect slicing, chopping, and cutting every time.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 70,
@@ -699,7 +706,7 @@ const cardsData = [
     price: "$75",
     description:
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 71,
@@ -709,7 +716,7 @@ const cardsData = [
     price: "$190",
     description:
       "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern Homesupplys.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 72,
@@ -719,7 +726,7 @@ const cardsData = [
     price: "$120",
     description:
       "Removes dust, pollen, and odors to keep your indoor air clean and breathable.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 73,
@@ -729,7 +736,7 @@ const cardsData = [
     price: "$65",
     description:
       "A soft fleece blanket that keeps you warm and cozy during chilly nights.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 74,
@@ -739,7 +746,7 @@ const cardsData = [
     price: "$150",
     description:
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 75,
@@ -749,7 +756,7 @@ const cardsData = [
     price: "$18",
     description:
       "Gentle foaming hand soap infused with essential oils for soft and clean hands.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 76,
@@ -759,7 +766,7 @@ const cardsData = [
     price: "$90",
     description:
       "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 77,
@@ -769,7 +776,7 @@ const cardsData = [
     price: "$110",
     description:
       "Elegant velvet curtains that block sunlight and add a touch of luxury to your decor.",
-    Categorization: true
+    rating: 4.7,
   },
   {
     id: 78,
@@ -779,7 +786,7 @@ const cardsData = [
     price: "$130",
     description:
       "A high-speed blender ideal for smoothies, soups, and sauces with easy-clean blades.",
-    Categorization: true
+    rating: 4.8,
   },
   {
     id: 79,
@@ -789,7 +796,7 @@ const cardsData = [
     price: "$140",
     description:
       "A plush, non-slip rug that adds warmth and comfort to your living area.",
-    Categorization: true
+    rating: 4.6,
   },
   {
     id: 80,
@@ -799,7 +806,7 @@ const cardsData = [
     price: "$50",
     description:
       "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric.",
-    Categorization: true
+    rating: 4.5,
   },
   {
     id: 81,
@@ -809,27 +816,24 @@ const cardsData = [
     price: "$320",
     description:
       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
-    Categorization: true
   },
   {
-    id: 82,
+    id: 882,
     image: "/Jewellery/2.png",
     title: "Crystal Bloom Earrings",
     subtitle: "Earrings • Sterling Silver",
     price: "$85",
     description:
       "Sparkling crystal earrings crafted from premium silver to add charm to any outfit.",
-    Categorization: true
   },
   {
-    id: 83,
+    id: 883,
     image: "/Jewellery/3.png",
     title: "RoseGold Infinity Bracelet",
     subtitle: "Bracelet • Adjustable Fit",
     price: "$110",
     description:
       "A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.",
-    Categorization: true
   },
   {
     id: 84,
@@ -839,7 +843,6 @@ const cardsData = [
     price: "$150",
     description:
       "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.",
-    Categorization: true
   },
   {
     id: 85,
@@ -849,7 +852,6 @@ const cardsData = [
     price: "$450",
     description:
       "A stunning diamond ring set in white gold with a graceful twist design for brilliance.",
-    Categorization: true
   },
   {
     id: 86,
@@ -859,7 +861,6 @@ const cardsData = [
     price: "$130",
     description:
       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
-    Categorization: true
   },
   {
     id: 87,
@@ -869,7 +870,6 @@ const cardsData = [
     price: "$65",
     description:
       "A wavy-pattern anklet made of pure silver for a chic and beachy look.",
-    Categorization: true
   },
   {
     id: 88,
@@ -879,7 +879,6 @@ const cardsData = [
     price: "$120",
     description:
       "Gorgeous ruby studs set in gold for a pop of color and refined beauty.",
-    Categorization: true
   },
   {
     id: 89,
@@ -889,7 +888,6 @@ const cardsData = [
     price: "$90",
     description:
       "A stylish link bracelet with customizable charms that showcase your personality.",
-    Categorization: true
   },
   {
     id: 90,
@@ -899,7 +897,6 @@ const cardsData = [
     price: "$210",
     description:
       "A soft glowing opal pendant necklace designed to capture natural iridescence.",
-    Categorization: true
   },
   {
     id: 91,
@@ -909,7 +906,6 @@ const cardsData = [
     price: "$390",
     description:
       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
-    Categorization: true
   },
   {
     id: 92,
@@ -919,7 +915,6 @@ const cardsData = [
     price: "$95",
     description:
       "Bold yet elegant gold-plated hoops that complement both casual and formal looks.",
-    Categorization: true
   },
   {
     id: 93,
@@ -929,7 +924,6 @@ const cardsData = [
     price: "$180",
     description:
       "A set of three silver bangles with moonlight shine, perfect for layering.",
-    Categorization: true
   },
   {
     id: 94,
@@ -939,7 +933,6 @@ const cardsData = [
     price: "$70",
     description:
       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
-    Categorization: true
   },
   {
     id: 95,
@@ -949,7 +942,6 @@ const cardsData = [
     price: "$250",
     description:
       "A sparkling tiara with crystal embellishments for special occasions and events.",
-    Categorization: true
   },
   {
     id: 96,
@@ -959,7 +951,6 @@ const cardsData = [
     price: "$140",
     description:
       "A warm amber pendant that radiates natural beauty and vintage charm.",
-    Categorization: true
   },
   {
     id: 97,
@@ -969,7 +960,6 @@ const cardsData = [
     price: "$55",
     description:
       "Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.",
-    Categorization: true
   },
   {
     id: 98,
@@ -979,7 +969,6 @@ const cardsData = [
     price: "$500",
     description:
       "A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.",
-    Categorization: true
   },
   {
     id: 99,
@@ -989,7 +978,6 @@ const cardsData = [
     price: "$115",
     description:
       "A beautiful bracelet with mixed crystals symbolizing peace and positive energy.",
-    Categorization: true
   },
   {
     id: 100,
@@ -999,7 +987,6 @@ const cardsData = [
     price: "$135",
     description:
       "Classic pearl drop earrings that add grace and sophistication to any occasion.",
-    Categorization: true
   },
   {
     id: 101,
@@ -1009,7 +996,6 @@ const cardsData = [
     price: "$60",
     description:
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
-    Categorization: true
   },
   {
     id: 102,
@@ -1019,7 +1005,6 @@ const cardsData = [
     price: "$699",
     description:
       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
-    Categorization: true
   },
   {
     id: 103,
@@ -1029,7 +1014,6 @@ const cardsData = [
     price: "$70",
     description:
       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
-    Categorization: true
   },
   {
     id: 104,
@@ -1039,7 +1023,6 @@ const cardsData = [
     price: "$45",
     description:
       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
-    Categorization: true
   },
   {
     id: 105,
@@ -1049,7 +1032,6 @@ const cardsData = [
     price: "$390",
     description:
       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
-    Categorization: true
   },
   {
     id: 106,
@@ -1059,7 +1041,6 @@ const cardsData = [
     price: "$799",
     description:
       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
-    Categorization: true
   },
   {
     id: 107,
@@ -1069,7 +1050,6 @@ const cardsData = [
     price: "$35",
     description:
       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
-    Categorization: true
   },
   {
     id: 108,
@@ -1079,7 +1059,6 @@ const cardsData = [
     price: "$320",
     description:
       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
-    Categorization: true
   },
   {
     id: 109,
@@ -1089,7 +1068,6 @@ const cardsData = [
     price: "$75",
     description:
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
-    Categorization: true
   },
   {
     id: 110,
@@ -1099,7 +1077,6 @@ const cardsData = [
     price: "$110",
     description:
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
-    Categorization: true
   },
   {
     id: 111,
@@ -1109,8 +1086,8 @@ const cardsData = [
     price: "$130",
     description:
       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
-    Categorization: true
   },
+
   {
     id: 112,
     image: "/Homesupply/5.png",
@@ -1119,7 +1096,6 @@ const cardsData = [
     price: "$35",
     description:
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
-    Categorization: true
   },
   {
     id: 113,
@@ -1129,7 +1105,6 @@ const cardsData = [
     price: "$130",
     description:
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
-    Categorization: true
   },
   {
     id: 114,
@@ -1139,7 +1114,6 @@ const cardsData = [
     price: "$39",
     description:
       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
-    Categorization: true
   },
   {
     id: 115,
@@ -1149,7 +1123,6 @@ const cardsData = [
     price: "$28",
     description:
       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
-    Categorization: true
   },
   {
     id: 116,
@@ -1159,7 +1132,6 @@ const cardsData = [
     price: "$65",
     description:
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
-    Categorization: true
   },
   {
     id: 117,
@@ -1169,7 +1141,6 @@ const cardsData = [
     price: "$129",
     description:
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
-    Categorization: true
   },
   {
     id: 118,
@@ -1179,7 +1150,6 @@ const cardsData = [
     price: "$29",
     description:
       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
-    Categorization: true
   },
   {
     id: 119,
@@ -1189,7 +1159,6 @@ const cardsData = [
     price: "$70",
     description:
       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
-    Categorization: true
   },
   {
     id: 120,
@@ -1199,16 +1168,14 @@ const cardsData = [
     price: "$150",
     description:
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
-    Categorization: true
   },
-  {
+    {
     id: 121,
     image: '/Jewellery/1.png',
     title: 'Golden Elegance Necklace',
     subtitle: 'Necklace • 18K Gold',
     price: '$320',
-    description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.',
-    Categorization: true
+    description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
   },
   {
     id: 122,
@@ -1216,8 +1183,7 @@ const cardsData = [
     title: 'Crystal Bloom Earrings',
     subtitle: 'Earrings • Sterling Silver',
     price: '$85',
-    description: 'Sparkling crystal earrings crafted from premium silver to add charm to any outfit.',
-    Categorization: true
+    description: 'Sparkling crystal earrings crafted from premium silver to add charm to any outfit.'
   },
   {
     id: 123,
@@ -1225,8 +1191,7 @@ const cardsData = [
     title: 'RoseGold Infinity Bracelet',
     subtitle: 'Bracelet • Adjustable Fit',
     price: '$110',
-    description: 'A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.',
-    Categorization: true
+    description: 'A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.'
   },
   {
     id: 124,
@@ -1234,8 +1199,7 @@ const cardsData = [
     title: 'PearlDream Choker',
     subtitle: 'Necklace • Freshwater Pearls',
     price: '$150',
-    description: 'A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.',
-    Categorization: true
+    description: 'A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.'
   },
   {
     id: 125,
@@ -1243,8 +1207,7 @@ const cardsData = [
     title: 'DiamondTwist Ring',
     subtitle: 'Ring • White Gold',
     price: '$450',
-    description: 'A stunning diamond ring set in white gold with a graceful twist design for brilliance.',
-    Categorization: true
+    description: 'A stunning diamond ring set in white gold with a graceful twist design for brilliance.'
   },
   {
     id: 126,
@@ -1252,8 +1215,7 @@ const cardsData = [
     title: 'Emerald Grace Pendant',
     subtitle: 'Pendant • Gold Plated',
     price: '$130',
-    description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.',
-    Categorization: true
+    description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.'
   },
   {
     id: 127,
@@ -1261,8 +1223,7 @@ const cardsData = [
     title: 'SilverWave Anklet',
     subtitle: 'Anklet • Sterling Silver',
     price: '$65',
-    description: 'A wavy-pattern anklet made of pure silver for a chic and beachy look.',
-    Categorization: true
+    description: 'A wavy-pattern anklet made of pure silver for a chic and beachy look.'
   },
   {
     id: 128,
@@ -1270,8 +1231,7 @@ const cardsData = [
     title: 'Ruby Radiance Studs',
     subtitle: 'Earrings • Ruby Stone',
     price: '$120',
-    description: 'Gorgeous ruby studs set in gold for a pop of color and refined beauty.',
-    Categorization: true
+    description: 'Gorgeous ruby studs set in gold for a pop of color and refined beauty.'
   },
   {
     id: 129,
@@ -1279,8 +1239,7 @@ const cardsData = [
     title: 'CharmLink Bracelet',
     subtitle: 'Bracelet • Stainless Steel',
     price: '$90',
-    description: 'A stylish link bracelet with customizable charms that showcase your personality.',
-    Categorization: true
+    description: 'A stylish link bracelet with customizable charms that showcase your personality.'
   },
   {
     id: 130,
@@ -1288,8 +1247,7 @@ const cardsData = [
     title: 'OpalMist Necklace',
     subtitle: 'Necklace • Opal Gemstone',
     price: '$210',
-    description: 'A soft glowing opal pendant necklace designed to capture natural iridescence.',
-    Categorization: true
+    description: 'A soft glowing opal pendant necklace designed to capture natural iridescence.'
   },
   {
     id: 131,
@@ -1297,8 +1255,7 @@ const cardsData = [
     title: 'Sapphire Queen Ring',
     subtitle: 'Ring • Sapphire Stone',
     price: '$390',
-    description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.',
-    Categorization: true
+    description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
   },
   {
     id: 132,
@@ -1306,8 +1263,7 @@ const cardsData = [
     title: 'Golden Halo Hoops',
     subtitle: 'Earrings • Gold-Plated',
     price: '$95',
-    description: 'Bold yet elegant gold-plated hoops that complement both casual and formal looks.',
-    Categorization: true
+    description: 'Bold yet elegant gold-plated hoops that complement both casual and formal looks.'
   },
   {
     id: 133,
@@ -1315,8 +1271,7 @@ const cardsData = [
     title: 'Moonlight Bangle Set',
     subtitle: 'Bangle • Silver Finish',
     price: '$180',
-    description: 'A set of three silver bangles with moonlight shine, perfect for layering.',
-    Categorization: true
+    description: 'A set of three silver bangles with moonlight shine, perfect for layering.'
   },
   {
     id: 134,
@@ -1324,8 +1279,7 @@ const cardsData = [
     title: 'RosePetal Brooch',
     subtitle: 'Brooch • Floral Design',
     price: '$70',
-    description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.',
-    Categorization: true
+    description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
   },
   {
     id: 135,
@@ -1333,8 +1287,7 @@ const cardsData = [
     title: 'Royal Crown Tiara',
     subtitle: 'Hair Accessory • Crystal',
     price: '$250',
-    description: 'A sparkling tiara with crystal embellishments for special occasions and events.',
-    Categorization: true
+    description: 'A sparkling tiara with crystal embellishments for special occasions and events.'
   },
   {
     id: 136,
@@ -1342,8 +1295,7 @@ const cardsData = [
     title: 'Amber Glow Pendant',
     subtitle: 'Pendant • Natural Amber',
     price: '$140',
-    description: 'A warm amber pendant that radiates natural beauty and vintage charm.',
-    Categorization: true
+    description: 'A warm amber pendant that radiates natural beauty and vintage charm.'
   },
   {
     id: 137,
@@ -1351,8 +1303,7 @@ const cardsData = [
     title: 'GoldenLeaf Hairpin Set',
     subtitle: 'Hair Accessory • Gold Tone',
     price: '$55',
-    description: 'Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.',
-    Categorization: true
+    description: 'Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.'
   },
   {
     id: 138,
@@ -1360,8 +1311,7 @@ const cardsData = [
     title: 'DiamondAura Necklace',
     subtitle: 'Necklace • Lab Diamond',
     price: '$500',
-    description: 'A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.',
-    Categorization: true
+    description: 'A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.'
   },
   {
     id: 139,
@@ -1369,8 +1319,7 @@ const cardsData = [
     title: 'Crystal Harmony Bracelet',
     subtitle: 'Bracelet • Multi-Stone',
     price: '$115',
-    description: 'A beautiful bracelet with mixed crystals symbolizing peace and positive energy.',
-    Categorization: true
+    description: 'A beautiful bracelet with mixed crystals symbolizing peace and positive energy.'
   },
   {
     id: 140,
@@ -1378,136 +1327,9 @@ const cardsData = [
     title: 'Elegance Pearl Drop Earrings',
     subtitle: 'Earrings • Gold-Plated',
     price: '$135',
-    description: 'Classic pearl drop earrings that add grace and sophistication to any occasion.',
-    Categorization: true
+    description: 'Classic pearl drop earrings that add grace and sophistication to any occasion.'
   }
 ];
 
-export default function Detail() {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const card = cardsData.find((card) => card.id === parseInt(id));
 
-  // Handle click anywhere to go back, except on interactive elements
-  const handleBackgroundClick = (e) => {
-    // Prevent navigation if clicking on interactive elements
-    if (
-      e.target.closest("button") ||
-      e.target.closest("a") ||
-      e.target.closest("img") ||
-      e.target.tagName === "BUTTON" ||
-      e.target.tagName === "A" ||
-      e.target.tagName === "IMG"
-    ) {
-      return;
-    }
-    navigate(-1); // Navigate back to the previous page
-  };
-
-  console.log("DetailCard rendered for ID:", id); // Debug log
-
-  if (!card) {
-    return (
-      <section
-        className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300 cursor-pointer"
-        onClick={handleBackgroundClick}
-      >
-        <h1 className="text-3xl font-bold text-center text-slate-900">
-          Product Not Found
-        </h1>
-        <button
-          onClick={(e) => {
-            e.stopPropagation(); // Prevent triggering the section's onClick
-            navigate(-1);
-          }}
-          className="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:bg-indigo-700"
-        >
-          Back to Products
-        </button>
-      </section>
-    );
-  }
-
-  return (
-    <section
-      className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300 cursor-pointer"
-      onClick={handleBackgroundClick}
-    >
-      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-        <button
-          onClick={(e) => {
-            e.stopPropagation(); // Prevent triggering the section's onClick
-            navigate(-1);
-          }}
-          className="inline-flex items-center gap-2 text-sm text-indigo-600 font-medium hover:underline mb-6"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10.707 3.293a1 1 0 00-1.414 0l-6 6a1 1 0 000 1.414l6 6a1 1 0 001.414-1.414L6.414 11H16a1 1 0 100-2H6.414l4.293-4.293a1 1 0 000-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Back to Products
-        </button>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl">
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-full object-cover"
-              onError={(e) =>
-                (e.target.src = "https://via.placeholder.com/300")
-              }
-            />
-            <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-              Featured
-            </div>
-          </div>
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-slate-900">
-              {card.title}
-            </h1>
-            <p className="mt-2 text-lg text-slate-500">{card.subtitle}</p>
-            <div className="mt-4 flex items-center justify-between">
-              <p className="text-2xl font-bold text-slate-900">{card.price}</p>
-              <p className="text-sm text-slate-500">⭐ {card.rating} / 5</p>
-            </div>
-            <p className="mt-4 text-slate-700">{card.description}</p>
-            <div className="mt-6 flex items-center gap-4">
-              <button
-                onClick={(e) => e.stopPropagation()} // Prevent triggering the section's onClick
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
-              >
-                Add to Cart
-              </button>
-              <button
-                onClick={(e) => e.stopPropagation()} // Prevent triggering the section's onClick
-                aria-label="save"
-                className="p-2 rounded-full bg-white shadow-md focus:outline-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-rose-500"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
-                </svg>
-              </button>
-            </div>
-            <div className="mt-4 text-sm text-slate-500">
-              <p>Free cancellation</p>
-              <p>Free shipping on orders over $50</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+export default SEARCH_DATA;
