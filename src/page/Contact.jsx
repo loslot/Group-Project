@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function Contact() {
   // State for form inputs
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   // State for toggling map visibility
@@ -20,9 +20,9 @@ export default function Contact() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
+    console.log("Form submitted:", formData);
+    alert("Message sent successfully!");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   // Toggle map visibility
@@ -31,16 +31,20 @@ export default function Contact() {
   };
 
   return (
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329
+    // <<<<<<< HEAD
+
+    // =======
+    // >>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex flex-col">
       {/* Header */}
       <header className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-8 shadow-lg">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-extrabold tracking-tight animate-fade-in-down">Contact Us</h1>
-          <p className="mt-3 text-xl font-light">Let's connect and bring your ideas to life!</p>
+          <h1 className="text-5xl font-extrabold tracking-tight animate-fade-in-down">
+            Contact Us
+          </h1>
+          <p className="mt-3 text-xl font-light">
+            Let's connect and bring your ideas to life!
+          </p>
         </div>
       </header>
 
@@ -51,12 +55,19 @@ export default function Contact() {
           <div className="lg:order-2">
             <div className="bg-white/80 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/30 transform transition-all duration-500 hover:shadow-3xl">
               <div className="text-center mb-10">
-                <h2 className="text-4xl font-bold text-gray-900 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">Send a Message</h2>
-                <p className="text-gray-600 text-lg">We're here to answer your questions. Reach out today!</p>
+                <h2 className="text-4xl font-bold text-gray-900 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                  Send a Message
+                </h2>
+                <p className="text-gray-600 text-lg">
+                  We're here to answer your questions. Reach out today!
+                </p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-semibold text-gray-800 mb-2"
+                  >
                     Full Name
                   </label>
                   <input
@@ -71,7 +82,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold text-gray-800 mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -86,7 +100,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-gray-800 mb-2"
+                  >
                     Your Message
                   </label>
                   <textarea
@@ -114,40 +131,87 @@ export default function Contact() {
           <div className="lg:order-1 space-y-12">
             {/* Contact Information */}
             <div className="bg-white/80 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/30 transform transition-all duration-500 hover:shadow-3xl">
-              <h2 className="text-4xl font-bold text-gray-900 mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">Get in Touch</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                Get in Touch
+              </h2>
               <div className="space-y-8">
                 <div className="flex items-start space-x-5 group">
                   <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-200 transition duration-300">
-                    <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg
+                      className="w-7 h-7 text-indigo-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Email</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Email
+                    </h3>
                     <p className="text-gray-600 text-lg">hello@company.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-5 group">
                   <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition duration-300">
-                    <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <svg
+                      className="w-7 h-7 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Phone</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Phone
+                    </h3>
                     <p className="text-gray-600 text-lg">+1 (555) 123-4567</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-5 group">
                   <div className="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-purple-200 transition duration-300">
-                    <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <svg
+                      className="w-7 h-7 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600 text-lg">123 Business St<br />New York, NY 10001</p>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Address
+                    </h3>
+                    <p className="text-gray-600 text-lg">
+                      123 Business St
+                      <br />
+                      New York, NY 10001
+                    </p>
                   </div>
                 </div>
               </div>
@@ -156,17 +220,19 @@ export default function Contact() {
             {/* Interactive Map */}
             <div className="bg-white/80 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/30 transform transition-all duration-500 hover:shadow-3xl">
               <div className="flex justify-between items-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">Our Location</h3>
+                <h3 className="text-2xl font-bold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                  Our Location
+                </h3>
                 <button
                   onClick={toggleMap}
                   className="px-5 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                 >
-                  {showMap ? 'Hide Map' : 'Show Map'}
+                  {showMap ? "Hide Map" : "Show Map"}
                 </button>
               </div>
               <div
                 className={`relative w-full h-96 rounded-2xl overflow-hidden shadow-xl transition-all duration-500 ease-in-out ${
-                  showMap ? 'opacity-100 scale-100' : 'opacity-0 scale-95 h-0'
+                  showMap ? "opacity-100 scale-100" : "opacity-0 scale-95 h-0"
                 }`}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 z-10"></div>
@@ -190,14 +256,22 @@ export default function Contact() {
       {/* Footer */}
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-10 mt-16">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-lg">&copy; 2025 Your Company. All rights reserved.</p>
+          <p className="text-lg">
+            &copy; 2025 Your Company. All rights reserved.
+          </p>
           <div className="mt-4 flex justify-center space-x-6">
-            <a href="#" className="text-gray-300 hover:text-white transition duration-300">
+            <a
+              href="#"
+              className="text-gray-300 hover:text-white transition duration-300"
+            >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 15h-2v-2h2v2zm0-4h-2V7h2v6zm-4 4h-2v-2h2v2zm0-4h-2V7h2v6zm-4 4H7v-2h2v2zm0-4H7V7h2v6z" />
               </svg>
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition duration-300">
+            <a
+              href="#"
+              className="text-gray-300 hover:text-white transition duration-300"
+            >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.91 8-4.94 8-9.95z" />
               </svg>
@@ -224,13 +298,9 @@ export default function Contact() {
       `}</style>
     </div>
   );
-<<<<<<< HEAD
+  // <<<<<<< HEAD
 }
 
-
-   
-
-
-=======
-}
->>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329
+// =======
+// }
+// >>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329

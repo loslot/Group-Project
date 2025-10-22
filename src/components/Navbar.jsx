@@ -151,17 +151,13 @@ export default function Navbar() {
           {/* <!-- cart count --> */}
 
           <div className="ml-4 hidden sm:flex flex-col font-bold mx-7">
-
-          <div className="ml-4 hidden sm:flex flex-col font-bold">
+            {/* <div className="ml-4 hidden sm:flex flex-col font-bold">
 
             <span>$0.00</span>
+          </div> */}
           </div>
-          </div>
-
         </div>
       </header>
     </div>
-   
-
   );
 }

@@ -305,20 +305,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
@@ -536,20 +522,26 @@ export default function Beauty() {
 
   // Simulate initial click times (1-5 minutes ago from 09:00 PM +07, October 21, 2025)
   useEffect(() => {
-    console.log('useEffect: Initializing click times');
-    const now = new Date('2025-10-21T21:00:00+07:00');
+    console.log("useEffect: Initializing click times");
+    const now = new Date("2025-10-21T21:00:00+07:00");
     const simulatedTimes = {};
-    const offsets = [2, 1, 4, 1, 5, 1, 3, 3, 1, 5, 1, 1, 3, 1, 5, 3, 1, 1, 2, 3];
+    const offsets = [
+      2, 1, 4, 1, 5, 1, 3, 3, 1, 5, 1, 1, 3, 1, 5, 3, 1, 1, 2, 3,
+    ];
     cardsData.forEach((card, index) => {
       const pastTime = new Date(now.getTime() - offsets[index] * 60 * 1000);
-      simulatedTimes[card.id] = pastTime.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' });
+      simulatedTimes[card.id] = pastTime.toLocaleString("en-US", {
+        timeZone: "Asia/Bangkok",
+      });
     });
     setClickTimes(simulatedTimes);
   }, []);
 
   const handleClick = (id, element) => {
     const now = new Date();
-    const formattedTime = now.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' });
+    const formattedTime = now.toLocaleString("en-US", {
+      timeZone: "Asia/Bangkok",
+    });
     setClickTimes((prev) => {
       console.log(`${element} clicked for ID ${id} at ${formattedTime}`);
       return { ...prev, [id]: formattedTime };
@@ -575,16 +567,20 @@ export default function Beauty() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
-          <Link to={`/details/${card.id}`} key={card.id} onClick={() => handleClick(card.id, 'Card')}>
-            <article
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
-            >
+          <Link
+            to={`/details/${card.id}`}
+            key={card.id}
+            onClick={() => handleClick(card.id, "Card")}
+          >
+            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
               <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 cursor-pointer"
-                  onError={(e) => (e.target.src = 'https://via.placeholder.com/300')}
+                  onError={(e) =>
+                    (e.target.src = "https://via.placeholder.com/300")
+                  }
                 />
                 <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                   Featured
@@ -594,7 +590,7 @@ export default function Beauty() {
                   className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleClick(card.id, 'Save');
+                    handleClick(card.id, "Save");
                   }}
                 >
                   <svg
@@ -611,26 +607,32 @@ export default function Beauty() {
               <div className="p-4 sm:p-5">
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900">{card.title}</h3>
-                    <p className="mt-1 text-sm text-slate-500">{card.subtitle}</p>
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {card.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-500">
+                      {card.subtitle}
+                    </p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-slate-600">From</p>
-                    <p className="text-lg font-bold text-slate-900">{card.price}</p>
+                    <p className="text-lg font-bold text-slate-900">
+                      {card.price}
+                    </p>
                   </div>
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
                   <button
                     className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
-                    onClick={() => handleClick(card.id, 'Book')}
+                    onClick={() => handleClick(card.id, "Book")}
                   >
-                    Book
+                    Add to Cart
                   </button>
                   <Link
                     to={`/details/${card.id}`}
                     className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none"
-                    onClick={() => handleClick(card.id, 'Details')}
+                    onClick={() => handleClick(card.id, "Details")}
                   >
                     Details
                   </Link>
