@@ -6,20 +6,22 @@ import Detail from "../page/Detail";
 import Fashion from "../page/Fashion";
 import Beauty from "../page/Beauty";
 import Homesupply from "../page/Homesupply";
-import Accessories from "../page/Jewellery";
 import Electronic from "../page/Electronic";
+import Contact from "../page/Contact";
+import Jewellery from "../page/Jewellery";
 
 export default function MainRouter() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Homepage/>} />
-        <Route path="/details" element={<Detail />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/details/:id" element={<Detail />} />
         <Route path="/electronic" element={<Electronic/>} />
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/beauty" element={<Beauty />} />
-        <Route path="/jewellery" element={<Accessories />} />
-        <Route path="/homesupply" element={<Homesupply/>} />
+        <Route path="/homesupplie" element={<Homesupply />} />
+        <Route path="/jewellery" element={<Jewellery/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<NotFound_404 />} />
       </Routes>
     </div>

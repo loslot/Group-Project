@@ -1,21 +1,43 @@
 import React from "react";
+import { Link } from "react-router";
+import { useNavigate } from "react-router";
+
 export default function Navbar() {
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    const category = e.target.value;
+    if (category === "all") {
+      navigate("/"); // go back to homepage
+    } else {
+      navigate(`/${category}`); // go to /electronic, /clothing, etc.
+    }
+  };
   return (
     <div>
-      <header className="bg-white shadow">
-        <div className="container mx-auto px-1  flex items-center">
+      <header
+        className="
+  fixed top-0 left-0 w-full z-50 
+  bg-white/80 backdrop-blur-md 
+  border-b border-gray-200 shadow-sm
+  transition-all duration-300
+"
+      >
+        <div className="w-full mx-auto px-4 flex items-center">
           {/* <!-- logo --> */}
-          <div className="mr-auto flex items-center gap-1 cursor-pointer">
+          <div
+            onClick={() => navigate("/")}
+            className="mr-auto flex items-center gap-1 cursor-pointer"
+          >
             {/* Logo */}
             <img
-              className="h-20 w-26 drop-shadow-md"
+              className="h-20 w-30  drop-shadow-md"
               src="logo/logo.png"
               alt="Logo"
             />
 
             {/* Brand name */}
             <div className="flex flex-col">
-              <h1 className="text-xl md:text-xl font-extrabold tracking-wide text-gray-800">
+              <h1 className="text-xs md:text-xl font-extrabold tracking-wide text-gray-800 flex">
                 PRODUCT <span className="text-blue-600">EXPRESS</span>
               </h1>
               <p className="text-xs md:text-sm text-gray-500 tracking-tight">
@@ -32,16 +54,17 @@ export default function Navbar() {
           >
             {/* Category selector */}
             <select
+              onChange={handleChange}
               className="cursor-pointer bg-transparent uppercase font-semibold text-sm px-4 py-3 text-blue-600 focus:outline-none"
-              name="category"
               defaultValue="all"
             >
               <option value="all">All Categories</option>
-              <option value="electronics">Electronics</option>
-              <option value="clothing">Clothing</option>
-              <option value="shoes">Shoes</option>
-              <option value="home">House Supplies</option>
-              <option value="accessories">Accessories</option>
+              <option value="electronic">Electronics</option>
+              <option value="beauty">Beauty and SkinCare</option>
+              <option value="fashion">Fashions</option>
+              <option value="homesupplie">Home Supplies</option>
+              <option value="jewellery">Jewelleries</option>
+              <option value="contact">Contact</option>
             </select>
 
             {/* Vertical divider */}
@@ -79,7 +102,7 @@ export default function Navbar() {
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <a href="#">
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                     fill="currentColor"
@@ -96,7 +119,7 @@ export default function Navbar() {
                     0
                   </div>
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     fill="currentColor"
@@ -113,7 +136,7 @@ export default function Navbar() {
                     0
                   </div>
                   <svg
-                    className="h-9 lg:h-10 p-2 text-gray-500"
+                    className="h-9 lg:h-10 p-2 text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
                     fill="currentColor"
@@ -134,6 +157,7 @@ export default function Navbar() {
             <span>$0.00</span>
           </div>
           </div>
+
         </div>
       </header>
     </div>

@@ -13,20 +13,47 @@ export default function Footer() {
               Product Express
             </h2>
             <p className="text-xs sm:text-sm leading-relaxed">
-              Delivering high-quality products and services with modern web technologies.
+              Delivering high-quality products and services with modern web
+              technologies.
             </p>
           </div>
 
-          {/* Products */}
+          {/* Company */}
           <div>
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
               Products
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/accessories" className="hover:text-blue-500 transition-colors">Accessories</Link></li>
-              <li><Link to="/fashion" className="hover:text-blue-500 transition-colors">Fashion</Link></li>
-              <li><Link to="/electronic" className="hover:text-blue-500 transition-colors">Electronics</Link></li>
-              <li><Link to="/homesupply" className="hover:text-blue-500 transition-colors">Home Supply</Link></li>
+              <li>
+                <Link
+                  to="/accessories"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Accessories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-blue-500 transition-colors"
+                ></Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/careers"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Home Supplies
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -36,12 +63,40 @@ export default function Footer() {
               Useful Links
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/pricing" className="hover:text-blue-500 transition-colors">Pricing</Link></li>
-              <li><Link to="/settings" className="hover:text-blue-500 transition-colors">Settings</Link></li>
-              <li><Link to="/orders" className="hover:text-blue-500 transition-colors">Orders</Link></li>
-              <li><Link to="/help" className="hover:text-blue-500 transition-colors">Help</Link></li>
+              <li>
+                <Link
+                  to="/pricing"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/settings"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Settings
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/orders"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Orders
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/help"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Help
+                </Link>
+              </li>
             </ul>
-          </div>
+          </div> 
 
           {/* Contact */}
           <div className="sm:col-span-2 md:col-span-1">
@@ -50,30 +105,59 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>📍 Phnom Penh, PP 10012, KH</li>
-              <li>📧 info@example.com</li>
+              <li>📧 productepress@shop.com</li>
               <li>📞 +01 234 567 88</li>
               <li>📞 +01 234 567 89</li>
             </ul>
           </div>
         </div>
       </div>
-
       {/* Social Icons */}
       <div className="border-t border-gray-300 dark:border-gray-700 py-4 sm:py-6">
         <div className="flex justify-center space-x-4 sm:space-x-6">
-          <Link to="https://facebook.com" className="text-xl hover:text-blue-500 transition-colors" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <Link
+            to="https://facebook.com"
+            className="text-xl hover:text-blue-500 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
+          >
             <i className="fab fa-facebook-f"></i>
           </Link>
-          <Link to="https://twitter.com" className="text-xl hover:text-sky-400 transition-colors" target="_blank" rel="noopener noreferrer" title="Twitter">
+          <Link
+            to="https://twitter.com"
+            className="text-xl hover:text-sky-400 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Twitter"
+          >
             <i className="fab fa-twitter"></i>
           </Link>
-          <Link to="https://instagram.com" className="text-xl hover:text-pink-500 transition-colors" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <Link
+            to="https://instagram.com"
+            className="text-xl hover:text-pink-500 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
             <i className="fab fa-instagram"></i>
           </Link>
-          <Link to="https://github.com" className="text-xl hover:text-gray-900 dark:hover:text-gray-100 transition-colors" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <Link
+            to="https://github.com"
+            className="text-xl hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+          >
             <i className="fab fa-github"></i>
           </Link>
-          <Link to="https://linkedin.com" className="text-xl hover:text-blue-700 transition-colors" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <Link
+            to="https://linkedin.com"
+            className="text-xl hover:text-blue-700 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
             <i className="fab fa-linkedin-in"></i>
           </Link>
         </div>
@@ -82,7 +166,8 @@ export default function Footer() {
       {/* Bottom Copyright */}
       <div className="bg-gray-200 dark:bg-gray-800 text-center py-3 sm:py-4">
         <p className="text-xs sm:text-sm">
-          © 2025 <span className="font-semibold">Product Express</span>. All rights reserved.
+          © 2025 <span className="font-semibold">Product Express</span>. All
+          rights reserved.
         </p>
       </div>
     </footer>

@@ -5,12 +5,12 @@ import Footer from "../components/Footer";
 
 export default function MainLayout() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen justify-between">
       <div>
         <Navbar />
       </div>
-      <div>
-        <MainRouter/>
+      <div className="pt-14 flex-grow">
+        <MainRouter />
       </div>
       <div>
         <Footer />
