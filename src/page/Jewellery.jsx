@@ -208,7 +208,7 @@ export default function Jewellery() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
-          <Link to={`/jewellery/${card.id}`} key={card.id}>
+          <Link to={`/details/${card.id}`} key={card.id}>
           <article
         
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
