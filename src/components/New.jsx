@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 // Responsive 5/4/2 Card Grid
 // - Desktop (lg): 5 columns
@@ -364,9 +365,11 @@ export default function New() {
           lg (desktop): 5 columns
       */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        
         {cardsData.map((card) => (
+          <Link to={`/details/${card.id}`} key={card.id}>
           <article
-            key={card.id}
+            
             className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
           >
             <div className="relative h-48 sm:h-56  w-full overflow-hidden">
@@ -433,6 +436,7 @@ export default function New() {
               </div>
             </div>
           </article>
+          </Link>
         ))}
       </div>
     </section>
