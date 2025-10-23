@@ -169,11 +169,7 @@ const cardsData = [
     price: '$150',
     description: 'Durable stainless steel cookware with even heat distribution for perfect cooking results.'
    },
-<<<<<<< HEAD
 
-=======
->>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329
-   
 ];
 
 export default function New() {

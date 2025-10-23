@@ -14,19 +14,49 @@ export default function Slide() {
   return (
     <>
       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
+          spaceBetween={30}
+  centeredSlides={true}
+  loop={true}
+  speed={1200} // smoother slide transition (1.2 seconds)
+  autoplay={{
+    delay: 2000, // time between slides
+    disableOnInteraction: false,
+    reverseDirection: false, // move right forever
+  }}
+  pagination={{
+    clickable: true,
+  }}
+  navigation={true}
+  modules={[Autoplay, Pagination, Navigation]}
+  className="mySwiper">
+     <SwiperSlide>
+          <div className="w-full h-[500px] bg-black ">
+            <img
+              src="/slides/Fashion.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </SwiperSlide>
+         <SwiperSlide>
+          <div className="w-full h-[500px] bg-black ">
+            <img
+              src="/slides/Jewellery.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </SwiperSlide>
+         <SwiperSlide>
+          <div className="w-full h-[500px] bg-black ">
+            <img
+              src="/slides/Skincare.png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </SwiperSlide>
+
         <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
             <img
@@ -36,15 +66,7 @@ export default function Slide() {
             />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-full h-[500px] bg-black ">
-            <img
-              src="/slides/Fashion.png"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
+       
 
         <SwiperSlide>
           <div className="w-full h-[500px] bg-black ">
@@ -55,24 +77,8 @@ export default function Slide() {
             />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-full h-[500px] bg-black ">
-            <img
-              src="/slides/Skincare.png"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-full h-[500px] bg-black ">
-            <img
-              src="/slides/Jewellery.png"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
+       
+       
       </Swiper>
     </>
   );

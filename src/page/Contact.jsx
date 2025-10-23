@@ -31,10 +31,7 @@ export default function Contact() {
   };
 
   return (
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329
+
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 flex flex-col">
       {/* Header */}
       <header className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-8 shadow-lg">
@@ -224,13 +221,4 @@ export default function Contact() {
       `}</style>
     </div>
   );
-<<<<<<< HEAD
 }
-
-
-   
-
-
-=======
-}
->>>>>>> 0c3c80cdcdec8a8ac6a737a8dd2f6f88c39da329
