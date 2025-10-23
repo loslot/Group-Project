@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router';
+import React from "react";
+import { Link } from "react-router";
 
 // Responsive 5/4/2 Card Grid
 // - Desktop (lg): 5 columns
@@ -9,177 +9,195 @@ import { Link } from 'react-router';
 const cardsData = [
   {
     id: 121,
-    image: '/Jewellery/1.png',
-    title: 'Golden Elegance Necklace',
-    subtitle: 'Necklace • 18K Gold',
-    price: '$320',
-    description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
+    image: "/Jewellery/1.png",
+    title: "Golden Elegance Necklace",
+    subtitle: "Necklace • 18K Gold",
+    price: "$320",
+    description:
+      "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
   },
   {
     id: 122,
-    image: '/Jewellery/2.png',
-    title: 'Crystal Bloom Earrings',
-    subtitle: 'Earrings • Sterling Silver',
-    price: '$85',
-    description: 'Sparkling crystal earrings crafted from premium silver to add charm to any outfit.'
+    image: "/Jewellery/2.png",
+    title: "Crystal Bloom Earrings",
+    subtitle: "Earrings • Sterling Silver",
+    price: "$85",
+    description:
+      "Sparkling crystal earrings crafted from premium silver to add charm to any outfit.",
   },
   {
     id: 123,
-    image: '/Jewellery/3.png',
-    title: 'RoseGold Infinity Bracelet',
-    subtitle: 'Bracelet • Adjustable Fit',
-    price: '$110',
-    description: 'A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.'
+    image: "/Jewellery/3.png",
+    title: "RoseGold Infinity Bracelet",
+    subtitle: "Bracelet • Adjustable Fit",
+    price: "$110",
+    description:
+      "A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.",
   },
   {
     id: 124,
-    image: '/Jewellery/4.png',
-    title: 'PearlDream Choker',
-    subtitle: 'Necklace • Freshwater Pearls',
-    price: '$150',
-    description: 'A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.'
+    image: "/Jewellery/4.png",
+    title: "PearlDream Choker",
+    subtitle: "Necklace • Freshwater Pearls",
+    price: "$150",
+    description:
+      "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.",
   },
   {
     id: 125,
-    image: '/Jewellery/5.png',
-    title: 'DiamondTwist Ring',
-    subtitle: 'Ring • White Gold',
-    price: '$450',
-    description: 'A stunning diamond ring set in white gold with a graceful twist design for brilliance.'
+    image: "/Jewellery/5.png",
+    title: "DiamondTwist Ring",
+    subtitle: "Ring • White Gold",
+    price: "$450",
+    description:
+      "A stunning diamond ring set in white gold with a graceful twist design for brilliance.",
   },
   {
     id: 126,
-    image: '/Jewellery/6.png',
-    title: 'Emerald Grace Pendant',
-    subtitle: 'Pendant • Gold Plated',
-    price: '$130',
-    description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.'
+    image: "/Jewellery/6.png",
+    title: "Emerald Grace Pendant",
+    subtitle: "Pendant • Gold Plated",
+    price: "$130",
+    description:
+      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
   },
   {
     id: 127,
-    image: '/Jewellery/7.png',
-    title: 'SilverWave Anklet',
-    subtitle: 'Anklet • Sterling Silver',
-    price: '$65',
-    description: 'A wavy-pattern anklet made of pure silver for a chic and beachy look.'
+    image: "/Jewellery/7.png",
+    title: "SilverWave Anklet",
+    subtitle: "Anklet • Sterling Silver",
+    price: "$65",
+    description:
+      "A wavy-pattern anklet made of pure silver for a chic and beachy look.",
   },
   {
     id: 128,
-    image: '/Jewellery/8.png',
-    title: 'Ruby Radiance Studs',
-    subtitle: 'Earrings • Ruby Stone',
-    price: '$120',
-    description: 'Gorgeous ruby studs set in gold for a pop of color and refined beauty.'
+    image: "/Jewellery/8.png",
+    title: "Ruby Radiance Studs",
+    subtitle: "Earrings • Ruby Stone",
+    price: "$120",
+    description:
+      "Gorgeous ruby studs set in gold for a pop of color and refined beauty.",
   },
   {
     id: 129,
-    image: '/Jewellery/9.png',
-    title: 'CharmLink Bracelet',
-    subtitle: 'Bracelet • Stainless Steel',
-    price: '$90',
-    description: 'A stylish link bracelet with customizable charms that showcase your personality.'
+    image: "/Jewellery/9.png",
+    title: "CharmLink Bracelet",
+    subtitle: "Bracelet • Stainless Steel",
+    price: "$90",
+    description:
+      "A stylish link bracelet with customizable charms that showcase your personality.",
   },
   {
     id: 130,
-    image: '/Jewellery/10.png',
-    title: 'OpalMist Necklace',
-    subtitle: 'Necklace • Opal Gemstone',
-    price: '$210',
-    description: 'A soft glowing opal pendant necklace designed to capture natural iridescence.'
+    image: "/Jewellery/10.png",
+    title: "OpalMist Necklace",
+    subtitle: "Necklace • Opal Gemstone",
+    price: "$210",
+    description:
+      "A soft glowing opal pendant necklace designed to capture natural iridescence.",
   },
   {
     id: 131,
-    image: '/Jewellery/11.png',
-    title: 'Sapphire Queen Ring',
-    subtitle: 'Ring • Sapphire Stone',
-    price: '$390',
-    description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
+    image: "/Jewellery/11.png",
+    title: "Sapphire Queen Ring",
+    subtitle: "Ring • Sapphire Stone",
+    price: "$390",
+    description:
+      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
   },
   {
     id: 132,
-    image: '/Jewellery/12.png',
-    title: 'Golden Halo Hoops',
-    subtitle: 'Earrings • Gold-Plated',
-    price: '$95',
-    description: 'Bold yet elegant gold-plated hoops that complement both casual and formal looks.'
+    image: "/Jewellery/12.png",
+    title: "Golden Halo Hoops",
+    subtitle: "Earrings • Gold-Plated",
+    price: "$95",
+    description:
+      "Bold yet elegant gold-plated hoops that complement both casual and formal looks.",
   },
   {
     id: 133,
-    image: '/Jewellery/13.png',
-    title: 'Moonlight Bangle Set',
-    subtitle: 'Bangle • Silver Finish',
-    price: '$180',
-    description: 'A set of three silver bangles with moonlight shine, perfect for layering.'
+    image: "/Jewellery/13.png",
+    title: "Moonlight Bangle Set",
+    subtitle: "Bangle • Silver Finish",
+    price: "$180",
+    description:
+      "A set of three silver bangles with moonlight shine, perfect for layering.",
   },
   {
     id: 134,
-    image: '/Jewellery/14.png',
-    title: 'RosePetal Brooch',
-    subtitle: 'Brooch • Floral Design',
-    price: '$70',
-    description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
+    image: "/Jewellery/14.png",
+    title: "RosePetal Brooch",
+    subtitle: "Brooch • Floral Design",
+    price: "$70",
+    description:
+      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
   },
   {
     id: 135,
-    image: '/Jewellery/15.png',
-    title: 'Royal Crown Tiara',
-    subtitle: 'Hair Accessory • Crystal',
-    price: '$250',
-    description: 'A sparkling tiara with crystal embellishments for special occasions and events.'
+    image: "/Jewellery/15.png",
+    title: "Royal Crown Tiara",
+    subtitle: "Hair Accessory • Crystal",
+    price: "$250",
+    description:
+      "A sparkling tiara with crystal embellishments for special occasions and events.",
   },
   {
     id: 136,
-    image: '/Jewellery/16.png',
-    title: 'Amber Glow Pendant',
-    subtitle: 'Pendant • Natural Amber',
-    price: '$140',
-    description: 'A warm amber pendant that radiates natural beauty and vintage charm.'
+    image: "/Jewellery/16.png",
+    title: "Amber Glow Pendant",
+    subtitle: "Pendant • Natural Amber",
+    price: "$140",
+    description:
+      "A warm amber pendant that radiates natural beauty and vintage charm.",
   },
   {
     id: 137,
-    image: '/Jewellery/17.png',
-    title: 'GoldenLeaf Hairpin Set',
-    subtitle: 'Hair Accessory • Gold Tone',
-    price: '$55',
-    description: 'Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.'
+    image: "/Jewellery/17.png",
+    title: "GoldenLeaf Hairpin Set",
+    subtitle: "Hair Accessory • Gold Tone",
+    price: "$55",
+    description:
+      "Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.",
   },
   {
     id: 138,
-    image: '/Jewellery/18.png',
-    title: 'DiamondAura Necklace',
-    subtitle: 'Necklace • Lab Diamond',
-    price: '$500',
-    description: 'A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.'
+    image: "/Jewellery/18.png",
+    title: "DiamondAura Necklace",
+    subtitle: "Necklace • Lab Diamond",
+    price: "$500",
+    description:
+      "A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.",
   },
   {
     id: 139,
-    image: '/Jewellery/19.png',
-    title: 'Crystal Harmony Bracelet',
-    subtitle: 'Bracelet • Multi-Stone',
-    price: '$115',
-    description: 'A beautiful bracelet with mixed crystals symbolizing peace and positive energy.'
+    image: "/Jewellery/19.png",
+    title: "Crystal Harmony Bracelet",
+    subtitle: "Bracelet • Multi-Stone",
+    price: "$115",
+    description:
+      "A beautiful bracelet with mixed crystals symbolizing peace and positive energy.",
   },
   {
     id: 140,
-    image: '/Jewellery/20.png',
-    title: 'Elegance Pearl Drop Earrings',
-    subtitle: 'Earrings • Gold-Plated',
-    price: '$135',
-    description: 'Classic pearl drop earrings that add grace and sophistication to any occasion.'
-  }
+    image: "/Jewellery/20.png",
+    title: "Elegance Pearl Drop Earrings",
+    subtitle: "Earrings • Gold-Plated",
+    price: "$135",
+    description:
+      "Classic pearl drop earrings that add grace and sophistication to any occasion.",
+  },
 ];
 
 export default function Jewellery() {
   return (
-
-    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10 bg-slate-300">
-
+    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10">
       {/* Grid:
           small (sm): 2 columns
           md (tablet): 4 columns
           lg (desktop): 5 columns
       */}
-       <h1 className="relative text-center mb-10 px-4">
+      <h1 className="relative text-center mb-10 px-4">
         <span
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
           style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.15)" }}
@@ -202,35 +220,44 @@ export default function Jewellery() {
                 className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
               />
 
-              {/* Badge */}
-              <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-                Featured
+                {/* Badge */}
+                <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+                  Featured
+                </div>
+
+                {/* Quick action */}
+                <button
+                  aria-label="save"
+                  className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 text-rose-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
+                  </svg>
+                </button>
               </div>
 
-              {/* Quick action */}
-              <button
-                aria-label="save"
-                className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-rose-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="p-4 sm:p-5">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900">{card.title}</h3>
-                  <p className="mt-1 text-sm text-slate-500">{card.subtitle}</p>
+              <div className="p-4 sm:p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {card.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-500">
+                      {card.subtitle}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-slate-600">From</p>
+                    <p className="text-lg font-bold text-slate-900">
+                      {card.price}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-sm text-slate-600">From</p>
-                  <p className="text-lg font-bold text-slate-900">{card.price}</p>
-                </div>
-              </div>
-
-             
 
                 <div className="mt-4 flex items-center justify-between">
                   <button
@@ -253,7 +280,7 @@ export default function Jewellery() {
             </article>
           </Link>
         ))}
-      </div>      
-    </section> 
+      </div>
+    </section>
   );
 }

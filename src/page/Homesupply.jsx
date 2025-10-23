@@ -211,7 +211,7 @@ const cardsData = [
 
 export default function Homesupply() {
   return (
-    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10 bg-slate-300">
+    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10 ">
       {/* Grid:
           small (sm): 2 columns
           md (tablet): 4 columns
@@ -232,9 +232,7 @@ export default function Homesupply() {
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
           <Link to={`/details/${card.id}`} key={card.id}>
-            <article
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1"
-            >
+            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
               <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                 <img
                   src={card.image}
@@ -265,7 +263,9 @@ export default function Homesupply() {
                     <h3 className="text-lg font-semibold text-slate-900">
                       {card.title}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">{card.subtitle}</p>
+                    <p className="mt-1 text-sm text-slate-500">
+                      {card.subtitle}
+                    </p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-slate-600">From</p>
@@ -276,10 +276,8 @@ export default function Homesupply() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <button
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
-                  >
-                    Book
+                  <button className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none">
+                    Add to Cart
                   </button>
                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
                     Details
