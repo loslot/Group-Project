@@ -29,15 +29,15 @@ export default function Navbar() {
 
   return (
     <div>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
-        <div className="w-full mx-auto px-4 flex items-center">
+      <header className="fixed top-0 left-0 w-full z-50 shadow-md bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
+        <div className="w-full h-[80px] mx-auto px-4 flex items-center">
           {/* --------------------  LOGO  -------------------- */}
           <div
             onClick={() => navigate("/")}
             className="mr-auto flex items-center gap-1 cursor-pointer"
           >
             <img
-              className="h-20 w-30 drop-shadow-md"
+              className="h-[110px] w-[110px] "
               src="logo/logo.png"
               alt="Logo"
             />
