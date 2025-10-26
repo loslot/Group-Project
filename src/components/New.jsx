@@ -383,7 +383,7 @@ const cardsData = [
       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
   },
   {
-    id: 131,
+    id: 90,
     image: "/Jewellery/11.png",
     title: "Sapphire Queen Ring",
     subtitle: "Ring • Sapphire Stone",
@@ -393,7 +393,7 @@ const cardsData = [
       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
   },
   {
-    id: 106,
+    id: 3,
     image: "/Electronic/3.png",
     title: "VisionHD 4K TV",
     subtitle: "Display • 55-inch",
@@ -403,7 +403,7 @@ const cardsData = [
       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
   },
   {
-    id: 107,
+    id: 34,
     image: "/Beauty/14.png",
     title: "Lavender Night Cream",
     subtitle: "Skincare • 50ml",
@@ -413,7 +413,7 @@ const cardsData = [
       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
   },
   {
-    id: 108,
+    id: 81,
     image: "/Jewellery/1.png",
     title: "Golden Elegance Necklace",
     subtitle: "Necklace • 18K Gold",
@@ -423,7 +423,7 @@ const cardsData = [
       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
   },
   {
-    id: 109,
+    id: 70,
     image: "/Homesupply/10.png",
     title: "AirBreeze Floor Fan",
     subtitle: "Homesupply Appliance • 3-Speed",
@@ -433,7 +433,7 @@ const cardsData = [
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
   },
   {
-    id: 110,
+    id: 48,
     image: "/Fashion/8.png",
     title: "Floral Maxi Dress",
     subtitle: "Women • Bohemian Style",
@@ -443,7 +443,7 @@ const cardsData = [
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
   },
   {
-    id: 111,
+    id: 85,
     image: "/Jewellery/6.png",
     title: "Emerald Grace Pendant",
     subtitle: "Pendant • Gold Plated",
@@ -453,7 +453,7 @@ const cardsData = [
       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
   },
   {
-    id: 112,
+    id: 65,
     image: "/Homesupply/5.png",
     title: "Modern Ceramic Vase",
     subtitle: "Decor • Minimalist Design",
@@ -463,7 +463,7 @@ const cardsData = [
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
   },
   {
-    id: 113,
+    id: 53,
     image: "/Fashion/13.png",
     title: "Classic Oxford Shoes",
     subtitle: "Men • Leather",
@@ -473,7 +473,7 @@ const cardsData = [
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
   },
   {
-    id: 114,
+    id: 12,
     image: "/Electronic/12.png",
     title: "XPower 10,000mAh Power Bank",
     subtitle: "Charging • Fast Charge",
@@ -483,7 +483,7 @@ const cardsData = [
       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
   },
   {
-    id: 115,
+    id: 39,
     image: "/Beauty/19.png",
     title: "Herbal Hair Conditioner",
     subtitle: "Haircare • 250ml",
@@ -493,7 +493,7 @@ const cardsData = [
       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
   },
   {
-    id: 116,
+    id: 60,
     image: "/Fashion/20.png",
     title: "Denim Mini Skirt",
     subtitle: "Women • Casual Wear",
@@ -503,7 +503,7 @@ const cardsData = [
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
   },
   {
-    id: 117,
+    id: 2,
     image: "/Electronic/2.png",
     title: "AeroBuds Wireless Earphones",
     subtitle: "Audio • Bluetooth 5.3",
@@ -513,7 +513,7 @@ const cardsData = [
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
   },
   {
-    id: 118,
+    id: 36,
     image: "/Beauty/16.png",
     title: "Diamond Glow Highlighter",
     subtitle: "Makeup • Compact",
@@ -523,7 +523,7 @@ const cardsData = [
       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
   },
   {
-    id: 119,
+    id: 93,
     image: "/Jewellery/14.png",
     title: "RosePetal Brooch",
     subtitle: "Brooch • Floral Design",
@@ -533,7 +533,7 @@ const cardsData = [
       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
   },
   {
-    id: 120,
+    id: 74,
     image: "/Homesupply/14.png",
     title: "Stainless Cookware Set",
     subtitle: "Kitchen • 8 Pieces",
