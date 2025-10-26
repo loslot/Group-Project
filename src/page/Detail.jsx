@@ -1,5 +1,13 @@
 import { useParams, useNavigate } from "react-router";
 
+// new item add
+import { useState } from "react";
+import { Link } from "react-router";
+import { useContext } from "react";
+import { CartContext } from "../components/CartContext";
+
+
+
 const cardsData = [
   {
     id: 1,
@@ -1383,14 +1391,147 @@ const cardsData = [
   }
 ];
 
+// export default function Detail() {
+//   const { id } = useParams();
+//   const navigate = useNavigate();
+//   const card = cardsData.find((card) => card.id === parseInt(id));
+
+//   // Handle click anywhere to go back, except on interactive elements
+//   const handleBackgroundClick = (e) => {
+//     // Prevent navigation if clicking on interactive elements
+//     if (
+//       e.target.closest("button") ||
+//       e.target.closest("a") ||
+//       e.target.closest("img") ||
+//       e.target.tagName === "BUTTON" ||
+//       e.target.tagName === "A" ||
+//       e.target.tagName === "IMG"
+//     ) {
+//       return;
+//     }
+//     navigate(-1); // Navigate back to the previous page
+//   };
+
+//   console.log("DetailCard rendered for ID:", id); // Debug log
+
+//   if (!card) {
+//     return (
+//       <section
+//         className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300 cursor-pointer"
+//         onClick={handleBackgroundClick}
+//       >
+//         <h1 className="text-3xl font-bold text-center text-slate-900">
+//           Product Not Found
+//         </h1>
+//         <button
+//           onClick={(e) => {
+//             e.stopPropagation(); // Prevent triggering the section's onClick
+//             navigate(-1);
+//           }}
+//           className="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:bg-indigo-700"
+//         >
+//           Back to Products
+//         </button>
+//       </section>
+//     );
+//   }
+
+//   return (
+//     <section
+//       className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-300 cursor-pointer"
+//       onClick={handleBackgroundClick}
+//     >
+//       <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+//         <button
+//           onClick={(e) => {
+//             e.stopPropagation(); // Prevent triggering the section's onClick
+//             navigate(-1);
+//           }}
+//           className="inline-flex items-center gap-2 text-sm text-indigo-600 font-medium hover:underline mb-6"
+//         >
+//           <svg
+//             xmlns="http://www.w3.org/2000/svg"
+//             className="h-4 w-4"
+//             viewBox="0 0 20 20"
+//             fill="currentColor"
+//           >
+//             <path
+//               fillRule="evenodd"
+//               d="M10.707 3.293a1 1 0 00-1.414 0l-6 6a1 1 0 000 1.414l6 6a1 1 0 001.414-1.414L6.414 11H16a1 1 0 100-2H6.414l4.293-4.293a1 1 0 000-1.414z"
+//               clipRule="evenodd"
+//             />
+//           </svg>
+//           Back to Products
+//         </button>
+//         <div className="grid md:grid-cols-2 gap-8">
+//           <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl">
+//             <img
+//               src={card.image}
+//               alt={card.title}
+//               className="w-full h-full object-cover"
+//               onError={(e) =>
+//                 (e.target.src = "https://via.placeholder.com/300")
+//               }
+//             />
+//             <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+//               Featured
+//             </div>
+//           </div>
+//           <div>
+//             <h1 className="text-3xl md:text-4xl font-bold text-slate-900">
+//               {card.title}
+//             </h1>
+//             <p className="mt-2 text-lg text-slate-500">{card.subtitle}</p>
+//             <div className="mt-4 flex items-center justify-between">
+//               <p className="text-2xl font-bold text-slate-900">{card.price}</p>
+//               <p className="text-sm text-slate-500">⭐ {card.rating} / 5</p>
+//             </div>
+//             <p className="mt-4 text-slate-700">{card.description}</p>
+//             <div className="mt-6 flex items-center gap-4">
+//               <button
+//                 onClick={(e) => e.stopPropagation()} // Prevent triggering the section's onClick
+//                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+//               >
+//                 Add to Cart
+//               </button>
+//               <button
+//                 onClick={(e) => e.stopPropagation()} // Prevent triggering the section's onClick
+//                 aria-label="save"
+//                 className="p-2 rounded-full bg-white shadow-md focus:outline-none"
+//               >
+//                 <svg
+//                   xmlns="http://www.w3.org/2000/svg"
+//                   className="h-5 w-5 text-rose-500"
+//                   viewBox="0 0 20 20"
+//                   fill="currentColor"
+//                 >
+//                   <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
+//                 </svg>
+//               </button>
+//             </div>
+//             <div className="mt-4 text-sm text-slate-500">
+//               <p>Free cancellation</p>
+//               <p>Free shipping on orders over $50</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
+
 export default function Detail() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext); // Access addToCart from context
   const card = cardsData.find((card) => card.id === parseInt(id));
 
   // Handle click anywhere to go back, except on interactive elements
   const handleBackgroundClick = (e) => {
-    // Prevent navigation if clicking on interactive elements
     if (
       e.target.closest("button") ||
       e.target.closest("a") ||
@@ -1401,7 +1542,7 @@ export default function Detail() {
     ) {
       return;
     }
-    navigate(-1); // Navigate back to the previous page
+    navigate(-1);
   };
 
   console.log("DetailCard rendered for ID:", id); // Debug log
@@ -1417,7 +1558,7 @@ export default function Detail() {
         </h1>
         <button
           onClick={(e) => {
-            e.stopPropagation(); // Prevent triggering the section's onClick
+            e.stopPropagation();
             navigate(-1);
           }}
           className="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:bg-indigo-700"
@@ -1436,7 +1577,7 @@ export default function Detail() {
       <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
         <button
           onClick={(e) => {
-            e.stopPropagation(); // Prevent triggering the section's onClick
+            e.stopPropagation();
             navigate(-1);
           }}
           className="inline-flex items-center gap-2 text-sm text-indigo-600 font-medium hover:underline mb-6"
@@ -1461,9 +1602,7 @@ export default function Detail() {
               src={card.image}
               alt={card.title}
               className="w-full h-full object-cover"
-              onError={(e) =>
-                (e.target.src = "https://via.placeholder.com/300")
-              }
+              onError={(e) => (e.target.src = "https://via.placeholder.com/300")}
             />
             <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
               Featured
@@ -1476,18 +1615,21 @@ export default function Detail() {
             <p className="mt-2 text-lg text-slate-500">{card.subtitle}</p>
             <div className="mt-4 flex items-center justify-between">
               <p className="text-2xl font-bold text-slate-900">{card.price}</p>
-              <p className="text-sm text-slate-500">⭐ {card.rating} / 5</p>
+              <p className="text-sm text-slate-500">⭐ {card.rating || 'N/A'} / 5</p>
             </div>
             <p className="mt-4 text-slate-700">{card.description}</p>
             <div className="mt-6 flex items-center gap-4">
               <button
-                onClick={(e) => e.stopPropagation()} // Prevent triggering the section's onClick
+                onClick={(e) => {
+                  e.stopPropagation();
+                  addToCart(card); // Add item to cart
+                }}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
               >
                 Add to Cart
               </button>
               <button
-                onClick={(e) => e.stopPropagation()} // Prevent triggering the section's onClick
+                onClick={(e) => e.stopPropagation()}
                 aria-label="save"
                 className="p-2 rounded-full bg-white shadow-md focus:outline-none"
               >

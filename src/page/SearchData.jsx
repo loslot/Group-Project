@@ -988,180 +988,9 @@ const SEARCH_DATA = [
     description:
       "Classic pearl drop earrings that add grace and sophistication to any occasion.",
   },
-  // {
-  //   id: 101,
-  //   image: "/Beauty/8.png",
-  //   title: "Pure Bloom Perfume",
-  //   subtitle: "Fragrance • 50ml",
-  //   price: "$60",
-  //   description:
-  //     "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
-  // },
-  // {
-  //   id: 102,
-  //   image: "/Electronic/1.png",
-  //   title: "SmartX Pro Phone",
-  //   subtitle: "Smartphone • 128GB",
-  //   price: "$699",
-  //   description:
-  //     "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
-  // },
-  // {
-  //   id: 103,
-  //   image: "/Fashion/7.png",
-  //   title: "Wool Knit Sweater",
-  //   subtitle: "Men • Winter Wear",
-  //   price: "$70",
-  //   description:
-  //     "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
-  // },
-  // {
-  //   id: 104,
-  //   image: "/Homesupply/1.png",
-  //   title: "ComfortPlus Pillow Set",
-  //   subtitle: "Bedroom • 2 Pieces",
-  //   price: "$45",
-  //   description:
-  //     "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
-  // },
-  // {
-  //   id: 105,
-  //   image: "/Jewellery/11.png",
-  //   title: "Sapphire Queen Ring",
-  //   subtitle: "Ring • Sapphire Stone",
-  //   price: "$390",
-  //   description:
-  //     "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
-  // },
-  // {
-  //   id: 106,
-  //   image: "/Electronic/3.png",
-  //   title: "VisionHD 4K TV",
-  //   subtitle: "Display • 55-inch",
-  //   price: "$799",
-  //   description:
-  //     "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
-  // },
-  // {
-  //   id: 107,
-  //   image: "/Beauty/14.png",
-  //   title: "Lavender Night Cream",
-  //   subtitle: "Skincare • 50ml",
-  //   price: "$35",
-  //   description:
-  //     "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
-  // },
-  // {
-  //   id: 108,
-  //   image: "/Jewellery/1.png",
-  //   title: "Golden Elegance Necklace",
-  //   subtitle: "Necklace • 18K Gold",
-  //   price: "$320",
-  //   description:
-  //     "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
-  // },
-  // {
-  //   id: 109,
-  //   image: "/Homesupply/10.png",
-  //   title: "AirBreeze Floor Fan",
-  //   subtitle: "Homesupply Appliance • 3-Speed",
-  //   price: "$75",
-  //   description:
-  //     "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
-  // },
-  // {
-  //   id: 110,
-  //   image: "/Fashion/8.png",
-  //   title: "Floral Maxi Dress",
-  //   subtitle: "Women • Bohemian Style",
-  //   price: "$110",
-  //   description:
-  //     "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
-  // },
-  // {
-  //   id: 111,
-  //   image: "/Jewellery/6.png",
-  //   title: "Emerald Grace Pendant",
-  //   subtitle: "Pendant • Gold Plated",
-  //   price: "$130",
-  //   description:
-  //     "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
-  // },
-
-  // {
-  //   id: 112,
-  //   image: "/Homesupply/5.png",
-  //   title: "Modern Ceramic Vase",
-  //   subtitle: "Decor • Minimalist Design",
-  //   price: "$35",
-  //   description:
-  //     "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
-  // },
-  // {
-  //   id: 113,
-  //   image: "/Fashion/13.png",
-  //   title: "Classic Oxford Shoes",
-  //   subtitle: "Men • Leather",
-  //   price: "$130",
-  //   description:
-  //     "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
-  // },
-  // {
-  //   id: 114,
-  //   image: "/Electronic/12.png",
-  //   title: "XPower 10,000mAh Power Bank",
-  //   subtitle: "Charging • Fast Charge",
-  //   price: "$39",
-  //   description:
-  //     "A compact power bank with fast-charging support for phones, tablets, and other devices.",
-  // },
-  // {
-  //   id: 115,
-  //   image: "/Beauty/19.png",
-  //   title: "Herbal Hair Conditioner",
-  //   subtitle: "Haircare • 250ml",
-  //   price: "$28",
-  //   description:
-  //     "A natural conditioner that strengthens and smooths hair with herbal extracts.",
-  // },
-  // {
-  //   id: 116,
-  //   image: "/Fashion/20.png",
-  //   title: "Denim Mini Skirt",
-  //   subtitle: "Women • Casual Wear",
-  //   price: "$65",
-  //   description:
-  //     "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
-  // },
-  // {
-  //   id: 117,
-  //   image: "/Electronic/2.png",
-  //   title: "AeroBuds Wireless Earphones",
-  //   subtitle: "Audio • Bluetooth 5.3",
-  //   price: "$129",
-  //   description:
-  //     "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
-  // },
-  // {
-  //   id: 118,
-  //   image: "/Beauty/16.png",
-  //   title: "Diamond Glow Highlighter",
-  //   subtitle: "Makeup • Compact",
-  //   price: "$29",
-  //   description:
-  //     "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
-  // },
-  // {
-  //   id: 119,
-  //   image: "/Jewellery/14.png",
-  //   title: "RosePetal Brooch",
-  //   subtitle: "Brooch • Floral Design",
-  //   price: "$70",
-  //   description:
-  //     "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
-  // },
+  
   {
-    id: 120,
+    id: 101,
     image: "/Homesupply/14.png",
     title: "Stainless Cookware Set",
     subtitle: "Kitchen • 8 Pieces",
@@ -1170,7 +999,7 @@ const SEARCH_DATA = [
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
   },
     {
-    id: 121,
+    id: 102,
     image: '/Jewellery/1.png',
     title: 'Golden Elegance Necklace',
     subtitle: 'Necklace • 18K Gold',
@@ -1178,7 +1007,7 @@ const SEARCH_DATA = [
     description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
   },
   {
-    id: 122,
+    id: 102,
     image: '/Jewellery/2.png',
     title: 'Crystal Bloom Earrings',
     subtitle: 'Earrings • Sterling Silver',
@@ -1186,7 +1015,7 @@ const SEARCH_DATA = [
     description: 'Sparkling crystal earrings crafted from premium silver to add charm to any outfit.'
   },
   {
-    id: 123,
+    id: 103,
     image: '/Jewellery/3.png',
     title: 'RoseGold Infinity Bracelet',
     subtitle: 'Bracelet • Adjustable Fit',
@@ -1194,7 +1023,7 @@ const SEARCH_DATA = [
     description: 'A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.'
   },
   {
-    id: 124,
+    id: 104,
     image: '/Jewellery/4.png',
     title: 'PearlDream Choker',
     subtitle: 'Necklace • Freshwater Pearls',
@@ -1202,7 +1031,7 @@ const SEARCH_DATA = [
     description: 'A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.'
   },
   {
-    id: 125,
+    id: 105,
     image: '/Jewellery/5.png',
     title: 'DiamondTwist Ring',
     subtitle: 'Ring • White Gold',
@@ -1210,7 +1039,7 @@ const SEARCH_DATA = [
     description: 'A stunning diamond ring set in white gold with a graceful twist design for brilliance.'
   },
   {
-    id: 126,
+    id: 106,
     image: '/Jewellery/6.png',
     title: 'Emerald Grace Pendant',
     subtitle: 'Pendant • Gold Plated',
@@ -1218,7 +1047,7 @@ const SEARCH_DATA = [
     description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.'
   },
   {
-    id: 127,
+    id: 107,
     image: '/Jewellery/7.png',
     title: 'SilverWave Anklet',
     subtitle: 'Anklet • Sterling Silver',
@@ -1226,7 +1055,7 @@ const SEARCH_DATA = [
     description: 'A wavy-pattern anklet made of pure silver for a chic and beachy look.'
   },
   {
-    id: 128,
+    id: 108,
     image: '/Jewellery/8.png',
     title: 'Ruby Radiance Studs',
     subtitle: 'Earrings • Ruby Stone',
@@ -1234,7 +1063,7 @@ const SEARCH_DATA = [
     description: 'Gorgeous ruby studs set in gold for a pop of color and refined beauty.'
   },
   {
-    id: 129,
+    id: 109,
     image: '/Jewellery/9.png',
     title: 'CharmLink Bracelet',
     subtitle: 'Bracelet • Stainless Steel',
@@ -1242,7 +1071,7 @@ const SEARCH_DATA = [
     description: 'A stylish link bracelet with customizable charms that showcase your personality.'
   },
   {
-    id: 130,
+    id: 110,
     image: '/Jewellery/10.png',
     title: 'OpalMist Necklace',
     subtitle: 'Necklace • Opal Gemstone',
@@ -1250,7 +1079,7 @@ const SEARCH_DATA = [
     description: 'A soft glowing opal pendant necklace designed to capture natural iridescence.'
   },
   {
-    id: 131,
+    id: 111,
     image: '/Jewellery/11.png',
     title: 'Sapphire Queen Ring',
     subtitle: 'Ring • Sapphire Stone',
@@ -1258,7 +1087,7 @@ const SEARCH_DATA = [
     description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
   },
   {
-    id: 132,
+    id: 112,
     image: '/Jewellery/12.png',
     title: 'Golden Halo Hoops',
     subtitle: 'Earrings • Gold-Plated',
@@ -1266,7 +1095,7 @@ const SEARCH_DATA = [
     description: 'Bold yet elegant gold-plated hoops that complement both casual and formal looks.'
   },
   {
-    id: 133,
+    id: 113,
     image: '/Jewellery/13.png',
     title: 'Moonlight Bangle Set',
     subtitle: 'Bangle • Silver Finish',
@@ -1274,7 +1103,7 @@ const SEARCH_DATA = [
     description: 'A set of three silver bangles with moonlight shine, perfect for layering.'
   },
   {
-    id: 134,
+    id: 114,
     image: '/Jewellery/14.png',
     title: 'RosePetal Brooch',
     subtitle: 'Brooch • Floral Design',
@@ -1282,7 +1111,7 @@ const SEARCH_DATA = [
     description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
   },
   {
-    id: 135,
+    id: 115,
     image: '/Jewellery/15.png',
     title: 'Royal Crown Tiara',
     subtitle: 'Hair Accessory • Crystal',
@@ -1290,7 +1119,7 @@ const SEARCH_DATA = [
     description: 'A sparkling tiara with crystal embellishments for special occasions and events.'
   },
   {
-    id: 136,
+    id: 116,
     image: '/Jewellery/16.png',
     title: 'Amber Glow Pendant',
     subtitle: 'Pendant • Natural Amber',
@@ -1298,7 +1127,7 @@ const SEARCH_DATA = [
     description: 'A warm amber pendant that radiates natural beauty and vintage charm.'
   },
   {
-    id: 137,
+    id: 117,
     image: '/Jewellery/17.png',
     title: 'GoldenLeaf Hairpin Set',
     subtitle: 'Hair Accessory • Gold Tone',
@@ -1306,7 +1135,7 @@ const SEARCH_DATA = [
     description: 'Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.'
   },
   {
-    id: 138,
+    id: 118,
     image: '/Jewellery/18.png',
     title: 'DiamondAura Necklace',
     subtitle: 'Necklace • Lab Diamond',
@@ -1314,7 +1143,7 @@ const SEARCH_DATA = [
     description: 'A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.'
   },
   {
-    id: 139,
+    id: 119,
     image: '/Jewellery/19.png',
     title: 'Crystal Harmony Bracelet',
     subtitle: 'Bracelet • Multi-Stone',
@@ -1322,7 +1151,7 @@ const SEARCH_DATA = [
     description: 'A beautiful bracelet with mixed crystals symbolizing peace and positive energy.'
   },
   {
-    id: 140,
+    id: 120,
     image: '/Jewellery/20.png',
     title: 'Elegance Pearl Drop Earrings',
     subtitle: 'Earrings • Gold-Plated',

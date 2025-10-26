@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
+import { useContext } from "react";
+import { CartContext } from "../components/CartContext";
 
 // Responsive 5/4/2 Card Grid
 // - Desktop (lg): 5 columns
@@ -209,39 +211,78 @@ const cardsData = [
   },
 ];
 
-export default function Homesupply() {
-  return (
-    <section className="max-w-7xl mx-auto px-4 my-3 sm:px-6 lg:px-8 py-10 ">
-      {/* Grid:
-          small (sm): 2 columns
-          md (tablet): 4 columns
-          lg (desktop): 5 columns
-      */}
+export default function Fashion() {
+  const { cart, addToCart } = useContext(CartContext);
 
-      <h1 className="relative text-center mb-10 px-4">
+  // Get the quantity of an item in the cart
+  const getItemQuantity = (id) => {
+    const item = cart.find((cartItem) => cartItem.id === id);
+    return item ? item.quantity : 0;
+  };
+
+  return (
+    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10">
+      <h1
+        className="
+          relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center
+          rounded-3xl px-12 py-6
+          bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+          shadow-2xl shadow-indigo-500/60
+          uppercase tracking-wider
+          mx-auto w-fit
+          overflow-hidden
+        "
+      >
+        <span className="relative z-10">HOMESUPPLY</span>
         <span
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-          style={{
-            textShadow: "2px 2px 4px rgba(0,0,0,0.15)",
-          }}
-        >
-          HOME SUPPLIES
-        </span>
+          className="
+            absolute inset-0 bg-gradient-to-r from-indigo-200 via-white to-indigo-400
+            opacity-30
+            animate-[shimmer_2s_infinite]
+          "
+        ></span>
       </h1>
+
+      <style jsx>{`
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+      `}</style>
+
+      {/* Cart Summary */}
+      <div className="mb-6 text-right">
+        <Link
+          to="/cart"
+          className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-sm hover:scale-105 transition-transform"
+        >
+          View Cart ({cart.reduce((total, item) => total + item.quantity, 0)})
+        </Link>
+      </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
           <Link to={`/details/${card.id}`} key={card.id}>
-            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
+            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col min-h-[350px]">
+              {/* IMAGE */}
               <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
                 />
-                <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+
+                {/* BADGE */}
+                <div className="absolute left-3 top-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                   Featured
                 </div>
+
+                {/* WISHLIST ICON */}
                 <button
                   aria-label="save"
                   className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
@@ -257,13 +298,14 @@ export default function Homesupply() {
                 </button>
               </div>
 
-              <div className="p-4 sm:p-5">
+              {/* CONTENT */}
+              <div className="p-4 sm:p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
                       {card.title}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-slate-500 line-clamp-1">
                       {card.subtitle}
                     </p>
                   </div>
@@ -276,8 +318,15 @@ export default function Homesupply() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <button className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none">
-                    Add to Cart
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent Link navigation
+                      addToCart(card);
+                      alert(`${card.title} added to cart!`);
+                    }}
+                    className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                  >
+                    Add to Cart {getItemQuantity(card.id) > 0 && `(${getItemQuantity(card.id)})`}
                   </button>
                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
                     Details
@@ -285,6 +334,7 @@ export default function Homesupply() {
                 </div>
               </div>
 
+              {/* FOOTER */}
               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                 <div className="flex items-center justify-between text-xs text-slate-500">
                   <span>⭐ {card.rating}</span>
