@@ -171,12 +171,10 @@ import React from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { CartContext } from "../components/CartContext";
 
-
 export default function Navbar() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { cartCount } = React.useContext(CartContext);
-  
 
   const categorySegment = pathname.split("/")[1] || "all";
 
@@ -199,14 +197,17 @@ export default function Navbar() {
   return (
     <div>
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
-        <div className="w-full mx-auto px-4 flex items-center justify-between">
+        <div
+          className="w-full h-[105] my-1 mx-auto px-6
+         flex items-center justify-between"
+        >
           {/* Logo Section */}
           <div
             onClick={() => navigate("/")}
             className="flex items-center gap-1 cursor-pointer"
           >
             <img
-              className="h-[110px] w-[110px]"
+              className="h-full w-full max-h-[80px] max-w-[110px]"
               src="/logo/logo.png"
               alt="Logo"
             />
