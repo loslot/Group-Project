@@ -1009,8 +1009,6 @@ const cardsData = [
       "Gorgeous gold-plated earrings with a pearl drop design for a refined look.",
     Categorization: true
   },
-
-  
 ];
 
 // export default function Detail() {

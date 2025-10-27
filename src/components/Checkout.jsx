@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
-import { useNavigate, Link } from 'react-router';
-import { CartContext } from '../components/CartContext';
-import { motion } from 'framer-motion';
+import React, { useContext } from "react";
+import { useNavigate, Link } from "react-router";
+import { CartContext } from "../components/CartContext";
+import { motion } from "framer-motion";
 
 export default function Checkout() {
-  const { cart, updateQuantity, removeFromCart, totalPrice } = useContext(CartContext);
+  const { cart, updateQuantity, removeFromCart, totalPrice } =
+    useContext(CartContext);
   const navigate = useNavigate();
 
   const containerVariants = {
@@ -12,8 +13,8 @@ export default function Checkout() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: 'easeOut' }
-    }
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const itemVariants = {
@@ -21,8 +22,8 @@ export default function Checkout() {
     visible: (i) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: i * 0.1, duration: 0.4, ease: 'easeOut' }
-    })
+      transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
+    }),
   };
 
   const headerVariants = {
@@ -30,8 +31,8 @@ export default function Checkout() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, ease: 'easeOut' }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const navVariants = {
@@ -39,14 +40,14 @@ export default function Checkout() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: 'easeOut' }
-    }
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Purchase completed successfully!');
-    navigate('/');
+    alert("Purchase completed successfully!");
+    navigate("/");
   };
 
   return (
@@ -56,42 +57,6 @@ export default function Checkout() {
       initial="hidden"
       animate="visible"
     >
-      {/* Navigation Bar */}
-      <motion.nav
-        className="bg-white rounded-xl shadow-sm p-4 mb-6 flex justify-end items-center"
-        variants={navVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <ul className="flex items-center space-x-2 lg:space-x-4">
-          <li className="relative inline-block">
-            <Link to="/account" aria-label="Account">
-              <svg
-                className="h-9 lg:h-10 p-2 text-blue-500"
-                fill="currentColor"
-                viewBox="0 0 448 512"
-              >
-                <path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144z" />
-              </svg>
-            </Link>
-          </li>
-          <li className="relative inline-block">
-            <Link to="/wishlist" aria-label="Wishlist">
-              <div className="absolute -top-1 right-0 z-10 bg-blue-500 text-gray-100 text-xs font-bold px-1 py-0.5 rounded-sm">
-                0
-              </div>
-              <svg
-                className="h-9 lg:h-10 p-2 text-blue-500"
-                fill="currentColor"
-                viewBox="0 0 512 512"
-              >
-                <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3z" />
-              </svg>
-            </Link>
-          </li>
-        </ul>
-      </motion.nav>
-
       <motion.h1
         className="
           text-4xl sm:text-5xl font-extrabold text-white text-center
@@ -111,7 +76,7 @@ export default function Checkout() {
         <div className="text-center">
           <p className="text-lg text-gray-600">Your cart is empty.</p>
           <motion.button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:bg-indigo-700"
@@ -123,7 +88,9 @@ export default function Checkout() {
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Cart Summary */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-900">Order Summary</h2>
+            <h2 className="text-2xl font-semibold text-gray-900">
+              Order Summary
+            </h2>
             {cart.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -137,16 +104,24 @@ export default function Checkout() {
                   src={item.image}
                   alt={item.title}
                   className="w-24 h-24 object-cover rounded-md"
-                  onError={(e) => (e.target.src = 'https://via.placeholder.com/100')}
+                  onError={(e) =>
+                    (e.target.src = "https://via.placeholder.com/100")
+                  }
                 />
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-gray-500">{item.subtitle}</p>
-                  <p className="text-lg font-bold text-gray-900">{item.price}</p>
+                  <p className="text-lg font-bold text-gray-900">
+                    {item.price}
+                  </p>
                   <div className="flex items-center gap-3 mt-3">
                     <div className="flex items-center gap-1 bg-gray-50 rounded-full p-1">
                       <motion.button
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity - 1)
+                        }
                         disabled={item.quantity <= 1}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -160,7 +135,12 @@ export default function Checkout() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M18 12H6"
+                          />
                         </svg>
                       </motion.button>
                       <input
@@ -168,11 +148,15 @@ export default function Checkout() {
                         type="number"
                         min="1"
                         value={item.quantity}
-                        onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                        onChange={(e) =>
+                          updateQuantity(item.id, parseInt(e.target.value))
+                        }
                         className="w-12 px-2 py-1 border-none bg-transparent text-sm text-center font-medium text-gray-900"
                       />
                       <motion.button
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity + 1)
+                        }
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className="w-8 h-8 flex items-center justify-center bg-green-500 text-white rounded-full shadow-sm hover:bg-green-600"
@@ -185,7 +169,12 @@ export default function Checkout() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                          />
                         </svg>
                       </motion.button>
                     </div>
@@ -211,10 +200,15 @@ export default function Checkout() {
 
           {/* Checkout Form */}
           <div className="bg-white rounded-xl shadow-md p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Shipping & Payment</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Shipping & Payment
+            </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Full Name
                 </label>
                 <input
@@ -226,7 +220,10 @@ export default function Checkout() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Email
                 </label>
                 <input
@@ -238,7 +235,10 @@ export default function Checkout() {
                 />
               </div>
               <div>
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="address"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Shipping Address
                 </label>
                 <input
@@ -250,7 +250,10 @@ export default function Checkout() {
                 />
               </div>
               <div>
-                <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="cardNumber"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Card Number
                 </label>
                 <input
@@ -263,7 +266,10 @@ export default function Checkout() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="expiry" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="expiry"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     Expiry Date
                   </label>
                   <input
@@ -275,7 +281,10 @@ export default function Checkout() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="cvv" className="block text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="cvv"
+                    className="block text-sm font-medium text-gray-700"
+                  >
                     CVV
                   </label>
                   <input
@@ -290,7 +299,7 @@ export default function Checkout() {
               <div className="flex justify-end gap-4 mt-6">
                 <motion.button
                   type="button"
-                  onClick={() => navigate('/cart')}
+                  onClick={() => navigate("/cart")}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gray-200 text-gray-800 text-sm font-medium shadow-sm hover:bg-gray-300"

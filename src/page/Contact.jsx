@@ -250,7 +250,7 @@ export default function Contact() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-10 mt-16">
+      {/* <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-10 mt-16">
         <div className="container mx-auto px-4 text-center">
           <p className="text-lg">
             &copy; 2025 Your Company. All rights reserved.
@@ -274,7 +274,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </footer>
+      </footer> */}
 
       {/* Inline CSS for animations */}
       <style jsx>{`
