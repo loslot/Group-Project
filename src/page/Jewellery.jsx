@@ -5,7 +5,7 @@ import { CartContext } from "../components/CartContext";
 
 const cardsData = [
   {
-    id: 121,
+    id: 81,
     image: "/Jewellery/1.png",
     title: "Golden Elegance Necklace",
     subtitle: "Necklace • 18K Gold",
@@ -15,7 +15,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 122,
+    id: 82,
     image: "/Jewellery/2.png",
     title: "Crystal Bloom Earrings",
     subtitle: "Earrings • Sterling Silver",
@@ -25,7 +25,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 123,
+    id: 83,
     image: "/Jewellery/3.png",
     title: "RoseGold Infinity Bracelet",
     subtitle: "Bracelet • Adjustable Fit",
@@ -35,7 +35,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 124,
+    id: 83,
     image: "/Jewellery/4.png",
     title: "PearlDream Choker",
     subtitle: "Necklace • Freshwater Pearls",
@@ -45,7 +45,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 125,
+    id: 84,
     image: "/Jewellery/5.png",
     title: "DiamondTwist Ring",
     subtitle: "Ring • White Gold",
@@ -55,7 +55,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 126,
+    id: 85,
     image: "/Jewellery/6.png",
     title: "Emerald Grace Pendant",
     subtitle: "Pendant • Gold Plated",
@@ -65,7 +65,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 127,
+    id: 86,
     image: "/Jewellery/7.png",
     title: "SilverWave Anklet",
     subtitle: "Anklet • Sterling Silver",
@@ -75,7 +75,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 128,
+    id: 87,
     image: "/Jewellery/8.png",
     title: "Ruby Radiance Studs",
     subtitle: "Earrings • Ruby Stone",
@@ -85,7 +85,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 129,
+    id: 88,
     image: "/Jewellery/9.png",
     title: "CharmLink Bracelet",
     subtitle: "Bracelet • Stainless Steel",
@@ -95,7 +95,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 130,
+    id: 89,
     image: "/Jewellery/10.png",
     title: "OpalMist Necklace",
     subtitle: "Necklace • Opal Gemstone",
@@ -105,7 +105,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 131,
+    id: 90,
     image: "/Jewellery/11.png",
     title: "Sapphire Queen Ring",
     subtitle: "Ring • Sapphire Stone",
@@ -115,7 +115,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 132,
+    id: 91,
     image: "/Jewellery/12.png",
     title: "Golden Halo Hoops",
     subtitle: "Earrings • Gold-Plated",
@@ -125,7 +125,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 133,
+    id: 92,
     image: "/Jewellery/13.png",
     title: "Moonlight Bangle Set",
     subtitle: "Bangle • Silver Finish",
@@ -135,7 +135,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 134,
+    id: 93,
     image: "/Jewellery/14.png",
     title: "RosePetal Brooch",
     subtitle: "Brooch • Floral Design",
@@ -145,7 +145,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 135,
+    id: 94,
     image: "/Jewellery/15.png",
     title: "Royal Crown Tiara",
     subtitle: "Hair Accessory • Crystal",
@@ -155,7 +155,7 @@ const cardsData = [
     rating: 4.8,
   },
   {
-    id: 136,
+    id: 95,
     image: "/Jewellery/16.png",
     title: "Amber Glow Pendant",
     subtitle: "Pendant • Natural Amber",
@@ -165,7 +165,7 @@ const cardsData = [
     rating: 4.6,
   },
   {
-    id: 137,
+    id: 96,
     image: "/Jewellery/17.png",
     title: "GoldenLeaf Hairpin Set",
     subtitle: "Hair Accessory • Gold Tone",
@@ -175,7 +175,7 @@ const cardsData = [
     rating: 4.5,
   },
   {
-    id: 138,
+    id: 97,
     image: "/Jewellery/18.png",
     title: "DiamondAura Necklace",
     subtitle: "Necklace • Lab Diamond",
@@ -185,7 +185,7 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 139,
+    id: 99,
     image: "/Jewellery/19.png",
     title: "Crystal Harmony Bracelet",
     subtitle: "Bracelet • Multi-Stone",
@@ -195,7 +195,7 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 140,
+    id: 100,
     image: "/Jewellery/20.png",
     title: "Elegance Pearl Drop Earrings",
     subtitle: "Earrings • Gold-Plated",

@@ -57,42 +57,6 @@ export default function Checkout() {
       initial="hidden"
       animate="visible"
     >
-      {/* Navigation Bar */}
-      <motion.nav
-        className="bg-white rounded-xl shadow-sm p-4 mb-6 flex justify-end items-center"
-        variants={navVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <ul className="flex items-center space-x-2 lg:space-x-4">
-          <li className="relative inline-block">
-            <Link to="/account" aria-label="Account">
-              <svg
-                className="h-9 lg:h-10 p-2 text-blue-500"
-                fill="currentColor"
-                viewBox="0 0 448 512"
-              >
-                <path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144z" />
-              </svg>
-            </Link>
-          </li>
-          <li className="relative inline-block">
-            <Link to="/wishlist" aria-label="Wishlist">
-              <div className="absolute -top-1 right-0 z-10 bg-blue-500 text-gray-100 text-xs font-bold px-1 py-0.5 rounded-sm">
-                0
-              </div>
-              <svg
-                className="h-9 lg:h-10 p-2 text-blue-500"
-                fill="currentColor"
-                viewBox="0 0 512 512"
-              >
-                <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3z" />
-              </svg>
-            </Link>
-          </li>
-        </ul>
-      </motion.nav>
-
       <motion.h1
         className="
           text-4xl sm:text-5xl font-extrabold text-white text-center

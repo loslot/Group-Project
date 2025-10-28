@@ -1,7 +1,95 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router'; 
+import React, { useContext, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import { CartContext } from '../components/CartContext';
 import { motion } from 'framer-motion';
+
+// Custom Quantity Stepper Component
+const QuantityStepper = ({ id, quantity, updateQuantity }) => {
+  const spanRef = useRef(null);
+  const displayRef = useRef(null);
+
+  // Update display width based on text content
+  useEffect(() => {
+    if (spanRef.current && displayRef.current) {
+      const spanWidth = spanRef.current.offsetWidth;
+      // Add padding (24px) and ensure minimum width of 48px
+      const newWidth = Math.max(spanWidth + 24, 48);
+      displayRef.current.style.width = `${newWidth}px`;
+    }
+  }, [quantity]);
+
+  // Handle keyboard events for accessibility
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowUp' || e.key === 'ArrowRight') {
+      updateQuantity(id, quantity + 1);
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') {
+      if (quantity > 1) {
+        updateQuantity(id, quantity - 1);
+      }
+    }
+  };
+
+  return (
+    <div className="flex items-center gap-1 bg-gray-50 rounded-full p-1 min-w-[120px]">
+      <motion.button
+        onClick={() => updateQuantity(id, quantity - 1)}
+        disabled={quantity <= 1}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-sm hover:bg-orange-600 disabled:bg-orange-300 disabled:cursor-not-allowed"
+        aria-label={`Decrease quantity for item ${id}`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
+        </svg>
+      </motion.button>
+      <div className="relative flex items-center justify-center">
+        {/* Hidden span to measure text width */}
+        <span
+          ref={spanRef}
+          className="absolute invisible text-sm font-medium text-gray-900"
+          style={{ fontSize: '0.875rem', fontFamily: 'inherit' }}
+        >
+          {quantity}
+        </span>
+        <div
+          ref={displayRef}
+          role="textbox"
+          tabIndex={0}
+          onKeyDown={handleKeyDown}
+          className="px-3 py-1 text-sm text-center font-medium text-gray-900 bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-text"
+          style={{ minWidth: '48px' }}
+          aria-label={`Quantity for item ${id}: ${quantity}`}
+        >
+          {quantity}
+        </div>
+      </div>
+      <motion.button
+        onClick={() => updateQuantity(id, quantity + 1)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="w-8 h-8 flex items-center justify-center bg-green-500 text-white rounded-full shadow-sm hover:bg-green-600"
+        aria-label={`Increase quantity for item ${id}`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+      </motion.button>
+    </div>
+  );
+};
 
 export default function Cart() {
   const { cart, updateQuantity, removeFromCart, totalPrice, clearCart, cartCount } = useContext(CartContext);
@@ -89,55 +177,11 @@ export default function Cart() {
                 <p className="text-sm text-gray-500">{item.subtitle}</p>
                 <p className="text-lg font-bold text-gray-900">{item.price}</p>
                 <div className="flex items-center gap-3 mt-3">
-                  <div className="flex items-center gap-1 bg-gray-50 rounded-full p-1">
-                    <motion.button
-                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      disabled={item.quantity <= 1}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-sm hover:bg-orange-600 disabled:bg-orange-300 disabled:cursor-not-allowed"
-                      aria-label="Decrease quantity"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
-                      </svg>
-                    </motion.button>
-                    <input
-                      id={`quantity-${item.id}`}
-                      type="number"
-                      min="1"
-                      value={item.quantity}
-                      onChange={(e) => {
-                        const value = e.target.value;
-                        if (value === '' || isNaN(value)) return;
-                        updateQuantity(item.id, parseInt(value));
-                      }}
-                      className="w-12 px-2 py-1 border-none bg-transparent text-sm text-center font-medium text-gray-900"
-                    />
-                    <motion.button
-                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="w-8 h-8 flex items-center justify-center bg-green-500 text-white rounded-full shadow-sm hover:bg-green-600"
-                      aria-label="Increase quantity"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                      </svg>
-                    </motion.button>
-                  </div>
+                  <QuantityStepper
+                    id={item.id}
+                    quantity={item.quantity}
+                    updateQuantity={updateQuantity}
+                  />
                   <motion.button
                     onClick={() => removeFromCart(item.id)}
                     whileHover={{ scale: 1.05 }}
