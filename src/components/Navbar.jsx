@@ -40,7 +40,7 @@ export default function Navbar() {
             className="flex items-center gap-1 cursor-pointer flex-shrink-0"
           >
             <img
-              className="h-full w-full max-h-[80px] max-w-[110px]"
+              className="h-full w-full max-h-[60px] max-w-[110px]"
               src="/logo/logo.png"
               alt="Logo"
             />
