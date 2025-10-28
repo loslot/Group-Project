@@ -355,18 +355,18 @@ const cardsData = [
   {
     id:1 ,
     image: "/Electronic/1.png",
-    title: "SmartX Pro Phone",
-    subtitle: "Smartphone • 128GB",
-    price: "$699",
+    title: "REDMI Airpods 6 Pro",
+    subtitle: "Airpods • 128GB",
+    price: "$49",
     rating: 4.8,
     description:
-      "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
+      "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
   },
   {
     id:47 ,
     image: "/Fashion/7.png",
     title: "Wool Knit Sweater",
-    subtitle: "Men • Winter Wear",
+    subtitle: "Men fashion • Winter Wear",
     price: "$70",
     rating: 4.2,
     description:
@@ -395,12 +395,12 @@ const cardsData = [
   {
     id: 3,
     image: "/Electronic/3.png",
-    title: "VisionHD 4K TV",
-    subtitle: "Display • 55-inch",
-    price: "$799",
+    title: "Smart Watch Waterproof ",
+    subtitle: "Smartwatch • 55-inch",
+    price: "$300",
     rating: 4.7,
     description:
-      "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
+      "The moreFit Smartwatch Waterproof is a sleek and durable fitness companion designed for an active lifestyle.",
   },
   {
     id: 34,
@@ -475,28 +475,26 @@ const cardsData = [
   {
     id: 12,
     image: "/Electronic/12.png",
-    title: "XPower 10,000mAh Power Bank",
-    subtitle: "Charging • Fast Charge",
-    price: "$39",
+    title: "Smart Watch for Men Women",
+    subtitle: "Smartwatch • Fast Charge",
+    price: "$120",
     rating: 4.5,
-    description:
-      "A compact power bank with fast-charging support for phones, tablets, and other devices.",
+    description: "A stylish and versatile smartwatch for men and women that tracks fitness, monitors health, and keeps you connected on the go.",
   },
   {
     id: 39,
     image: "/Beauty/19.png",
-    title: "Herbal Hair Conditioner",
-    subtitle: "Haircare • 250ml",
+    title: "The Fume Lab Face",
+    subtitle: "Skincare • 250ml",
     price: "$28",
     rating: 4.4,
-    description:
-      "A natural conditioner that strengthens and smooths hair with herbal extracts.",
+    description: "The Fume Lab is a modern skincare brand that blends science and nature to create pure, effective formulas for radiant, healthy skin.",
   },
   {
     id: 60,
     image: "/Fashion/20.png",
-    title: "Denim Mini Skirt",
-    subtitle: "Women • Casual Wear",
+    title: "Denim Mini Skirt 2025",
+    subtitle: "Women fashion • Casual Wear",
     price: "$65",
     rating: 4.3,
     description:
@@ -505,12 +503,11 @@ const cardsData = [
   {
     id: 2,
     image: "/Electronic/2.png",
-    title: "AeroBuds Wireless Earphones",
-    subtitle: "Audio • Bluetooth 5.3",
-    price: "$129",
+    title: "JBL Speaker Viral Pro",
+    subtitle: "Speaker • Bluetooth 5.3",
+    price: "$209",
     rating: 4.6,
-    description:
-      "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
+    description: "JBL Speaker Viral Pro is a powerful, high-performance wireless speaker designed for deep bass, clear vocals, and immersive 360° sound",
   },
   {
     id: 36,
