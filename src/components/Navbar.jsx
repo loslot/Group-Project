@@ -33,7 +33,7 @@ export default function Navbar() {
     <div>
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
         {/* Desktop & Tablet Layout */}
-        <div className="hidden md:flex w-full h-[105px] my-1 mx-auto px-4 lg:px-6 items-center justify-between">
+        <div className="hidden md:flex w-full h-[70px] my-1 mx-auto px-4 lg:px-6 items-center justify-between">
           {/* Logo Section */}
           <div
             onClick={() => navigate("/")}
@@ -66,13 +66,12 @@ export default function Navbar() {
                 onChange={handleCategory}
                 className="cursor-pointer bg-transparent uppercase font-semibold text-xs lg:text-sm px-2 lg:px-4 py-3 text-blue-600 focus:outline-none rounded-l-full"
               >
-                <option value="all">All</option>
+                <option value="all">All Categories</option>
                 <option value="electronic">Electronics</option>
-                <option value="beauty">Beauty</option>
+                <option value="beauty">Beauty and Skincare</option>
                 <option value="fashion">Fashion</option>
-                <option value="homesupplies">Home</option>
-                <option value="jewellery">Jewelry</option>
-                <option value="contact">Contact</option>
+                <option value="homesupplies">Home Supplies</option>
+                <option value="jewellery">Jewellery</option>
               </select>
               <div className="h-6 w-px bg-blue-500/30"></div>
               <select
