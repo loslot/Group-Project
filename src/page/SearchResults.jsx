@@ -60,7 +60,7 @@ export default function SearchResults() {
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 cursor-pointer"
       onClick={handleBackgroundClick}
     >
-      <header className="mb-8">
+      <header className="mb-8 mt-7">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">

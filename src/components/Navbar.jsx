@@ -1,11 +1,15 @@
+
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router";
+import { CartContext } from "../components/CartContext";
+
 
 export default function Navbar() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { cartCount } = React.useContext(CartContext);
+  
 
-  // derive current category from URL segment
   const categorySegment = pathname.split("/")[1] || "all";
 
   const handleCategory = (e) => {
@@ -17,28 +21,25 @@ export default function Navbar() {
   const handleSearch = (e) => {
     e.preventDefault();
     const form = e.target;
-    const mode = form.mode.value; // title | id | price
+    const mode = form.mode.value;
     const q = form.q.value.trim();
     if (!q) return;
-
-    // quick guard for non-numeric price
     if (mode === "price" && Number.isNaN(Number(q))) return;
-
     navigate(`/search?mode=${mode}&q=${encodeURIComponent(q)}`);
   };
 
   return (
     <div>
-      <header className="fixed top-0 left-0 w-full z-50 shadow-md bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
-        <div className="w-full h-[80px] mx-auto px-4 flex items-center">
-          {/* --------------------  LOGO  -------------------- */}
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div className="w-full mx-auto px-4 flex items-center justify-between">
+          {/* Logo Section */}
           <div
             onClick={() => navigate("/")}
-            className="mr-auto flex items-center gap-1 cursor-pointer"
+            className="flex items-center gap-1 cursor-pointer"
           >
             <img
-              className="h-[110px] w-[110px] "
-              src="logo/logo.png"
+              className="h-[110px] w-[110px]"
+              src="/logo/logo.png"
               alt="Logo"
             />
             <div className="flex flex-col">
@@ -51,71 +52,65 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* --------------------  SEARCH  -------------------- */}
-          <form
-            onSubmit={handleSearch}
-            className="w-full max-w-2xl bg-white/90 backdrop-blur-sm shadow-sm border border-gray-200 rounded-full flex items-center overflow-hidden transition-all duration-300 focus-within:shadow-md"
-          >
-            {/* Category selector */}
-            <select
-              aria-label="Category"
-              defaultValue={categorySegment}
-              onChange={handleCategory}
-              className="cursor-pointer bg-transparent uppercase font-semibold text-sm px-4 py-3 text-blue-600 focus:outline-none rounded-l-full"
+          {/* Centered Search Bar */}
+          <div className="flex-1 flex justify-center px-4">
+            <form
+              onSubmit={handleSearch}
+              className="w-full max-w-2xl bg-white/90 backdrop-blur-sm shadow-sm border border-gray-200 rounded-full flex items-center overflow-hidden transition-all duration-300 focus-within:shadow-md"
             >
-              <option value="all">All Categories</option>
-              <option value="electronic">Electronics</option>
-              <option value="beauty">Beauty and SkinCare</option>
-              <option value="fashion">Fashions</option>
-              <option value="homesupplies">Home Supplies</option>
-              <option value="jewellery">Jewelry</option>
-              <option value="contact">Contact</option>
-            </select>
-            <div className="h-6 w-px bg-blue-500/30"></div>
-
-            {/* Search-mode selector */}
-            <select
-              aria-label="Search by"
-              name="mode"
-              defaultValue="title"
-              className="cursor-pointer bg-transparent font-semibold text-sm px-3 py-3 text-indigo-600 focus:outline-none"
-            >
-              <option value="title">Title</option>
-              <option value="id">ID</option>
-              <option value="price">Price</option>
-            </select>
-            <div className="h-6 w-px bg-blue-500/30"></div>
-
-            {/* Query input */}
-            <input
-              name="q"
-              type="text"
-              required
-              className="flex-1 bg-transparent font-medium text-sm px-4 py-3 text-gray-700 placeholder-gray-400 outline-none"
-              placeholder="Search products..."
-            />
-
-            {/* Submit button */}
-            <button
-              type="submit"
-              aria-label="Submit search"
-              className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-5 py-3 rounded-r-full hover:from-blue-600 hover:to-blue-800 transition-all duration-300 active:scale-95"
-              title="Search"
-            >
-              <svg
-                className="h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 512 512"
+              <select
+                aria-label="Category"
+                defaultValue={categorySegment}
+                onChange={handleCategory}
+                className="cursor-pointer bg-transparent uppercase font-semibold text-sm px-4 py-3 text-blue-600 focus:outline-none rounded-l-full"
               >
-                <path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z" />
-              </svg>
-            </button>
-          </form>
+                <option value="all">All Categories</option>
+                <option value="electronic">Electronics</option>
+                <option value="beauty">Beauty and SkinCare</option>
+                <option value="fashion">Fashions</option>
+                <option value="homesupplies">Home Supplies</option>
+                <option value="jewellery">Jewelry</option>
+                <option value="contact">Contact</option>
+              </select>
+              <div className="h-6 w-px bg-blue-500/30"></div>
+              <select
+                aria-label="Search by"
+                name="mode"
+                defaultValue="title"
+                className="cursor-pointer bg-transparent font-semibold text-sm px-3 py-3 text-indigo-600 focus:outline-none"
+              >
+                <option value="title">Title</option>
+                <option value="id">ID</option>
+                <option value="price">Price</option>
+              </select>
+              <div className="h-6 w-px bg-blue-500/30"></div>
+              <input
+                name="q"
+                type="text"
+                required
+                className="flex-1 bg-transparent font-medium text-sm px-4 py-3 text-gray-700 placeholder-gray-400 outline-none"
+                placeholder="Search products..."
+              />
+              <button
+                type="submit"
+                aria-label="Submit search"
+                className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-5 py-3 rounded-r-full hover:from-blue-600 hover:to-blue-800 transition-all duration-300 active:scale-95"
+                title="Search"
+              >
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 512 512"
+                >
+                  <path d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z" />
+                </svg>
+              </button>
+            </form>
+          </div>
 
-          {/* --------------------  ICONS  -------------------- */}
-          <nav className="contents">
-            <ul className="ml-4 xl:w-48 flex items-center justify-end">
-              {/* User */}
+          {/* Right-Aligned Icons */}
+          <nav className="flex items-center">
+            <ul className="flex items-center justify-end">
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <Link to="/account" aria-label="Account">
                   <svg
@@ -127,8 +122,6 @@ export default function Navbar() {
                   </svg>
                 </Link>
               </li>
-
-              {/* Wishlist */}
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <Link to="/wishlist" aria-label="Wishlist">
                   <div className="absolute -top-1 right-0 z-10 bg-blue-500 text-gray-100 text-xs font-bold px-1 py-0.5 rounded-sm">
@@ -144,11 +137,10 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              {/* Cart */}
               <li className="ml-2 lg:ml-4 relative inline-block">
                 <Link to="/cart" aria-label="Cart">
                   <div className="absolute -top-1 right-0 z-10 bg-blue-500 text-gray-100 text-xs font-bold px-1 py-0.5 rounded-sm">
-                    0
+                    {cartCount}
                   </div>
                   <svg
                     className="h-9 lg:h-10 p-2 text-blue-500"

@@ -1,13 +1,22 @@
 // src/data/searchData.js
-const FashionData = [ /* your 20 fashion items */ ];
-const ElectronicData = [ /* … */ ];
-const BeautyData = [ /* … */ ];
-const HomeData = [ /* … */ ];
-const JewelleryData = [ /* … */ ];
+const FashionData = [
+  /* your 20 fashion items */
+];
+const ElectronicData = [
+  /* … */
+];
+const BeautyData = [
+  /* … */
+];
+const HomeData = [
+  /* … */
+];
+const JewelleryData = [
+  /* … */
+];
 
 // flatten and add category tag
 const SEARCH_DATA = [
-
   {
     id: 1,
     image: "/Electronic/1.png",
@@ -16,7 +25,7 @@ const SEARCH_DATA = [
     price: "$699",
     description:
       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 2,
@@ -26,7 +35,7 @@ const SEARCH_DATA = [
     price: "$129",
     description:
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 3,
@@ -36,7 +45,7 @@ const SEARCH_DATA = [
     price: "$799",
     description:
       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 4,
@@ -46,7 +55,7 @@ const SEARCH_DATA = [
     price: "$199",
     description:
       "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 5,
@@ -56,7 +65,7 @@ const SEARCH_DATA = [
     price: "$89",
     description:
       "A compact Bluetooth speaker with deep bass, clear treble, and 12-hour battery life.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 6,
@@ -66,7 +75,7 @@ const SEARCH_DATA = [
     price: "$999",
     description:
       "A powerful ultrabook designed for productivity with fast performance and lightweight design.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 7,
@@ -76,7 +85,7 @@ const SEARCH_DATA = [
     price: "$1,250",
     description:
       "Capture professional-grade photos and videos with advanced autofocus and 4K recording.",
-    rating: 4.9,
+    Categorization: true,
   },
   {
     id: 8,
@@ -86,7 +95,7 @@ const SEARCH_DATA = [
     price: "$79",
     description:
       "Control lights, music, and more with your voice — the perfect addition to any smart home.",
-    rating: 4.3,
+    Categorization: true,
   },
   {
     id: 9,
@@ -96,7 +105,7 @@ const SEARCH_DATA = [
     price: "$55",
     description:
       "A quiet and powerful fan with adjustable speeds and oscillation for full-room cooling.",
-    rating: 4.2,
+    Categorization: true,
   },
   {
     id: 10,
@@ -106,7 +115,7 @@ const SEARCH_DATA = [
     price: "$49",
     description:
       "High-precision gaming mouse with customizable buttons and RGB lighting for pro gamers.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 11,
@@ -116,7 +125,7 @@ const SEARCH_DATA = [
     price: "$89",
     description:
       "A durable mechanical keyboard with smooth keys, anti-ghosting, and vibrant lighting effects.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 12,
@@ -126,7 +135,7 @@ const SEARCH_DATA = [
     price: "$39",
     description:
       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 13,
@@ -136,7 +145,7 @@ const SEARCH_DATA = [
     price: "$120",
     description:
       "Monitor your home anytime with motion detection, night vision, and mobile alerts.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 14,
@@ -146,7 +155,7 @@ const SEARCH_DATA = [
     price: "$299",
     description:
       "A lightweight tablet for entertainment and productivity with a vivid HD display and long battery.",
-    rating: 4.3,
+    Categorization: true,
   },
   {
     id: 15,
@@ -156,7 +165,7 @@ const SEARCH_DATA = [
     price: "$159",
     description:
       "Over-ear headphones delivering immersive sound with active noise cancellation technology.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 16,
@@ -166,7 +175,7 @@ const SEARCH_DATA = [
     price: "$145",
     description:
       "Cook crispy and healthy meals faster with digital temperature control and preset menus.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 17,
@@ -176,7 +185,7 @@ const SEARCH_DATA = [
     price: "$175",
     description:
       "A lightning-fast external SSD for secure file storage and instant data transfers.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 18,
@@ -186,7 +195,7 @@ const SEARCH_DATA = [
     price: "$299",
     description:
       "An intelligent robot vacuum that cleans efficiently with smart sensors and app control.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 19,
@@ -196,7 +205,7 @@ const SEARCH_DATA = [
     price: "$210",
     description:
       "Enhance your home theater experience with powerful stereo sound and wireless connectivity.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 20,
@@ -206,7 +215,7 @@ const SEARCH_DATA = [
     price: "$349",
     description:
       "A high-performance gaming monitor with ultra-smooth refresh rate and vibrant color accuracy.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 21,
@@ -216,7 +225,7 @@ const SEARCH_DATA = [
     price: "$45",
     description:
       "A lightweight serum that brightens dull skin, evens tone, and restores a youthful glow.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 22,
@@ -226,7 +235,7 @@ const SEARCH_DATA = [
     price: "$25",
     description:
       "A creamy matte lipstick that delivers rich color with a smooth, long-lasting finish.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 23,
@@ -236,7 +245,7 @@ const SEARCH_DATA = [
     price: "$38",
     description:
       "An ultra-hydrating moisturizer infused with hyaluronic acid for all-day smoothness.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 24,
@@ -246,7 +255,7 @@ const SEARCH_DATA = [
     price: "$32",
     description:
       "A nourishing oil that tames frizz, adds shine, and keeps hair soft and healthy.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 25,
@@ -256,7 +265,7 @@ const SEARCH_DATA = [
     price: "$28",
     description:
       "A refreshing rose-infused mask that hydrates, purifies, and soothes the skin.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 26,
@@ -266,7 +275,7 @@ const SEARCH_DATA = [
     price: "$30",
     description:
       "A nourishing shampoo enriched with argan oil to strengthen and repair damaged hair.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 27,
@@ -276,7 +285,7 @@ const SEARCH_DATA = [
     price: "$22",
     description:
       "A gentle toner that tightens pores, balances pH, and refreshes your skin.",
-    rating: 4.3,
+    Categorization: true,
   },
   {
     id: 28,
@@ -286,7 +295,7 @@ const SEARCH_DATA = [
     price: "$60",
     description:
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 29,
@@ -296,7 +305,7 @@ const SEARCH_DATA = [
     price: "$55",
     description:
       "An anti-aging eye cream that reduces puffiness, fine lines, and dark circles.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 30,
@@ -306,7 +315,7 @@ const SEARCH_DATA = [
     price: "$40",
     description:
       "A lightweight liquid foundation offering smooth coverage and a natural satin finish.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 31,
@@ -316,7 +325,7 @@ const SEARCH_DATA = [
     price: "$15",
     description:
       "A hydrating lip balm with a hint of berry tint to keep lips soft and naturally glowing.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 32,
@@ -326,7 +335,7 @@ const SEARCH_DATA = [
     price: "$27",
     description:
       "A deeply moisturizing lotion that softens skin with coconut oil and vitamin E.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 33,
@@ -336,7 +345,7 @@ const SEARCH_DATA = [
     price: "$26",
     description:
       "A deep-cleansing facial wash that removes impurities and clears clogged pores.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 34,
@@ -346,7 +355,7 @@ const SEARCH_DATA = [
     price: "$35",
     description:
       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 35,
@@ -356,7 +365,7 @@ const SEARCH_DATA = [
     price: "$20",
     description:
       "A soothing gel perfect for hydrating and cooling the skin after sun exposure.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 36,
@@ -366,7 +375,7 @@ const SEARCH_DATA = [
     price: "$29",
     description:
       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 37,
@@ -376,7 +385,7 @@ const SEARCH_DATA = [
     price: "$24",
     description:
       "A refreshing facial mist infused with natural botanicals for instant hydration.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 38,
@@ -386,7 +395,7 @@ const SEARCH_DATA = [
     price: "$33",
     description:
       "An exfoliating scrub that removes dead skin and leaves your body smooth and glowing.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 39,
@@ -396,7 +405,7 @@ const SEARCH_DATA = [
     price: "$28",
     description:
       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 40,
@@ -406,7 +415,7 @@ const SEARCH_DATA = [
     price: "$31",
     description:
       "A refreshing body mist with aquatic and citrus notes for a clean, energizing scent.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 41,
@@ -416,7 +425,7 @@ const SEARCH_DATA = [
     price: "$79",
     description:
       "A timeless denim jacket with a modern fit, perfect for layering and casual outfits.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 42,
@@ -426,7 +435,7 @@ const SEARCH_DATA = [
     price: "$120",
     description:
       "A luxurious silk dress designed with soft fabric and graceful draping for special occasions.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 43,
@@ -436,7 +445,7 @@ const SEARCH_DATA = [
     price: "$65",
     description:
       "Comfortable slim-fit jeans made from durable stretch denim for everyday wear.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 44,
@@ -446,7 +455,7 @@ const SEARCH_DATA = [
     price: "$95",
     description:
       "A sleek and compact leather bag ideal for carrying your essentials in style.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 45,
@@ -456,7 +465,7 @@ const SEARCH_DATA = [
     price: "$35",
     description:
       "Soft, breathable cotton T-shirt with a bold graphic design for a trendy, casual look.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 46,
@@ -466,7 +475,7 @@ const SEARCH_DATA = [
     price: "$85",
     description:
       "Lightweight sneakers with cushioned soles and a minimalist design for everyday comfort.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 47,
@@ -476,7 +485,7 @@ const SEARCH_DATA = [
     price: "$70",
     description:
       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 48,
@@ -486,7 +495,7 @@ const SEARCH_DATA = [
     price: "$110",
     description:
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 49,
@@ -496,7 +505,7 @@ const SEARCH_DATA = [
     price: "$55",
     description:
       "Stylish aviator sunglasses offering UV400 protection and a timeless look.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 50,
@@ -506,7 +515,7 @@ const SEARCH_DATA = [
     price: "$60",
     description:
       "Lightweight linen shirt perfect for summer days with a relaxed yet polished vibe.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 51,
@@ -516,7 +525,7 @@ const SEARCH_DATA = [
     price: "$40",
     description:
       "A soft, oversized knit scarf that keeps you cozy and adds texture to your outfit.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 52,
@@ -526,7 +535,7 @@ const SEARCH_DATA = [
     price: "$75",
     description:
       "A lightweight, elegant skirt with pleats that flow beautifully with every step.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 53,
@@ -536,7 +545,7 @@ const SEARCH_DATA = [
     price: "$130",
     description:
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 54,
@@ -546,7 +555,7 @@ const SEARCH_DATA = [
     price: "$45",
     description:
       "A durable canvas tote with vintage prints, great for daily use and weekend trips.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 55,
@@ -556,7 +565,7 @@ const SEARCH_DATA = [
     price: "$150",
     description:
       "A refined pearl necklace that adds sophistication to any outfit or special occasion.",
-    rating: 4.9,
+    Categorization: true,
   },
   {
     id: 56,
@@ -566,7 +575,7 @@ const SEARCH_DATA = [
     price: "$55",
     description:
       "Comfortable flat sandals designed for warm days with soft straps and durable soles.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 57,
@@ -576,7 +585,7 @@ const SEARCH_DATA = [
     price: "$145",
     description:
       "A sharp, slim-fit blazer crafted from premium fabric for a refined, confident look.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 58,
@@ -586,7 +595,7 @@ const SEARCH_DATA = [
     price: "$60",
     description:
       "A soft cotton-blend hoodie with a relaxed fit — perfect for laid-back, modern style.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 59,
@@ -596,7 +605,7 @@ const SEARCH_DATA = [
     price: "$220",
     description:
       "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement.",
-    rating: 4.9,
+    Categorization: true,
   },
   {
     id: 60,
@@ -606,7 +615,7 @@ const SEARCH_DATA = [
     price: "$65",
     description:
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 61,
@@ -616,7 +625,7 @@ const SEARCH_DATA = [
     price: "$45",
     description:
       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 62,
@@ -626,7 +635,7 @@ const SEARCH_DATA = [
     price: "$70",
     description:
       "Breathable cotton bedsheets designed for durability, comfort, and a luxurious feel.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 63,
@@ -636,7 +645,7 @@ const SEARCH_DATA = [
     price: "$25",
     description:
       "A soothing scented candle with lavender and vanilla notes to create a relaxing atmosphere.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 64,
@@ -646,7 +655,7 @@ const SEARCH_DATA = [
     price: "$55",
     description:
       "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at Homesupply.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 65,
@@ -656,7 +665,7 @@ const SEARCH_DATA = [
     price: "$35",
     description:
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
-    rating: 4.4,
+    Categorization: true,
   },
   {
     id: 66,
@@ -666,7 +675,7 @@ const SEARCH_DATA = [
     price: "$60",
     description:
       "A dimmable LED lamp with touch control and warm-to-cool light modes for any mood.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 67,
@@ -676,7 +685,7 @@ const SEARCH_DATA = [
     price: "$48",
     description:
       "Removes impurities and provides clean, great-tasting water for the entire family.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 68,
@@ -686,7 +695,7 @@ const SEARCH_DATA = [
     price: "$40",
     description:
       "Ultrasonic aroma diffuser that fills your Homesupply with relaxing natural scents and mist.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 69,
@@ -696,7 +705,7 @@ const SEARCH_DATA = [
     price: "$85",
     description:
       "Precision stainless steel knives for perfect slicing, chopping, and cutting every time.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 70,
@@ -706,7 +715,7 @@ const SEARCH_DATA = [
     price: "$75",
     description:
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 71,
@@ -716,7 +725,7 @@ const SEARCH_DATA = [
     price: "$190",
     description:
       "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern Homesupplys.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 72,
@@ -726,7 +735,7 @@ const SEARCH_DATA = [
     price: "$120",
     description:
       "Removes dust, pollen, and odors to keep your indoor air clean and breathable.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 73,
@@ -736,7 +745,7 @@ const SEARCH_DATA = [
     price: "$65",
     description:
       "A soft fleece blanket that keeps you warm and cozy during chilly nights.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 74,
@@ -746,7 +755,7 @@ const SEARCH_DATA = [
     price: "$150",
     description:
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 75,
@@ -756,7 +765,7 @@ const SEARCH_DATA = [
     price: "$18",
     description:
       "Gentle foaming hand soap infused with essential oils for soft and clean hands.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 76,
@@ -766,7 +775,7 @@ const SEARCH_DATA = [
     price: "$90",
     description:
       "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 77,
@@ -776,7 +785,7 @@ const SEARCH_DATA = [
     price: "$110",
     description:
       "Elegant velvet curtains that block sunlight and add a touch of luxury to your decor.",
-    rating: 4.7,
+    Categorization: true,
   },
   {
     id: 78,
@@ -786,7 +795,7 @@ const SEARCH_DATA = [
     price: "$130",
     description:
       "A high-speed blender ideal for smoothies, soups, and sauces with easy-clean blades.",
-    rating: 4.8,
+    Categorization: true,
   },
   {
     id: 79,
@@ -796,7 +805,7 @@ const SEARCH_DATA = [
     price: "$140",
     description:
       "A plush, non-slip rug that adds warmth and comfort to your living area.",
-    rating: 4.6,
+    Categorization: true,
   },
   {
     id: 80,
@@ -806,7 +815,7 @@ const SEARCH_DATA = [
     price: "$50",
     description:
       "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric.",
-    rating: 4.5,
+    Categorization: true,
   },
   {
     id: 81,
@@ -816,24 +825,27 @@ const SEARCH_DATA = [
     price: "$320",
     description:
       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
+    Categorization: true,
   },
   {
-    id: 882,
+    id: 82,
     image: "/Jewellery/2.png",
     title: "Crystal Bloom Earrings",
     subtitle: "Earrings • Sterling Silver",
     price: "$85",
     description:
       "Sparkling crystal earrings crafted from premium silver to add charm to any outfit.",
+    Categorization: true,
   },
   {
-    id: 883,
+    id: 83,
     image: "/Jewellery/3.png",
     title: "RoseGold Infinity Bracelet",
     subtitle: "Bracelet • Adjustable Fit",
     price: "$110",
     description:
       "A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.",
+    Categorization: true,
   },
   {
     id: 84,
@@ -843,6 +855,7 @@ const SEARCH_DATA = [
     price: "$150",
     description:
       "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.",
+    Categorization: true,
   },
   {
     id: 85,
@@ -852,6 +865,7 @@ const SEARCH_DATA = [
     price: "$450",
     description:
       "A stunning diamond ring set in white gold with a graceful twist design for brilliance.",
+    Categorization: true,
   },
   {
     id: 86,
@@ -861,6 +875,7 @@ const SEARCH_DATA = [
     price: "$130",
     description:
       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+    Categorization: true,
   },
   {
     id: 87,
@@ -870,6 +885,7 @@ const SEARCH_DATA = [
     price: "$65",
     description:
       "A wavy-pattern anklet made of pure silver for a chic and beachy look.",
+    Categorization: true,
   },
   {
     id: 88,
@@ -879,6 +895,7 @@ const SEARCH_DATA = [
     price: "$120",
     description:
       "Gorgeous ruby studs set in gold for a pop of color and refined beauty.",
+    Categorization: true,
   },
   {
     id: 89,
@@ -888,6 +905,7 @@ const SEARCH_DATA = [
     price: "$90",
     description:
       "A stylish link bracelet with customizable charms that showcase your personality.",
+    Categorization: true,
   },
   {
     id: 90,
@@ -897,6 +915,7 @@ const SEARCH_DATA = [
     price: "$210",
     description:
       "A soft glowing opal pendant necklace designed to capture natural iridescence.",
+    Categorization: true,
   },
   {
     id: 91,
@@ -906,6 +925,7 @@ const SEARCH_DATA = [
     price: "$390",
     description:
       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+    Categorization: true,
   },
   {
     id: 92,
@@ -915,6 +935,7 @@ const SEARCH_DATA = [
     price: "$95",
     description:
       "Bold yet elegant gold-plated hoops that complement both casual and formal looks.",
+    Categorization: true,
   },
   {
     id: 93,
@@ -924,6 +945,7 @@ const SEARCH_DATA = [
     price: "$180",
     description:
       "A set of three silver bangles with moonlight shine, perfect for layering.",
+    Categorization: true,
   },
   {
     id: 94,
@@ -933,6 +955,7 @@ const SEARCH_DATA = [
     price: "$70",
     description:
       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
+    Categorization: true,
   },
   {
     id: 95,
@@ -942,6 +965,7 @@ const SEARCH_DATA = [
     price: "$250",
     description:
       "A sparkling tiara with crystal embellishments for special occasions and events.",
+    Categorization: true,
   },
   {
     id: 96,
@@ -951,6 +975,7 @@ const SEARCH_DATA = [
     price: "$140",
     description:
       "A warm amber pendant that radiates natural beauty and vintage charm.",
+    Categorization: true,
   },
   {
     id: 97,
@@ -960,6 +985,7 @@ const SEARCH_DATA = [
     price: "$55",
     description:
       "Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.",
+    Categorization: true,
   },
   {
     id: 98,
@@ -969,6 +995,7 @@ const SEARCH_DATA = [
     price: "$500",
     description:
       "A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.",
+    Categorization: true,
   },
   {
     id: 99,
@@ -978,6 +1005,7 @@ const SEARCH_DATA = [
     price: "$115",
     description:
       "A beautiful bracelet with mixed crystals symbolizing peace and positive energy.",
+    Categorization: true,
   },
   {
     id: 100,
@@ -986,350 +1014,9 @@ const SEARCH_DATA = [
     subtitle: "Earrings • Gold-Plated",
     price: "$135",
     description:
-      "Classic pearl drop earrings that add grace and sophistication to any occasion.",
+      "Gorgeous gold-plated earrings with a pearl drop design for a refined look.",
+    Categorization: true,
   },
-  {
-    id: 101,
-    image: "/Beauty/8.png",
-    title: "Pure Bloom Perfume",
-    subtitle: "Fragrance • 50ml",
-    price: "$60",
-    description:
-      "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
-  },
-  {
-    id: 102,
-    image: "/Electronic/1.png",
-    title: "SmartX Pro Phone",
-    subtitle: "Smartphone • 128GB",
-    price: "$699",
-    description:
-      "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
-  },
-  {
-    id: 103,
-    image: "/Fashion/7.png",
-    title: "Wool Knit Sweater",
-    subtitle: "Men • Winter Wear",
-    price: "$70",
-    description:
-      "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
-  },
-  {
-    id: 104,
-    image: "/Homesupply/1.png",
-    title: "ComfortPlus Pillow Set",
-    subtitle: "Bedroom • 2 Pieces",
-    price: "$45",
-    description:
-      "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
-  },
-  {
-    id: 105,
-    image: "/Jewellery/11.png",
-    title: "Sapphire Queen Ring",
-    subtitle: "Ring • Sapphire Stone",
-    price: "$390",
-    description:
-      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
-  },
-  {
-    id: 106,
-    image: "/Electronic/3.png",
-    title: "VisionHD 4K TV",
-    subtitle: "Display • 55-inch",
-    price: "$799",
-    description:
-      "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
-  },
-  {
-    id: 107,
-    image: "/Beauty/14.png",
-    title: "Lavender Night Cream",
-    subtitle: "Skincare • 50ml",
-    price: "$35",
-    description:
-      "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
-  },
-  {
-    id: 108,
-    image: "/Jewellery/1.png",
-    title: "Golden Elegance Necklace",
-    subtitle: "Necklace • 18K Gold",
-    price: "$320",
-    description:
-      "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
-  },
-  {
-    id: 109,
-    image: "/Homesupply/10.png",
-    title: "AirBreeze Floor Fan",
-    subtitle: "Homesupply Appliance • 3-Speed",
-    price: "$75",
-    description:
-      "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
-  },
-  {
-    id: 110,
-    image: "/Fashion/8.png",
-    title: "Floral Maxi Dress",
-    subtitle: "Women • Bohemian Style",
-    price: "$110",
-    description:
-      "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
-  },
-  {
-    id: 111,
-    image: "/Jewellery/6.png",
-    title: "Emerald Grace Pendant",
-    subtitle: "Pendant • Gold Plated",
-    price: "$130",
-    description:
-      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
-  },
-
-  {
-    id: 112,
-    image: "/Homesupply/5.png",
-    title: "Modern Ceramic Vase",
-    subtitle: "Decor • Minimalist Design",
-    price: "$35",
-    description:
-      "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
-  },
-  {
-    id: 113,
-    image: "/Fashion/13.png",
-    title: "Classic Oxford Shoes",
-    subtitle: "Men • Leather",
-    price: "$130",
-    description:
-      "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
-  },
-  {
-    id: 114,
-    image: "/Electronic/12.png",
-    title: "XPower 10,000mAh Power Bank",
-    subtitle: "Charging • Fast Charge",
-    price: "$39",
-    description:
-      "A compact power bank with fast-charging support for phones, tablets, and other devices.",
-  },
-  {
-    id: 115,
-    image: "/Beauty/19.png",
-    title: "Herbal Hair Conditioner",
-    subtitle: "Haircare • 250ml",
-    price: "$28",
-    description:
-      "A natural conditioner that strengthens and smooths hair with herbal extracts.",
-  },
-  {
-    id: 116,
-    image: "/Fashion/20.png",
-    title: "Denim Mini Skirt",
-    subtitle: "Women • Casual Wear",
-    price: "$65",
-    description:
-      "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
-  },
-  {
-    id: 117,
-    image: "/Electronic/2.png",
-    title: "AeroBuds Wireless Earphones",
-    subtitle: "Audio • Bluetooth 5.3",
-    price: "$129",
-    description:
-      "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
-  },
-  {
-    id: 118,
-    image: "/Beauty/16.png",
-    title: "Diamond Glow Highlighter",
-    subtitle: "Makeup • Compact",
-    price: "$29",
-    description:
-      "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
-  },
-  {
-    id: 119,
-    image: "/Jewellery/14.png",
-    title: "RosePetal Brooch",
-    subtitle: "Brooch • Floral Design",
-    price: "$70",
-    description:
-      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
-  },
-  {
-    id: 120,
-    image: "/Homesupply/14.png",
-    title: "Stainless Cookware Set",
-    subtitle: "Kitchen • 8 Pieces",
-    price: "$150",
-    description:
-      "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
-  },
-    {
-    id: 121,
-    image: '/Jewellery/1.png',
-    title: 'Golden Elegance Necklace',
-    subtitle: 'Necklace • 18K Gold',
-    price: '$320',
-    description: 'A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.'
-  },
-  {
-    id: 122,
-    image: '/Jewellery/2.png',
-    title: 'Crystal Bloom Earrings',
-    subtitle: 'Earrings • Sterling Silver',
-    price: '$85',
-    description: 'Sparkling crystal earrings crafted from premium silver to add charm to any outfit.'
-  },
-  {
-    id: 123,
-    image: '/Jewellery/3.png',
-    title: 'RoseGold Infinity Bracelet',
-    subtitle: 'Bracelet • Adjustable Fit',
-    price: '$110',
-    description: 'A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.'
-  },
-  {
-    id: 124,
-    image: '/Jewellery/4.png',
-    title: 'PearlDream Choker',
-    subtitle: 'Necklace • Freshwater Pearls',
-    price: '$150',
-    description: 'A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.'
-  },
-  {
-    id: 125,
-    image: '/Jewellery/5.png',
-    title: 'DiamondTwist Ring',
-    subtitle: 'Ring • White Gold',
-    price: '$450',
-    description: 'A stunning diamond ring set in white gold with a graceful twist design for brilliance.'
-  },
-  {
-    id: 126,
-    image: '/Jewellery/6.png',
-    title: 'Emerald Grace Pendant',
-    subtitle: 'Pendant • Gold Plated',
-    price: '$130',
-    description: 'A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.'
-  },
-  {
-    id: 127,
-    image: '/Jewellery/7.png',
-    title: 'SilverWave Anklet',
-    subtitle: 'Anklet • Sterling Silver',
-    price: '$65',
-    description: 'A wavy-pattern anklet made of pure silver for a chic and beachy look.'
-  },
-  {
-    id: 128,
-    image: '/Jewellery/8.png',
-    title: 'Ruby Radiance Studs',
-    subtitle: 'Earrings • Ruby Stone',
-    price: '$120',
-    description: 'Gorgeous ruby studs set in gold for a pop of color and refined beauty.'
-  },
-  {
-    id: 129,
-    image: '/Jewellery/9.png',
-    title: 'CharmLink Bracelet',
-    subtitle: 'Bracelet • Stainless Steel',
-    price: '$90',
-    description: 'A stylish link bracelet with customizable charms that showcase your personality.'
-  },
-  {
-    id: 130,
-    image: '/Jewellery/10.png',
-    title: 'OpalMist Necklace',
-    subtitle: 'Necklace • Opal Gemstone',
-    price: '$210',
-    description: 'A soft glowing opal pendant necklace designed to capture natural iridescence.'
-  },
-  {
-    id: 131,
-    image: '/Jewellery/11.png',
-    title: 'Sapphire Queen Ring',
-    subtitle: 'Ring • Sapphire Stone',
-    price: '$390',
-    description: 'An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.'
-  },
-  {
-    id: 132,
-    image: '/Jewellery/12.png',
-    title: 'Golden Halo Hoops',
-    subtitle: 'Earrings • Gold-Plated',
-    price: '$95',
-    description: 'Bold yet elegant gold-plated hoops that complement both casual and formal looks.'
-  },
-  {
-    id: 133,
-    image: '/Jewellery/13.png',
-    title: 'Moonlight Bangle Set',
-    subtitle: 'Bangle • Silver Finish',
-    price: '$180',
-    description: 'A set of three silver bangles with moonlight shine, perfect for layering.'
-  },
-  {
-    id: 134,
-    image: '/Jewellery/14.png',
-    title: 'RosePetal Brooch',
-    subtitle: 'Brooch • Floral Design',
-    price: '$70',
-    description: 'An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.'
-  },
-  {
-    id: 135,
-    image: '/Jewellery/15.png',
-    title: 'Royal Crown Tiara',
-    subtitle: 'Hair Accessory • Crystal',
-    price: '$250',
-    description: 'A sparkling tiara with crystal embellishments for special occasions and events.'
-  },
-  {
-    id: 136,
-    image: '/Jewellery/16.png',
-    title: 'Amber Glow Pendant',
-    subtitle: 'Pendant • Natural Amber',
-    price: '$140',
-    description: 'A warm amber pendant that radiates natural beauty and vintage charm.'
-  },
-  {
-    id: 137,
-    image: '/Jewellery/17.png',
-    title: 'GoldenLeaf Hairpin Set',
-    subtitle: 'Hair Accessory • Gold Tone',
-    price: '$55',
-    description: 'Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.'
-  },
-  {
-    id: 138,
-    image: '/Jewellery/18.png',
-    title: 'DiamondAura Necklace',
-    subtitle: 'Necklace • Lab Diamond',
-    price: '$500',
-    description: 'A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.'
-  },
-  {
-    id: 139,
-    image: '/Jewellery/19.png',
-    title: 'Crystal Harmony Bracelet',
-    subtitle: 'Bracelet • Multi-Stone',
-    price: '$115',
-    description: 'A beautiful bracelet with mixed crystals symbolizing peace and positive energy.'
-  },
-  {
-    id: 140,
-    image: '/Jewellery/20.png',
-    title: 'Elegance Pearl Drop Earrings',
-    subtitle: 'Earrings • Gold-Plated',
-    price: '$135',
-    description: 'Classic pearl drop earrings that add grace and sophistication to any occasion.'
-  }
 ];
-
 
 export default SEARCH_DATA;
