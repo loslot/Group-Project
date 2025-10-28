@@ -248,14 +248,14 @@ export default function Jewellery() {
         }
       `}</style>
 
-      <div className="mb-6 text-right">
+      {/* <div className="mb-6 text-right">
         <Link
           to="/cart"
           className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-sm hover:scale-105 transition-transform"
         >
           View Cart ({cart.reduce((total, item) => total + item.quantity, 0)})
         </Link>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => (
