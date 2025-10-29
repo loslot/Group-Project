@@ -12,21 +12,18 @@
 // }
 
 // src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router';
-import { CartProvider } from './components/CartContext';
+import React from "react";
+import { BrowserRouter as Router } from "react-router";
+import { CartProvider } from "./components/CartContext";
 
-import MainLayout from './layout/MainLayout';
- 
+import MainLayout from "./layout/MainLayout";
 
 export default function App() {
   return (
-  
-        <CartProvider>
-          <div className="max-w-[2000px] mx-auto">
-            <MainLayout />
-          </div>
-        </CartProvider>
-      
+    <CartProvider>
+      <div className="max-w-[2000px] mx-auto">
+        <MainLayout />
+      </div>
+    </CartProvider>
   );
 }

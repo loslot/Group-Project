@@ -35,18 +35,8 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 83,
-    image: "/Jewellery/4.png",
-    title: "PearlDream Choker",
-    subtitle: "Necklace • Freshwater Pearls",
-    price: "$150",
-    description:
-      "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.",
-    rating: 4.7,
-  },
-  {
     id: 84,
-    image: "/Jewellery/5.png",
+    image: "/Jewellery/4.png",
     title: "DiamondTwist Ring",
     subtitle: "Ring • White Gold",
     price: "$450",
@@ -56,7 +46,7 @@ const cardsData = [
   },
   {
     id: 85,
-    image: "/Jewellery/6.png",
+    image: "/Jewellery/5.png",
     title: "Emerald Grace Pendant",
     subtitle: "Pendant • Gold Plated",
     price: "$130",
@@ -66,7 +56,7 @@ const cardsData = [
   },
   {
     id: 86,
-    image: "/Jewellery/7.png",
+    image: "/Jewellery/6.png",
     title: "SilverWave Anklet",
     subtitle: "Anklet • Sterling Silver",
     price: "$65",
@@ -76,7 +66,7 @@ const cardsData = [
   },
   {
     id: 87,
-    image: "/Jewellery/8.png",
+    image: "/Jewellery/7.png",
     title: "Ruby Radiance Studs",
     subtitle: "Earrings • Ruby Stone",
     price: "$120",
@@ -86,7 +76,7 @@ const cardsData = [
   },
   {
     id: 88,
-    image: "/Jewellery/9.png",
+    image: "/Jewellery/8.png",
     title: "CharmLink Bracelet",
     subtitle: "Bracelet • Stainless Steel",
     price: "$90",
@@ -96,7 +86,7 @@ const cardsData = [
   },
   {
     id: 89,
-    image: "/Jewellery/10.png",
+    image: "/Jewellery/9.png",
     title: "OpalMist Necklace",
     subtitle: "Necklace • Opal Gemstone",
     price: "$210",
@@ -106,7 +96,7 @@ const cardsData = [
   },
   {
     id: 90,
-    image: "/Jewellery/11.png",
+    image: "/Jewellery/10.png",
     title: "Sapphire Queen Ring",
     subtitle: "Ring • Sapphire Stone",
     price: "$390",
@@ -116,7 +106,7 @@ const cardsData = [
   },
   {
     id: 91,
-    image: "/Jewellery/12.png",
+    image: "/Jewellery/11.png",
     title: "Golden Halo Hoops",
     subtitle: "Earrings • Gold-Plated",
     price: "$95",
@@ -126,7 +116,7 @@ const cardsData = [
   },
   {
     id: 92,
-    image: "/Jewellery/13.png",
+    image: "/Jewellery/12.png",
     title: "Moonlight Bangle Set",
     subtitle: "Bangle • Silver Finish",
     price: "$180",
@@ -136,7 +126,7 @@ const cardsData = [
   },
   {
     id: 93,
-    image: "/Jewellery/14.png",
+    image: "/Jewellery/13.png",
     title: "RosePetal Brooch",
     subtitle: "Brooch • Floral Design",
     price: "$70",
@@ -146,7 +136,7 @@ const cardsData = [
   },
   {
     id: 94,
-    image: "/Jewellery/15.png",
+    image: "/Jewellery/14.png",
     title: "Royal Crown Tiara",
     subtitle: "Hair Accessory • Crystal",
     price: "$250",
@@ -156,7 +146,7 @@ const cardsData = [
   },
   {
     id: 95,
-    image: "/Jewellery/16.png",
+    image: "/Jewellery/15.png",
     title: "Amber Glow Pendant",
     subtitle: "Pendant • Natural Amber",
     price: "$140",
@@ -166,7 +156,7 @@ const cardsData = [
   },
   {
     id: 96,
-    image: "/Jewellery/17.png",
+    image: "/Jewellery/16.png",
     title: "GoldenLeaf Hairpin Set",
     subtitle: "Hair Accessory • Gold Tone",
     price: "$55",
@@ -176,7 +166,7 @@ const cardsData = [
   },
   {
     id: 97,
-    image: "/Jewellery/18.png",
+    image: "/Jewellery/17.png",
     title: "DiamondAura Necklace",
     subtitle: "Necklace • Lab Diamond",
     price: "$500",
@@ -185,8 +175,8 @@ const cardsData = [
     rating: 4.9,
   },
   {
-    id: 99,
-    image: "/Jewellery/19.png",
+    id: 98,
+    image: "/Jewellery/18.png",
     title: "Crystal Harmony Bracelet",
     subtitle: "Bracelet • Multi-Stone",
     price: "$115",
@@ -195,14 +185,24 @@ const cardsData = [
     rating: 4.7,
   },
   {
-    id: 100,
-    image: "/Jewellery/20.png",
+    id: 99,
+    image: "/Jewellery/19.png",
     title: "Elegance Pearl Drop Earrings",
     subtitle: "Earrings • Gold-Plated",
     price: "$135",
     description:
       "Classic pearl drop earrings that add grace and sophistication to any occasion.",
     rating: 4.7,
+  },
+   {
+    id: 100,
+    image: "/Jewellery/20.png",
+    title: "Elegance Pearl Drop Earrings",
+    subtitle: "Earrings • Gold-Plated",
+    price: "$135",
+    description:
+      "Gorgeous gold-plated earrings with a pearl drop design for a refined look.",
+    Categorization: true,
   },
 ];
 

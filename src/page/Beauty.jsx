@@ -272,7 +272,9 @@ export default function Beauty() {
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
-                  onError={(e) => (e.target.src = 'https://via.placeholder.com/200')}
+                  onError={(e) =>
+                    (e.target.src = "https://via.placeholder.com/200")
+                  }
                 />
 
                 {/* Badge */}
