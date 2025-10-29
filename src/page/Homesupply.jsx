@@ -233,7 +233,7 @@ export default function Fashion() {
           overflow-hidden
         "
       >
-        <span className="relative z-10">HOMESUPPLY</span>
+        <span className="relative z-10">HOME SUPPLIES</span>
         <span
           className="
             absolute inset-0 bg-gradient-to-r from-indigo-200 via-white to-indigo-400
@@ -274,7 +274,9 @@ export default function Fashion() {
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
+                  onError={(e) =>
+                    (e.target.src = "https://via.placeholder.com/200")
+                  }
                 />
 
                 {/* BADGE */}
@@ -326,7 +328,9 @@ export default function Fashion() {
                     }}
                     className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
                   >
-                    Add to Cart {getItemQuantity(card.id) > 0 && `(${getItemQuantity(card.id)})`}
+                    Add to Cart{" "}
+                    {getItemQuantity(card.id) > 0 &&
+                      `(${getItemQuantity(card.id)})`}
                   </button>
                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
                     Details

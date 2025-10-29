@@ -328,9 +328,6 @@
 //   );
 // }
 
-
-
-
 import React, { useContext } from "react";
 import { Link } from "react-router";
 import { CartContext } from "../components/CartContext";
@@ -353,7 +350,7 @@ const cardsData = [
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
   },
   {
-    id:1 ,
+    id: 1,
     image: "/Electronic/1.png",
     title: "REDMI Airpods 6 Pro",
     subtitle: "Airpods • 128GB",
@@ -363,7 +360,7 @@ const cardsData = [
       "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
   },
   {
-    id:47 ,
+    id: 47,
     image: "/Fashion/7.png",
     title: "Wool Knit Sweater",
     subtitle: "Men fashion • Winter Wear",
@@ -479,7 +476,8 @@ const cardsData = [
     subtitle: "Smartwatch • Fast Charge",
     price: "$120",
     rating: 4.5,
-    description: "A stylish and versatile smartwatch for men and women that tracks fitness, monitors health, and keeps you connected on the go.",
+    description:
+      "A stylish and versatile smartwatch for men and women that tracks fitness, monitors health, and keeps you connected on the go.",
   },
   {
     id: 39,
@@ -488,7 +486,8 @@ const cardsData = [
     subtitle: "Skincare • 250ml",
     price: "$28",
     rating: 4.4,
-    description: "The Fume Lab is a modern skincare brand that blends science and nature to create pure, effective formulas for radiant, healthy skin.",
+    description:
+      "The Fume Lab is a modern skincare brand that blends science and nature to create pure, effective formulas for radiant, healthy skin.",
   },
   {
     id: 60,
@@ -507,7 +506,8 @@ const cardsData = [
     subtitle: "Speaker • Bluetooth 5.3",
     price: "$209",
     rating: 4.6,
-    description: "JBL Speaker Viral Pro is a powerful, high-performance wireless speaker designed for deep bass, clear vocals, and immersive 360° sound",
+    description:
+      "JBL Speaker Viral Pro is a powerful, high-performance wireless speaker designed for deep bass, clear vocals, and immersive 360° sound",
   },
   {
     id: 36,
@@ -602,7 +602,9 @@ export default function New() {
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
+                  onError={(e) =>
+                    (e.target.src = "https://via.placeholder.com/200")
+                  }
                 />
 
                 {/* Badge */}
