@@ -26,32 +26,42 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/accessories"
+                  to="/electronic"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Accessories
+                  Electronics
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/contact"
-                  className="hover:text-blue-500 transition-colors"
-                ></Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
+                  to="/beauty"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Blog
+                  Beauty and Skincare
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/careers"
+                  to="/fashion"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Fashion
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/homesupplies"
                   className="hover:text-blue-500 transition-colors"
                 >
                   Home Supplies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/jewellery"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  Jewellery
                 </Link>
               </li>
             </ul>
@@ -68,7 +78,7 @@ export default function Footer() {
                   to="/pricing"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Pricing
+                  Map
                 </Link>
               </li>
               <li>
@@ -80,28 +90,30 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/orders"
                   className="hover:text-blue-500 transition-colors"
                 >
                   Orders
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/help"
                   className="hover:text-blue-500 transition-colors"
                 >
                   Help
-                </Link>
+                </Link> */}
               </li>
             </ul>
-          </div> 
+          </div>
 
           {/* Contact */}
           <div className="sm:col-span-2 md:col-span-1">
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              Contact
+              <div className="cursor-pointer hover:text-blue-500 transition-colors">
+                <Link to="/contact">Contact Us</Link>
+              </div>
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>📍 Phnom Penh, PP 10012, KH</li>
@@ -114,7 +126,7 @@ export default function Footer() {
       </div>
       {/* Social Icons */}
       <div className="border-t border-gray-300 dark:border-gray-700 py-4 sm:py-6">
-        <div className="flex justify-center space-x-4 sm:space-x-6">
+        <div className="flex justify-around space-x-4 sm:space-x-6">
           <Link
             to="https://facebook.com"
             className="text-xl hover:text-blue-500 transition-colors"

@@ -1,328 +1,647 @@
-// import React from "react";
-// import { Link } from "react-router";
+// // // import React from "react";
+// // // import { Link } from "react-router";
 
-// // Responsive 5/4/2 Card Grid
-// // - Desktop (lg): 5 columns
-// // - Tablet (md): 4 columns
-// // - Mobile (sm): 2 columns
-// // - Smooth hover transitions using Tailwind utilities
+// // // // Responsive 5/4/2 Card Grid
+// // // // - Desktop (lg): 5 columns
+// // // // - Tablet (md): 4 columns
+// // // // - Mobile (sm): 2 columns
+// // // // - Smooth hover transitions using Tailwind utilities
+
+// // // const cardsData = [
+// // //   {
+// // //     id: 101,
+// // //     image: "/Beauty/8.png",
+// // //     title: "Pure Bloom Perfume",
+// // //     subtitle: "Fragrance • 50ml",
+// // //     price: "$60",
+// // //     rating: 4.6,
+// // //     description:
+// // //       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
+// // //   },
+// // //   {
+// // //     id: 102,
+// // //     image: "/Electronic/1.png",
+// // //     title: "SmartX Pro Phone",
+// // //     subtitle: "Smartphone • 128GB",
+// // //     price: "$699",
+// // //     rating: 4.8,
+// // //     description:
+// // //       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
+// // //   },
+// // //   {
+// // //     id: 103,
+// // //     image: "/Fashion/7.png",
+// // //     title: "Wool Knit Sweater",
+// // //     subtitle: "Men • Winter Wear",
+// // //     price: "$70",
+// // //     rating: 4.5,
+// // //     description:
+// // //       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
+// // //   },
+// // //   {
+// // //     id: 104,
+// // //     image: "/Homesupply/1.png",
+// // //     title: "ComfortPlus Pillow Set",
+// // //     subtitle: "Bedroom • 2 Pieces",
+// // //     price: "$45",
+// // //     rating: 4.4,
+// // //     description:
+// // //       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
+// // //   },
+// // //   {
+// // //     id: 105,
+// // //     image: "/Jewellery/11.png",
+// // //     title: "Sapphire Queen Ring",
+// // //     subtitle: "Ring • Sapphire Stone",
+// // //     price: "$390",
+// // //     rating: 4.9,
+// // //     description:
+// // //       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+// // //   },
+// // //   {
+// // //     id: 106,
+// // //     image: "/Electronic/3.png",
+// // //     title: "VisionHD 4K TV",
+// // //     subtitle: "Display • 55-inch",
+// // //     price: "$799",
+// // //     rating: 4.7,
+// // //     description:
+// // //       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
+// // //   },
+// // //   {
+// // //     id: 107,
+// // //     image: "/Beauty/14.png",
+// // //     title: "Lavender Night Cream",
+// // //     subtitle: "Skincare • 50ml",
+// // //     price: "$35",
+// // //     rating: 4.3,
+// // //     description:
+// // //       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
+// // //   },
+// // //   {
+// // //     id: 108,
+// // //     image: "/Jewellery/1.png",
+// // //     title: "Golden Elegance Necklace",
+// // //     subtitle: "Necklace • 18K Gold",
+// // //     price: "$320",
+// // //     rating: 4.8,
+// // //     description:
+// // //       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
+// // //   },
+// // //   {
+// // //     id: 109,
+// // //     image: "/Homesupply/10.png",
+// // //     title: "AirBreeze Floor Fan",
+// // //     subtitle: "Homesupply Appliance • 3-Speed",
+// // //     price: "$75",
+// // //     rating: 4.5,
+// // //     description:
+// // //       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
+// // //   },
+// // //   {
+// // //     id: 110,
+// // //     image: "/Fashion/8.png",
+// // //     title: "Floral Maxi Dress",
+// // //     subtitle: "Women • Bohemian Style",
+// // //     price: "$110",
+// // //     rating: 4.7,
+// // //     description:
+// // //       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+// // //   },
+// // //   {
+// // //     id: 111,
+// // //     image: "/Jewellery/6.png",
+// // //     title: "Emerald Grace Pendant",
+// // //     subtitle: "Pendant • Gold Plated",
+// // //     price: "$130",
+// // //     rating: 4.6,
+// // //     description:
+// // //       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+// // //   },
+// // //   {
+// // //     id: 112,
+// // //     image: "/Homesupply/5.png",
+// // //     title: "Modern Ceramic Vase",
+// // //     subtitle: "Decor • Minimalist Design",
+// // //     price: "$35",
+// // //     rating: 4.2,
+// // //     description:
+// // //       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
+// // //   },
+// // //   {
+// // //     id: 113,
+// // //     image: "/Fashion/13.png",
+// // //     title: "Classic Oxford Shoes",
+// // //     subtitle: "Men • Leather",
+// // //     price: "$130",
+// // //     rating: 4.8,
+// // //     description:
+// // //       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+// // //   },
+// // //   {
+// // //     id: 114,
+// // //     image: "/Electronic/12.png",
+// // //     title: "XPower 10,000mAh Power Bank",
+// // //     subtitle: "Charging • Fast Charge",
+// // //     price: "$39",
+// // //     rating: 4.5,
+// // //     description:
+// // //       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
+// // //   },
+// // //   {
+// // //     id: 115,
+// // //     image: "/Beauty/19.png",
+// // //     title: "Herbal Hair Conditioner",
+// // //     subtitle: "Haircare • 250ml",
+// // //     price: "$28",
+// // //     rating: 4.4,
+// // //     description:
+// // //       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
+// // //   },
+// // //   {
+// // //     id: 116,
+// // //     image: "/Fashion/20.png",
+// // //     title: "Denim Mini Skirt",
+// // //     subtitle: "Women • Casual Wear",
+// // //     price: "$65",
+// // //     rating: 4.3,
+// // //     description:
+// // //       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+// // //   },
+// // //   {
+// // //     id: 117,
+// // //     image: "/Electronic/2.png",
+// // //     title: "AeroBuds Wireless Earphones",
+// // //     subtitle: "Audio • Bluetooth 5.3",
+// // //     price: "$129",
+// // //     rating: 4.6,
+// // //     description:
+// // //       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
+// // //   },
+// // //   {
+// // //     id: 118,
+// // //     image: "/Beauty/16.png",
+// // //     title: "Diamond Glow Highlighter",
+// // //     subtitle: "Makeup • Compact",
+// // //     price: "$29",
+// // //     rating: 4.5,
+// // //     description:
+// // //       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
+// // //   },
+// // //   {
+// // //     id: 119,
+// // //     image: "/Jewellery/14.png",
+// // //     title: "RosePetal Brooch",
+// // //     subtitle: "Brooch • Floral Design",
+// // //     price: "$70",
+// // //     rating: 4.6,
+// // //     description:
+// // //       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
+// // //   },
+// // //   {
+// // //     id: 120,
+
+// // //     image: '/Homesupply/14.png',
+// // //     title: 'Stainless Cookware Set',
+// // //     subtitle: 'Kitchen • 8 Pieces',
+// // //     price: '$150',
+// // //     description: 'Durable stainless steel cookware with even heat distribution for perfect cooking results.'
+// // //    },
+// // // ];
+
+// // // export default function New() {
+// // //   return (
+// // //     <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 ">
+// // //       <h1
+// // //         className="
+// // //     relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center
+// // //     rounded-3xl px-12 py-6
+// // //     bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+// // //     shadow-2xl shadow-blue-500/60
+// // //     uppercase tracking-wider
+// // //     mx-auto w-fit
+// // //     overflow-hidden
+// // //   "
+// // //       >
+// // //         <span className="relative z-10">New's Product</span>
+// // //         <span
+// // //           className="
+// // //     absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400
+// // //     opacity-30
+// // //     animate-[shimmer_2s_infinite]
+// // //   "
+// // //         >
+// // //           ;
+// // //         </span>
+// // //       </h1>
+
+// // //       <style jsx>{`
+// // //         @keyframes shimmer {
+// // //           0% {
+// // //             transform: translateX(-100%);
+// // //           }
+// // //           100% {
+// // //             transform: translateX(100%);
+// // //           }
+// // //         }
+// // //       `}</style>
+
+// // //       {/* Grid:
+// // //           small (sm): 2 columns
+// // //           md (tablet): 4 columns
+// // //           lg (desktop): 5 columns
+// // //       */}
+// // //       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+// // //         {cardsData.map((card) => (
+// // //           <Link to={`/details/${card.id}`} key={card.id}>
+// // //             <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
+// // //               <div className="relative h-48 sm:h-56  w-full overflow-hidden">
+// // //                 <img
+// // //                   src={card.image}
+// // //                   alt={card.title}
+// // //                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
+// // //                 />
+
+// // //                 {/* Badge */}
+// // //                 <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+// // //                   Featured
+// // //                 </div>
+
+// // //                 {/* Quick action */}
+// // //                 <button
+// // //                   aria-label="save"
+// // //                   className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
+// // //                 >
+// // //                   <svg
+// // //                     xmlns="http://www.w3.org/2000/svg"
+// // //                     className="h-4 w-4 text-rose-500"
+// // //                     viewBox="0 0 20 20"
+// // //                     fill="currentColor"
+// // //                   >
+// // //                     <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
+// // //                   </svg>
+// // //                 </button>
+// // //               </div>
+
+// // //               <div className="p-4 sm:p-5">
+// // //                 <div className="flex items-start justify-between">
+// // //                   <div>
+// // //                     <h3 className="text-lg font-semibold text-slate-900">
+// // //                       {card.title}
+// // //                     </h3>
+// // //                     <p className="mt-1 text-sm text-slate-500">
+// // //                       {card.subtitle}
+// // //                     </p>
+// // //                   </div>
+// // //                   <div className="text-right">
+// // //                     <p className="text-sm text-slate-600">From</p>
+// // //                     <p className="text-lg font-bold text-slate-900">
+// // //                       {card.price}
+// // //                     </p>
+// // //                   </div>
+// // //                 </div>
+
+// // //                 <div className="mt-4 flex items-center justify-between">
+// // //                   <h3
+// // //                     href="#"
+// // //                     className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+// // //                   >
+// // //                     Add to Cart
+// // //                   </h3>
+// // //                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
+// // //                     Details
+// // //                   </button>
+// // //                 </div>
+// // //               </div>
+
+// // //               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
+// // //                 <div className="flex items-center justify-between text-xs text-slate-500">
+// // //                   <span>⭐ {card.rating}</span>
+// // //                   <span>Free cancellation</span>
+// // //                 </div>
+// // //               </div>
+// // //             </article>
+// // //           </Link>
+// // //         ))}
+// // //       </div>
+// // //     </section>
+// // //   );
+// // // }
+
+
+
+
+// // src/components/New.jsx
+// import React, { useContext } from "react";
+// import { Link } from "react-router"; // Fixed
+// import { CartContext } from "../components/CartContext";
+// import { useWishlist } from "../Context/WishlistContext";
+// import toast from "react-hot-toast"; // Fixed
 
 // const cardsData = [
 //   {
-//     id: 101,
+//     id: 28,
 //     image: "/Beauty/8.png",
 //     title: "Pure Bloom Perfume",
 //     subtitle: "Fragrance • 50ml",
 //     price: "$60",
 //     rating: 4.6,
-//     description:
-//       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
+//     description: "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
 //   },
 //   {
-//     id: 102,
+//     id: 1,
 //     image: "/Electronic/1.png",
-//     title: "SmartX Pro Phone",
-//     subtitle: "Smartphone • 128GB",
-//     price: "$699",
+//     title: "REDMI Airpods 6 Pro",
+//     subtitle: "Airpods • 128GB",
+//     price: "$49",
 //     rating: 4.8,
-//     description:
-//       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
+//     description: "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
 //   },
 //   {
-//     id: 103,
+//     id: 47,
 //     image: "/Fashion/7.png",
 //     title: "Wool Knit Sweater",
-//     subtitle: "Men • Winter Wear",
+//     subtitle: "Men fashion • Winter Wear",
 //     price: "$70",
-//     rating: 4.5,
-//     description:
-//       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
+//     rating: 4.2,
+//     description: "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
 //   },
 //   {
-//     id: 104,
+//     id: 41,
 //     image: "/Homesupply/1.png",
 //     title: "ComfortPlus Pillow Set",
 //     subtitle: "Bedroom • 2 Pieces",
 //     price: "$45",
-//     rating: 4.4,
-//     description:
-//       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
+//     rating: 4.5,
+//     description: "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
 //   },
 //   {
-//     id: 105,
+//     id: 90,
 //     image: "/Jewellery/11.png",
 //     title: "Sapphire Queen Ring",
 //     subtitle: "Ring • Sapphire Stone",
 //     price: "$390",
 //     rating: 4.9,
-//     description:
-//       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+//     description: "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
 //   },
 //   {
-//     id: 106,
+//     id: 3,
 //     image: "/Electronic/3.png",
-//     title: "VisionHD 4K TV",
-//     subtitle: "Display • 55-inch",
-//     price: "$799",
+//     title: "Smart Watch Waterproof",
+//     subtitle: "Smartwatch • 55-inch",
+//     price: "$300",
 //     rating: 4.7,
-//     description:
-//       "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
+//     description: "The moreFit Smartwatch Waterproof is a sleek and durable fitness companion designed for an active lifestyle.",
 //   },
 //   {
-//     id: 107,
+//     id: 34,
 //     image: "/Beauty/14.png",
 //     title: "Lavender Night Cream",
 //     subtitle: "Skincare • 50ml",
 //     price: "$35",
 //     rating: 4.3,
-//     description:
-//       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
+//     description: "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
 //   },
 //   {
-//     id: 108,
+//     id: 81,
 //     image: "/Jewellery/1.png",
 //     title: "Golden Elegance Necklace",
 //     subtitle: "Necklace • 18K Gold",
 //     price: "$320",
 //     rating: 4.8,
-//     description:
-//       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
+//     description: "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
 //   },
 //   {
-//     id: 109,
+//     id: 70,
 //     image: "/Homesupply/10.png",
 //     title: "AirBreeze Floor Fan",
 //     subtitle: "Homesupply Appliance • 3-Speed",
 //     price: "$75",
 //     rating: 4.5,
-//     description:
-//       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
+//     description: "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
 //   },
 //   {
-//     id: 110,
+//     id: 48,
 //     image: "/Fashion/8.png",
 //     title: "Floral Maxi Dress",
 //     subtitle: "Women • Bohemian Style",
 //     price: "$110",
 //     rating: 4.7,
-//     description:
-//       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+//     description: "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
 //   },
 //   {
-//     id: 111,
+//     id: 85,
 //     image: "/Jewellery/6.png",
 //     title: "Emerald Grace Pendant",
 //     subtitle: "Pendant • Gold Plated",
 //     price: "$130",
 //     rating: 4.6,
-//     description:
-//       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+//     description: "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
 //   },
 //   {
-//     id: 112,
+//     id: 65,
 //     image: "/Homesupply/5.png",
 //     title: "Modern Ceramic Vase",
 //     subtitle: "Decor • Minimalist Design",
 //     price: "$35",
 //     rating: 4.2,
-//     description:
-//       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
+//     description: "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
 //   },
 //   {
-//     id: 113,
+//     id: 53,
 //     image: "/Fashion/13.png",
 //     title: "Classic Oxford Shoes",
 //     subtitle: "Men • Leather",
 //     price: "$130",
 //     rating: 4.8,
-//     description:
-//       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+//     description: "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
 //   },
 //   {
-//     id: 114,
+//     id: 12,
 //     image: "/Electronic/12.png",
-//     title: "XPower 10,000mAh Power Bank",
-//     subtitle: "Charging • Fast Charge",
-//     price: "$39",
+//     title: "Smart Watch for Men Women",
+//     subtitle: "Smartwatch • Fast Charge",
+//     price: "$120",
 //     rating: 4.5,
-//     description:
-//       "A compact power bank with fast-charging support for phones, tablets, and other devices.",
+//     description: "A stylish and versatile smartwatch for men and women that tracks fitness, monitors health, and keeps you connected on the go.",
 //   },
 //   {
-//     id: 115,
+//     id: 39,
 //     image: "/Beauty/19.png",
-//     title: "Herbal Hair Conditioner",
-//     subtitle: "Haircare • 250ml",
+//     title: "The Fume Lab Face",
+//     subtitle: "Skincare • 250ml",
 //     price: "$28",
 //     rating: 4.4,
-//     description:
-//       "A natural conditioner that strengthens and smooths hair with herbal extracts.",
+//     description: "The Fume Lab is a modern skincare brand that blends science and nature to create pure, effective formulas for radiant, healthy skin.",
 //   },
 //   {
-//     id: 116,
+//     id: 60,
 //     image: "/Fashion/20.png",
-//     title: "Denim Mini Skirt",
-//     subtitle: "Women • Casual Wear",
+//     title: "Denim Mini Skirt 2025",
+//     subtitle: "Women fashion • Casual Wear",
 //     price: "$65",
 //     rating: 4.3,
-//     description:
-//       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+//     description: "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
 //   },
 //   {
-//     id: 117,
+//     id: 2,
 //     image: "/Electronic/2.png",
-//     title: "AeroBuds Wireless Earphones",
-//     subtitle: "Audio • Bluetooth 5.3",
-//     price: "$129",
+//     title: "JBL Speaker Viral Pro",
+//     subtitle: "Speaker • Bluetooth 5.3",
+//     price: "$209",
 //     rating: 4.6,
-//     description:
-//       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
+//     description: "JBL Speaker Viral Pro is a powerful, high-performance wireless speaker designed for deep bass, clear vocals, and immersive 360° sound",
 //   },
 //   {
-//     id: 118,
+//     id: 36,
 //     image: "/Beauty/16.png",
 //     title: "Diamond Glow Highlighter",
 //     subtitle: "Makeup • Compact",
 //     price: "$29",
 //     rating: 4.5,
-//     description:
-//       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
+//     description: "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
 //   },
 //   {
-//     id: 119,
+//     id: 93,
 //     image: "/Jewellery/14.png",
 //     title: "RosePetal Brooch",
 //     subtitle: "Brooch • Floral Design",
 //     price: "$70",
 //     rating: 4.6,
-//     description:
-//       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
+//     description: "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
 //   },
 //   {
-//     id: 120,
-
-//     image: '/Homesupply/14.png',
-//     title: 'Stainless Cookware Set',
-//     subtitle: 'Kitchen • 8 Pieces',
-//     price: '$150',
-//     description: 'Durable stainless steel cookware with even heat distribution for perfect cooking results.'
-//    },
+//     id: 74,
+//     image: "/Homesupply/14.png",
+//     title: "Stainless Cookware Set",
+//     subtitle: "Kitchen • 8 Pieces",
+//     price: "$150",
+//     rating: 4.7,
+//     description: "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
+//   },
 // ];
 
 // export default function New() {
+//   const { addToCart } = useContext(CartContext);
+//   const { wishlist, toggleWishlist } = useWishlist(); 
+
 //   return (
-//     <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10 ">
-//       <h1
-//         className="
-//     relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center
-//     rounded-3xl px-12 py-6
-//     bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
-//     shadow-2xl shadow-blue-500/60
-//     uppercase tracking-wider
-//     mx-auto w-fit
-//     overflow-hidden
-//   "
-//       >
+//     <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10">
+//       <h1 className="relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center rounded-3xl px-12 py-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 shadow-2xl shadow-blue-500/60 uppercase tracking-wider mx-auto w-fit overflow-hidden">
 //         <span className="relative z-10">New's Product</span>
-//         <span
-//           className="
-//     absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400
-//     opacity-30
-//     animate-[shimmer_2s_infinite]
-//   "
-//         >
-//           ;
-//         </span>
+//         <span className="absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400 opacity-30 animate-shimmer"></span>
 //       </h1>
 
-//       <style jsx>{`
-//         @keyframes shimmer {
-//           0% {
-//             transform: translateX(-100%);
+//       <style>
+//         {`
+//           @keyframes shimmer {
+//             0% { transform: translateX(-100%); }
+//             100% { transform: translateX(100%); }
 //           }
-//           100% {
-//             transform: translateX(100%);
+//           .animate-shimmer {
+//             animation: shimmer 2s infinite;
 //           }
-//         }
-//       `}</style>
+//         `}
+//       </style>
 
-//       {/* Grid:
-//           small (sm): 2 columns
-//           md (tablet): 4 columns
-//           lg (desktop): 5 columns
-//       */}
+//       {/* Grid */}
 //       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-//         {cardsData.map((card) => (
-//           <Link to={`/details/${card.id}`} key={card.id}>
-//             <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
-//               <div className="relative h-48 sm:h-56  w-full overflow-hidden">
-//                 <img
-//                   src={card.image}
-//                   alt={card.title}
-//                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out "
-//                 />
+//         {cardsData.map((card) => {
+//           const isInWishlist = wishlist.some((i) => i.id === card.id);
 
-//                 {/* Badge */}
-//                 <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-//                   Featured
-//                 </div>
+//           return (
+//             <Link to={`/details/${card.id}`} key={card.id} className="block">
+//               <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+//                 <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+//                   <img
+//                     src={card.image}
+//                     alt={card.title}
+//                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+//                     onError={(e) => (e.currentTarget.src = "https://via.placeholder.com/200")}
+//                   />
 
-//                 {/* Quick action */}
-//                 <button
-//                   aria-label="save"
-//                   className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
-//                 >
-//                   <svg
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="h-4 w-4 text-rose-500"
-//                     viewBox="0 0 20 20"
-//                     fill="currentColor"
-//                   >
-//                     <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
-//                   </svg>
-//                 </button>
-//               </div>
-
-//               <div className="p-4 sm:p-5">
-//                 <div className="flex items-start justify-between">
-//                   <div>
-//                     <h3 className="text-lg font-semibold text-slate-900">
-//                       {card.title}
-//                     </h3>
-//                     <p className="mt-1 text-sm text-slate-500">
-//                       {card.subtitle}
-//                     </p>
+//                   {/* Featured Badge */}
+//                   <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+//                     Featured
 //                   </div>
-//                   <div className="text-right">
-//                     <p className="text-sm text-slate-600">From</p>
-//                     <p className="text-lg font-bold text-slate-900">
-//                       {card.price}
-//                     </p>
-//                   </div>
-//                 </div>
 
-//                 <div className="mt-4 flex items-center justify-between">
-//                   <h3
-//                     href="#"
-//                     className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+//                   {/* Wishlist Heart */}
+//                   <button
+//                     onClick={(e) => {
+//                       e.preventDefault();
+//                       e.stopPropagation();
+//                       toggleWishlist(card);
+//                       toast.success(
+//                         isInWishlist
+//                           ? `${card.title} removed from wishlist`
+//                           : `${card.title} added to wishlist`,
+//                         { duration: 1500 }
+//                       );
+//                     }}
+//                     className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
+//                     aria-label="Toggle wishlist"
 //                   >
-//                     Add to Cart
-//                   </h3>
-//                   <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
-//                     Details
+//                     <svg
+//                       xmlns="http://www.w3.org/2000/svg"
+//                       className={`h-5 w-5 transition-all ${
+//                         isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500 hover:text-red-500"
+//                       }`}
+//                       viewBox="0 0 20 20"
+//                       fill="currentColor"
+//                     >
+//                       <path
+//                         fillRule="evenodd"
+//                         d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"
+//                         clipRule="evenodd"
+//                       />
+//                     </svg>
 //                   </button>
 //                 </div>
-//               </div>
 
-//               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
-//                 <div className="flex items-center justify-between text-xs text-slate-500">
-//                   <span>⭐ {card.rating}</span>
-//                   <span>Free cancellation</span>
+//                 <div className="p-4 sm:p-5 flex flex-col flex-grow">
+//                   <div className="flex items-start justify-between">
+//                     <div>
+//                       <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
+//                         {card.title}
+//                       </h3>
+//                       <p className="mt-1 text-sm text-slate-500 line-clamp-1">
+//                         {card.subtitle}
+//                       </p>
+//                     </div>
+//                     <div className="text-right">
+//                       <p className="text-sm text-slate-600">From</p>
+//                       <p className="text-lg font-bold text-slate-900">{card.price}</p>
+//                     </div>
+//                   </div>
+
+//                   <div className="mt-4 flex items-center justify-between">
+//                     <button
+//                       onClick={(e) => {
+//                         e.preventDefault();
+//                         e.stopPropagation();
+//                         addToCart(card);
+//                         toast.success(`${card.title} added to cart!`, { duration: 1200 });
+//                       }}
+//                       className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
+//                     >
+//                       Add to Cart
+//                     </button>
+//                     <span className="text-sm text-indigo-600 font-medium hover:underline">
+//                       Details
+//                     </span>
+//                   </div>
 //                 </div>
-//               </div>
-//             </article>
-//           </Link>
-//         ))}
+
+//                 <div className="px-4 pb-4 sm:px-5 sm:pb-5">
+//                   <div className="flex items-center justify-between text-xs text-slate-500">
+//                     <span>Rating: {card.rating}</span>
+//                     <span>Free cancellation</span>
+//                   </div>
+//                 </div>
+//               </article>
+//             </Link>
+//           );
+//         })}
 //       </div>
 //     </section>
 //   );
@@ -334,12 +653,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router";
 import { CartContext } from "../components/CartContext";
-
-// Responsive 5/4/2 Card Grid
-// - Desktop (lg): 5 columns
-// - Tablet (md): 4 columns
-// - Mobile (sm): 2 columns
-// - Smooth hover transitions using Tailwind utilities
+import { useWishlist } from "../Context/WishlistContext";
+import toast from "react-hot-toast";
 
 const cardsData = [
   {
@@ -349,28 +664,25 @@ const cardsData = [
     subtitle: "Fragrance • 50ml",
     price: "$60",
     rating: 4.6,
-    description:
-      "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
+    description: "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
   },
   {
-    id:1 ,
+    id: 1,
     image: "/Electronic/1.png",
     title: "REDMI Airpods 6 Pro",
     subtitle: "Airpods • 128GB",
     price: "$49",
     rating: 4.8,
-    description:
-      "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
+    description: "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
   },
   {
-    id:47 ,
+    id: 47,
     image: "/Fashion/7.png",
     title: "Wool Knit Sweater",
     subtitle: "Men fashion • Winter Wear",
     price: "$70",
     rating: 4.2,
-    description:
-      "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
+    description: "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
   },
   {
     id: 41,
@@ -379,8 +691,7 @@ const cardsData = [
     subtitle: "Bedroom • 2 Pieces",
     price: "$45",
     rating: 4.5,
-    description:
-      "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
+    description: "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
   },
   {
     id: 90,
@@ -389,18 +700,16 @@ const cardsData = [
     subtitle: "Ring • Sapphire Stone",
     price: "$390",
     rating: 4.9,
-    description:
-      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+    description: "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
   },
   {
     id: 3,
     image: "/Electronic/3.png",
-    title: "Smart Watch Waterproof ",
+    title: "Smart Watch Waterproof",
     subtitle: "Smartwatch • 55-inch",
     price: "$300",
     rating: 4.7,
-    description:
-      "The moreFit Smartwatch Waterproof is a sleek and durable fitness companion designed for an active lifestyle.",
+    description: "The moreFit Smartwatch Waterproof is a sleek and durable fitness companion designed for an active lifestyle.",
   },
   {
     id: 34,
@@ -409,8 +718,7 @@ const cardsData = [
     subtitle: "Skincare • 50ml",
     price: "$35",
     rating: 4.3,
-    description:
-      "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
+    description: "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
   },
   {
     id: 81,
@@ -419,8 +727,7 @@ const cardsData = [
     subtitle: "Necklace • 18K Gold",
     price: "$320",
     rating: 4.8,
-    description:
-      "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
+    description: "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
   },
   {
     id: 70,
@@ -429,8 +736,7 @@ const cardsData = [
     subtitle: "Homesupply Appliance • 3-Speed",
     price: "$75",
     rating: 4.5,
-    description:
-      "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
+    description: "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
   },
   {
     id: 48,
@@ -439,8 +745,7 @@ const cardsData = [
     subtitle: "Women • Bohemian Style",
     price: "$110",
     rating: 4.7,
-    description:
-      "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+    description: "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
   },
   {
     id: 85,
@@ -449,8 +754,7 @@ const cardsData = [
     subtitle: "Pendant • Gold Plated",
     price: "$130",
     rating: 4.6,
-    description:
-      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+    description: "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
   },
   {
     id: 65,
@@ -459,8 +763,7 @@ const cardsData = [
     subtitle: "Decor • Minimalist Design",
     price: "$35",
     rating: 4.2,
-    description:
-      "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
+    description: "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
   },
   {
     id: 53,
@@ -469,8 +772,7 @@ const cardsData = [
     subtitle: "Men • Leather",
     price: "$130",
     rating: 4.8,
-    description:
-      "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+    description: "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
   },
   {
     id: 12,
@@ -497,8 +799,7 @@ const cardsData = [
     subtitle: "Women fashion • Casual Wear",
     price: "$65",
     rating: 4.3,
-    description:
-      "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+    description: "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
   },
   {
     id: 2,
@@ -516,8 +817,7 @@ const cardsData = [
     subtitle: "Makeup • Compact",
     price: "$29",
     rating: 4.5,
-    description:
-      "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
+    description: "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
   },
   {
     id: 93,
@@ -526,8 +826,7 @@ const cardsData = [
     subtitle: "Brooch • Floral Design",
     price: "$70",
     rating: 4.6,
-    description:
-      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
+    description: "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
   },
   {
     id: 74,
@@ -536,96 +835,98 @@ const cardsData = [
     subtitle: "Kitchen • 8 Pieces",
     price: "$150",
     rating: 4.7,
-    description:
-      "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
+    description: "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
   },
 ];
 
 export default function New() {
-  const { cart, addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
+  const { wishlist, toggleWishlist } = useWishlist();
 
   return (
     <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10">
-      <h1
-        className="
-          relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center
-          rounded-3xl px-12 py-6
-          bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
-          shadow-2xl shadow-blue-500/60
-          uppercase tracking-wider
-          mx-auto w-fit
-          overflow-hidden
-        "
-      >
+      {/* Shimmer Heading */}
+      <h1 className="relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center rounded-3xl px-12 py-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 shadow-2xl shadow-blue-500/60 uppercase tracking-wider mx-auto w-fit overflow-hidden">
         <span className="relative z-10">New's Product</span>
-        <span
-          className="
-            absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400
-            opacity-30
-            animate-[shimmer_2s_infinite]
-          "
-        ></span>
+        <span className="absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400 opacity-30 animate-shimmer"></span>
       </h1>
 
+      {/* Shimmer Animation */}
       <style jsx>{`
         @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+        .animate-shimmer {
+          animation: shimmer 2s infinite;
         }
       `}</style>
 
-      {/* Cart Summary */}
-      {/* <div className="mb-6 text-right">
-        <Link
-          to="/cart"
-          className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-sm hover:scale-105 transition-transform"
-        >
-          View Cart ({cart.reduce((total, item) => total + item.quantity, 0)})
-        </Link>
-      </div> */}
-
-      {/* Grid:
-          small (sm): 2 columns
-          md (tablet): 4 columns
-          lg (desktop): 5 columns
-      */}
+      {/* Responsive Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {cardsData.map((card) => (
-          <Link to={`/details/${card.id}`} key={card.id}>
-            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full">
-              <div className="relative h-48 sm:h-56 w-full overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
-                />
+        {cardsData.map((card) => {
+          const isInWishlist = wishlist.some((i) => i.id === card.id);
 
-                {/* Badge */}
+          return (
+            <article
+              key={card.id}
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+            >
+              {/* Image + Badges + Heart */}
+              <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+                {/* Clickable Image */}
+                <Link to={`/details/${card.id}`}>
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) =>
+                      (e.currentTarget.src = "https://via.placeholder.com/200")
+                    }
+                  />
+                </Link>
+
+                {/* Featured Badge */}
                 <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
                   Featured
                 </div>
 
-                {/* Quick action */}
+                {/* Wishlist Heart */}
                 <button
-                  aria-label="save"
-                  className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleWishlist(card);
+                    toast.success(
+                      isInWishlist
+                        ? `${card.title} removed from wishlist`
+                        : `${card.title} added to wishlist`,
+                      { duration: 1500 }
+                    );
+                  }}
+                  className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
+                  aria-label="Toggle wishlist"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-rose-500"
+                    className={`h-5 w-5 transition-all ${
+                      isInWishlist
+                        ? "fill-red-600 text-red-600"
+                        : "text-gray-500 hover:text-red-500"
+                    }`}
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
-                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </button>
               </div>
 
+              {/* Content */}
               <div className="p-4 sm:p-5 flex flex-col flex-grow">
                 <div className="flex items-start justify-between">
                   <div>
@@ -645,31 +946,41 @@ export default function New() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
+                  {/* Add to Cart */}
                   <button
                     onClick={(e) => {
-                      e.preventDefault(); // Prevent Link navigation
+                      e.preventDefault();
+                      e.stopPropagation();
                       addToCart(card);
-                      alert(`${card.title} added to cart!`);
+                      toast.success(`${card.title} added to cart!`, {
+                        duration: 1200,
+                      });
                     }}
-                    className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
                   >
                     Add to Cart
                   </button>
-                  <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
+
+                  {/* Details Link */}
+                  <Link
+                    to={`/details/${card.id}`}
+                    className="text-sm text-indigo-600 font-medium hover:underline"
+                  >
                     Details
-                  </button>
+                  </Link>
                 </div>
               </div>
 
+              {/* Rating */}
               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                 <div className="flex items-center justify-between text-xs text-slate-500">
-                  <span>⭐ {card.rating}</span>
+                  <span>Rating: {card.rating}</span>
                   <span>Free cancellation</span>
                 </div>
               </div>
             </article>
-          </Link>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

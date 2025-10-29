@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router"; 
 import { CartContext } from "../components/CartContext";
+import { useWishlist } from "../Context/WishlistContext";
+import toast from "react-hot-toast"; 
 
 const cardsData = [
   {
@@ -206,138 +208,126 @@ const cardsData = [
 ];
 
 export default function Fashion() {
-  const { cart, addToCart } = useContext(CartContext);
-
-  // Get the quantity of an item in the cart
-  const getItemQuantity = (id) => {
-    const item = cart.find((cartItem) => cartItem.id === id);
-    return item ? item.quantity : 0;
-  };
+  const { addToCart } = useContext(CartContext);
+  const { wishlist, toggleWishlist } = useWishlist(); 
 
   return (
     <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10">
-      <h1
-        className="
-          relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center
-          rounded-3xl px-12 py-6
-          bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-          shadow-2xl shadow-indigo-500/60
-          uppercase tracking-wider
-          mx-auto w-fit
-          overflow-hidden
-        "
-      >
-        <span className="relative z-10">FASHIONS</span>
-        <span
-          className="
-            absolute inset-0 bg-gradient-to-r from-indigo-200 via-white to-indigo-400
-            opacity-30
-            animate-[shimmer_2s_infinite]
-          "
-        ></span>
+      <h1 className="relative text-3xl sm:text-5xl font-extrabold mb-12 text-white text-center rounded-3xl px-12 py-6 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 shadow-2xl shadow-blue-500/60 uppercase tracking-wider mx-auto w-fit overflow-hidden">
+        <span className="relative z-10">Fashion</span>
+        <span className="absolute inset-0 bg-gradient-to-r from-blue-200 via-white to-blue-400 opacity-30 animate-shimmer"></span>
       </h1>
 
-      <style jsx>{`
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
+      <style>
+        {`
+          @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
           }
-          100% {
-            transform: translateX(100%);
+          .animate-shimmer {
+            animation: shimmer 2s infinite;
           }
-        }
-      `}</style>
+        `}
+      </style>
 
-      {/* Cart Summary */}
-      {/* <div className="mb-6 text-right">
-        <Link
-          to="/cart"
-          className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-sm hover:scale-105 transition-transform"
-        >
-          View Cart ({cart.reduce((total, item) => total + item.quantity, 0)})
-        </Link>
-      </div> */}
-
+      {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {cardsData.map((card) => (
-          <Link to={`/details/${card.id}`} key={card.id}>
-            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col min-h-[350px]">
-              {/* IMAGE */}
-              <div className="relative h-48 sm:h-56 w-full overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
-                />
+        {cardsData.map((card) => {
+          const isInWishlist = wishlist.some((i) => i.id === card.id);
 
-                {/* BADGE */}
-                <div className="absolute left-3 top-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-                  Featured
-                </div>
+          return (
+            <Link to={`/details/${card.id}`} key={card.id} className="block">
+              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+                <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => (e.currentTarget.src = "https://via.placeholder.com/200")}
+                  />
 
-                {/* WISHLIST ICON */}
-                <button
-                  aria-label="save"
-                  className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md focus:outline-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-rose-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 10.828a4 4 0 010-5.656z" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-4 sm:p-5 flex flex-col flex-1">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
-                      {card.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-slate-500 line-clamp-1">
-                      {card.subtitle}
-                    </p>
+                  {/* Featured Badge */}
+                  <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+                    Featured
                   </div>
-                  <div className="text-right">
-                    <p className="text-sm text-slate-600">From</p>
-                    <p className="text-lg font-bold text-slate-900">
-                      {card.price}
-                    </p>
-                  </div>
-                </div>
 
-                <div className="mt-4 flex items-center justify-between">
+                  {/* Wishlist Heart */}
                   <button
                     onClick={(e) => {
-                      e.preventDefault(); // Prevent Link navigation
-                      addToCart(card);
-                      alert(`${card.title} added to cart!`);
+                      e.preventDefault();
+                      e.stopPropagation();
+                      toggleWishlist(card);
+                      toast.success(
+                        isInWishlist
+                          ? `${card.title} removed from wishlist`
+                          : `${card.title} added to wishlist`,
+                        { duration: 1500 }
+                      );
                     }}
-                    className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                    className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
+                    aria-label="Toggle wishlist"
                   >
-                    Add to Cart {getItemQuantity(card.id) > 0 && `(${getItemQuantity(card.id)})`}
-                  </button>
-                  <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
-                    Details
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`h-5 w-5 transition-all ${
+                        isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500 hover:text-red-500"
+                      }`}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </button>
                 </div>
-              </div>
 
-              {/* FOOTER */}
-              <div className="px-4 pb-4 sm:px-5 sm:pb-5">
-                <div className="flex items-center justify-between text-xs text-slate-500">
-                  <span>⭐ {card.rating}</span>
-                  <span>Free cancellation</span>
+                <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
+                        {card.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-500 line-clamp-1">
+                        {card.subtitle}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-slate-600">From</p>
+                      <p className="text-lg font-bold text-slate-900">{card.price}</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center justify-between">
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        addToCart(card);
+                        toast.success(`${card.title} added to cart!`, { duration: 1200 });
+                      }}
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
+                    >
+                      Add to Cart
+                    </button>
+                    <span className="text-sm text-indigo-600 font-medium hover:underline">
+                      Details
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </Link>
-        ))}
+
+                <div className="px-4 pb-4 sm:px-5 sm:pb-5">
+                  <div className="flex items-center justify-between text-xs text-slate-500">
+                    <span>Rating: {card.rating}</span>
+                    <span>Free cancellation</span>
+                  </div>
+                </div>
+              </article>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

@@ -634,25 +634,23 @@
 
 
 
-// src/components/Checkout.tsx
+// src/components/Checkout.jsx
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router";
-import { CartContext } from "../components/CartContext";
+import { CartContext } from "./CartContext";
 import { motion } from "framer-motion";
 import { QRCodeCanvas } from "qrcode.react";
+import toast from "react-hot-toast";
 
 // CONFIG
-const MERCHANT_LIGHTNING = "merchant@your-wallet.com"; // Replace with your Lightning Address
+const MERCHANT_LIGHTNING = "merchant@your-wallet.com";
 const PAYMENT_TIMEOUT_SECONDS = 120; // 2 minutes
 
 export default function Checkout() {
   const { cart, totalPrice, updateQuantity, removeFromCart } = useContext(CartContext);
   const navigate = useNavigate();
 
-  // Payment method
-  const [paymentMethod, setPaymentMethod] = useState<"card" | "qr">("card");
-
-  // QR states
+  const [paymentMethod, setPaymentMethod] = useState("card");
   const [paymentURI, setPaymentURI] = useState("");
   const [loadingQR, setLoadingQR] = useState(false);
   const [timeLeft, setTimeLeft] = useState(PAYMENT_TIMEOUT_SECONDS);
@@ -660,18 +658,24 @@ export default function Checkout() {
   const [paymentDone, setPaymentDone] = useState(false);
   const [isChecking, setIsChecking] = useState(false);
 
-  // Fresh orderId every mount
   const [orderId] = useState(() => `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef(null);
 
-  // Animations
-  const containerVariants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
-  const itemVariants = { hidden: { opacity: 0, x: 100 }, visible: (i: number) => ({ opacity: 1, x: 0, transition: { delay: i * 0.1 } }) };
-  const headerVariants = { hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } } };
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: (i) => ({ opacity: 1, x: 0, transition: { delay: i * 0.1 } }),
+  };
+  const headerVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+  };
 
-  // ---------------------------------------------------------------
-  // 1. Build USD-ONLY QR Code (only if method is qr)
-  // ---------------------------------------------------------------
+  // Build QR URI
   useEffect(() => {
     if (paymentMethod !== "qr" || totalPrice <= 0 || cart.length === 0) return;
 
@@ -693,11 +697,9 @@ export default function Checkout() {
     };
 
     buildURI();
-  }, [paymentMethod, totalPrice, cart, orderId]);
+  }, [paymentMethod, totalPrice, cart.length, orderId]);
 
-  // ---------------------------------------------------------------
-  // 2. Start 2-minute timer for QR
-  // ---------------------------------------------------------------
+  // Timer
   useEffect(() => {
     if (paymentMethod !== "qr" || loadingQR || !paymentURI || qrExpired || paymentDone) return;
 
@@ -720,9 +722,7 @@ export default function Checkout() {
     };
   }, [paymentMethod, paymentURI, loadingQR, qrExpired, paymentDone]);
 
-  // ---------------------------------------------------------------
-  // 3. One-time payment check (QR)
-  // ---------------------------------------------------------------
+  // Check payment status
   useEffect(() => {
     if (paymentMethod !== "qr" || !paymentURI || paymentDone || qrExpired || loadingQR) return;
 
@@ -734,6 +734,7 @@ export default function Checkout() {
         if (data.paid === true) {
           setPaymentDone(true);
           if (timerRef.current) clearInterval(timerRef.current);
+          toast.success("Payment confirmed!");
         }
       } catch (err) {
         console.error("Payment check failed:", err);
@@ -745,27 +746,21 @@ export default function Checkout() {
     checkPayment();
   }, [paymentMethod, paymentURI, paymentDone, qrExpired, loadingQR, orderId]);
 
-  // ---------------------------------------------------------------
-  // 4. Format time
-  // ---------------------------------------------------------------
-  const formatTime = (seconds: number) => {
+  // Format time
+  const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
-  // ---------------------------------------------------------------
-  // 5. Handle Card Payment
-  // ---------------------------------------------------------------
-  const handleCardSubmit = (e: React.FormEvent) => {
+  // Card submit
+  const handleCardSubmit = (e) => {
     e.preventDefault();
-    alert("Card payment processed! (Mock)");
+    toast.success("Card payment processed! (Mock)");
     navigate("/");
   };
 
-  // ---------------------------------------------------------------
-  // 6. Empty Cart
-  // ---------------------------------------------------------------
+  // Empty cart
   if (cart.length === 0) {
     return (
       <motion.section
@@ -789,9 +784,6 @@ export default function Checkout() {
     );
   }
 
-  // ---------------------------------------------------------------
-  // 7. Main UI
-  // ---------------------------------------------------------------
   return (
     <motion.section
       className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10 bg-slate-100"
@@ -806,10 +798,10 @@ export default function Checkout() {
         Checkout
       </motion.h1>
 
-      {/* {/* <div className="grid gap-6 lg:grid-cols-2"> */}
+      <div className="grid gap-8 lg:grid-cols-2">
         {/* Cart Summary */}
         <div className="space-y-6">
-          {/* <h2 className="text-2xl font-semibold text-gray-900">Order Summary</h2>
+          <h2 className="text-2xl font-semibold text-gray-900">Order Summary</h2>
           {cart.map((item, index) => (
             <motion.div
               key={item.id}
@@ -828,7 +820,8 @@ export default function Checkout() {
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                 <p className="text-sm text-gray-500">{item.subtitle}</p>
-                <p className="text-lg font-bold text-gray-900">${item.price}</p>
+                <p className="text-lg font-bold text-gray-900">{item.price}</p>
+
                 <div className="flex items-center gap-3 mt-3">
                   <div className="flex items-center gap-1 bg-gray-50 rounded-full p-1">
                     <motion.button
@@ -875,10 +868,10 @@ export default function Checkout() {
           <div className="text-right">
             <p className="text-xl font-bold text-gray-900">Total: ${totalPrice}</p>
           </div>
-        </div>  */}
+        </div>
 
         {/* Payment Options */}
-        <div className="bg-white/10 rounded-xl shadow-md p-6 space-y-6 ">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-md p-6 space-y-6">
           <h2 className="text-2xl font-semibold text-gray-900">Payment Method</h2>
 
           {/* Tabs */}
@@ -938,7 +931,7 @@ export default function Checkout() {
             </form>
           )}
 
-          {/* USD QR */}
+          {/* QR Payment */}
           {paymentMethod === "qr" && (
             <div className="text-center space-y-6">
               {loadingQR ? (
@@ -985,7 +978,7 @@ export default function Checkout() {
                   <motion.button
                     onClick={() => {
                       navigator.clipboard.writeText(paymentURI);
-                      alert("Payment link copied!");
+                      toast.success("Payment link copied!");
                     }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
