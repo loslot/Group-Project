@@ -70,7 +70,6 @@ const cardsData = [
     price: "$320",
     rating: 4.8,
   },
- 900,
   {
     id: 70,
     image: "/Homesupply/10.png",
@@ -283,7 +282,7 @@ export default function New() {
                     }}
                     className="flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform hover:scale-105"
                   >
-                    Add to Cart {quantity > 0 && `(${quantity})`}
+                    Add to Cart 
                   </button>
 
                   <Link

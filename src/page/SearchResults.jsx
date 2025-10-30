@@ -12,8 +12,8 @@ export default function SearchResults() {
   const matched = q
     ? SEARCH_DATA.filter(p => {
         switch (mode) {
-          case 'id':
-            return String(p.id) === q;
+          // case 'id':
+          //   return String(p.id) === q;
           case 'title':
             return p.title.toLowerCase().includes(q.toLowerCase());
           case 'price':

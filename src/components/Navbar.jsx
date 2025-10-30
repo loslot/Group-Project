@@ -93,7 +93,7 @@ export default function Navbar() {
               className="cursor-pointer bg-transparent font-semibold text-xs lg:text-sm px-2 lg:px-3 py-3 text-indigo-600 focus:outline-none"
             >
               <option value="title">Title</option>
-              <option value="id">ID</option>
+              {/* <option value="id">ID</option> */}
               <option value="price">Price</option>
             </select>
             <div className="h-6 w-px bg-blue-500/30"></div>

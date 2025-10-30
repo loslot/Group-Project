@@ -1,7 +1,7 @@
 // src/pages/Homesupply.tsx
-import React, { useContext } from "react";
-import { Link } from "react-router";
-import { CartContext } from "../components/CartContext"
+import React from "react";
+import { Link } from "react-router"; 
+import { useCart } from "../components/CartContext";
 import { useWishlist } from "../Context/WishlistContext";
 import toast from "react-hot-toast";
 
@@ -189,7 +189,7 @@ const cardsData = [
 ];
 
 export default function Homesupply() {
-  const { addToCart, getItemQuantity } = useContext(CartContext);
+  const { addToCart, getItemQuantity } = useCart(); // Safe + correct
   const { wishlist, toggleWishlist } = useWishlist();
 
   return (
@@ -202,19 +202,23 @@ export default function Homesupply() {
 
       <style jsx>{`
         @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
         }
         .animate-shimmer {
           animation: shimmer 2s infinite;
         }
       `}</style>
 
-      {/* Responsive Grid: 2 → 4 → 5 */}
+      {/* Responsive Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card) => {
           const isInWishlist = wishlist.some((item) => item.id === card.id);
-          const quantity = getItemQuantity(card.id);
+          const quantity = getItemQuantity(card.id); // Now works!
 
           return (
             <Link to={`/details/${card.id}`} key={card.id} className="block">
@@ -226,7 +230,8 @@ export default function Homesupply() {
                     alt={card.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      e.currentTarget.src = "https://via.placeholder.com/300x200?text=Image+Not+Found";
+                      e.currentTarget.src =
+                        "https://via.placeholder.com/300x200?text=Image+Not+Found";
                     }}
                   />
 
