@@ -230,105 +230,122 @@ export default function Jewellery() {
         `}
       </style>
 
-      {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {cardsData.map((card) => {
-          const isInWishlist = wishlist.some((i) => i.id === card.id);
 
-          return (
-            <Link to={`/details/${card.id}`} key={card.id} className="block">
-              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
-                <div className="relative h-48 sm:h-56 w-full overflow-hidden">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    onError={(e) => (e.currentTarget.src = "https://via.placeholder.com/200")}
-                  />
-
-                  {/* Featured Badge */}
-                  <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-                    Featured
-                  </div>
-
-                  {/* Wishlist Heart */}
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      toggleWishlist(card);
-                      toast.success(
-                        isInWishlist
-                          ? `${card.title} removed from wishlist`
-                          : `${card.title} added to wishlist`,
-                        { duration: 1500 }
-                      );
-                    }}
-                    className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
-                    aria-label="Toggle wishlist"
+       {/* Responsive Grid: 2 / 4 / 5 */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {cardsData.map((card) => {
+                const isInWishlist = Array.isArray(wishlist) && wishlist.some((i) => i.id === card.id);
+                const quantity = typeof getItemQuantity === "function" ? getItemQuantity(card.id) : 0;
+      
+                return (
+                  <article
+                    key={card.id}
+                    className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className={`h-5 w-5 transition-all ${
-                        isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500 hover:text-red-500"
-                      }`}
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
-                        {card.title}
-                      </h3>
-                      <p className="mt-1 text-sm text-slate-500 line-clamp-1">
-                        {card.subtitle}
-                      </p>
+                    {/* Image + Badges + Heart */}
+                    <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+                      <Link to={`/details/${card.id}`} className="block w-full h-full">
+                        <img
+                          src={card.image}
+                          alt={card.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          onError={(e) => {
+                            e.currentTarget.src = "https://via.placeholder.com/300x200?text=No+Image";
+                          }}
+                        />
+                      </Link>
+      
+                      <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+                        Featured
+                      </div>
+      
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          if (typeof toggleWishlist === "function") {
+                            toggleWishlist(card);
+                            toast.success(
+                              isInWishlist
+                                ? `${card.title} removed from wishlist`
+                                : `${card.title} added to wishlist`,
+                              { duration: 1500 }
+                            );
+                          }
+                        }}
+                        className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
+                        aria-label="Toggle wishlist"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className={`h-5 w-5 transition-all ${
+                            isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500 hover:text-red-500"
+                          }`}
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </button>
                     </div>
-                    <div className="text-right">
-                      <p className="text-sm text-slate-600">From</p>
-                      <p className="text-lg font-bold text-slate-900">{card.price}</p>
+      
+                    {/* Content */}
+                    <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex-1 pr-2">
+                          <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
+                            {card.title}
+                          </h3>
+                          <p className="mt-1 text-sm text-slate-500 line-clamp-1">
+                            {card.subtitle}
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm text-slate-600">From</p>
+                          <p className="text-lg font-bold text-slate-900">{card.price}</p>
+                        </div>
+                      </div>
+      
+                      <div className="mt-auto flex gap-2">
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            if (typeof addToCart === "function") {
+                              addToCart(card);
+                              toast.success(`${card.title} added to cart!`, { duration: 1200 });
+                            }
+                          }}
+                          className="cursor-pointer inline-flex items-center justify-center gap-2 px-2 md:px-3 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                        > 
+                          Add Cart
+                        </button>
+                        <Link
+                          to={`/details/${card.id}`}
+                          className="text-sm text-indigo-600 font-medium hover:underline ml-6 mt-2"
+                        >
+                          Details
+                        </Link>
+                      </div>
                     </div>
-                  </div>
+      
+                    {/* Footer */}
+                    <div className="px-4 pb-4 sm:px-5 sm:pb-5">
+                      <div className="flex items-center justify-between text-xs text-slate-500">
+                        <span>Rating: {card.rating}</span>
+                        <span>Free cancellation</span>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
 
-                  <div className="mt-4 flex items-center justify-between">
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        addToCart(card);
-                        toast.success(`${card.title} added to cart!`, { duration: 1200 });
-                      }}
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
-                    >
-                      Add to Cart
-                    </button>
-                    <span className="text-sm text-indigo-600 font-medium hover:underline">
-                      Details
-                    </span>
-                  </div>
-                </div>
-
-                <div className="px-4 pb-4 sm:px-5 sm:pb-5">
-                  <div className="flex items-center justify-between text-xs text-slate-500">
-                    <span>Rating: {card.rating}</span>
-                    <span>Free cancellation</span>
-                  </div>
-                </div>
-              </article>
-            </Link>
-          );
-        })}
-      </div>
+    
     </section>
   );
 }

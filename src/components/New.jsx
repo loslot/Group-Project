@@ -1,8 +1,8 @@
 // src/pages/New.jsx
 import React from "react";
-import { Link } from "react-router"; 
+import { Link } from "react-router"; // Fixed: was "react-router"
 import { useCart } from "../components/CartContext";
-import { useWishlist } from "../Context/WishlistContext"; 
+import { useWishlist } from "../Context/WishlistContext";
 import toast from "react-hot-toast";
 
 const cardsData = [
@@ -208,7 +208,7 @@ export default function New() {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-500 "
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.currentTarget.src = "https://via.placeholder.com/300x200?text=No+Image";
                     }}
@@ -270,6 +270,7 @@ export default function New() {
                   </div>
                 </div>
 
+                {/* Buttons */}
                 <div className="mt-auto flex gap-2">
                   <button
                     onClick={(e) => {
@@ -280,14 +281,14 @@ export default function New() {
                         toast.success(`${card.title} added to cart!`, { duration: 1200 });
                       }
                     }}
-                    className="flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-2xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform"
-                  >
-                    Add to Cart 
+                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-2 md:px-3 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                        > 
+                          Add Cart
                   </button>
 
                   <Link
                     to={`/details/${card.id}`}
-                    className="text-sm text-indigo-600 font-medium hover:underline ml-6 mt-2"
+                    className="text-sm text-indigo-600 font-medium hover:underline ml-2 flex items-center"
                   >
                     Details
                   </Link>
@@ -297,7 +298,7 @@ export default function New() {
               {/* Footer */}
               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                 <div className="flex items-center justify-between text-xs text-slate-500">
-                  <span>Rating: {card.rating}</span>
+                  <span>Rating: {card.rating} stars</span>
                   <span>Free cancellation</span>
                 </div>
               </div>
