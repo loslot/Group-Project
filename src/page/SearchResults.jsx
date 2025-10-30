@@ -1,22 +1,22 @@
-import { useSearchParams, Link, useNavigate } from 'react-router';
-import { useState } from 'react';
-import SEARCH_DATA from '../page/SearchData';
+import { useSearchParams, Link, useNavigate } from "react-router";
+import { useState } from "react";
+import SEARCH_DATA from "../page/SearchData";
 
 export default function SearchResults() {
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
-  const q = params.get('q')?.trim() || '';
-  const mode = params.get('mode') || 'title';
+  const q = params.get("q")?.trim() || "";
+  const mode = params.get("mode") || "title";
 
   /* ---------- FILTER BY SELECTED MODE ONLY ---------- */
   const matched = q
-    ? SEARCH_DATA.filter(p => {
+    ? SEARCH_DATA.filter((p) => {
         switch (mode) {
-          // case 'id':
-          //   return String(p.id) === q;
-          case 'title':
+          case "id":
+            return String(p.id) === q;
+          case "title":
             return p.title.toLowerCase().includes(q.toLowerCase());
-          case 'price':
+          case "price":
             return p.price.toLowerCase().includes(q.toLowerCase());
           default:
             return false;
@@ -27,28 +27,28 @@ export default function SearchResults() {
   /* ---------- SINGLE NATIVE SELECT → choose ONE only ---------- */
   const handleModeChange = (e) => {
     const newMode = e.target.value;
-    params.set('mode', newMode);
+    params.set("mode", newMode);
     setParams(params, { replace: true }); // Update URL without adding to history
   };
 
   /* ---------- CANCEL SEARCH ---------- */
   const handleCancelSearch = () => {
     setParams({}); // Clear search parameters
-    navigate('/'); // Navigate to all products
+    navigate("/"); // Navigate to all products
   };
 
   /* ---------- HANDLE BACKGROUND CLICK TO CANCEL SEARCH ---------- */
   const handleBackgroundClick = (e) => {
     // Prevent cancellation if clicking on interactive elements
     if (
-      e.target.closest('button') ||
-      e.target.closest('a') ||
-      e.target.closest('img') ||
-      e.target.closest('select') ||
-      e.target.tagName === 'BUTTON' ||
-      e.target.tagName === 'A' ||
-      e.target.tagName === 'IMG' ||
-      e.target.tagName === 'SELECT'
+      e.target.closest("button") ||
+      e.target.closest("a") ||
+      e.target.closest("img") ||
+      e.target.closest("select") ||
+      e.target.tagName === "BUTTON" ||
+      e.target.tagName === "A" ||
+      e.target.tagName === "IMG" ||
+      e.target.tagName === "SELECT"
     ) {
       return;
     }
@@ -64,16 +64,15 @@ export default function SearchResults() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-              {matched.length} Result{matched.length !== 1 && 's'}
+              {matched.length} Result{matched.length !== 1 && "s"}
             </h1>
 
             {q && (
               <span className="hidden sm:inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white bg-slate-800/80 backdrop-blur">
-                {mode === 'id' ? `ID: ${q}` : `“${q}”`}
+                {mode === "id" ? `ID: ${q}` : `“${q}”`}
               </span>
             )}
           </div>
-
         </div>
         <div className="mt-4 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
       </header>
@@ -108,7 +107,8 @@ export default function SearchResults() {
               We couldn’t find any products for{" "}
               <span className="font-medium text-slate-700">
                 {mode === "id" ? "ID" : mode} “{q}”
-              </span>.
+              </span>
+              .
             </p>
 
             {/* Back Button */}
@@ -141,7 +141,7 @@ export default function SearchResults() {
 
       {/* PRODUCT GRID */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {matched.map(item => (
+        {matched.map((item) => (
           <Link
             to={`/details/${item.id}`}
             key={item.id}

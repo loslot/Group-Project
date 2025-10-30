@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { CartContext } from "../components/CartContext";
 import { useWishlist } from "../Context/WishlistContext";
+import { GoHistory } from "react-icons/go";
 
 const isActive = (path, current) => {
   if (path === "/") return current === "/";
@@ -124,19 +125,23 @@ export default function Navbar() {
         {/* RIGHT ICONS */}
         <nav className="flex items-center flex-shrink-0">
           <ul className="flex items-center justify-end gap-1.5 lg:gap-3">
-            {/* ACCOUNT */}
+            {/* ORDERS */}
             <li>
               <Link
-                to="/account"
-                aria-label="Account"
-                className={`block p-1.5 ${isActive("/account", pathname)
+                to="/order-history"
+                aria-label="Order History"
+                className={`block p-1.5 ${isActive("/order-history", pathname)
                   ? "text-blue-700"
                   : "text-blue-500 hover:text-blue-700"
                   }`}
               >
-                <svg className="h-7 lg:h-8 w-7 lg:w-8" fill="currentColor" viewBox="0 0 448 512">
-                  <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" />
-                </svg>
+                {/* <svg className="h-7 lg:h-8 w-7 lg:w-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
+                  <path d="M9 8H11V17H9V8ZM13 8H15V17H13V8Z"/>
+                </svg> */}
+                <div className="text-3xl">
+                  <GoHistory />
+                </div>
               </Link>
             </li>
 

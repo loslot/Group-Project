@@ -15,10 +15,26 @@ export const CartProvider = ({ children }) => {
     }
   });
 
+  // Load orders from localStorage on mount
+  const [orders, setOrders] = useState(() => {
+    try {
+      const saved = localStorage.getItem("orders");
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      console.error("Failed to load orders from localStorage", e);
+      return [];
+    }
+  });
+
   // Save to localStorage whenever cart changes
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+  // Save to localStorage whenever orders change
+  useEffect(() => {
+    localStorage.setItem("orders", JSON.stringify(orders));
+  }, [orders]);
 
   // Add item or increase quantity
   const addToCart = (item) => {
@@ -68,6 +84,32 @@ export const CartProvider = ({ children }) => {
     }, 0)
     .toFixed(2);
 
+  // Create order from cart items
+  const createOrder = (orderDetails) => {
+    const order = {
+      id: `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+      items: [...cart],
+      total: totalPrice,
+      status: 'paid',
+      deliveryStatus: 'waiting_for_delivery',
+      orderDate: new Date().toISOString(),
+      ...orderDetails,
+    };
+    setOrders(prev => [...prev, order]);
+    clearCart(); // Clear cart after creating order
+    return order;
+  };
+
+  // Get all orders
+  const getOrders = () => orders;
+
+  // Update delivery status
+  const updateDeliveryStatus = (orderId, status) => {
+    setOrders(prev => prev.map(order =>
+      order.id === orderId ? { ...order, deliveryStatus: status } : order
+    ));
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -79,6 +121,10 @@ export const CartProvider = ({ children }) => {
         getItemQuantity,   // Now available!
         cartCount,
         totalPrice,
+        orders,
+        createOrder,
+        getOrders,
+        updateDeliveryStatus,
       }}
     >
       {children}

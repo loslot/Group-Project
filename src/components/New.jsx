@@ -11,7 +11,7 @@ const cardsData = [
     image: "/Beauty/8.png",
     title: "Pure Bloom Perfume",
     subtitle: "Fragrance • 50ml",
-    price: "$60",
+    price: "0.01$",
     rating: 4.6,
   },
   {
@@ -19,7 +19,7 @@ const cardsData = [
     image: "/Electronic/1.png",
     title: "REDMI Airpods 6 Pro",
     subtitle: "Airpods • 128GB",
-    price: "$49",
+    price: "0.01$",
     rating: 4.8,
   },
   {
@@ -208,7 +208,7 @@ export default function New() {
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 "
                     onError={(e) => {
                       e.currentTarget.src = "https://via.placeholder.com/300x200?text=No+Image";
                     }}
@@ -239,7 +239,7 @@ export default function New() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={`h-5 w-5 transition-all ${
-                      isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500 hover:text-red-500"
+                      isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500"
                     }`}
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -280,14 +280,14 @@ export default function New() {
                         toast.success(`${card.title} added to cart!`, { duration: 1200 });
                       }
                     }}
-                    className="flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform hover:scale-105"
+                    className="flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-2xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform"
                   >
                     Add to Cart 
                   </button>
 
                   <Link
                     to={`/details/${card.id}`}
-                    className="text-sm text-indigo-600 font-medium hover:underline"
+                    className="text-sm text-indigo-600 font-medium hover:underline ml-6 mt-2"
                   >
                     Details
                   </Link>

@@ -94,6 +94,7 @@ import SearchResults from "../page/SearchResults";
 import Cart from "../page/Cart";
 import Checkout from "../components/Checkout";
 import OrderConfirmation from "../components/OrderConfirmation";
+import OrderHistory from "../page/OrderHistory";
 import Wishlistpage from "../page/Wishlistpage";
 import NotFound_404 from "../error/NotFound_404";
 
@@ -119,6 +120,7 @@ export default function MainRouter() {
       <Route path="/cart" element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order-confirmation" element={<OrderConfirmation />} />
+      <Route path="/order-history" element={<OrderHistory />} />
       <Route path="/wishlist" element={<Wishlistpage />} />
 
       {/* 404 */}
