@@ -597,21 +597,23 @@ export default function Electronic() {
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center justify-between">
+                 <div className="mt-4 flex items-center justify-between">
                   <button
                     onClick={(e) => {
                       e.preventDefault(); // Prevent Link navigation
                       addToCart(card);
                       alert(`${card.title} added to cart!`);
                     }}
-                    className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
-                  >
-                    Add to Cart
+                    className="cursor-pointer inline-flex items-center justify-center gap-2 px-2 md:px-3 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                  > 
+                    Add Cart
                   </button>
-                  <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
+
+                  <button className="text-sm pl-2 text-indigo-600 font-medium hover:underline focus:outline-none">
                     Details
                   </button>
                 </div>
+
               </div>
 
               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
