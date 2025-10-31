@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
 
           {/* Centered Search Bar */}
-          <div className="flex-1 flex justify-center px-4 max-w-3xl">
+          <div className="flex-1 flex justify-center px-1 max-w-3xl">
             <form
               onSubmit={handleSearch}
               className="w-full bg-white/90 backdrop-blur-sm shadow-sm border border-gray-200 rounded-full flex items-center overflow-hidden transition-all duration-300 focus-within:shadow-md"
@@ -64,7 +64,7 @@ export default function Navbar() {
                 aria-label="Category"
                 defaultValue={categorySegment}
                 onChange={handleCategory}
-                className="cursor-pointer bg-transparent uppercase font-semibold text-xs lg:text-sm px-2 lg:px-4 py-3 text-blue-600 focus:outline-none rounded-l-full"
+                className="cursor-pointer bg-transparent uppercase font-semibold text-xs lg:text-sm px-1 lg:px-4 py-3 text-blue-600 focus:outline-none rounded-l-full"
               >
                 <option value="all">All Categories</option>
                 <option value="electronic">Electronics</option>
@@ -78,7 +78,7 @@ export default function Navbar() {
                 aria-label="Search by"
                 name="mode"
                 defaultValue="title"
-                className="cursor-pointer bg-transparent font-semibold text-xs lg:text-sm px-2 lg:px-3 py-3 text-indigo-600 focus:outline-none"
+                className="cursor-pointer bg-transparent font-semibold text-xs lg:text-sm px-2 lg:px-3 py-2 text-indigo-600 focus:outline-none"
               >
                 <option value="title">Title</option>
                 <option value="id">ID</option>

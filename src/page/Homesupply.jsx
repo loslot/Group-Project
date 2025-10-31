@@ -233,7 +233,7 @@ export default function Fashion() {
           overflow-hidden
         "
       >
-        <span className="relative z-10">HOMESUPPLY</span>
+        <span className="relative z-10">HOME SUPPLIES</span>
         <span
           className="
             absolute inset-0 bg-gradient-to-r from-indigo-200 via-white to-indigo-400
@@ -274,7 +274,9 @@ export default function Fashion() {
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                  onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
+                  onError={(e) =>
+                    (e.target.src = "https://via.placeholder.com/200")
+                  }
                 />
 
                 {/* BADGE */}
@@ -317,7 +319,7 @@ export default function Fashion() {
                   </div>
                 </div>
 
-                <div className="mt-4 flex items-center justify-between">
+                 <div className="mt-4 flex items-center justify-between">
                   <button
                     onClick={(e) => {
                       e.preventDefault(); // Prevent Link navigation
