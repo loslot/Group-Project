@@ -1,5 +1,5 @@
 import { useSearchParams, Link, useNavigate } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SEARCH_DATA from "../page/SearchData";
 
 export default function SearchResults() {
@@ -8,8 +8,15 @@ export default function SearchResults() {
   const q = params.get("q")?.trim() || "";
   const mode = params.get("mode") || "title";
 
+  // Filter states
+  const [categoryFilter, setCategoryFilter] = useState("");
+  const [priceMin, setPriceMin] = useState("");
+  const [priceMax, setPriceMax] = useState("");
+  const [ratingMin, setRatingMin] = useState("");
+  const [sortBy, setSortBy] = useState("relevance");
+
   /* ---------- FILTER BY SELECTED MODE ONLY ---------- */
-  const matched = q
+  let matched = q
     ? SEARCH_DATA.filter((p) => {
         switch (mode) {
           case "id":
@@ -22,7 +29,34 @@ export default function SearchResults() {
             return false;
         }
       })
-    : [];
+    : SEARCH_DATA; // If no query, show all for filtering
+
+  // Apply additional filters
+  if (categoryFilter) {
+    matched = matched.filter((p) => p.category === categoryFilter);
+  }
+  if (priceMin) {
+    const min = parseFloat(priceMin);
+    matched = matched.filter((p) => parseFloat(p.price.replace('$', '')) >= min);
+  }
+  if (priceMax) {
+    const max = parseFloat(priceMax);
+    matched = matched.filter((p) => parseFloat(p.price.replace('$', '')) <= max);
+  }
+  if (ratingMin) {
+    const minRating = parseFloat(ratingMin);
+    matched = matched.filter((p) => p.rating && p.rating >= minRating);
+  }
+
+  // Apply sorting
+  if (sortBy === "price-low") {
+    matched = [...matched].sort((a, b) => parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')));
+  } else if (sortBy === "price-high") {
+    matched = [...matched].sort((a, b) => parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')));
+  } else if (sortBy === "rating") {
+    matched = [...matched].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  }
+  // relevance is default, no sorting
 
   /* ---------- SINGLE NATIVE SELECT → choose ONE only ---------- */
   const handleModeChange = (e) => {
@@ -30,6 +64,13 @@ export default function SearchResults() {
     params.set("mode", newMode);
     setParams(params, { replace: true }); // Update URL without adding to history
   };
+
+  // Filter handlers
+  const handleCategoryChange = (e) => setCategoryFilter(e.target.value);
+  const handlePriceMinChange = (e) => setPriceMin(e.target.value);
+  const handlePriceMaxChange = (e) => setPriceMax(e.target.value);
+  const handleRatingMinChange = (e) => setRatingMin(e.target.value);
+  const handleSortChange = (e) => setSortBy(e.target.value);
 
   /* ---------- CANCEL SEARCH ---------- */
   const handleCancelSearch = () => {
@@ -45,10 +86,12 @@ export default function SearchResults() {
       e.target.closest("a") ||
       e.target.closest("img") ||
       e.target.closest("select") ||
+      e.target.closest("input") ||
       e.target.tagName === "BUTTON" ||
       e.target.tagName === "A" ||
       e.target.tagName === "IMG" ||
-      e.target.tagName === "SELECT"
+      e.target.tagName === "SELECT" ||
+      e.target.tagName === "INPUT"
     ) {
       return;
     }
@@ -74,6 +117,60 @@ export default function SearchResults() {
             )}
           </div>
         </div>
+
+        {/* Filter UI */}
+        <div className="mt-6 flex flex-wrap gap-4 items-center">
+          <select
+            value={categoryFilter}
+            onChange={handleCategoryChange}
+            className="px-3 py-2 border rounded text-sm"
+          >
+            <option value="">All Categories</option>
+            <option value="electronic">Electronic</option>
+            <option value="beauty">Beauty</option>
+            <option value="fashion">Fashion</option>
+            <option value="homesupply">Home Supply</option>
+            <option value="jewellery">Jewellery</option>
+          </select>
+
+          <input
+            type="number"
+            placeholder="Min Price"
+            value={priceMin}
+            onChange={handlePriceMinChange}
+            className="px-3 py-2 border rounded text-sm w-24"
+          />
+          <input
+            type="number"
+            placeholder="Max Price"
+            value={priceMax}
+            onChange={handlePriceMaxChange}
+            className="px-3 py-2 border rounded text-sm w-24"
+          />
+
+          <input
+            type="number"
+            placeholder="Min Rating"
+            value={ratingMin}
+            onChange={handleRatingMinChange}
+            className="px-3 py-2 border rounded text-sm w-24"
+            min="0"
+            max="5"
+            step="0.1"
+          />
+
+          <select
+            value={sortBy}
+            onChange={handleSortChange}
+            className="px-3 py-2 border rounded text-sm"
+          >
+            <option value="relevance">Sort by Relevance</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+
         <div className="mt-4 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
       </header>
 
@@ -162,6 +259,34 @@ export default function SearchResults() {
             </article>
           </Link>
         ))}
+      </div>
+
+      {/* RECOMMENDED PRODUCTS */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-slate-900 mb-6">Recommended for You</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {SEARCH_DATA.slice(0, 5).map((item) => (
+            <Link
+              to={`/details/${item.id}`}
+              key={`rec-${item.id}`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="h-48 sm:h-56 w-full object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-slate-900">{item.title}</h3>
+                  <p className="text-sm text-slate-500">{item.subtitle}</p>
+                  <p className="mt-2 font-bold text-slate-900">{item.price}</p>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

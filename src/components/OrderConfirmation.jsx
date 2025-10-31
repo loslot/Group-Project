@@ -158,7 +158,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 // ---------------------------------------------------------------
 // CONFIG – CHANGE ONLY THESE
 // ---------------------------------------------------------------
-const PAYMENT_LINK = 'https://your-payment-gateway.com/pay?order=123&amount='; 
+const PAYMENT_LINK = 'https://example.com/pay?amount=';
 // Example: PayPal, Stripe, Cash App, etc.
 // Replace with your real USD payment URL
 

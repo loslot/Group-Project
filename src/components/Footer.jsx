@@ -23,7 +23,7 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
               Products
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="flex flex-wrap gap-2 text-sm sm:block sm:space-y-2">
               <li>
                 <Link
                   to="/electronic"
@@ -72,7 +72,7 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
               Useful Links
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="flex flex-wrap gap-2 text-sm sm:block sm:space-y-2">
               <li>
                 <Link
                   to="/pricing"
@@ -115,9 +115,9 @@ export default function Footer() {
                 <Link to="/contact">Contact Us</Link>
               </div>
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="flex flex-wrap gap-2 text-xs sm:text-sm sm:block sm:space-y-2">
               <li>📍 Phnom Penh, PP 10012, KH</li>
-              <li>📧 productepress@shop.com</li>
+              <li>📧 productepress@shop.com</li><br />
               <li>📞 +01 234 567 88</li>
               <li>📞 +01 234 567 89</li>
             </ul>

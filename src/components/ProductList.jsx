@@ -1070,7 +1070,7 @@ export default function ProductList() {
   const { wishlist, toggle } = useWishlist();
 
   return (
-    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10">
+    <section className="max-w-7xl mx-auto my-3 px-4 sm:px-6 lg:px-8 py-10">
       <h1 className="text-4xl font-extrabold text-center mb-12 text-slate-900">
         All Products
       </h1>
@@ -1093,8 +1093,12 @@ export default function ProductList() {
           };
 
           return (
-            <Link to={`/details/${card.id}`} key={card.id}>
-              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full">
+            <article
+              key={card.id}
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full cursor-pointer"
+              onClick={() => window.location.href = `/details/${card.id}`}
+              onTouchStart={(e) => e.preventDefault()}
+            >
                 <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                   <img
                     src={card.image}
@@ -1177,7 +1181,6 @@ export default function ProductList() {
                   </div>
                 </div>
               </article>
-            </Link>
           );
         })}
       </div>

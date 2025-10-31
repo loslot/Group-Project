@@ -27,6 +27,7 @@ const SEARCH_DATA = [
     description:
       "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ const SEARCH_DATA = [
     description:
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 3,
@@ -48,6 +50,7 @@ const SEARCH_DATA = [
     description:
       "The moreFit Smartwatch Waterproof is a sleek and durable fitness companion designed for an active lifestyle.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ const SEARCH_DATA = [
     description:
       "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 5,
@@ -68,6 +72,7 @@ const SEARCH_DATA = [
     description:
       "A compact Bluetooth speaker with deep bass, clear treble, and 12-hour battery life.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 6,
@@ -230,6 +235,7 @@ const SEARCH_DATA = [
     description:
       "A lightweight serum that brightens dull skin, evens tone, and restores a youthful glow.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 22,
@@ -240,6 +246,7 @@ const SEARCH_DATA = [
     description:
       "A creamy matte lipstick that delivers rich color with a smooth, long-lasting finish.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 23,
@@ -250,6 +257,7 @@ const SEARCH_DATA = [
     description:
       "An ultra-hydrating moisturizer infused with hyaluronic acid for all-day smoothness.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 24,
@@ -260,6 +268,7 @@ const SEARCH_DATA = [
     description:
       "A nourishing oil that tames frizz, adds shine, and keeps hair soft and healthy.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 25,
@@ -270,6 +279,7 @@ const SEARCH_DATA = [
     description:
       "A refreshing rose-infused mask that hydrates, purifies, and soothes the skin.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 26,
