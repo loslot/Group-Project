@@ -1178,7 +1178,7 @@ export default function Detail() {
         </h1>
         <button
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation();    
             navigate(-1);
           }}
           className="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:bg-indigo-700"
