@@ -1,31 +1,76 @@
-// src/data/searchData.js
-const FashionData = [
-  /* your 20 fashion items */
-];
-const ElectronicData = [
-  /* … */
-];
-const BeautyData = [
-  /* … */
-];
-const HomeData = [
-  /* … */
-];
-const JewelleryData = [
-  /* … */
-];
+// // ProductCard.jsx (or inside your product list)
+// import { useWishlist } from "../Context/WishlistContext";
+// import { Heart } from "lucide-react"; // npm install lucide-react
 
-// flatten and add category tag
-const SEARCH_DATA = [
+// export default function ProductCard({ item }) {
+//   const { wishlist, toggle } = useWishlist();
+
+//   const isInWishlist = wishlist.some((i) => i.id === item.id);
+
+//   const handleHeartClick = (e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     toggle(item);
+//   };
+
+//   return (
+//     <div className="bg-white rounded-lg shadow-md overflow-hidden relative">
+//       <Link to={`/details/${item.id}`}>
+//         <img
+//           src={item.image}
+//           alt={item.title}
+//           className="w-full h-48 object-cover"
+//         />
+//       </Link>
+
+//       {/* HEART ICON */}
+//       <button
+//         onClick={handleHeartClick}
+//         className="absolute top-2 right-2 p-2 bg-white/80 rounded-full hover:bg-white transition"
+//         aria-label={isInWishlist ? "Remove from wishlist" : "Add to wishlist"}
+//       >
+//         <Heart
+//           size={20}
+//           className={isInWishlist ? "fill-red-600 text-red-600" : "text-gray-600"}
+//         />
+//       </button>
+
+//       <div className="p-3">
+//         <h3 className="font-semibold text-sm line-clamp-1">{item.title}</h3>
+//         <p className="text-lg font-bold text-indigo-600">{item.price}</p>
+//         <div className="flex gap-2 mt-2">
+//           <button className="flex-1 bg-indigo-600 text-white py-2 rounded text-sm">
+//             Add to Cart
+//           </button>
+//           <Link
+//             to={`/details/${item.id}`}
+//             className="flex-1 border border-indigo-600 text-indigo-600 py-2 rounded text-sm text-center"
+//           >
+//             Details
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+// src/components/ProductList.jsx
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../components/CartContext";
+import { useWishlist } from "../Context/WishlistContext";
+import toast from "react-hot-toast";
+
+const cardsData = [
   {
     id: 1,
     image: "/Electronic/1.png",
-    title: "REDMI Airpods 6 Pro",
-    subtitle: "Airpods • 128GB",
-    price: "$49",
-    rating: 4.8,
+    title: "SmartX Pro Phone",
+    subtitle: "Smartphone • 128GB",
+    price: "$699",
     description:
-      "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
+      "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
     Categorization: true,
   },
   {
@@ -41,19 +86,18 @@ const SEARCH_DATA = [
   {
     id: 3,
     image: "/Electronic/3.png",
-    title: "Smart Watch Waterproof ",
-    subtitle: "Smartwatch • 55-inch",
-    price: "$300",
-    rating: 4.7,
+    title: "VisionHD 4K TV",
+    subtitle: "Display • 55-inch",
+    price: "$799",
     description:
-      "The moreFit Smartwatch Waterproof is a sleek and durable fitness companion designed for an active lifestyle.",
+      "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
     Categorization: true,
   },
   {
     id: 4,
     image: "/Electronic/4.png",
     title: "PowerBeat Smartwatch",
-    subtitle: 'Wearable • 1.8" AMOLED',
+    subtitle: "Wearable • 1.8\" AMOLED",
     price: "$199",
     description:
       "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications.",
@@ -132,12 +176,11 @@ const SEARCH_DATA = [
   {
     id: 12,
     image: "/Electronic/12.png",
-    title: "Smart Watch for Men Women",
-    subtitle: "Smartwatch • Fast Charge",
-    price: "$120",
-    rating: 4.5,
+    title: "XPower 10,000mAh Power Bank",
+    subtitle: "Charging • Fast Charge",
+    price: "$39",
     description:
-      "A stylish and versatile smartwatch for men and women that tracks fitness, monitors health, and keeps you connected on the go.",
+      "A compact power bank with fast-charging support for phones, tablets, and other devices.",
     Categorization: true,
   },
   {
@@ -211,14 +254,13 @@ const SEARCH_DATA = [
     Categorization: true,
   },
   {
-    id: 2,
-    image: "/Electronic/2.png",
-    title: "JBL Speaker Viral Pro",
-    subtitle: "Speaker • Bluetooth 5.3",
-    price: "$209",
-    rating: 4.6,
+    id: 20,
+    image: "/Electronic/20.png",
+    title: "Optix LED Monitor",
+    subtitle: "Display • 27-inch • 144Hz",
+    price: "$349",
     description:
-      "JBL Speaker Viral Pro is a powerful, high-performance wireless speaker designed for deep bass, clear vocals, and immersive 360° sound",
+      "A high-performance gaming monitor with ultra-smooth refresh rate and vibrant color accuracy.",
     Categorization: true,
   },
   {
@@ -297,7 +339,6 @@ const SEARCH_DATA = [
     title: "Pure Bloom Perfume",
     subtitle: "Fragrance • 50ml",
     price: "$60",
-    rating: 4.6,
     description:
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
     Categorization: true,
@@ -358,7 +399,6 @@ const SEARCH_DATA = [
     title: "Lavender Night Cream",
     subtitle: "Skincare • 50ml",
     price: "$35",
-    rating: 4.3,
     description:
       "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
     Categorization: true,
@@ -379,7 +419,6 @@ const SEARCH_DATA = [
     title: "Diamond Glow Highlighter",
     subtitle: "Makeup • Compact",
     price: "$29",
-    rating: 4.5,
     description:
       "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
     Categorization: true,
@@ -407,12 +446,11 @@ const SEARCH_DATA = [
   {
     id: 39,
     image: "/Beauty/19.png",
-    title: "The Fume Lab Face",
-    subtitle: "Skincare • 250ml",
+    title: "Herbal Hair Conditioner",
+    subtitle: "Haircare • 250ml",
     price: "$28",
-    rating: 4.4,
     description:
-      "The Fume Lab is a modern skincare brand that blends science and nature to create pure, effective formulas for radiant, healthy skin.",
+      "A natural conditioner that strengthens and smooths hair with herbal extracts.",
     Categorization: true,
   },
   {
@@ -428,8 +466,8 @@ const SEARCH_DATA = [
   {
     id: 41,
     image: "/Fashion/1.png",
-    title: "ComfortPlus Pillow Set",
-    subtitle: "Bedroom • 2 Pieces",
+    title: "Classic Denim Jacket",
+    subtitle: "Outerwear • Unisex",
     price: "$79",
     description:
       "A timeless denim jacket with a modern fit, perfect for layering and casual outfits.",
@@ -491,7 +529,6 @@ const SEARCH_DATA = [
     title: "Wool Knit Sweater",
     subtitle: "Men • Winter Wear",
     price: "$70",
-    rating: 4.2,
     description:
       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
     Categorization: true,
@@ -502,9 +539,9 @@ const SEARCH_DATA = [
     title: "Floral Maxi Dress",
     subtitle: "Women • Bohemian Style",
     price: "$110",
-    rating: 4.7,
     description:
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+    Categorization: true,
   },
   {
     id: 49,
@@ -552,9 +589,9 @@ const SEARCH_DATA = [
     title: "Classic Oxford Shoes",
     subtitle: "Men • Leather",
     price: "$130",
-    rating: 4.8,
     description:
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+    Categorization: true,
   },
   {
     id: 54,
@@ -616,16 +653,15 @@ const SEARCH_DATA = [
       "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement.",
     Categorization: true,
   },
-
   {
     id: 60,
     image: "/Fashion/20.png",
-    title: "Denim Mini Skirt 2025",
-    subtitle: "Women fashion • Casual Wear",
+    title: "Denim Mini Skirt",
+    subtitle: "Women • Casual Wear",
     price: "$65",
-    rating: 4.3,
     description:
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+    Categorization: true,
   },
   {
     id: 61,
@@ -664,7 +700,7 @@ const SEARCH_DATA = [
     subtitle: "Bathroom • 6 Pieces",
     price: "$55",
     description:
-      "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at Homesupply.",
+      "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at home.",
     Categorization: true,
   },
   {
@@ -673,7 +709,6 @@ const SEARCH_DATA = [
     title: "Modern Ceramic Vase",
     subtitle: "Decor • Minimalist Design",
     price: "$35",
-    rating: 4.2,
     description:
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
     Categorization: true,
@@ -705,7 +740,7 @@ const SEARCH_DATA = [
     subtitle: "Living Room • 300ml",
     price: "$40",
     description:
-      "Ultrasonic aroma diffuser that fills your Homesupply with relaxing natural scents and mist.",
+      "Ultrasonic aroma diffuser that fills your home with relaxing natural scents and mist.",
     Categorization: true,
   },
   {
@@ -722,9 +757,8 @@ const SEARCH_DATA = [
     id: 70,
     image: "/Homesupply/10.png",
     title: "AirBreeze Floor Fan",
-    subtitle: "Homesupply Appliance • 3-Speed",
+    subtitle: "Home Appliance • 3-Speed",
     price: "$75",
-    rating: 4.5,
     description:
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
     Categorization: true,
@@ -736,7 +770,7 @@ const SEARCH_DATA = [
     subtitle: "Living Room • Solid Wood",
     price: "$190",
     description:
-      "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern Homesupplys.",
+      "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern homes.",
     Categorization: true,
   },
   {
@@ -752,7 +786,7 @@ const SEARCH_DATA = [
   {
     id: 73,
     image: "/Homesupply/13.png",
-    title: "CozyHomesupply Blanket",
+    title: "CozyHome Blanket",
     subtitle: "Bedroom • 200x220cm",
     price: "$65",
     description:
@@ -765,9 +799,9 @@ const SEARCH_DATA = [
     title: "Stainless Cookware Set",
     subtitle: "Kitchen • 8 Pieces",
     price: "$150",
-    rating: 4.7,
     description:
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
+    Categorization: true,
   },
   {
     id: 75,
@@ -783,7 +817,7 @@ const SEARCH_DATA = [
     id: 76,
     image: "/Homesupply/16.png",
     title: "SmartSense Trash Can",
-    subtitle: "Homesupply • Motion Sensor",
+    subtitle: "Home • Motion Sensor",
     price: "$90",
     description:
       "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen.",
@@ -823,7 +857,7 @@ const SEARCH_DATA = [
     id: 80,
     image: "/Homesupply/20.png",
     title: "EcoDry Laundry Basket",
-    subtitle: "Homesupply • Bamboo Frame",
+    subtitle: "Home • Bamboo Frame",
     price: "$50",
     description:
       "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric.",
@@ -835,7 +869,6 @@ const SEARCH_DATA = [
     title: "Golden Elegance Necklace",
     subtitle: "Necklace • 18K Gold",
     price: "$320",
-    rating: 4.8,
     description:
       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
     Categorization: true,
@@ -872,15 +905,14 @@ const SEARCH_DATA = [
   },
   {
     id: 85,
-    image: "/Jewellery/6.png",
-    title: "Emerald Grace Pendant",
-    subtitle: "Pendant • Gold Plated",
-    price: "$130",
-    rating: 4.6,
+    image: "/Jewellery/5.png",
+    title: "DiamondTwist Ring",
+    subtitle: "Ring • White Gold",
+    price: "$450",
     description:
-      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+      "A stunning diamond ring set in white gold with a graceful twist design for brilliance.",
+    Categorization: true,
   },
-
   {
     id: 86,
     image: "/Jewellery/6.png",
@@ -924,7 +956,7 @@ const SEARCH_DATA = [
   {
     id: 90,
     image: "/Jewellery/10.png",
-    title: "Sapphire Queen Ring",
+    title: "OpalMist Necklace",
     subtitle: "Necklace • Opal Gemstone",
     price: "$210",
     description:
@@ -953,13 +985,12 @@ const SEARCH_DATA = [
   },
   {
     id: 93,
-    image: "/Jewellery/14.png",
-    title: "RosePetal Brooch",
-    subtitle: "Brooch • Floral Design",
-    price: "$70",
-    rating: 4.6,
+    image: "/Jewellery/13.png",
+    title: "Moonlight Bangle Set",
+    subtitle: "Bangle • Silver Finish",
+    price: "$180",
     description:
-      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
+      "A set of three silver bangles with moonlight shine, perfect for layering.",
     Categorization: true,
   },
   {
@@ -1016,11 +1047,10 @@ const SEARCH_DATA = [
     id: 99,
     image: "/Jewellery/19.png",
     title: "Crystal Harmony Bracelet",
-    subtitle: "Ring • Sapphire Stone",
-    price: "$390",
-    rating: 4.9,
+    subtitle: "Bracelet • Multi-Stone",
+    price: "$115",
     description:
-      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+      "A beautiful bracelet with mixed crystals symbolizing peace and positive energy.",
     Categorization: true,
   },
   {
@@ -1035,4 +1065,122 @@ const SEARCH_DATA = [
   },
 ];
 
-export default SEARCH_DATA;
+export default function ProductList() {
+  const { addToCart } = useContext(CartContext);
+  const { wishlist, toggle } = useWishlist();
+
+  return (
+    <section className="max-w-7xl mx-auto mt-4 my-3 px-4 sm:px-6 lg:px-8 py-10">
+      <h1 className="text-4xl font-extrabold text-center mb-12 text-slate-900">
+        All Products
+      </h1>
+
+      {/* Grid: 2 (mobile), 4 (tablet), 5 (desktop) */}
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {cardsData.map((card) => {
+          const isInWishlist = wishlist.some((i) => i.id === card.id);
+
+          const handleHeartClick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggle(card);
+            toast.success(
+              isInWishlist
+                ? `${card.title} removed from wishlist`
+                : `${card.title} added to wishlist`,
+              { duration: 1500 }
+            );
+          };
+
+          return (
+            <Link to={`/details/${card.id}`} key={card.id}>
+              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1 flex flex-col h-full">
+                <div className="relative h-48 sm:h-56 w-full overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => (e.target.src = "https://via.placeholder.com/200")}
+                  />
+
+                  {/* Featured Badge */}
+                  <div className="absolute left-3 top-3 bg-white backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium-bold text-slate-800">
+                    Featured
+                  </div>
+
+                  {/* WISHLIST HEART */}
+                  <button
+                    onClick={handleHeartClick}
+                    className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
+                    aria-label="Toggle wishlist"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`h-5 w-5 transition-all ${
+                        isInWishlist
+                          ? "fill-red-600 text-red-600"
+                          : "text-gray-500 hover:text-red-500"
+                      }`}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657l-6.828-6.829a4 4 0 010-5.656z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900 line-clamp-2">
+                        {card.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-500 line-clamp-1">
+                        {card.subtitle}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-slate-600">From</p>
+                      <p className="text-lg font-bold text-slate-900">
+                        {card.price}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center justify-between">
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(card);
+                        toast.success(`${card.title} added to cart!`, {
+                          duration: 1200,
+                        });
+                      }}
+                      className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
+                    >
+                      Add to Cart
+                    </button>
+                    <button className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none">
+                      Details
+                    </button>
+                  </div>
+                </div>
+
+                <div className="px-4 pb-4 sm:px-5 sm:pb-5">
+                  <div className="flex items-center justify-between text-xs text-slate-500">
+                    <span>Rating: {card.rating || "N/A"}</span>
+                    <span>Free cancellation</span>
+                  </div>
+                </div>
+              </article>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
+}

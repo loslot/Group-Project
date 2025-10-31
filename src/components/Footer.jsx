@@ -78,7 +78,7 @@ export default function Footer() {
                   to="/pricing"
                   className="hover:text-blue-500 transition-colors"
                 >
-                  Pricing
+                  Map
                 </Link>
               </li>
               <li>
@@ -90,20 +90,20 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/orders"
                   className="hover:text-blue-500 transition-colors"
                 >
                   Orders
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/help"
                   className="hover:text-blue-500 transition-colors"
                 >
                   Help
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </div>
@@ -126,7 +126,7 @@ export default function Footer() {
       </div>
       {/* Social Icons */}
       <div className="border-t border-gray-300 dark:border-gray-700 py-4 sm:py-6">
-        <div className="flex justify-center space-x-4 sm:space-x-6">
+        <div className="flex justify-around space-x-4 sm:space-x-6">
           <Link
             to="https://facebook.com"
             className="text-xl hover:text-blue-500 transition-colors"

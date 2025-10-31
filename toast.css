@@ -1,0 +1,54 @@
+/* src/components/Toast.css */
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 360px;
+}
+
+.toast {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  min-width: 280px;
+}
+
+.toast--enter { animation-name: slideInRight; }
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.toast--exit { animation-name: slideOutRight; }
+@keyframes slideOutRight {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(100%); }
+}
+
+.toast--success  { background: #28a745; }
+.toast--error    { background: #dc3545; }
+.toast--info     { background: #17a2b8; }
+.toast--warning  { background: #ffc107; color: #212529; }
+
+.toast__close {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.toast__close:hover { opacity: 1; }

@@ -233,7 +233,8 @@ export default function Contact() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 z-10"></div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.566014387663!2d-73.98647768459211!3d40.74844097932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b311746f%3A0xd134e199a405a163!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1635782345678!5m2!1sen!2sus"
+                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.448713335682!2d104.88793507481716!3d11.56220538863841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951adb4d4041d%3A0x8a90e729f62ad800!2sETEC2!5e1!3m2!1sen!2skh!4v1761557740688!5m2!1sen!2skh" 
+                
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -242,39 +243,12 @@ export default function Contact() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Company Location"
                   className="relative z-0"
-                ></iframe>
+              ></iframe>
               </div>
             </div>
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      {/* <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-10 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-lg">
-            &copy; 2025 Your Company. All rights reserved.
-          </p>
-          <div className="mt-4 flex justify-center space-x-6">
-            <a
-              href="#"
-              className="text-gray-300 hover:text-white transition duration-300"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 15h-2v-2h2v2zm0-4h-2V7h2v6zm-4 4h-2v-2h2v2zm0-4h-2V7h2v6zm-4 4H7v-2h2v2zm0-4H7V7h2v6z" />
-              </svg>
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-white transition duration-300"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.91 8-4.94 8-9.95z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </footer> */}
 
       {/* Inline CSS for animations */}
       <style jsx>{`
