@@ -306,7 +306,7 @@ const cardsData = [
     image: "/Electronic/1.png",
     title: "SmartX Pro Phone",
     subtitle: "Smartphone • 128GB",
-    price: "$699",
+    price: "$0.01",
     description:
       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
     rating: 4.7,
