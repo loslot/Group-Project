@@ -1116,7 +1116,7 @@ export default function Detail() {
                       ? `${card.title} removed from wishlist`
                       : `${card.title} added to wishlist`,
                     {
-                      duration: 1500,
+                      duration: 1000,
                       icon: inWish ? "" : "",
                     }
                   );

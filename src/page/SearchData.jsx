@@ -1,6 +1,6 @@
 // src/data/searchData.js
 const FashionData = [
-  /* your 20 fashion items */
+ 
 ];
 const ElectronicData = [
   /* … */

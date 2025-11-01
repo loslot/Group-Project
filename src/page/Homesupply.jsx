@@ -254,7 +254,7 @@ export default function Homesupply() {
                               isInWishlist
                                 ? `${card.title} removed from wishlist`
                                 : `${card.title} added to wishlist`,
-                              { duration: 1500 }
+                              { duration: 1000 }
                             );
                           }
                         }}
@@ -321,7 +321,7 @@ export default function Homesupply() {
                     {/* Footer */}
                     <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                       <div className="flex items-center justify-between text-xs text-slate-500">
-                        <span>Rating: {card.rating}</span>
+                        <span>Rating: {card.rating}⭐</span>
                         <span>Free cancellation</span>
                       </div>
                     </div>

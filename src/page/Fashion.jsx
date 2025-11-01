@@ -317,7 +317,7 @@ export default function Fashion() {
                         e.stopPropagation();
                         addToCart(card);
                         toast.success(`${card.title} added to cart!`, {
-                          duration: 1200,
+                          duration: 1000,
                         });
                       }}
                       className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
@@ -332,7 +332,7 @@ export default function Fashion() {
 
                 <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                   <div className="flex items-center justify-between text-xs text-slate-500">
-                    <span>Rating: {card.rating}★</span>
+                    <span>Rating: {card.rating}⭐</span>
                     <span>Free cancellation</span>
                   </div>
                 </div>

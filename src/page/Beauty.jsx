@@ -486,7 +486,7 @@ export default function Beauty() {
               {/* Footer */}
               <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                 <div className="flex items-center justify-between text-xs text-slate-500">
-                  <span>Rating: {card.rating}</span>
+                  <span>Rating: {card.rating}⭐</span>
                   <span>Free cancellation</span>
                 </div>
               </div>

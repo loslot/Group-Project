@@ -563,7 +563,7 @@ export default function Electronic() {
                         isInWishlist
                           ? `${card.title} removed from wishlist`
                           : `${card.title} added to wishlist`,
-                        { duration: 1500 }
+                        { duration: 1000 }
                       );
                     }}
                     className="absolute right-3 top-3 p-2 rounded-full bg-white/90 shadow-md hover:scale-110 transition z-10"
@@ -628,7 +628,7 @@ export default function Electronic() {
 
                 <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                   <div className="flex items-center justify-between text-xs text-slate-500">
-                    <span>Rating: {card.rating} ⭐</span>
+                    <span>Rating: {card.rating}⭐</span>
                     <span>Free cancellation</span>
                   </div>
                 </div>
