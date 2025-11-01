@@ -1095,10 +1095,10 @@ export default function Detail() {
                   e.stopPropagation();
                   addToCart(card);
                   toast.success(
-                    `${card.title} added to cart! ${quantity > 0 ? `(Now: ${quantity + 1})` : ""}`,
+                    `${card.title} added to cart! `,
                     {
                       duration: 2000,
-                      icon: "Cart",
+                      icon: "",
                     }
                   );
                 }}
