@@ -22,7 +22,7 @@ const SEARCH_DATA = [
     image: "/Electronic/1.png",
     title: "REDMI Airpods 6 Pro",
     subtitle: "Airpods • 128GB",
-    price: "$49",
+    price: "$0.01",
     rating: 4.8,
     description:
       "The Redmi Buds 6 Pro are premium true wireless earbuds designed for high-quality sound and smart connectivity.",
@@ -34,7 +34,7 @@ const SEARCH_DATA = [
     image: "/Electronic/2.png",
     title: "AeroBuds Wireless Earphones",
     subtitle: "Audio • Bluetooth 5.3",
-    price: "$129",
+    price: "$0.01",
     description:
       "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
     Categorization: true,
@@ -83,6 +83,7 @@ const SEARCH_DATA = [
     description:
       "A powerful ultrabook designed for productivity with fast performance and lightweight design.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 7,
@@ -93,6 +94,7 @@ const SEARCH_DATA = [
     description:
       "Capture professional-grade photos and videos with advanced autofocus and 4K recording.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 8,
@@ -103,6 +105,7 @@ const SEARCH_DATA = [
     description:
       "Control lights, music, and more with your voice — the perfect addition to any smart home.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 9,
@@ -113,6 +116,7 @@ const SEARCH_DATA = [
     description:
       "A quiet and powerful fan with adjustable speeds and oscillation for full-room cooling.",
     Categorization: true,
+    category: "electronic",
   },
   {
     id: 10,
@@ -216,17 +220,6 @@ const SEARCH_DATA = [
     Categorization: true,
   },
   {
-    id: 2,
-    image: "/Electronic/2.png",
-    title: "JBL Speaker Viral Pro",
-    subtitle: "Speaker • Bluetooth 5.3",
-    price: "$209",
-    rating: 4.6,
-    description:
-      "JBL Speaker Viral Pro is a powerful, high-performance wireless speaker designed for deep bass, clear vocals, and immersive 360° sound",
-    Categorization: true,
-  },
-  {
     id: 21,
     image: "/Beauty/1.png",
     title: "Radiant Glow Serum",
@@ -290,6 +283,7 @@ const SEARCH_DATA = [
     description:
       "A nourishing shampoo enriched with argan oil to strengthen and repair damaged hair.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 27,
@@ -300,6 +294,7 @@ const SEARCH_DATA = [
     description:
       "A gentle toner that tightens pores, balances pH, and refreshes your skin.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 28,
@@ -311,6 +306,7 @@ const SEARCH_DATA = [
     description:
       "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 29,
@@ -321,6 +317,7 @@ const SEARCH_DATA = [
     description:
       "An anti-aging eye cream that reduces puffiness, fine lines, and dark circles.",
     Categorization: true,
+    category: "beauty",
   },
   {
     id: 30,
@@ -444,6 +441,7 @@ const SEARCH_DATA = [
     description:
       "A timeless denim jacket with a modern fit, perfect for layering and casual outfits.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 42,
@@ -454,6 +452,7 @@ const SEARCH_DATA = [
     description:
       "A luxurious silk dress designed with soft fabric and graceful draping for special occasions.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 43,
@@ -464,6 +463,7 @@ const SEARCH_DATA = [
     description:
       "Comfortable slim-fit jeans made from durable stretch denim for everyday wear.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 44,
@@ -474,6 +474,7 @@ const SEARCH_DATA = [
     description:
       "A sleek and compact leather bag ideal for carrying your essentials in style.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 45,
@@ -484,6 +485,7 @@ const SEARCH_DATA = [
     description:
       "Soft, breathable cotton T-shirt with a bold graphic design for a trendy, casual look.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 46,
@@ -494,6 +496,7 @@ const SEARCH_DATA = [
     description:
       "Lightweight sneakers with cushioned soles and a minimalist design for everyday comfort.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 47,
@@ -505,6 +508,7 @@ const SEARCH_DATA = [
     description:
       "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 48,
@@ -515,6 +519,8 @@ const SEARCH_DATA = [
     rating: 4.7,
     description:
       "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+    Categorization: true,
+    category: "fashion",
   },
   {
     id: 49,
@@ -525,6 +531,7 @@ const SEARCH_DATA = [
     description:
       "Stylish aviator sunglasses offering UV400 protection and a timeless look.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 50,
@@ -535,6 +542,7 @@ const SEARCH_DATA = [
     description:
       "Lightweight linen shirt perfect for summer days with a relaxed yet polished vibe.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 51,
@@ -545,6 +553,7 @@ const SEARCH_DATA = [
     description:
       "A soft, oversized knit scarf that keeps you cozy and adds texture to your outfit.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 52,
@@ -555,6 +564,7 @@ const SEARCH_DATA = [
     description:
       "A lightweight, elegant skirt with pleats that flow beautifully with every step.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 53,
@@ -565,6 +575,8 @@ const SEARCH_DATA = [
     rating: 4.8,
     description:
       "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+    Categorization: true,
+    category: "fashion",
   },
   {
     id: 54,
@@ -575,6 +587,7 @@ const SEARCH_DATA = [
     description:
       "A durable canvas tote with vintage prints, great for daily use and weekend trips.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 55,
@@ -585,6 +598,7 @@ const SEARCH_DATA = [
     description:
       "A refined pearl necklace that adds sophistication to any outfit or special occasion.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 56,
@@ -595,6 +609,7 @@ const SEARCH_DATA = [
     description:
       "Comfortable flat sandals designed for warm days with soft straps and durable soles.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 57,
@@ -605,6 +620,7 @@ const SEARCH_DATA = [
     description:
       "A sharp, slim-fit blazer crafted from premium fabric for a refined, confident look.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 58,
@@ -615,6 +631,7 @@ const SEARCH_DATA = [
     description:
       "A soft cotton-blend hoodie with a relaxed fit — perfect for laid-back, modern style.",
     Categorization: true,
+    category: "fashion",
   },
   {
     id: 59,
@@ -625,6 +642,7 @@ const SEARCH_DATA = [
     description:
       "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement.",
     Categorization: true,
+    category: "fashion",
   },
 
   {
@@ -636,6 +654,8 @@ const SEARCH_DATA = [
     rating: 4.3,
     description:
       "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+    Categorization: true,
+    category: "fashion",
   },
   {
     id: 61,
@@ -646,6 +666,7 @@ const SEARCH_DATA = [
     description:
       "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 62,
@@ -656,6 +677,7 @@ const SEARCH_DATA = [
     description:
       "Breathable cotton bedsheets designed for durability, comfort, and a luxurious feel.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 63,
@@ -666,6 +688,7 @@ const SEARCH_DATA = [
     description:
       "A soothing scented candle with lavender and vanilla notes to create a relaxing atmosphere.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 64,
@@ -676,6 +699,7 @@ const SEARCH_DATA = [
     description:
       "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at Homesupply.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 65,
@@ -687,6 +711,7 @@ const SEARCH_DATA = [
     description:
       "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 66,
@@ -697,6 +722,7 @@ const SEARCH_DATA = [
     description:
       "A dimmable LED lamp with touch control and warm-to-cool light modes for any mood.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 67,
@@ -707,6 +733,7 @@ const SEARCH_DATA = [
     description:
       "Removes impurities and provides clean, great-tasting water for the entire family.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 68,
@@ -717,6 +744,7 @@ const SEARCH_DATA = [
     description:
       "Ultrasonic aroma diffuser that fills your Homesupply with relaxing natural scents and mist.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 69,
@@ -727,6 +755,7 @@ const SEARCH_DATA = [
     description:
       "Precision stainless steel knives for perfect slicing, chopping, and cutting every time.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 70,
@@ -738,6 +767,7 @@ const SEARCH_DATA = [
     description:
       "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 71,
@@ -748,6 +778,7 @@ const SEARCH_DATA = [
     description:
       "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern Homesupplys.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 72,
@@ -758,6 +789,7 @@ const SEARCH_DATA = [
     description:
       "Removes dust, pollen, and odors to keep your indoor air clean and breathable.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 73,
@@ -768,6 +800,7 @@ const SEARCH_DATA = [
     description:
       "A soft fleece blanket that keeps you warm and cozy during chilly nights.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 74,
@@ -778,6 +811,8 @@ const SEARCH_DATA = [
     rating: 4.7,
     description:
       "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
+    Categorization: true,
+    category: "homesupply",
   },
   {
     id: 75,
@@ -788,6 +823,7 @@ const SEARCH_DATA = [
     description:
       "Gentle foaming hand soap infused with essential oils for soft and clean hands.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 76,
@@ -798,6 +834,7 @@ const SEARCH_DATA = [
     description:
       "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 77,
@@ -808,6 +845,7 @@ const SEARCH_DATA = [
     description:
       "Elegant velvet curtains that block sunlight and add a touch of luxury to your decor.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 78,
@@ -818,6 +856,7 @@ const SEARCH_DATA = [
     description:
       "A high-speed blender ideal for smoothies, soups, and sauces with easy-clean blades.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 79,
@@ -828,6 +867,7 @@ const SEARCH_DATA = [
     description:
       "A plush, non-slip rug that adds warmth and comfort to your living area.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 80,
@@ -838,6 +878,7 @@ const SEARCH_DATA = [
     description:
       "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric.",
     Categorization: true,
+    category: "homesupply",
   },
   {
     id: 81,
@@ -849,6 +890,7 @@ const SEARCH_DATA = [
     description:
       "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 82,
@@ -859,6 +901,7 @@ const SEARCH_DATA = [
     description:
       "Sparkling crystal earrings crafted from premium silver to add charm to any outfit.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 83,
@@ -869,6 +912,7 @@ const SEARCH_DATA = [
     description:
       "A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 84,
@@ -879,6 +923,7 @@ const SEARCH_DATA = [
     description:
       "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 85,
@@ -889,18 +934,10 @@ const SEARCH_DATA = [
     rating: 4.6,
     description:
       "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+    Categorization: true,
+    category: "jewellery",
   },
 
-  {
-    id: 86,
-    image: "/Jewellery/6.png",
-    title: "Emerald Grace Pendant",
-    subtitle: "Pendant • Gold Plated",
-    price: "$130",
-    description:
-      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
-    Categorization: true,
-  },
   {
     id: 87,
     image: "/Jewellery/7.png",
@@ -910,6 +947,7 @@ const SEARCH_DATA = [
     description:
       "A wavy-pattern anklet made of pure silver for a chic and beachy look.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 88,
@@ -920,6 +958,7 @@ const SEARCH_DATA = [
     description:
       "Gorgeous ruby studs set in gold for a pop of color and refined beauty.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 89,
@@ -930,6 +969,7 @@ const SEARCH_DATA = [
     description:
       "A stylish link bracelet with customizable charms that showcase your personality.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 90,
@@ -940,6 +980,7 @@ const SEARCH_DATA = [
     description:
       "A soft glowing opal pendant necklace designed to capture natural iridescence.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 91,
@@ -950,6 +991,7 @@ const SEARCH_DATA = [
     description:
       "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 92,
@@ -960,6 +1002,7 @@ const SEARCH_DATA = [
     description:
       "Bold yet elegant gold-plated hoops that complement both casual and formal looks.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 93,
@@ -971,16 +1014,7 @@ const SEARCH_DATA = [
     description:
       "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
     Categorization: true,
-  },
-  {
-    id: 94,
-    image: "/Jewellery/14.png",
-    title: "RosePetal Brooch",
-    subtitle: "Brooch • Floral Design",
-    price: "$70",
-    description:
-      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
-    Categorization: true,
+    category: "jewellery",
   },
   {
     id: 95,
@@ -991,6 +1025,7 @@ const SEARCH_DATA = [
     description:
       "A sparkling tiara with crystal embellishments for special occasions and events.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 96,
@@ -1001,6 +1036,7 @@ const SEARCH_DATA = [
     description:
       "A warm amber pendant that radiates natural beauty and vintage charm.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 97,
@@ -1011,6 +1047,7 @@ const SEARCH_DATA = [
     description:
       "Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 98,
@@ -1021,17 +1058,19 @@ const SEARCH_DATA = [
     description:
       "A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 99,
     image: "/Jewellery/19.png",
     title: "Crystal Harmony Bracelet",
-    subtitle: "Ring • Sapphire Stone",
+    subtitle: "Bracelet • Crystal",
     price: "$390",
     rating: 4.9,
     description:
-      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+      "A crystal harmony bracelet that brings balance and elegance to your wrist.",
     Categorization: true,
+    category: "jewellery",
   },
   {
     id: 100,
@@ -1042,6 +1081,7 @@ const SEARCH_DATA = [
     description:
       "Gorgeous gold-plated earrings with a pearl drop design for a refined look.",
     Categorization: true,
+    category: "jewellery",
   },
 ];
 

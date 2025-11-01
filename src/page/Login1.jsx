@@ -106,7 +106,7 @@ export default function Login1() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 animate-gradient-xy">
+    <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 animate-gradient-xy cursor-pointer" onDoubleClick={() => navigate(-1)}>
       {/* Animated BG */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 animate-gradient-xy opacity-80 -z-10" />
 

@@ -101,7 +101,7 @@ export default function SearchResults() {
   return (
     <section
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 cursor-pointer"
-      onClick={handleBackgroundClick}
+      onDoubleClick={handleBackgroundClick}
     >
       <header className="mb-8 mt-7">
         <div className="flex items-center justify-between">
@@ -124,12 +124,14 @@ export default function SearchResults() {
             value={categoryFilter}
             onChange={handleCategoryChange}
             className="px-3 py-2 border rounded text-sm"
+            onClick={(e) => e.stopPropagation()}
+            onDoubleClick={(e) => e.stopPropagation()}
           >
             <option value="">All Categories</option>
-            <option value="electronic">Electronic</option>
-            <option value="beauty">Beauty</option>
+            <option value="electronic">Electronics</option>
+            <option value="beauty">Beauty and Skincare</option>
             <option value="fashion">Fashion</option>
-            <option value="homesupply">Home Supply</option>
+            <option value="homesupply">Home Supplies</option>
             <option value="jewellery">Jewellery</option>
           </select>
 
@@ -139,6 +141,8 @@ export default function SearchResults() {
             value={priceMin}
             onChange={handlePriceMinChange}
             className="px-3 py-2 border rounded text-sm w-24"
+            onClick={(e) => e.stopPropagation()}
+            onDoubleClick={(e) => e.stopPropagation()}
           />
           <input
             type="number"
@@ -146,6 +150,8 @@ export default function SearchResults() {
             value={priceMax}
             onChange={handlePriceMaxChange}
             className="px-3 py-2 border rounded text-sm w-24"
+            onClick={(e) => e.stopPropagation()}
+            onDoubleClick={(e) => e.stopPropagation()}
           />
 
           <input
@@ -157,12 +163,16 @@ export default function SearchResults() {
             min="0"
             max="5"
             step="0.1"
+            onClick={(e) => e.stopPropagation()}
+            onDoubleClick={(e) => e.stopPropagation()}
           />
 
           <select
             value={sortBy}
             onChange={handleSortChange}
             className="px-3 py-2 border rounded text-sm"
+            onClick={(e) => e.stopPropagation()}
+            onDoubleClick={(e) => e.stopPropagation()}
           >
             <option value="relevance">Sort by Relevance</option>
             <option value="price-low">Price: Low to High</option>
