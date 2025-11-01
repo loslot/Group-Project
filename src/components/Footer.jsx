@@ -3,16 +3,16 @@ import { Link } from "react-router"; // Add this import
 
 export default function Footer() {
   return (
-    <footer className="w-full min-h-[100px] bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-t border-gray-300 dark:border-gray-700 sticky bottom-0 z-10 px-5 ">
+    <footer className="w-full min-h-[100px] bg-gray-900 text-gray-300 border-t border-gray-700 sticky bottom-0 z-10 px-5 dark">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 py-6 sm:py-8 lg:py-10">
           {/* Brand / About */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-white mb-3">
               Product Express
             </h2>
-            <p className="text-xs sm:text-sm leading-relaxed">
+            <p className="text-xs sm:text-sm leading-relaxed text-gray-300">
               Delivering high-quality products and services with modern web
               technologies.
             </p>
@@ -20,10 +20,10 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+            <h3 className="text-base sm:text-lg font-semibold text-white mb-3">
               Products
             </h3>
-            <ul className="flex flex-wrap gap-2 text-sm sm:block sm:space-y-2">
+            <ul className="flex flex-wrap gap-2 text-sm sm:block sm:space-y-2 text-gray-300">
               <li>
                 <Link
                   to="/electronic"
@@ -69,10 +69,10 @@ export default function Footer() {
 
           {/* Useful Links */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
+            <h3 className="text-base sm:text-lg font-semibold text-white mb-3">
               Useful Links
             </h3>
-            <ul className="flex flex-wrap gap-2 text-sm sm:block sm:space-y-2">
+            <ul className="flex flex-wrap gap-2 text-sm sm:block sm:space-y-2 text-gray-300">
               <li>
                 <Link
                   to="/pricing"
@@ -110,12 +110,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="sm:col-span-2 md:col-span-1">
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              <div className="cursor-pointer hover:text-blue-500 transition-colors">
+            <h3 className="text-base sm:text-lg font-semibold text-white mb-3">
+              <div className="cursor-pointer hover:text-blue-400 transition-colors">
                 <Link to="/contact">Contact Us</Link>
               </div>
             </h3>
-            <ul className="flex flex-wrap gap-2 text-xs sm:text-sm sm:block sm:space-y-2">
+            <ul className="flex flex-wrap gap-2 text-xs sm:text-sm sm:block sm:space-y-2 text-gray-300">
               <li>📍 Phnom Penh, PP 10012, KH</li>
               <li>📧 productepress@shop.com</li><br />
               <li>📞 +01 234 567 88</li>
@@ -125,11 +125,11 @@ export default function Footer() {
         </div>
       </div>
       {/* Social Icons */}
-      <div className="border-t border-gray-300 dark:border-gray-700 py-4 sm:py-6">
+      <div className="border-t border-gray-700 py-4 sm:py-6">
         <div className="flex justify-around space-x-4 sm:space-x-6">
           <Link
             to="https://facebook.com"
-            className="text-xl hover:text-blue-500 transition-colors"
+            className="text-xl text-gray-400 hover:text-blue-400 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             title="Facebook"
@@ -138,7 +138,7 @@ export default function Footer() {
           </Link>
           <Link
             to="https://twitter.com"
-            className="text-xl hover:text-sky-400 transition-colors"
+            className="text-xl text-gray-400 hover:text-sky-400 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             title="Twitter"
@@ -147,7 +147,7 @@ export default function Footer() {
           </Link>
           <Link
             to="https://instagram.com"
-            className="text-xl hover:text-pink-500 transition-colors"
+            className="text-xl text-gray-400 hover:text-pink-400 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             title="Instagram"
@@ -156,7 +156,7 @@ export default function Footer() {
           </Link>
           <Link
             to="https://github.com"
-            className="text-xl hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            className="text-xl text-gray-400 hover:text-gray-100 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub"
@@ -165,7 +165,7 @@ export default function Footer() {
           </Link>
           <Link
             to="https://linkedin.com"
-            className="text-xl hover:text-blue-700 transition-colors"
+            className="text-xl text-gray-400 hover:text-blue-400 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
@@ -176,9 +176,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="bg-gray-200 dark:bg-gray-800 text-center py-3 sm:py-4">
-        <p className="text-xs sm:text-sm">
-          © 2025 <span className="font-semibold">Product Express</span>. All
+      <div className="bg-gray-800 text-center py-3 sm:py-4">
+        <p className="text-xs sm:text-sm text-gray-300">
+          © 2025 <span className="font-semibold text-white">Product Express</span>. All
           rights reserved.
         </p>
       </div>

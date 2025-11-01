@@ -232,12 +232,16 @@ export default function Fashion() {
 
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {cardsData.map((card) => {
+        {cardsData.map((card, index) => {
           const isInWishlist = wishlist.some((i) => i.id === card.id);
 
           return (
             <Link to={`/details/${card.id}`} key={card.id} className="block">
-              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+              <article
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                   <img
                     src={card.image}

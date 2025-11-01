@@ -71,6 +71,7 @@
 import React from "react";
 import { useWishlist } from "../Context/WishlistContext";
 import { Link, useNavigate } from "react-router";
+import { motion } from 'framer-motion';
 
 function Wishlistpage() {
   const { wishlist, toggleWishlist } = useWishlist();
@@ -95,6 +96,8 @@ function Wishlistpage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
+     
+
       <h1 className="text-3xl font-bold mb-6">
         My Wishlist ({wishlist.length})
       </h1>
@@ -116,6 +119,7 @@ function Wishlistpage() {
                 }
               />
             </Link>
+            
 
             <div className="p-4 flex-1 flex flex-col justify-between">
               <div>
@@ -144,7 +148,31 @@ function Wishlistpage() {
               </div>
             </div>
           </div>
+          
         ))}
+      </div>
+
+       {/* Back Button */}
+       <div className="mb-6 text-center">
+         <button
+           onClick={() => navigate(-1)}
+           className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors duration-200 shadow-md hover:shadow-lg mt-5"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Back
+        </button>
       </div>
     </div>
   );

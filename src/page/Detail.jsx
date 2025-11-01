@@ -12,7 +12,7 @@ const cardsData = [
     subtitle: "Smartphone • 128GB",
     price: "$699",
     description:
-      "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life.",
+      "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life. This device comes with a 6.5-inch AMOLED display, Snapdragon 888 processor, 8GB RAM, 128GB storage, triple camera system (48MP main, 12MP ultra-wide, 5MP macro), 5000mAh battery with 65W fast charging, 5G connectivity, and Android 11.",
     Categorization: true,
   },
   {
@@ -22,7 +22,7 @@ const cardsData = [
     subtitle: "Audio • Bluetooth 5.3",
     price: "$129",
     description:
-      "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit.",
+      "Noise-cancelling wireless earbuds with crystal-clear sound and a comfortable, secure fit. These earbuds feature active noise cancellation, Bluetooth 5.3, 11mm drivers, up to 8 hours playtime, 24 hours with case, IPX7 rating, touch controls, and compatibility with voice assistants.",
     Categorization: true,
   },
   {
@@ -32,7 +32,7 @@ const cardsData = [
     subtitle: "Display • 55-inch",
     price: "$799",
     description:
-      "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps.",
+      "A stunning 4K UHD smart TV with vibrant colors, HDR10 support, and built-in streaming apps. The 55-inch display offers 4K resolution, smart TV features with voice control, multiple HDMI and USB ports, Wi-Fi connectivity, and support for popular streaming services like Netflix and YouTube.",
     Categorization: true,
   },
   {
@@ -42,7 +42,7 @@ const cardsData = [
     subtitle: "Wearable • 1.8\" AMOLED",
     price: "$199",
     description:
-      "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications.",
+      "A stylish smartwatch with heart-rate tracking, GPS, fitness modes, and message notifications. Featuring a 1.8-inch AMOLED display, water resistance up to 50m, multiple sports modes, sleep tracking, and compatibility with iOS and Android.",
     Categorization: true,
   },
   {
@@ -52,7 +52,7 @@ const cardsData = [
     subtitle: "Audio • Waterproof",
     price: "$89",
     description:
-      "A compact Bluetooth speaker with deep bass, clear treble, and 12-hour battery life.",
+      "A compact Bluetooth speaker with deep bass, clear treble, and 12-hour battery life. With waterproof design (IPX7), 360-degree sound, Bluetooth 5.0, and built-in microphone for calls.",
     Categorization: true,
   },
   {
@@ -62,7 +62,7 @@ const cardsData = [
     subtitle: "Laptop • 15.6-inch • 512GB SSD",
     price: "$999",
     description:
-      "A powerful ultrabook designed for productivity with fast performance and lightweight design.",
+      "A powerful ultrabook designed for productivity with fast performance and lightweight design. The 15.6-inch laptop features Intel Core i7 processor, 16GB RAM, 512GB SSD, full HD display, backlit keyboard, and up to 10 hours battery life.",
     Categorization: true,
   },
   {
@@ -72,7 +72,7 @@ const cardsData = [
     subtitle: "Camera • 24MP • Wi-Fi",
     price: "$1,250",
     description:
-      "Capture professional-grade photos and videos with advanced autofocus and 4K recording.",
+      "Capture professional-grade photos and videos with advanced autofocus and 4K recording. The 24MP DSLR camera includes Wi-Fi connectivity, LCD screen, interchangeable lenses, and support for RAW format.",
     Categorization: true,
   },
   {
@@ -82,7 +82,7 @@ const cardsData = [
     subtitle: "Home Tech • Voice Control",
     price: "$79",
     description:
-      "Control lights, music, and more with your voice — the perfect addition to any smart home.",
+      "Control lights, music, and more with your voice — the perfect addition to any smart home. This mini hub supports voice commands, integrates with smart devices, has LED indicators, and compact design.",
     Categorization: true,
   },
   {
@@ -92,7 +92,7 @@ const cardsData = [
     subtitle: "Home Appliance • 3-Speed",
     price: "$55",
     description:
-      "A quiet and powerful fan with adjustable speeds and oscillation for full-room cooling.",
+      "A quiet and powerful fan with adjustable speeds and oscillation for full-room cooling. With 3-speed settings, 90-degree oscillation, remote control, and energy-efficient motor.",
     Categorization: true,
   },
   {
@@ -102,7 +102,7 @@ const cardsData = [
     subtitle: "Accessory • RGB • Wired",
     price: "$49",
     description:
-      "High-precision gaming mouse with customizable buttons and RGB lighting for pro gamers.",
+      "High-precision gaming mouse with customizable buttons and RGB lighting for pro gamers. Featuring 16000 DPI, programmable buttons, ergonomic design, and braided cable.",
     Categorization: true,
   },
   {
@@ -112,7 +112,7 @@ const cardsData = [
     subtitle: "Accessory • RGB Backlight",
     price: "$89",
     description:
-      "A durable mechanical keyboard with smooth keys, anti-ghosting, and vibrant lighting effects.",
+      "A durable mechanical keyboard with smooth keys, anti-ghosting, and vibrant lighting effects. Featuring RGB backlighting, mechanical switches, N-key rollover, and USB connectivity.",
     Categorization: true,
   },
   {
@@ -122,7 +122,7 @@ const cardsData = [
     subtitle: "Charging • Fast Charge",
     price: "$39",
     description:
-      "A compact power bank with fast-charging support for phones, tablets, and other devices.",
+      "A compact power bank with fast-charging support for phones, tablets, and other devices. With 10000mAh capacity, dual USB ports, and LED indicator.",
     Categorization: true,
   },
   {
@@ -132,7 +132,7 @@ const cardsData = [
     subtitle: "Smart Home • 1080p HD",
     price: "$120",
     description:
-      "Monitor your home anytime with motion detection, night vision, and mobile alerts.",
+      "Monitor your home anytime with motion detection, night vision, and mobile alerts. The 1080p HD camera includes two-way audio, cloud storage, and app control.",
     Categorization: true,
   },
   {
@@ -142,7 +142,7 @@ const cardsData = [
     subtitle: "Tablet • 64GB • Wi-Fi",
     price: "$299",
     description:
-      "A lightweight tablet for entertainment and productivity with a vivid HD display and long battery.",
+      "A lightweight tablet for entertainment and productivity with a vivid HD display and long battery. Featuring 10.1-inch screen, 64GB storage, Wi-Fi, and stylus support.",
     Categorization: true,
   },
   {
@@ -152,7 +152,7 @@ const cardsData = [
     subtitle: "Audio • Noise Canceling",
     price: "$159",
     description:
-      "Over-ear headphones delivering immersive sound with active noise cancellation technology.",
+      "Over-ear headphones delivering immersive sound with active noise cancellation technology. With 40mm drivers, Bluetooth 5.0, 30-hour battery, and foldable design.",
     Categorization: true,
   },
   {
@@ -162,7 +162,7 @@ const cardsData = [
     subtitle: "Kitchen • 4L Capacity",
     price: "$145",
     description:
-      "Cook crispy and healthy meals faster with digital temperature control and preset menus.",
+      "Cook crispy and healthy meals faster with digital temperature control and preset menus. The 4L air fryer includes non-stick basket and easy-clean design.",
     Categorization: true,
   },
   {
@@ -172,7 +172,7 @@ const cardsData = [
     subtitle: "Storage • 1TB • USB-C",
     price: "$175",
     description:
-      "A lightning-fast external SSD for secure file storage and instant data transfers.",
+      "A lightning-fast external SSD for secure file storage and instant data transfers. With 1TB capacity, USB-C interface, and shock resistance.",
     Categorization: true,
   },
   {
@@ -182,7 +182,7 @@ const cardsData = [
     subtitle: "Home Tech • Smart Mapping",
     price: "$299",
     description:
-      "An intelligent robot vacuum that cleans efficiently with smart sensors and app control.",
+      "An intelligent robot vacuum that cleans efficiently with smart sensors and app control. Featuring smart mapping, HEPA filter, and 90-minute runtime.",
     Categorization: true,
   },
   {
@@ -192,7 +192,7 @@ const cardsData = [
     subtitle: "Audio • TV Soundbar",
     price: "$210",
     description:
-      "Enhance your home theater experience with powerful stereo sound and wireless connectivity.",
+      "Enhance your home theater experience with powerful stereo sound and wireless connectivity. The soundbar includes Bluetooth, HDMI, and subwoofer output.",
     Categorization: true,
   },
   {
@@ -202,7 +202,7 @@ const cardsData = [
     subtitle: "Display • 27-inch • 144Hz",
     price: "$349",
     description:
-      "A high-performance gaming monitor with ultra-smooth refresh rate and vibrant color accuracy.",
+      "A high-performance gaming monitor with ultra-smooth refresh rate and vibrant color accuracy. Featuring 27-inch 144Hz display, 1ms response time, and FreeSync.",
     Categorization: true,
   },
   {
@@ -212,7 +212,7 @@ const cardsData = [
     subtitle: "Skincare • 30ml",
     price: "$45",
     description:
-      "A lightweight serum that brightens dull skin, evens tone, and restores a youthful glow.",
+      "A lightweight serum that brightens dull skin, evens tone, and restores a youthful glow. Infused with vitamin C, hyaluronic acid, and niacinamide for hydration and radiance.",
     Categorization: true,
   },
   {
@@ -222,7 +222,7 @@ const cardsData = [
     subtitle: "Makeup • 12 shades",
     price: "$25",
     description:
-      "A creamy matte lipstick that delivers rich color with a smooth, long-lasting finish.",
+      "A creamy matte lipstick that delivers rich color with a smooth, long-lasting finish. Available in 12 shades, with moisturizing formula and non-drying texture.",
     Categorization: true,
   },
   {
@@ -232,7 +232,7 @@ const cardsData = [
     subtitle: "Skincare • 50ml",
     price: "$38",
     description:
-      "An ultra-hydrating moisturizer infused with hyaluronic acid for all-day smoothness.",
+      "An ultra-hydrating moisturizer infused with hyaluronic acid for all-day smoothness. Non-greasy formula suitable for all skin types, with SPF 30 protection.",
     Categorization: true,
   },
   {
@@ -242,7 +242,7 @@ const cardsData = [
     subtitle: "Haircare • 100ml",
     price: "$32",
     description:
-      "A nourishing oil that tames frizz, adds shine, and keeps hair soft and healthy.",
+      "A nourishing oil that tames frizz, adds shine, and keeps hair soft and healthy. Made with argan oil, jojoba oil, and essential oils for deep conditioning.",
     Categorization: true,
   },
   {
@@ -252,7 +252,7 @@ const cardsData = [
     subtitle: "Skincare • 100g",
     price: "$28",
     description:
-      "A refreshing rose-infused mask that hydrates, purifies, and soothes the skin.",
+      "A refreshing rose-infused mask that hydrates, purifies, and soothes the skin. With clay and aloe vera for detoxifying and calming effects.",
     Categorization: true,
   },
   {
@@ -262,7 +262,7 @@ const cardsData = [
     subtitle: "Haircare • 250ml",
     price: "$30",
     description:
-      "A nourishing shampoo enriched with argan oil to strengthen and repair damaged hair.",
+      "A nourishing shampoo enriched with argan oil to strengthen and repair damaged hair. Sulfate-free formula with keratin and biotin for healthy, shiny hair.",
     Categorization: true,
   },
   {
@@ -272,7 +272,7 @@ const cardsData = [
     subtitle: "Skincare • 120ml",
     price: "$22",
     description:
-      "A gentle toner that tightens pores, balances pH, and refreshes your skin.",
+      "A gentle toner that tightens pores, balances pH, and refreshes your skin. Alcohol-free with witch hazel and green tea for soothing and clarifying.",
     Categorization: true,
   },
   {
@@ -282,7 +282,7 @@ const cardsData = [
     subtitle: "Fragrance • 50ml",
     price: "$60",
     description:
-      "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent.",
+      "A floral fragrance with notes of jasmine, rose, and vanilla for an elegant, timeless scent. Long-lasting eau de parfum in 50ml bottle.",
     Categorization: true,
   },
   {
@@ -292,7 +292,7 @@ const cardsData = [
     subtitle: "Skincare • 20ml",
     price: "$55",
     description:
-      "An anti-aging eye cream that reduces puffiness, fine lines, and dark circles.",
+      "An anti-aging eye cream that reduces puffiness, fine lines, and dark circles. With caffeine, peptides, and hyaluronic acid for firming and brightening.",
     Categorization: true,
   },
   {
@@ -302,7 +302,7 @@ const cardsData = [
     subtitle: "Makeup • 30ml",
     price: "$40",
     description:
-      "A lightweight liquid foundation offering smooth coverage and a natural satin finish.",
+      "A lightweight liquid foundation offering smooth coverage and a natural satin finish. With SPF 15, non-comedogenic, and available in multiple shades.",
     Categorization: true,
   },
   {
@@ -312,7 +312,7 @@ const cardsData = [
     subtitle: "Makeup • 10g",
     price: "$15",
     description:
-      "A hydrating lip balm with a hint of berry tint to keep lips soft and naturally glowing.",
+      "A hydrating lip balm with a hint of berry tint to keep lips soft and naturally glowing. Made with shea butter, beeswax, and natural oils.",
     Categorization: true,
   },
   {
@@ -322,7 +322,7 @@ const cardsData = [
     subtitle: "Body Care • 200ml",
     price: "$27",
     description:
-      "A deeply moisturizing lotion that softens skin with coconut oil and vitamin E.",
+      "A deeply moisturizing lotion that softens skin with coconut oil and vitamin E. Absorbs quickly, leaving skin hydrated and smooth.",
     Categorization: true,
   },
   {
@@ -332,7 +332,7 @@ const cardsData = [
     subtitle: "Skincare • 100ml",
     price: "$26",
     description:
-      "A deep-cleansing facial wash that removes impurities and clears clogged pores.",
+      "A deep-cleansing facial wash that removes impurities and clears clogged pores. With charcoal and tea tree oil for detoxifying and antibacterial properties.",
     Categorization: true,
   },
   {
@@ -342,7 +342,7 @@ const cardsData = [
     subtitle: "Skincare • 50ml",
     price: "$35",
     description:
-      "A calming night cream that nourishes skin overnight and promotes a healthy glow.",
+      "A calming night cream that nourishes skin overnight and promotes a healthy glow. With lavender oil, aloe vera, and vitamin E.",
     Categorization: true,
   },
   {
@@ -352,7 +352,7 @@ const cardsData = [
     subtitle: "Skincare • 200ml",
     price: "$20",
     description:
-      "A soothing gel perfect for hydrating and cooling the skin after sun exposure.",
+      "A soothing gel perfect for hydrating and cooling the skin after sun exposure. 100% pure aloe vera with no additives.",
     Categorization: true,
   },
   {
@@ -362,7 +362,7 @@ const cardsData = [
     subtitle: "Makeup • Compact",
     price: "$29",
     description:
-      "A shimmery highlighter that adds a radiant glow to cheekbones and eyes.",
+      "A shimmery highlighter that adds a radiant glow to cheekbones and eyes. Compact powder with mica and pearl for luminous finish.",
     Categorization: true,
   },
   {
@@ -372,7 +372,7 @@ const cardsData = [
     subtitle: "Skincare • 120ml",
     price: "$24",
     description:
-      "A refreshing facial mist infused with natural botanicals for instant hydration.",
+      "A refreshing facial mist infused with natural botanicals for instant hydration. With rose water, chamomile, and hyaluronic acid.",
     Categorization: true,
   },
   {
@@ -382,7 +382,7 @@ const cardsData = [
     subtitle: "Body Care • 150g",
     price: "$33",
     description:
-      "An exfoliating scrub that removes dead skin and leaves your body smooth and glowing.",
+      "An exfoliating scrub that removes dead skin and leaves your body smooth and glowing. With peach extract, sugar, and jojoba oil.",
     Categorization: true,
   },
   {
@@ -392,7 +392,7 @@ const cardsData = [
     subtitle: "Haircare • 250ml",
     price: "$28",
     description:
-      "A natural conditioner that strengthens and smooths hair with herbal extracts.",
+      "A natural conditioner that strengthens and smooths hair with herbal extracts. With aloe vera, keratin, and essential oils for detangling and shine.",
     Categorization: true,
   },
   {
@@ -402,7 +402,7 @@ const cardsData = [
     subtitle: "Fragrance • 150ml",
     price: "$31",
     description:
-      "A refreshing body mist with aquatic and citrus notes for a clean, energizing scent.",
+      "A refreshing body mist with aquatic and citrus notes for a clean, energizing scent. Alcohol-free formula in 150ml spray bottle.",
     Categorization: true,
   },
   {
@@ -412,7 +412,7 @@ const cardsData = [
     subtitle: "Outerwear • Unisex",
     price: "$79",
     description:
-      "A timeless denim jacket with a modern fit, perfect for layering and casual outfits.",
+      "A timeless denim jacket with a modern fit, perfect for layering and casual outfits. Made from 100% cotton denim with distressed details.",
     Categorization: true,
   },
   {
@@ -422,7 +422,7 @@ const cardsData = [
     subtitle: "Women • Evening Wear",
     price: "$120",
     description:
-      "A luxurious silk dress designed with soft fabric and graceful draping for special occasions.",
+      "A luxurious silk dress designed with soft fabric and graceful draping for special occasions. With adjustable straps and elegant silhouette.",
     Categorization: true,
   },
   {
@@ -432,7 +432,7 @@ const cardsData = [
     subtitle: "Men • Stretch Fit",
     price: "$65",
     description:
-      "Comfortable slim-fit jeans made from durable stretch denim for everyday wear.",
+      "Comfortable slim-fit jeans made from durable stretch denim for everyday wear. With five-pocket design and reinforced stitching.",
     Categorization: true,
   },
   {
@@ -442,7 +442,7 @@ const cardsData = [
     subtitle: "Accessories • Genuine Leather",
     price: "$95",
     description:
-      "A sleek and compact leather bag ideal for carrying your essentials in style.",
+      "A sleek and compact leather bag ideal for carrying your essentials in style. Genuine leather with adjustable strap and multiple compartments.",
     Categorization: true,
   },
   {
@@ -452,7 +452,7 @@ const cardsData = [
     subtitle: "Unisex • Street Style",
     price: "$35",
     description:
-      "Soft, breathable cotton T-shirt with a bold graphic design for a trendy, casual look.",
+      "Soft, breathable cotton T-shirt with a bold graphic design for a trendy, casual look. Unisex sizing with crew neck and short sleeves.",
     Categorization: true,
   },
   {
@@ -462,7 +462,7 @@ const cardsData = [
     subtitle: "Footwear • Unisex",
     price: "$85",
     description:
-      "Lightweight sneakers with cushioned soles and a minimalist design for everyday comfort.",
+      "Lightweight sneakers with cushioned soles and a minimalist design for everyday comfort. With breathable mesh and rubber outsole.",
     Categorization: true,
   },
   {
@@ -472,7 +472,7 @@ const cardsData = [
     subtitle: "Men • Winter Wear",
     price: "$70",
     description:
-      "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette.",
+      "A cozy wool-blend sweater that keeps you warm while maintaining a stylish silhouette. With ribbed cuffs and crew neck design.",
     Categorization: true,
   },
   {
@@ -482,7 +482,7 @@ const cardsData = [
     subtitle: "Women • Bohemian Style",
     price: "$110",
     description:
-      "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events.",
+      "A flowy maxi dress with a floral pattern, ideal for sunny days and casual events. Made from lightweight fabric with adjustable waist tie.",
     Categorization: true,
   },
   {
@@ -492,7 +492,7 @@ const cardsData = [
     subtitle: "Accessories • UV Protection",
     price: "$55",
     description:
-      "Stylish aviator sunglasses offering UV400 protection and a timeless look.",
+      "Stylish aviator sunglasses offering UV400 protection and a timeless look. With polarized lenses and metal frame.",
     Categorization: true,
   },
   {
@@ -502,7 +502,7 @@ const cardsData = [
     subtitle: "Men • Breathable Fabric",
     price: "$60",
     description:
-      "Lightweight linen shirt perfect for summer days with a relaxed yet polished vibe.",
+      "Lightweight linen shirt perfect for summer days with a relaxed yet polished vibe. With button-down collar and chest pocket.",
     Categorization: true,
   },
   {
@@ -512,7 +512,7 @@ const cardsData = [
     subtitle: "Accessories • Unisex",
     price: "$40",
     description:
-      "A soft, oversized knit scarf that keeps you cozy and adds texture to your outfit.",
+      "A soft, oversized knit scarf that keeps you cozy and adds texture to your outfit. Made from chunky knit wool blend.",
     Categorization: true,
   },
   {
@@ -522,7 +522,7 @@ const cardsData = [
     subtitle: "Women • Casual Chic",
     price: "$75",
     description:
-      "A lightweight, elegant skirt with pleats that flow beautifully with every step.",
+      "A lightweight, elegant skirt with pleats that flow beautifully with every step. Midi length with elastic waistband.",
     Categorization: true,
   },
   {
@@ -532,7 +532,7 @@ const cardsData = [
     subtitle: "Men • Leather",
     price: "$130",
     description:
-      "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear.",
+      "Handcrafted leather Oxfords with a timeless design, perfect for both business and casual wear. With lace-up closure and cushioned insole.",
     Categorization: true,
   },
   {
@@ -542,7 +542,7 @@ const cardsData = [
     subtitle: "Accessories • Canvas",
     price: "$45",
     description:
-      "A durable canvas tote with vintage prints, great for daily use and weekend trips.",
+      "A durable canvas tote with vintage prints, great for daily use and weekend trips. With reinforced handles and spacious interior.",
     Categorization: true,
   },
   {
@@ -552,7 +552,7 @@ const cardsData = [
     subtitle: "Jewelry • Classic Style",
     price: "$150",
     description:
-      "A refined pearl necklace that adds sophistication to any outfit or special occasion.",
+      "A refined pearl necklace that adds sophistication to any outfit or special occasion. Freshwater pearls with gold clasp.",
     Categorization: true,
   },
   {
@@ -562,7 +562,7 @@ const cardsData = [
     subtitle: "Footwear • Women",
     price: "$55",
     description:
-      "Comfortable flat sandals designed for warm days with soft straps and durable soles.",
+      "Comfortable flat sandals designed for warm days with soft straps and durable soles. With adjustable ankle strap.",
     Categorization: true,
   },
   {
@@ -572,7 +572,7 @@ const cardsData = [
     subtitle: "Men • Formal Wear",
     price: "$145",
     description:
-      "A sharp, slim-fit blazer crafted from premium fabric for a refined, confident look.",
+      "A sharp, slim-fit blazer crafted from premium fabric for a refined, confident look. With two-button closure and notch lapel.",
     Categorization: true,
   },
   {
@@ -582,7 +582,7 @@ const cardsData = [
     subtitle: "Unisex • Streetwear",
     price: "$60",
     description:
-      "A soft cotton-blend hoodie with a relaxed fit — perfect for laid-back, modern style.",
+      "A soft cotton-blend hoodie with a relaxed fit — perfect for laid-back, modern style. With kangaroo pocket and adjustable hood.",
     Categorization: true,
   },
   {
@@ -592,7 +592,7 @@ const cardsData = [
     subtitle: "Accessories • Quartz",
     price: "$220",
     description:
-      "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement.",
+      "A modern wristwatch with a stainless-steel band, minimalist dial, and reliable quartz movement. Water-resistant to 50m.",
     Categorization: true,
   },
   {
@@ -602,7 +602,7 @@ const cardsData = [
     subtitle: "Women • Casual Wear",
     price: "$65",
     description:
-      "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion.",
+      "A stylish denim mini skirt that pairs perfectly with tees, blouses, or jackets for any occasion. With button front and distressed details.",
     Categorization: true,
   },
   {
@@ -612,7 +612,7 @@ const cardsData = [
     subtitle: "Bedroom • 2 Pieces",
     price: "$45",
     description:
-      "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep.",
+      "Soft microfiber pillows offering plush comfort and lasting support for a restful sleep. Hypoallergenic and machine washable.",
     Categorization: true,
   },
   {
@@ -622,7 +622,7 @@ const cardsData = [
     subtitle: "Bedroom • 4 Pieces",
     price: "$70",
     description:
-      "Breathable cotton bedsheets designed for durability, comfort, and a luxurious feel.",
+      "Breathable cotton bedsheets designed for durability, comfort, and a luxurious feel. 4-piece set with fitted sheet, flat sheet, and pillowcases.",
     Categorization: true,
   },
   {
@@ -632,7 +632,7 @@ const cardsData = [
     subtitle: "Living Room • 250g",
     price: "$25",
     description:
-      "A soothing scented candle with lavender and vanilla notes to create a relaxing atmosphere.",
+      "A soothing scented candle with lavender and vanilla notes to create a relaxing atmosphere. 250g soy wax with 40-hour burn time.",
     Categorization: true,
   },
   {
@@ -642,7 +642,7 @@ const cardsData = [
     subtitle: "Bathroom • 6 Pieces",
     price: "$55",
     description:
-      "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at home.",
+      "Highly absorbent towels made from 100% cotton, perfect for spa-like comfort at home. 6-piece set with bath, hand, and wash towels.",
     Categorization: true,
   },
   {
@@ -652,7 +652,7 @@ const cardsData = [
     subtitle: "Decor • Minimalist Design",
     price: "$35",
     description:
-      "A sleek ceramic vase that adds a touch of modern elegance to your living space.",
+      "A sleek ceramic vase that adds a touch of modern elegance to your living space. Minimalist design in white glaze.",
     Categorization: true,
   },
   {
@@ -662,7 +662,7 @@ const cardsData = [
     subtitle: "Lighting • Adjustable",
     price: "$60",
     description:
-      "A dimmable LED lamp with touch control and warm-to-cool light modes for any mood.",
+      "A dimmable LED lamp with touch control and warm-to-cool light modes for any mood. Adjustable height and USB charging port.",
     Categorization: true,
   },
   {
@@ -672,7 +672,7 @@ const cardsData = [
     subtitle: "Kitchen • 2L Capacity",
     price: "$48",
     description:
-      "Removes impurities and provides clean, great-tasting water for the entire family.",
+      "Removes impurities and provides clean, great-tasting water for the entire family. 2L pitcher with replaceable filter.",
     Categorization: true,
   },
   {
@@ -682,7 +682,7 @@ const cardsData = [
     subtitle: "Living Room • 300ml",
     price: "$40",
     description:
-      "Ultrasonic aroma diffuser that fills your home with relaxing natural scents and mist.",
+      "Ultrasonic aroma diffuser that fills your home with relaxing natural scents and mist. 300ml capacity with LED lights.",
     Categorization: true,
   },
   {
@@ -692,7 +692,7 @@ const cardsData = [
     subtitle: "Kitchen • 6 Pieces",
     price: "$85",
     description:
-      "Precision stainless steel knives for perfect slicing, chopping, and cutting every time.",
+      "Precision stainless steel knives for perfect slicing, chopping, and cutting every time. 6-piece set with block.",
     Categorization: true,
   },
   {
@@ -702,7 +702,7 @@ const cardsData = [
     subtitle: "Home Appliance • 3-Speed",
     price: "$75",
     description:
-      "A quiet, powerful fan that keeps your room cool and comfortable all day long.",
+      "A quiet, powerful fan that keeps your room cool and comfortable all day long. 3-speed with remote control.",
     Categorization: true,
   },
   {
@@ -712,7 +712,7 @@ const cardsData = [
     subtitle: "Living Room • Solid Wood",
     price: "$190",
     description:
-      "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern homes.",
+      "Elegant wooden coffee table with smooth finish and sturdy legs, perfect for modern homes. Solid wood construction with storage shelf.",
     Categorization: true,
   },
   {
@@ -722,7 +722,7 @@ const cardsData = [
     subtitle: "Appliance • HEPA Filter",
     price: "$120",
     description:
-      "Removes dust, pollen, and odors to keep your indoor air clean and breathable.",
+      "Removes dust, pollen, and odors to keep your indoor air clean and breathable. HEPA filter with air quality indicator.",
     Categorization: true,
   },
   {
@@ -732,7 +732,7 @@ const cardsData = [
     subtitle: "Bedroom • 200x220cm",
     price: "$65",
     description:
-      "A soft fleece blanket that keeps you warm and cozy during chilly nights.",
+      "A soft fleece blanket that keeps you warm and cozy during chilly nights. 200x220cm size, machine washable.",
     Categorization: true,
   },
   {
@@ -742,7 +742,7 @@ const cardsData = [
     subtitle: "Kitchen • 8 Pieces",
     price: "$150",
     description:
-      "Durable stainless steel cookware with even heat distribution for perfect cooking results.",
+      "Durable stainless steel cookware with even heat distribution for perfect cooking results. 8-piece set with lids.",
     Categorization: true,
   },
   {
@@ -752,7 +752,7 @@ const cardsData = [
     subtitle: "Bathroom • 500ml",
     price: "$18",
     description:
-      "Gentle foaming hand soap infused with essential oils for soft and clean hands.",
+      "Gentle foaming hand soap infused with essential oils for soft and clean hands. 500ml pump bottle.",
     Categorization: true,
   },
   {
@@ -762,7 +762,7 @@ const cardsData = [
     subtitle: "Home • Motion Sensor",
     price: "$90",
     description:
-      "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen.",
+      "Touch-free stainless trash can with motion sensor for a cleaner, smarter kitchen. 12L capacity with odor control.",
     Categorization: true,
   },
   {
@@ -772,7 +772,7 @@ const cardsData = [
     subtitle: "Living Room • 2 Panels",
     price: "$110",
     description:
-      "Elegant velvet curtains that block sunlight and add a touch of luxury to your decor.",
+      "Elegant velvet curtains that block sunlight and add a touch of luxury to your decor. 2 panels, 84 inches long.",
     Categorization: true,
   },
   {
@@ -782,7 +782,7 @@ const cardsData = [
     subtitle: "Appliance • 1000W",
     price: "$130",
     description:
-      "A high-speed blender ideal for smoothies, soups, and sauces with easy-clean blades.",
+      "A high-speed blender ideal for smoothies, soups, and sauces with easy-clean blades. 1000W motor with multiple speed settings.",
     Categorization: true,
   },
   {
@@ -792,7 +792,7 @@ const cardsData = [
     subtitle: "Living Room • 160x230cm",
     price: "$140",
     description:
-      "A plush, non-slip rug that adds warmth and comfort to your living area.",
+      "A plush, non-slip rug that adds warmth and comfort to your living area. 160x230cm, low-pile design.",
     Categorization: true,
   },
   {
@@ -802,7 +802,7 @@ const cardsData = [
     subtitle: "Home • Bamboo Frame",
     price: "$50",
     description:
-      "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric.",
+      "A durable and eco-friendly laundry basket made from natural bamboo and cotton fabric. Foldable for storage.",
     Categorization: true,
   },
   {
@@ -812,7 +812,7 @@ const cardsData = [
     subtitle: "Necklace • 18K Gold",
     price: "$320",
     description:
-      "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance.",
+      "A delicate 18K gold necklace featuring a minimalist pendant for timeless elegance. 16-inch chain with lobster clasp.",
     Categorization: true,
   },
   {
@@ -822,7 +822,7 @@ const cardsData = [
     subtitle: "Earrings • Sterling Silver",
     price: "$85",
     description:
-      "Sparkling crystal earrings crafted from premium silver to add charm to any outfit.",
+      "Sparkling crystal earrings crafted from premium silver to add charm to any outfit. Sterling silver with post backs.",
     Categorization: true,
   },
   {
@@ -832,7 +832,7 @@ const cardsData = [
     subtitle: "Bracelet • Adjustable Fit",
     price: "$110",
     description:
-      "A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm.",
+      "A romantic rose gold bracelet symbolizing eternal love with an elegant infinity charm. Adjustable fit.",
     Categorization: true,
   },
   {
@@ -842,7 +842,7 @@ const cardsData = [
     subtitle: "Necklace • Freshwater Pearls",
     price: "$150",
     description:
-      "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication.",
+      "A classic pearl choker with lustrous freshwater pearls for a touch of sophistication. 16-inch length with gold clasp.",
     Categorization: true,
   },
   {
@@ -852,7 +852,7 @@ const cardsData = [
     subtitle: "Ring • White Gold",
     price: "$450",
     description:
-      "A stunning diamond ring set in white gold with a graceful twist design for brilliance.",
+      "A stunning diamond ring set in white gold with a graceful twist design for brilliance. 0.5 carat center stone.",
     Categorization: true,
   },
   {
@@ -862,7 +862,7 @@ const cardsData = [
     subtitle: "Pendant • Gold Plated",
     price: "$130",
     description:
-      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings.",
+      "A dazzling emerald pendant with a gold-plated chain, perfect for elegant evenings. 18-inch chain length.",
     Categorization: true,
   },
   {
@@ -872,7 +872,7 @@ const cardsData = [
     subtitle: "Anklet • Sterling Silver",
     price: "$65",
     description:
-      "A wavy-pattern anklet made of pure silver for a chic and beachy look.",
+      "A wavy-pattern anklet made of pure silver for a chic and beachy look. Sterling silver with lobster clasp.",
     Categorization: true,
   },
   {
@@ -882,7 +882,7 @@ const cardsData = [
     subtitle: "Earrings • Ruby Stone",
     price: "$120",
     description:
-      "Gorgeous ruby studs set in gold for a pop of color and refined beauty.",
+      "Gorgeous ruby studs set in gold for a pop of color and refined beauty. 14K gold with post backs.",
     Categorization: true,
   },
   {
@@ -892,7 +892,7 @@ const cardsData = [
     subtitle: "Bracelet • Stainless Steel",
     price: "$90",
     description:
-      "A stylish link bracelet with customizable charms that showcase your personality.",
+      "A stylish link bracelet with customizable charms that showcase your personality. Stainless steel with extension chain.",
     Categorization: true,
   },
   {
@@ -902,7 +902,7 @@ const cardsData = [
     subtitle: "Necklace • Opal Gemstone",
     price: "$210",
     description:
-      "A soft glowing opal pendant necklace designed to capture natural iridescence.",
+      "A soft glowing opal pendant necklace designed to capture natural iridescence. 18-inch gold-plated chain.",
     Categorization: true,
   },
   {
@@ -912,7 +912,7 @@ const cardsData = [
     subtitle: "Ring • Sapphire Stone",
     price: "$390",
     description:
-      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen.",
+      "An exquisite sapphire ring surrounded by small diamonds, fit for a modern queen. 1 carat sapphire with white gold band.",
     Categorization: true,
   },
   {
@@ -922,7 +922,7 @@ const cardsData = [
     subtitle: "Earrings • Gold-Plated",
     price: "$95",
     description:
-      "Bold yet elegant gold-plated hoops that complement both casual and formal looks.",
+      "Bold yet elegant gold-plated hoops that complement both casual and formal looks. 2-inch diameter.",
     Categorization: true,
   },
   {
@@ -932,7 +932,7 @@ const cardsData = [
     subtitle: "Bangle • Silver Finish",
     price: "$180",
     description:
-      "A set of three silver bangles with moonlight shine, perfect for layering.",
+      "A set of three silver bangles with moonlight shine, perfect for layering. Sterling silver finish.",
     Categorization: true,
   },
   {
@@ -942,7 +942,7 @@ const cardsData = [
     subtitle: "Brooch • Floral Design",
     price: "$70",
     description:
-      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle.",
+      "An elegant rose-shaped brooch plated in rose gold with a subtle sparkle. Pin back closure.",
     Categorization: true,
   },
   {
@@ -952,7 +952,7 @@ const cardsData = [
     subtitle: "Hair Accessory • Crystal",
     price: "$250",
     description:
-      "A sparkling tiara with crystal embellishments for special occasions and events.",
+      "A sparkling tiara with crystal embellishments for special occasions and events. Adjustable fit.",
     Categorization: true,
   },
   {
@@ -962,7 +962,7 @@ const cardsData = [
     subtitle: "Pendant • Natural Amber",
     price: "$140",
     description:
-      "A warm amber pendant that radiates natural beauty and vintage charm.",
+      "A warm amber pendant that radiates natural beauty and vintage charm. Natural Baltic amber.",
     Categorization: true,
   },
   {
@@ -972,7 +972,7 @@ const cardsData = [
     subtitle: "Hair Accessory • Gold Tone",
     price: "$55",
     description:
-      "Delicate gold-tone hairpins inspired by nature, perfect for bridal styling.",
+      "Delicate gold-tone hairpins inspired by nature, perfect for bridal styling. Set of 6 pins.",
     Categorization: true,
   },
   {
@@ -982,7 +982,7 @@ const cardsData = [
     subtitle: "Necklace • Lab Diamond",
     price: "$500",
     description:
-      "A breathtaking lab-grown diamond necklace that sparkles with modern brilliance.",
+      "A breathtaking lab-grown diamond necklace that sparkles with modern brilliance. 1 carat total weight.",
     Categorization: true,
   },
   {
@@ -992,7 +992,7 @@ const cardsData = [
     subtitle: "Bracelet • Multi-Stone",
     price: "$115",
     description:
-      "A beautiful bracelet with mixed crystals symbolizing peace and positive energy.",
+      "A beautiful bracelet with mixed crystals symbolizing peace and positive energy. Adjustable cord.",
     Categorization: true,
   },
   {
@@ -1002,7 +1002,7 @@ const cardsData = [
     subtitle: "Earrings • Gold-Plated",
     price: "$135",
     description:
-      "Gorgeous gold-plated earrings with a pearl drop design for a refined look.",
+      "Gorgeous gold-plated earrings with a pearl drop design for a refined look. 1.5-inch drop length.",
     Categorization: true,
   },
 ];
@@ -1098,7 +1098,7 @@ export default function Detail() {
 
             <div className="mt-4 flex items-center justify-between">
               <p className="text-2xl font-bold text-slate-900">{card.price}</p>
-              <p className="text-sm text-slate-500">Rating: {card.rating || 4.5} / 5</p>
+              <p className="text-sm text-slate-500">Rating: {card.rating || 4.5} / 5 ⭐</p>
             </div>
 
             <p className="mt-4 text-slate-700">{card.description}</p>
@@ -1119,7 +1119,7 @@ export default function Detail() {
                 }}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105"
               >
-                Add to Cart {quantity > 0 && `(${quantity})`}
+                Add to Cart
               </button>
 
               <button
@@ -1132,7 +1132,7 @@ export default function Detail() {
                       : `${card.title} added to wishlist`,
                     {
                       duration: 1500,
-                      icon: inWish ? "Heart Broken" : "Heart",
+                      icon: inWish ? "" : "",
                     }
                   );
                 }}

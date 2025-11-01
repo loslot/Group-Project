@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { CartContext } from "../components/CartContext";
 import { useWishlist } from "../Context/WishlistContext";
+import { useUser } from "../Context/UserContext";
+import { GoHistory } from 'react-icons/go';
 import SEARCH_DATA from "../page/SearchData";
 
 const isActive = (path, current) => {
@@ -10,18 +12,14 @@ const isActive = (path, current) => {
 };
 
 export default function Navbar() {
-   const navigate = useNavigate();
-   const { pathname } = useLocation();
-   const { cartCount } = useContext(CartContext);
-   const { wishlistCount } = useWishlist();
-   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const { pathname } = useLocation();
+    const { cartCount } = useContext(CartContext);
+    const { wishlistCount } = useWishlist();
+    const { user, logout } = useUser();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
-   const [isLoginOpen, setIsLoginOpen] = useState(false);
-   const [isLoggedIn, setIsLoggedIn] = useState(false);
-   const loginRef = useRef(null);
-
-   const [showSignUp, setShowSignUp] = useState(false);
+    const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
 
    // Search suggestions state
     const [searchQuery, setSearchQuery] = useState("");
@@ -29,27 +27,8 @@ export default function Navbar() {
     const [searchMode, setSearchMode] = useState("title");
     const searchRef = useRef(null);
 
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    setIsLoggedIn(true);
-    setShowSignUp(false);
-  };
-
-  const handleSignIn = (e) => {
-    e.preventDefault();
-    // simulate successful sign-in: mark user as logged in and close the login dropdown
-    setIsLoggedIn(true);
-    setIsLoginOpen(false);
-    setShowSignUp(false);
-  };
-
   const handleLogout = () => {
-    setIsLoggedIn(false);
-    setShowSignUp(false);
-  };
-
-  const toggleForm = () => {
-    setShowSignUp(!showSignUp);
+    logout();
   };
 
   // Extract current category from URL: "/fashion" → "fashion", "/" → "all"
@@ -57,12 +36,9 @@ export default function Navbar() {
     pathname === "/" ? "all" : pathname.split("/")[1] || "all";
   const categorySegment = currentCategory;
 
-  // Close login dropdown when clicking outside
+  // Close search suggestions when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (loginRef.current && !loginRef.current.contains(e.target)) {
-        setIsLoginOpen(false);
-      }
       if (searchRef.current && !searchRef.current.contains(e.target)) {
         setShowSuggestions(false);
       }
@@ -118,24 +94,11 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
-
-    // Add your login logic here
-    console.log("Login:", { email, password });
-
-    // Simulate successful login
-    setIsLoggedIn(true);
-    setIsLoginOpen(false);
-  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
       {/* ==================== DESKTOP VIEW ==================== */}
-      <div className="hidden md:flex w-full h-[70px] my-1 mx-auto px-4 lg:px-6 items-center justify-between">
+      <div className="hidden lg:flex w-full h-[70px] my-1 mx-auto px-4 lg:px-6 items-center justify-between">
         {/* LOGO */}
         <Link
           to="/"
@@ -249,9 +212,9 @@ export default function Navbar() {
         <nav className="flex items-center flex-shrink-0">
           <ul className="flex items-center justify-end gap-1.5 lg:gap-3">
             {/* ACCOUNT */}
-            <li className="relative block p-1.5 text-blue-500" ref={loginRef}>
-              <button
-                onClick={() => setIsLoginOpen(!isLoginOpen)}
+            <li className="block p-1.5 text-blue-500">
+              <Link
+                to={user ? "/MyAccount" : "/login"}
                 aria-label="account"
                 className="focus:outline-none"
               >
@@ -262,211 +225,7 @@ export default function Navbar() {
                 >
                   <path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144z" />
                 </svg>
-              </button>
-
-              {/* Login Dropdown */}
-              {isLoginOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50">
-                  {!isLoggedIn ? (
-                    <div className="p-6">
-                      {!showSignUp ? (
-                        <>
-                          <h3 className="text-xl font-bold text-gray-800 mb-4">
-                            Sign In
-                          </h3>
-                          <div className="space-y-4">
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Email
-                              </label>
-                              <input
-                                type="email"
-                                className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Enter your email"
-                              />
-                            </div>
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Password
-                              </label>
-                              <input
-                                type="password"
-                                className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Enter your password"
-                              />
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <label className="flex items-center">
-                                <input
-                                  type="checkbox"
-                                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                                />
-                                <span className="ml-2 text-sm text-gray-600">
-                                  Remember me
-                                </span>
-                              </label>
-                              <button
-                                type="button"
-                                className="text-sm text-blue-600 hover:text-blue-700"
-                              >
-                                Forgot password?
-                              </button>
-                            </div>
-                            <button
-                              onClick={handleSignIn}
-                              className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-800 transition-all duration-300"
-                            >
-                              Sign In
-                            </button>
-                          </div>
-                          <div className="mt-4 text-center">
-                            <p className="text-sm text-gray-600">
-                              Don't have an account?{" "}
-                              <button
-                                onClick={toggleForm}
-                                className="text-blue-600 font-semibold hover:text-blue-700"
-                              >
-                                Sign Up
-                              </button>
-                            </p>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <h3 className="text-xl font-bold text-gray-800 mb-4">
-                            Create Account
-                          </h3>
-                          <div className="space-y-4">
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Full Name
-                              </label>
-                              <input
-                                type="text"
-                                className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Enter your full name"
-                              />
-                            </div>
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Email
-                              </label>
-                              <input
-                                type="email"
-                                className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Enter your email"
-                              />
-                            </div>
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Password
-                              </label>
-                              <input
-                                type="password"
-                                className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Create a password"
-                              />
-                            </div>
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Confirm Password
-                              </label>
-                              <input
-                                type="password"
-                                className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="Confirm your password"
-                              />
-                            </div>
-                            <div className="flex items-start">
-                              <input
-                                type="checkbox"
-                                className="w-4 h-4 text-blue-600 text-gray-700 border-gray-300 rounded focus:ring-blue-500 mt-1"
-                              />
-                              <span className="ml-2 text-sm text-gray-600">
-                                I agree to the{" "}
-                                <button
-                                  type="button"
-                                  className="text-blue-600 hover:text-blue-700"
-                                >
-                                  Terms of Service
-                                </button>{" "}
-                                and{" "}
-                                <button
-                                  type="button"
-                                  className="text-blue-600 hover:text-blue-700"
-                                >
-                                  Privacy Policy
-                                </button>
-                              </span>
-                            </div>
-                            <button
-                              onClick={handleSignUp}
-                              className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-800 transition-all duration-300"
-                            >
-                              Create Account
-                            </button>
-                          </div>
-                          <div className="mt-4 text-center">
-                            <p className="text-sm text-gray-600">
-                              Already have an account?{" "}
-                              <button
-                                onClick={toggleForm}
-                                className="text-blue-600 font-semibold hover:text-blue-700"
-                              >
-                                Sign In
-                              </button>
-                            </p>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                          <img src="/user/user.png" alt="" />
-                        </div>
-                        <div>
-                          <p className="font-semibold text-gray-800">
-                            Username
-                          </p>
-                          <p className="text-sm text-gray-600">
-                            user@example.com
-                          </p>
-                        </div>
-                      </div>
-                      <div className="border-t border-gray-200 pt-4 space-y-2">
-                        <Link to="/MyAccount">
-                          <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                            My Account
-                          </button>
-                        </Link>
-                        <Link to="/MyOrders">
-                          <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                            My Orders
-                          </button>
-                        </Link>
-                        <Link to="/contact">
-                          <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                            Contact Us
-                          </button>
-                        </Link>
-                        <Link to="/settings">
-                          <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                            Settings
-                          </button>
-                        </Link>
-                        <button
-                          onClick={handleLogout}
-                          className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors font-semibold"
-                        >
-                          Sign Out
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
+              </Link>
             </li>
 
             {/* WISHLIST */}
@@ -492,6 +251,21 @@ export default function Navbar() {
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                   />
                 </svg>
+              </Link>
+            </li>
+
+            {/* ORDER HISTORY */}
+            <li>
+              <Link
+                to="/Order-History"
+                aria-label="Order History"
+                className={`block p-1.5 ${
+                  isActive("/OrderHistory", pathname)
+                    ? "text-blue-700"
+                    : "text-blue-500 hover:text-blue-700"
+                }`}
+              >
+                <GoHistory className="h-7 lg:h-8 w-7 lg:w-8" />
               </Link>
             </li>
 
@@ -530,7 +304,7 @@ export default function Navbar() {
       </div>
 
       {/* ==================== MOBILE HEADER ==================== */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         {/* Top Bar with Logo and Actions */}
         <div className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4 bg-white shadow-sm">
           {/* Logo */}
@@ -573,7 +347,7 @@ export default function Navbar() {
 
             {/* Account Button */}
             <Link
-              to="/login"
+              to={user ? "/my-account" : "/login"}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
               aria-label="Account menu"
             >
@@ -608,6 +382,15 @@ export default function Navbar() {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               </svg>
+            </Link>
+
+            {/* ORDER HISTORY  On mobile*/}
+            <Link
+              to="/Order-History"
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              aria-label="Order History"
+            >
+              <GoHistory className="h-5 w-5 text-blue-500" />
             </Link>
 
             {/* CART */}

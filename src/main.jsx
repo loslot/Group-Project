@@ -22,6 +22,10 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router";
 import { WishlistProvider } from "./Context/WishlistContext.jsx"; // Import the WishlistProvider component from "./Context/WishlistContext";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

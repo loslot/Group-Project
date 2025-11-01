@@ -284,7 +284,7 @@ export default function Checkout() {
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
-              Pay with Card
+              Pay with Card 
             </button>
             <button
               onClick={() => setPaymentMethod("qr")}
@@ -294,7 +294,7 @@ export default function Checkout() {
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
-              Pay with QR (USD)
+              Pay with QR Code
             </button>
           </div>
 

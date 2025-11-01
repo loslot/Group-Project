@@ -233,13 +233,15 @@ export default function Jewellery() {
 
        {/* Responsive Grid: 2 / 4 / 5 */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {cardsData.map((card) => {
+              {cardsData.map((card, index) => {
                 const isInWishlist = Array.isArray(wishlist) && wishlist.some((i) => i.id === card.id);
                 const quantity = typeof getItemQuantity === "function" ? getItemQuantity(card.id) : 0;
-      
+
                 return (
                   <article
                     key={card.id}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
                     className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
                   >
                     {/* Image + Badges + Heart */}

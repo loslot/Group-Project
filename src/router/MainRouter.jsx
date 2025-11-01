@@ -94,6 +94,8 @@ import Settings from "../page/Settings";
 import MyAccount from "../page/MyAccount";
 import MyOrders from "../page/MyOrders";
 import SignUp from "../page/SignUp";
+import Login from "../page/Login1";
+import Login1 from "../page/Login1";
 
 
 export default function MainRouter() {
@@ -118,11 +120,13 @@ export default function MainRouter() {
       <Route path="/order-history" element={<OrderHistory />} />
       <Route path="/wishlist" element={<Wishlistpage />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="/my-account" element={<MyAccount />} />
       <Route path="/MyAccount" element={<MyAccount />} />
       <Route path="/MyOrders" element={<MyOrders />} />
       <Route path="/signup" element={<SignUp />} />
       {/* 404 */}
       <Route path="*" element={<NotFound_404 />} />
+      <Route path="/login" element={<Login1 />} />
     </Routes>
   );
 }
