@@ -40,7 +40,7 @@ export default function Login1() {
       const result = login(email, password);
       if (result.success) {
         toast.success("Login successful! Welcome back.");
-        navigate("/my-account");
+        navigate("/");
       } else {
         toast.error(result.error);
       }

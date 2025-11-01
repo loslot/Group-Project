@@ -290,7 +290,7 @@ export default function New() {
 
                   <Link
                     to={`/details/${card.id}`}
-                    className="text-sm text-indigo-600 font-medium hover:underline ml-2 flex items-center"
+                    className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none flex items-center"
                   >
                     Details
                   </Link>

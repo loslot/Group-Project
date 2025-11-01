@@ -10,7 +10,7 @@ const cardsData = [
     image: "/Electronic/1.png",
     title: "SmartX Pro Phone",
     subtitle: "Smartphone • 128GB",
-    price: "$699",
+    price: "$0.01",
     description:
       "A sleek smartphone with a powerful processor, edge-to-edge display, and all-day battery life. This device comes with a 6.5-inch AMOLED display, Snapdragon 888 processor, 8GB RAM, 128GB storage, triple camera system (48MP main, 12MP ultra-wide, 5MP macro), 5000mAh battery with 65W fast charging, 5G connectivity, and Android 11.",
     Categorization: true,
@@ -1074,24 +1074,9 @@ export default function Detail() {
         </button>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Product Image */}
-          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl">
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found";
-              }}
-            />
-            <div className="absolute left-3 top-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
-              Featured
-            </div>
-          </div>
-
           {/* Product Details */}
           <div>
-            <h1 of the worldclassName="text-3xl md:text-4xl font-bold text-slate-900">
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-900">
               {card.title}
             </h1>
             <p className="mt-2 text-lg text-slate-500">{card.subtitle}</p>
@@ -1155,6 +1140,21 @@ export default function Detail() {
             <div className="mt-4 text-sm text-slate-500">
               <p>Free cancellation</p>
               <p>Free shipping on orders over $50</p>
+            </div>
+          </div>
+
+          {/* Product Image */}
+          <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-xl">
+            <img
+              src={card.image}
+              alt={card.title}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.src = "https://via.placeholder.com/300?text=Image+Not+Found";
+              }}
+            />
+            <div className="absolute left-3 top-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-slate-800">
+              Featured
             </div>
           </div>
         </div>

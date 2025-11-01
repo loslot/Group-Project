@@ -8,13 +8,14 @@ import {
   LogOut,
   Shield,
   Trash2,
+  ArrowLeft,
 } from "lucide-react";
 import { useUser } from "../Context/UserContext";
 import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
 export default function MyAccount() {
-  const { user, updateProfile, logout } = useUser();
+  const { user, updateProfile, logout, deleteUser } = useUser();
   const navigate = useNavigate();
   const [isEditing, setIsEditing] = useState(false);
   const [editName, setEditName] = useState(user?.name || "");
@@ -127,10 +128,10 @@ export default function MyAccount() {
 
   const handleDeleteAccount = () => {
     if (window.confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
-      // In a real app, this would call an API to delete the account
-      logout();
+      // Delete the user from the users array and logout
+      deleteUser(user.id);
       toast.success("Account deleted successfully");
-      navigate("/");
+      navigate("/signup");
     }
   };
 
@@ -160,13 +161,25 @@ export default function MyAccount() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            My Account
-          </h1>
-          <p className="mt-3 text-gray-600 text-lg">
-            Manage your personal information and account settings
-          </p>
+        <div className="mb-8">
+          <div className="flex items-center justify-between">
+            <button
+              onClick={() => navigate("/")}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-xl transition-all duration-300 text-gray-700 hover:text-gray-900"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Back to Home
+            </button>
+            <div className="text-center flex-1">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                My Account
+              </h1>
+              <p className="mt-3 text-gray-600 text-lg">
+                Manage your personal information and account settings
+              </p>
+            </div>
+            <div className="w-32"></div> {/* Spacer for centering */}
+          </div>
         </div>
 
         {/* Profile Card */}
@@ -212,9 +225,6 @@ export default function MyAccount() {
                 <>
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{user?.name || "User"}</h2>
                   <p className="text-gray-600 text-base sm:text-lg mb-3">{user?.email}</p>
-                  <p className="text-sm text-gray-500 bg-gray-50 px-3 py-1 rounded-full inline-block">
-                    Member since {user?.createdAt ? new Date(user.createdAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : 'October 2023'}
-                  </p>
                 </>
               )}
             </div>

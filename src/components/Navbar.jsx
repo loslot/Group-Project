@@ -105,7 +105,7 @@ export default function Navbar() {
           className="flex items-center gap-2 cursor-pointer flex-shrink-0"
         >
           <img
-            className="h-14 w-auto max-h-[60px] max-w-[110px] object-contain"
+            className="h-14 w-auto max-h-[60px] max-w-[110px] object-cover"
             src="/logo/logo.png"
             alt="Product Express"
           />
@@ -465,7 +465,7 @@ export default function Navbar() {
                 aria-label="Search mode"
               >
                 <option value="title">Title</option>
-                <option value="id">ID</option>
+                {/* <option value="id">ID</option> */}
                 <option value="price">Price</option>
               </select>
               <input
@@ -508,8 +508,7 @@ export default function Navbar() {
                 <option value="beauty">Beauty and Skincare</option>
                 <option value="fashion">Fashion</option>
                 <option value="homesupplies">Home Supplies</option>
-                <option value="jewellery">Jewelry</option>
-                <option value="contact">Contact</option>
+                <option value="jewellery">Jewellery</option>
               </select>
             </nav>
           </div>

@@ -99,6 +99,12 @@ export const UserProvider = ({ children }) => {
     setUser(null);
   };
 
+  // Delete user function
+  const deleteUser = (userId) => {
+    setUsers(prev => prev.filter(u => u.id !== userId));
+    setUser(null);
+  };
+
   // Update user profile
   const updateProfile = (updates) => {
     if (!user) return { success: false, error: "No user logged in" };
@@ -119,6 +125,7 @@ export const UserProvider = ({ children }) => {
         login,
         signup,
         logout,
+        deleteUser,
         updateProfile,
         isAuthenticated: !!user,
         theme,
