@@ -254,7 +254,7 @@ export default function SearchResults() {
             key={item.id}
             onClick={(e) => e.stopPropagation()} // Prevent triggering background click
           >
-            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
+            <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-500 ease-in-out hover:-translate-y-1">
               <img
                 src={item.image}
                 alt={item.title}
@@ -281,7 +281,7 @@ export default function SearchResults() {
               key={`rec-${item.id}`}
               onClick={(e) => e.stopPropagation()}
             >
-              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-300 ease-in-out hover:-translate-y-1">
+              <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transform transition duration-500 ease-in-out hover:-translate-y-1">
                 <img
                   src={item.image}
                   alt={item.title}
