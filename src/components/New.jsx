@@ -183,8 +183,12 @@ export default function New() {
       {/* Shimmer Animation */}
       <style jsx>{`
         @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
         }
         .animate-shimmer {
           animation: shimmer 2s infinite;
@@ -194,8 +198,12 @@ export default function New() {
       {/* Responsive Grid: 2 / 4 / 5 */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {cardsData.map((card, index) => {
-          const isInWishlist = Array.isArray(wishlist) && wishlist.some((i) => i.id === card.id);
-          const quantity = typeof getItemQuantity === "function" ? getItemQuantity(card.id) : 0;
+          const isInWishlist =
+            Array.isArray(wishlist) && wishlist.some((i) => i.id === card.id);
+          const quantity =
+            typeof getItemQuantity === "function"
+              ? getItemQuantity(card.id)
+              : 0;
 
           return (
             <article
@@ -206,13 +214,17 @@ export default function New() {
             >
               {/* Image + Badges + Heart */}
               <div className="relative h-48 sm:h-56 w-full overflow-hidden">
-                <Link to={`/details/${card.id}`} className="block w-full h-full">
+                <Link
+                  to={`/details/${card.id}`}
+                  className="block w-full h-full"
+                >
                   <img
                     src={card.image}
                     alt={card.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
-                      e.currentTarget.src = "https://via.placeholder.com/300x200?text=No+Image";
+                      e.currentTarget.src =
+                        "https://via.placeholder.com/300x200?text=No+Image";
                     }}
                   />
                 </Link>
@@ -241,7 +253,9 @@ export default function New() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={`h-5 w-5 transition-all ${
-                      isInWishlist ? "fill-red-600 text-red-600" : "text-gray-500"
+                      isInWishlist
+                        ? "fill-red-600 text-red-600"
+                        : "text-gray-500"
                     }`}
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -268,7 +282,9 @@ export default function New() {
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-slate-600">From</p>
-                    <p className="text-lg font-bold text-slate-900">{card.price}</p>
+                    <p className="text-lg font-bold text-slate-900">
+                      {card.price}
+                    </p>
                   </div>
                 </div>
 
@@ -280,17 +296,19 @@ export default function New() {
                       e.stopPropagation();
                       if (typeof addToCart === "function") {
                         addToCart(card);
-                        toast.success(`${card.title} added to cart!`, { duration: 1200 });
+                        toast.success(`${card.title} added to cart!`, {
+                          duration: 1200,
+                        });
                       }
                     }}
-                  className="cursor-pointer inline-flex items-center justify-center gap-2 px-2 md:px-3 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow-sm transition-transform transform hover:scale-105 focus:outline-none"
-                        > 
-                          Add Cart
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
+                  >
+                    Add Cart
                   </button>
 
                   <Link
                     to={`/details/${card.id}`}
-                    className="text-sm text-indigo-600 font-medium hover:underline focus:outline-none flex items-center"
+                    className="text-sm text-indigo-600 m-auto font-medium hover:underline  "
                   >
                     Details
                   </Link>
