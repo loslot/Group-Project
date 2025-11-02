@@ -210,6 +210,7 @@ export default function New() {
               key={card.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
+              data-aos-duration={1000}
               className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
             >
               {/* Image + Badges + Heart */}

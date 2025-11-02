@@ -322,7 +322,7 @@ export default function Fashion() {
                       }}
                       className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-medium shadow-sm hover:scale-105 transition"
                     >
-                      Add to Cart
+                      Add  Cart
                     </button>
                     <span className="text-sm text-indigo-600 font-medium hover:underline">
                       Details

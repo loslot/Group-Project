@@ -2,6 +2,11 @@ import { useSearchParams, Link, useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import SEARCH_DATA from "../page/SearchData";
 
+// Helper function to parse price string to number
+const parsePrice = (priceStr) => {
+  return parseFloat(priceStr.replace(/[$,]/g, ''));
+};
+
 export default function SearchResults() {
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
@@ -24,7 +29,7 @@ export default function SearchResults() {
           case "title":
             return p.title.toLowerCase().includes(q.toLowerCase());
           case "price":
-            return p.price.toLowerCase().includes(q.toLowerCase());
+            return parsePrice(p.price) === parsePrice(q);
           default:
             return false;
         }
@@ -37,11 +42,11 @@ export default function SearchResults() {
   }
   if (priceMin) {
     const min = parseFloat(priceMin);
-    matched = matched.filter((p) => parseFloat(p.price.replace('$', '')) >= min);
+    matched = matched.filter((p) => parsePrice(p.price) >= min);
   }
   if (priceMax) {
     const max = parseFloat(priceMax);
-    matched = matched.filter((p) => parseFloat(p.price.replace('$', '')) <= max);
+    matched = matched.filter((p) => parsePrice(p.price) <= max);
   }
   if (ratingMin) {
     const minRating = parseFloat(ratingMin);
@@ -50,9 +55,9 @@ export default function SearchResults() {
 
   // Apply sorting
   if (sortBy === "price-low") {
-    matched = [...matched].sort((a, b) => parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')));
+    matched = [...matched].sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
   } else if (sortBy === "price-high") {
-    matched = [...matched].sort((a, b) => parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')));
+    matched = [...matched].sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
   } else if (sortBy === "rating") {
     matched = [...matched].sort((a, b) => (b.rating || 0) - (a.rating || 0));
   }
@@ -103,87 +108,7 @@ export default function SearchResults() {
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 cursor-pointer"
       onDoubleClick={handleBackgroundClick}
     >
-      <header className="mb-8 mt-7">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-              {matched.length} Result{matched.length !== 1 && "s"}
-            </h1>
-
-            {q && (
-              <span className="hidden sm:inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white bg-slate-800/80 backdrop-blur">
-                {mode === "id" ? `ID: ${q}` : `“${q}”`}
-              </span>
-            )}
-          </div>
-        </div>
-
-        {/* Filter UI */}
-        <div className="mt-6 flex flex-wrap gap-4 items-center">
-          <select
-            value={categoryFilter}
-            onChange={handleCategoryChange}
-            className="px-3 py-2 border rounded text-sm"
-            onClick={(e) => e.stopPropagation()}
-            onDoubleClick={(e) => e.stopPropagation()}
-          >
-            <option value="">All Categories</option>
-            <option value="electronic">Electronics</option>
-            <option value="beauty">Beauty and Skincare</option>
-            <option value="fashion">Fashion</option>
-            <option value="homesupply">Home Supplies</option>
-            <option value="jewellery">Jewellery</option>
-          </select>
-
-          <input
-            type="number"
-            placeholder="Min Price"
-            value={priceMin}
-            onChange={handlePriceMinChange}
-            className="px-3 py-2 border rounded text-sm w-24"
-            onClick={(e) => e.stopPropagation()}
-            onDoubleClick={(e) => e.stopPropagation()}
-          />
-          <input
-            type="number"
-            placeholder="Max Price"
-            value={priceMax}
-            onChange={handlePriceMaxChange}
-            className="px-3 py-2 border rounded text-sm w-24"
-            onClick={(e) => e.stopPropagation()}
-            onDoubleClick={(e) => e.stopPropagation()}
-          />
-
-          <input
-            type="number"
-            placeholder="Min Rating"
-            value={ratingMin}
-            onChange={handleRatingMinChange}
-            className="px-3 py-2 border rounded text-sm w-24"
-            min="0"
-            max="5"
-            step="0.1"
-            onClick={(e) => e.stopPropagation()}
-            onDoubleClick={(e) => e.stopPropagation()}
-          />
-
-          <select
-            value={sortBy}
-            onChange={handleSortChange}
-            className="px-3 py-2 border rounded text-sm"
-            onClick={(e) => e.stopPropagation()}
-            onDoubleClick={(e) => e.stopPropagation()}
-          >
-            <option value="relevance">Sort by Relevance</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="rating">Rating</option>
-          </select>
-        </div>
-
-        <div className="mt-4 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-      </header>
-
+     -
       {/* NO RESULTS */}
       {matched.length === 0 && (
         <div className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-slate-50 to-purple-100 px-4">
